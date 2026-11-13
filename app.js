@@ -19,6 +19,9 @@ const DAY = 864e5;
 const BOXES = [1, 3, 7, 14, 30]; // days
 
 const ICON = {
+  pause: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4.5" height="16" rx="1"/><rect x="13.5" y="4" width="4.5" height="16" rx="1"/></svg>',
+  x: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  star: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>',
   play: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>',
   flag: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>',
   tick: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>',
@@ -27,7 +30,7 @@ const ICON = {
 
 /* ---------- progress (localStorage, single key) ---------- */
 const KEY = 'bamale.progress';
-const S = Object.assign({ v: 1, levels: {}, done: {}, tests: {}, review: {}, flags: {}, clipEdits: {}, last: null }, (() => {
+const S = Object.assign({ v: 1, levels: {}, done: {}, tests: {}, review: {}, flags: {}, clipEdits: {}, days: [], last: null }, (() => {
   try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
 })());
 function save() {
@@ -62,29 +65,82 @@ const clipOf = (c) => Object.assign({}, c, S.clipEdits[c.id] || {});
 /* ---------- audio ---------- */
 const audio = new Audio();
 let seq = 0;
-function halt() { seq++; audio.pause(); $$('.playing').forEach((e) => e.classList.remove('playing')); }
-function playOne(src, el) {
+let endOne = null; // settles the clip that is playing now
+let NOW = null; // the running sequence: { items, i, onEach, tag, paused }
+function syncPlayAll() {
+  const b = $('.play-all');
+  if (!b) return;
+  const on = NOW && NOW.tag === 'all';
+  b.innerHTML = on ? (NOW.paused ? `${ICON.play} Resume` : `${ICON.pause} Pause`) : `${ICON.play} ${b.dataset.label}`;
+  b.classList.toggle('playing', !!on && !NOW.paused);
+}
+function halt() {
+  seq++;
+  audio.pause();
+  NOW = null;
+  if (endOne) endOne(false);
+  $$('.playing').forEach((e) => e.classList.remove('playing'));
+  syncPlayAll();
+}
+function playOne(src, el, frac) {
   audio.pause();
   return new Promise((res) => {
     if (el) el.classList.add('playing');
-    const fin = (ok) => { audio.onended = audio.onerror = null; if (el) el.classList.remove('playing'); res(ok); };
+    const fin = (ok) => {
+      if (endOne !== fin) return;
+      endOne = null;
+      audio.onended = audio.onerror = audio.onloadedmetadata = null;
+      if (el) el.classList.remove('playing');
+      res(ok);
+    };
+    endOne = fin;
     audio.onended = () => fin(true);
     audio.onerror = () => fin(false);
+    audio.onloadedmetadata = frac ? () => { audio.currentTime = frac * audio.duration; } : null;
     audio.src = src;
     audio.play().catch(() => fin(false));
   });
 }
-/** Play one or more [src, element] pairs in order; a new call or halt() cancels. */
-async function play(items, onEach) {
+/**
+ * Play [src, element] pairs in order; a new call or halt() cancels.
+ * `src` may be a function, so a speed change mid-play can re-resolve it.
+ * `frac` starts the first item part-way through; `tag` 'all' marks a pausable run.
+ */
+async function play(items, onEach, frac, tag) {
   halt();
-  const mine = seq;
-  for (const [src, el] of items) {
-    const ok = await playOne(src, el);
+  const mine = seq, st = (NOW = { items, i: 0, onEach, tag, paused: false });
+  syncPlayAll();
+  for (; st.i < items.length; st.i++) {
+    const [src, el] = items[st.i];
+    const ok = await playOne(typeof src === 'function' ? src() : src, el, st.i === 0 ? frac : 0);
     if (mine !== seq) return;
     if (el && onEach) onEach(el);
-    if (!ok) return;
-    if (items.length > 1) { await wait(350); if (mine !== seq) return; }
+    if (!ok) break;
+    if (st.i < items.length - 1) {
+      await wait(350);
+      while (st.paused && mine === seq) await wait(120);
+      if (mine !== seq) return;
+    }
   }
+  if (NOW === st) { NOW = null; syncPlayAll(); }
+}
+/** The whole-dialogue button: start, then pause / resume while it runs. */
+function playAll(makeItems, onEach) {
+  if (NOW && NOW.tag === 'all') {
+    NOW.paused = !NOW.paused;
+    if (NOW.paused) audio.pause();
+    else if (endOne) audio.play().catch(() => {});
+    syncPlayAll();
+    return;
+  }
+  play(makeItems(), onEach, 0, 'all');
+}
+/** Speed changed: restart the current line at the new speed, at the same point. */
+function respeed() {
+  const st = NOW;
+  if (!st || !st.items[st.i] || typeof st.items[st.i][0] !== 'function') return;
+  const frac = audio.duration ? audio.currentTime / audio.duration : 0;
+  play(st.items.slice(st.i), st.onEach, frac, st.tag);
 }
 
 /* ---------- glossing ---------- */
@@ -171,6 +227,39 @@ function gradeWords(target, typed) {
   return { marks, right, total: a.length, extra: b.length - right };
 }
 
+/* ---------- feature switches, progress, shared bits ---------- */
+const REAL = false; // real YouTube clips + clip review: built, switched off until the clips are vetted
+
+const dayKey = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+function touchDay() {
+  const t = dayKey(new Date());
+  if (!S.days.includes(t)) S.days = S.days.concat(t).slice(-400);
+}
+function streak() {
+  const days = new Set(S.days), d = new Date();
+  if (!days.has(dayKey(d))) d.setDate(d.getDate() - 1);
+  let n = 0;
+  while (days.has(dayKey(d))) { n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+/** { easy: [done, total], medium: …, hard: … } for one module. */
+function levelCounts(mid, mod) {
+  const o = {};
+  LEVELS.forEach((l) => { o[l] = [mod.lessons.filter((x) => S.done[`${mid}-${x.id}:${l}`]).length, mod.lessons.length]; });
+  return o;
+}
+const levelMeters = (counts) => `<div class="lvls" aria-label="Lessons finished at each difficulty">${LEVELS.map((l) => {
+  const [n, t] = counts[l], full = n === t;
+  return `<span class="lvl ${full ? 'full' : ''}">${full ? ICON.tick : ''}${FULL[l]} ${full ? 'done' : `${n}/${t}`}</span>`;
+}).join('')}</div>`;
+const lessonStars = (mid, lid) => `<span class="stars">${LEVELS.map((l) => {
+  const on = !!S.done[`${mid}-${lid}:${l}`];
+  return `<span class="star ${on ? 'on' : ''}" title="${FULL[l]}: ${on ? 'finished' : 'not yet'}">${ICON.star}<span class="sr">${FULL[l]} ${on ? 'finished' : 'not finished'}</span></span>`;
+}).join('')}</span>`;
+const crumbs = (parts) => `<nav class="crumbs" aria-label="Breadcrumb">${parts.map(([t, h]) => (h ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`)).join('<span aria-hidden="true">›</span>')}</nav>`;
+const flagBtn = (on) => `<button type="button" class="flagbtn flag" aria-pressed="${!!on}">${ICON.flag}<span>${on ? 'Flagged' : 'Feels off?'}</span></button>`;
+function setFlagBtn(btn, on) { btn.setAttribute('aria-pressed', on); $('span', btn).textContent = on ? 'Flagged' : 'Feels off?'; }
+
 /* ---------- small UI builders ---------- */
 function levelSwitch(mid, disabled) {
   const cur = levelOf(mid);
@@ -223,13 +312,17 @@ function setNav(active, lesson) {
   if (lesson) {
     nav.className = 'steps';
     nav.setAttribute('aria-label', 'Lesson steps');
-    nav.innerHTML = STEPS.map((s, i) => `<a href="#/l/${lesson.mid}/${lesson.lid}/${i}" class="${i === lesson.step ? 'on' : i < lesson.step ? 'done' : ''}" ${i === lesson.step ? 'aria-current="step"' : ''}>${i + 1} ${s}</a>`).join('');
+    nav.innerHTML = STEPS.map((s, i) => (i === 4 && !REAL
+      ? `<span class="off" aria-disabled="true">${i + 1} ${s} <span class="soon-tag">soon</span></span>`
+      : `<a href="#/l/${lesson.mid}/${lesson.lid}/${i}" class="${i === lesson.step ? 'on' : i < lesson.step ? 'done' : ''}" ${i === lesson.step ? 'aria-current="step"' : ''}>${i + 1} ${s}</a>`)).join('');
     return;
   }
   nav.className = '';
   nav.setAttribute('aria-label', 'Main');
   const item = (id, href, label) => `<a href="${href}" class="${active === id ? 'on' : ''}" ${active === id ? 'aria-current="page"' : ''}>${label}</a>`;
-  nav.innerHTML = item('course', '#/', 'Course') + item('review', '#/review', 'Review <span class="count" hidden></span>') + item('clips', '#/clips', 'Clip review') + item('flags', '#/flags', 'Feels off?');
+  nav.innerHTML = item('course', '#/', 'Home') + item('review', '#/review', 'Review <span class="count" hidden></span>')
+    + (REAL ? item('clips', '#/clips', 'Clip review') : '<span class="off" aria-disabled="true">Clip review <span class="soon-tag">soon</span></span>')
+    + item('flags', '#/flags', 'Feels off?');
   renderNavCount();
 }
 
@@ -300,27 +393,32 @@ async function clipBlock(el, clip, level) {
 }
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
 
-/* ---------- views: course map ---------- */
+/* ---------- views: home (the course map) ---------- */
 async function viewCourse() {
   setNav('course');
+  let stars = 0, starTotal = 0;
   const cards = await Promise.all(COURSE.modules.map(async (m) => {
-    let prog = 'Not written yet';
+    let prog = 'Not written yet', counts = null;
+    const lv = levelOf(m.id);
     if (m.ready) {
-      const mod = await getModule(m.id), lv = levelOf(m.id);
-      const n = mod.lessons.filter((l) => S.done[`${m.id}-${l.id}:${lv}`]).length;
-      prog = n ? `${n} of ${mod.lessons.length} lessons` : 'Not started';
+      counts = levelCounts(m.id, await getModule(m.id));
+      LEVELS.forEach((l) => { stars += counts[l][0]; starTotal += counts[l][1]; });
+      prog = `Playing at ${FULL[lv]}`;
     } else if (m.woven) prog = 'Woven through all';
     return `<article class="card mod ${m.ready ? '' : 'soon'}">
-      <div class="mod-head"><span class="badge">${m.num}</span><h2>${m.ready ? `<a href="#/m/${m.id}">${esc(m.title)}</a>` : esc(m.title)}</h2></div>
+      <div class="mod-head"><span class="badge">${m.num}</span><div class="stack" style="gap:0"><span class="eyebrow quiet">Module ${m.num}</span>
+        <h2>${m.ready ? `<a href="#/m/${m.id}">${esc(m.title)}</a>` : esc(m.title)}</h2></div></div>
       <p>${esc(m.blurb)}</p>
+      ${counts ? levelMeters(counts) : ''}
       <div class="mod-foot"><span class="prog">${prog}</span>${levelSwitch(m.id, !m.ready)}</div>
     </article>`;
   }));
   let cont = S.last;
   if (!cont) {
     const first = COURSE.modules.find((m) => m.ready), mod = await getModule(first.id);
-    cont = { href: `#/l/${first.id}/${mod.lessons[0].id}/0`, title: `${first.title.split(' ')[0]} · Lesson 1`, sub: mod.lessons[0].blurb, fresh: true };
+    cont = { href: `#/l/${first.id}/${mod.lessons[0].id}/0`, title: `Module ${first.num} · Lesson 1`, sub: mod.lessons[0].blurb, fresh: true };
   }
+  const pct = starTotal ? Math.round((stars / starTotal) * 100) : 0, st = streak();
   app.innerHTML = `<section class="hero-row">
       <div class="stack"><h1 class="hero">Jom, sambung belajar.</h1>
         <p class="lede">Pick any module. Everything is open — set the difficulty per module and change it whenever.</p></div>
@@ -328,6 +426,16 @@ async function viewCourse() {
         <h2>${esc(cont.title)}</h2><span class="muted" style="font-size:15px">${esc(cont.sub)}</span>
         <span class="btn">${cont.fresh ? 'Start' : 'Resume'} →</span></a>
     </section>
+    <section class="card progress" aria-label="Your progress">
+      <div class="stack meter"><div class="row spread"><span class="eyebrow quiet">Course progress</span><b>${ICON.star} ${stars} of ${starTotal} stars</b></div>
+        <div class="bar" role="progressbar" aria-label="Stars earned" aria-valuemin="0" aria-valuemax="${starTotal}" aria-valuenow="${stars}"><span style="width:${pct}%"></span></div>
+        <span class="small muted">One star for every lesson you finish, at each difficulty. New modules add more stars.</span></div>
+      <div class="stat"><b>${st}</b><span>day streak</span></div>
+      <div class="stat"><b>${Object.keys(S.review).length}</b><span>phrases collected</span></div>
+      <div class="stat"><b>${dueItems().length}</b><span>due for review</span></div>
+    </section>
+    <section class="stack"><h2>The course: ${COURSE.modules.length} modules</h2>
+      <p class="muted">The <b>course</b> is everything here. A <b>module</b> is one real-life situation, like the mamak. Each module has a handful of short <b>lessons</b> — one dialogue each, worked through in steps — and ends with a <b>finale</b> test. Easy, Med and Hard are three versions of the same lessons.</p></section>
     <section class="grid" aria-label="Modules">${cards.join('')}</section>`;
 }
 
@@ -338,17 +446,20 @@ async function viewModule(mid) {
   if (!meta || !meta.ready) return viewCourse();
   const mod = await getModule(mid), lv = levelOf(mid);
   const test = S.tests[`${mid}:${lv}`];
-  app.innerHTML = `<section class="stack"><span class="eyebrow">Module ${meta.num}</span>
+  app.innerHTML = `<section class="stack">${crumbs([['Home', '#/'], [`Module ${meta.num}: ${meta.title}`]])}
+      <span class="eyebrow">Module ${meta.num} of ${COURSE.modules.length}</span>
       <div class="row spread"><h1>${esc(meta.title)}</h1>${levelSwitch(mid)}</div>
-      <p class="lede">${esc(meta.blurb)} Lessons run in any order; ticks are for ${FULL[lv]}.</p></section>
+      <p class="lede">${esc(meta.blurb)} ${mod.lessons.length} lessons and a finale, in any order.</p>
+      ${levelMeters(levelCounts(mid, mod))}</section>
     <section class="lessons">${mod.lessons.map((l, i) => {
       const d = S.done[`${mid}-${l.id}:${lv}`];
       return `<article class="card lesson-row"><span class="badge ${d ? 'done' : ''}">${d ? ICON.tick : i + 1}</span>
-        <div class="stack"><h2>${esc(l.title)}</h2><p>${esc(l.blurb)}</p></div>
+        <div class="stack"><span class="eyebrow quiet">Lesson ${i + 1}</span><h2>${esc(l.title)}</h2><p>${esc(l.blurb)}</p></div>
+        ${lessonStars(mid, l.id)}
         <a class="btn ${d ? 'ghost' : ''}" href="#/l/${mid}/${l.id}/0" aria-label="${d ? 'Repeat' : 'Start'} lesson ${i + 1}: ${esc(l.title)}">${d ? 'Again' : 'Start'} →</a></article>`;
     }).join('')}
-      <article class="card key lesson-row"><span class="badge ${test ? 'done' : ''}">${test ? ICON.tick : '★'}</span>
-        <div class="stack"><h2>${esc(mod.finale.title)}</h2><p>${esc(mod.finale.blurb)}${test ? ` Best: ${test.best}/${test.total}.` : ''}</p></div>
+      <article class="card key lesson-row"><span class="badge ${test ? 'done' : ''}">${test ? ICON.tick : ICON.star}</span>
+        <div class="stack"><span class="eyebrow quiet">Finale</span><h2>${esc(mod.finale.title)}</h2><p>${esc(mod.finale.blurb)}${test ? ` Best at ${FULL[lv]}: ${test.best}/${test.total}.` : ''}</p></div>
         <a class="btn red" href="#/f/${mid}">Open finale →</a></article>
     </section>`;
 }
@@ -365,13 +476,16 @@ async function viewLesson(mid, lid, step) {
   SES.level = level;
   step = Math.max(0, Math.min(STEPS.length - 1, step || 0));
   const num = mod.lessons.findIndex((l) => l.id === lid) + 1;
-  S.last = { href: `#/l/${mid}/${lid}/${step}`, title: `${meta.title.split(' ')[0]} · Lesson ${num}`, sub: `${lesson.title} — ${STEPS[step]}` };
+  S.last = { href: `#/l/${mid}/${lid}/${step}`, title: `Module ${meta.num} · Lesson ${num}`, sub: `${lesson.title} — ${STEPS[step]}` };
   save();
   setNav(null, { mid, lid, step });
   const c = { mid, lid, step, meta, mod, lesson, level, lv, num, key, adir: `audio/${mid}/${lid}` };
   c.src = (id, speed) => `${c.adir}/${id}-${speed || LS.speed}.mp3`;
-  c.head = (sub) => `<div class="stack" style="gap:4px"><span class="eyebrow">Module ${meta.num} · ${esc(meta.title)} · ${FULL[level]}</span><h1>${esc(lesson.title)}</h1>${sub ? `<p class="muted" style="font-size:15px">${sub}</p>` : ''}</div>`;
-  c.next = (cls) => (step < STEPS.length - 1 ? `<a class="btn next ${cls || ''}" href="#/l/${mid}/${lid}/${step + 1}">Next: ${STEPS[step + 1]} →</a>` : '');
+  c.head = (sub) => `<div class="stack" style="gap:6px"><div class="row spread">${crumbs([['Home', '#/'], [`Module ${meta.num}: ${meta.title}`, `#/m/${mid}`], [`Lesson ${num}`]])}
+    <a class="btn ghost exit" href="#/m/${mid}">${ICON.x} Exit lesson</a></div>
+    <span class="eyebrow">Lesson ${num} of ${mod.lessons.length} · ${FULL[level]} · Step ${step + 1}: ${STEPS[step]}</span><h1>${esc(lesson.title)}</h1>${sub ? `<p class="muted" style="font-size:15px">${sub}</p>` : ''}</div>`;
+  const nx = !REAL && step === 3 ? 5 : step + 1;
+  c.next = (cls) => (step < STEPS.length - 1 ? `<a class="btn next ${cls || ''}" href="#/l/${mid}/${lid}/${nx}">Next: ${STEPS[nx]} →</a>` : '');
   [stepListen, stepRead, stepPhrases, stepDrills, stepClip, stepWrap][step](c);
 }
 const speakerLabel = (c, s) => (s === 'you' ? 'You' : c.lesson.staff.label);
@@ -384,6 +498,7 @@ function bindSpeed(root) {
     if (!b) return;
     LS.speed = b.dataset.speed;
     $$('[data-speed]', root).forEach((x) => x.setAttribute('aria-pressed', x === b));
+    respeed();
   });
 }
 
@@ -394,16 +509,16 @@ function stepListen(c) {
       <div class="card key"><span class="eyebrow quiet">The dialogue · ${c.lv.dialogue.length} lines</span>
         <div class="chips">${c.lv.dialogue.map((l, i) => `<span class="chip ${l.s}" data-i="${i}">${esc(speakerLabel(c, l.s))}</span>`).join('')}</div>
         ${speedControl()}
-        <button type="button" class="btn red block play-all">${ICON.play} Play the dialogue</button></div>
+        <button type="button" class="btn red block play-all" data-label="Play the dialogue">${ICON.play} Play the dialogue</button></div>
       <div class="card gist"><span class="eyebrow quiet">Gist check</span><p class="q">${esc(g.q)}</p></div>
     </section><aside>
       <div class="card note"><span class="eyebrow quiet">Why listen blind?</span><p>The goal is whole sentences at natural speed. Reading first trains your eyes; this trains your ears. Guessing is fine.</p></div>
       ${c.next()}</aside></div>`;
   bindSpeed(app);
-  $('.play-all').addEventListener('click', () => {
+  $('.play-all').addEventListener('click', () => playAll(() => {
     $$('.chip').forEach((x) => x.classList.remove('heard'));
-    play(c.lv.dialogue.map((l, i) => [c.src(l.id), $(`.chip[data-i="${i}"]`)]), (el) => el.classList.add('heard'));
-  });
+    return c.lv.dialogue.map((l, i) => [() => c.src(l.id), $(`.chip[data-i="${i}"]`)]);
+  }, (el) => el.classList.add('heard')));
   const box = $('.gist');
   mcq(box, g, (ok) => { LS.gist = ok; feedback(box, ok, `<span>${esc(g.why || '')}</span>`); box.insertAdjacentHTML('beforeend', c.next()); });
 }
@@ -411,28 +526,28 @@ function stepListen(c) {
 function stepRead(c) {
   const flagId = (l) => `${c.key}:${l.id}`;
   app.innerHTML = `<div class="lesson"><section>
-      ${c.head('Tap any word for its meaning. Translations stay hidden until you ask.' + (c.level === 'hard' ? ' On Hard, word taps count as hints.' : ''))}
+      ${c.head('Tap any word for its meaning. Translations stay hidden until you ask. If a line sounds wrong in real life, press Feels off? to save it for correction.' + (c.level === 'hard' ? ' On Hard, word taps count as hints.' : ''))}
       <div class="dialogue">${c.lv.dialogue.map((l) => `<div class="line ${l.s}" data-id="${l.id}">
         <span class="avatar">${esc(speakerLabel(c, l.s))}</span>
         <div class="bubble"><p class="ms" lang="ms">${glossHTML(l.ms)}</p><p class="en" hidden>${esc(l.en)}</p>
           <div class="tools"><button type="button" class="iconbtn play-line" aria-label="Play line">${ICON.play}</button>
             <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>
-            <button type="button" class="iconbtn plain flag" aria-label="Flag: feels off" aria-pressed="${!!S.flags[flagId(l)]}" title="Feels off?">${ICON.flag}</button></div>
+            ${flagBtn(S.flags[flagId(l)])}</div>
         </div></div>`).join('')}</div>
     </section><aside>
       <div class="card key"><span class="eyebrow quiet">Audio</span>
-        <div class="seg wide" role="group" aria-label="Audio source"><button type="button" aria-pressed="true">Learning voice</button><button type="button" aria-pressed="false" disabled title="No matching real clip for these lines yet">Real Malay</button></div>
+        <div class="seg wide" role="group" aria-label="Audio source"><button type="button" aria-pressed="true">Learning voice</button><button type="button" aria-pressed="false" disabled title="Coming soon">Real Malay · soon</button></div>
         ${speedControl()}
         <label class="check"><input type="checkbox" class="auto" ${LS.auto ? 'checked' : ''}> Auto-play next line</label>
-        <button type="button" class="btn red block play-all">${ICON.play} Play whole dialogue</button>
-        <span class="small muted">Real Malay: no clip matches these lines yet. Real clips appear in step 5 once confirmed.</span></div>
+        <button type="button" class="btn red block play-all" data-label="Play whole dialogue">${ICON.play} Play whole dialogue</button>
+        <span class="small muted">Real Malay clips of real speakers are coming soon.</span></div>
       ${c.lesson.notes.map((n) => `<div class="card note"><span class="eyebrow quiet">Colloquial note · ${esc(n.title)}</span><p>${n.body}</p></div>`).join('')}
       ${c.next()}</aside></div>`;
   bindSpeed(app);
   const lines = c.lv.dialogue, rowOf = (l) => $(`.line[data-id="${l.id}"]`);
-  const from = (i, all) => play((all ? lines.slice(i) : [lines[i]]).map((l) => [c.src(l.id), rowOf(l)]));
+  const from = (i, all) => play((all ? lines.slice(i) : [lines[i]]).map((l) => [() => c.src(l.id), rowOf(l)]), null, 0, all ? 'all' : null);
   $('.auto').addEventListener('change', (e) => { LS.auto = e.target.checked; });
-  $('.play-all').addEventListener('click', () => from(0, true));
+  $('.play-all').addEventListener('click', () => playAll(() => lines.map((l) => [() => c.src(l.id), rowOf(l)])));
   $('.dialogue').addEventListener('click', (e) => {
     const row = e.target.closest('.line');
     if (!row) return;
@@ -445,7 +560,7 @@ function stepRead(c) {
       const id = flagId(l);
       if (S.flags[id]) delete S.flags[id];
       else S.flags[id] = { ms: l.ms, en: l.en, where: `Module ${c.meta.num} · ${c.lesson.title} · ${FULL[c.level]} · line ${l.id}`, at: Date.now() };
-      fl.setAttribute('aria-pressed', !!S.flags[id]);
+      setFlagBtn(fl, !!S.flags[id]);
       save();
     }
   });
@@ -457,7 +572,7 @@ function stepPhrases(c) {
       <p class="ms" lang="ms">${glossHTML(p.ms)}</p>
       <div class="row"><button type="button" class="iconbtn" data-sp="normal" aria-label="Play">${ICON.play}</button>
         <button type="button" class="iconbtn" data-sp="slow" aria-label="Play slowly">${ICON.slow}</button>
-        <button type="button" class="link show" aria-expanded="false">Show meaning</button></div>
+        <button type="button" class="link show" aria-expanded="false">Show meaning</button>${flagBtn(S.flags[`${c.lesson.id}:${pid}`])}</div>
       <div class="stack more" hidden><p class="en">${esc(p.en)}</p>${p.note ? `<p class="small muted">${esc(p.note)}</p>` : ''}</div></article>`; }).join('')}</div>
     <div class="row" style="justify-content:flex-end">${c.next()}</div></section>`;
   $('.phrases').addEventListener('click', (e) => {
@@ -465,6 +580,14 @@ function stepPhrases(c) {
     if (!card) return;
     const sp = e.target.closest('[data-sp]');
     if (sp) play([[c.src(card.dataset.id, sp.dataset.sp), sp]]);
+    const fl = e.target.closest('.flag');
+    if (fl) {
+      const pid = card.dataset.id, p = c.lesson.phrases[pid], id = `${c.lesson.id}:${pid}`;
+      if (S.flags[id]) delete S.flags[id];
+      else S.flags[id] = { ms: p.ms, en: p.en, where: `Module ${c.meta.num} · ${c.lesson.title} · key phrase ${pid}`, at: Date.now() };
+      setFlagBtn(fl, !!S.flags[id]);
+      save();
+    }
     const sh = e.target.closest('.show');
     if (sh) { const m = $('.more', card); m.hidden = !m.hidden; sh.textContent = m.hidden ? 'Show meaning' : 'Hide meaning'; sh.setAttribute('aria-expanded', !m.hidden); }
   });
@@ -615,6 +738,12 @@ function stepDrills(c) {
 }
 
 async function stepClip(c) {
+  if (!REAL) {
+    app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head()}
+      <div class="card"><span class="eyebrow quiet">Real clip</span><h2>Coming soon</h2><p class="muted">Short clips of real people speaking will appear here in a later version.</p></div>
+      <div class="row" style="justify-content:flex-end">${c.next()}</div></section>`;
+    return;
+  }
   const all = (c.mod.clips || []).map(clipOf).filter((k) => k.use === c.lid);
   const ok = all.filter((k) => k.status === 'confirmed'), waiting = all.filter((k) => k.status === 'candidate').length;
   app.innerHTML = `<section class="stack" style="gap:18px; max-width:860px; width:100%; align-self:center">${c.head('Real speech is faster and messier than the learning voice. Catching a few words is a win.')}
@@ -631,11 +760,13 @@ async function stepClip(c) {
 function stepWrap(c) {
   const added = c.lv.phrases.filter((pid) => { const p = c.lesson.phrases[pid]; return addReview({ id: `${c.lesson.id}:${pid}`, ms: p.ms, en: p.en, audio: `${c.adir}/${pid}-normal.mp3` }); }).length;
   const d = LS.drill, right = d ? d.results.filter(Boolean).length : null;
+  touchDay();
+  const firstTime = !S.done[c.key];
   S.done[c.key] = { at: Date.now(), right, total: d ? d.results.length : null, hints: SES.hints };
   save();
   const nextL = c.mod.lessons[c.num];
   app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head()}
-    <div class="card key"><span class="eyebrow">Lesson done · ${FULL[c.level]}</span><h2>Siap! Bagus.</h2>
+    <div class="card key"><span class="eyebrow">Lesson done · ${FULL[c.level]}</span><h2>Siap! Bagus.</h2>${firstTime ? `<p class="starline">${ICON.star} Star earned for ${FULL[c.level]}</p>` : ''}
       <div class="row">${right !== null ? `<span class="pill">Drills ${right}/${d.results.length}</span>` : '<span class="pill yellow">Drills skipped</span>'}
         ${LS.gist !== null ? `<span class="pill ${LS.gist ? '' : 'red'}">Gist ${LS.gist ? 'right' : 'missed'}</span>` : ''}
         ${c.level === 'hard' ? `<span class="pill yellow">${SES.hints} word hint${SES.hints === 1 ? '' : 's'}</span>` : ''}</div>
@@ -656,13 +787,16 @@ async function viewFinale(mid) {
   const ok = clips.filter((k) => k.status === 'confirmed');
   const best = S.tests[`${mid}:${level}`];
   app.innerHTML = `<section class="stack" style="gap:18px; max-width:860px; width:100%; align-self:center">
-    <div class="stack" style="gap:4px"><span class="eyebrow">Module ${meta.num} · ${esc(meta.title)} · ${FULL[level]}</span><div class="row spread"><h1>${esc(mod.finale.title)}</h1>${levelSwitch(mid)}</div></div>
+    <div class="stack" style="gap:6px"><div class="row spread">${crumbs([['Home', '#/'], [`Module ${meta.num}: ${meta.title}`, `#/m/${mid}`], ['Finale']])}
+      <a class="btn ghost exit" href="#/m/${mid}">${ICON.x} Exit finale</a></div>
+      <span class="eyebrow">Module ${meta.num} · Finale · ${FULL[level]}</span><div class="row spread"><h1>${esc(mod.finale.title)}</h1>${levelSwitch(mid)}</div></div>
     <div class="stack clips" style="gap:18px"></div>
     <div class="stack test" style="gap:14px"><div class="card key"><span class="eyebrow">Module test</span><h2>${mod.finale.testSize} questions from all ${mod.lessons.length} lessons</h2>
       <p class="muted">Listening and reading, at ${FULL[level]}. Results are saved but nothing ever locks.${best ? ` Best so far: ${best.best}/${best.total}.` : ''}</p>
       <div class="row"><button type="button" class="btn red start">Start the test</button><a class="btn ghost" href="#/m/${mid}">Back to module</a></div></div></div></section>`;
   const host = $('.clips');
-  if (!ok.length) host.innerHTML = `<div class="card"><span class="eyebrow quiet">Real conversation</span><h2>No confirmed finale clip yet</h2><p class="muted">${clips.length ? `A candidate is waiting in <a href="#/clips">Clip review</a>.` : 'None found yet.'} The test below works without it.</p></div>`;
+  if (!REAL) host.hidden = true;
+  else if (!ok.length) host.innerHTML = `<div class="card"><span class="eyebrow quiet">Real conversation</span><h2>No confirmed finale clip yet</h2><p class="muted">${clips.length ? `A candidate is waiting in <a href="#/clips">Clip review</a>.` : 'None found yet.'} The test below works without it.</p></div>`;
   else for (const k of ok) await clipBlock(host, k, level);
   $('.start').addEventListener('click', async () => {
     const lessons = await Promise.all(mod.lessons.map((l) => getLesson(mid, l.id)));
@@ -671,6 +805,7 @@ async function viewFinale(mid) {
     const items = shuffle(pool).slice(0, mod.finale.testSize);
     runDrills($('.test'), items, { i: 0, results: [] }, (st) => {
       const right = st.results.filter(Boolean).length, k = `${mid}:${level}`, old = S.tests[k];
+      touchDay();
       S.tests[k] = { best: Math.max(right, old ? old.best : 0), total: items.length, at: Date.now() };
       save();
       $('.test').innerHTML = `<div class="card key"><span class="eyebrow">Test result · ${FULL[level]}</span><p class="score">${right}/${items.length}</p>
@@ -696,7 +831,7 @@ function viewReview(practiseAll) {
       app.innerHTML = `${head}<div class="card key empty reviewcard"><span class="eyebrow">${total ? 'Session done' : 'Nothing due'}</span>
         <h2>${all.length ? `${Object.keys(S.review).length} items in your queue` : 'Your queue is empty'}</h2>
         <p class="muted">${all.length ? (dueItems().length ? `${dueItems().length} still due.` : `Next one is due ${days <= 1 ? 'within a day' : `in ${days} days`}.`) : 'Finish a lesson and its key phrases land here. Sentences you miss in drills come here too.'}</p>
-        <div class="row">${all.length ? '<button type="button" class="btn ghost all">Practise everything anyway</button>' : ''}<a class="btn" href="#/">Course map</a></div></div>`;
+        <div class="row">${all.length ? '<button type="button" class="btn ghost all">Practise everything anyway</button>' : ''}<a class="btn" href="#/">Home</a></div></div>`;
       const b = $('.all');
       if (b) b.addEventListener('click', () => viewReview(true));
       return;
@@ -712,7 +847,7 @@ function viewReview(practiseAll) {
     $('.big-play').addEventListener('click', sayIt);
     $('.show').addEventListener('click', () => { $('.answer').hidden = false; $('.show').hidden = true; $('.miss').hidden = $('.got').hidden = false; $('.got').focus(); });
     const grade = (ok) => {
-      queue.shift(); seen++;
+      queue.shift(); seen++; touchDay();
       if (ok) { r.box = Math.min(r.box + 1, BOXES.length - 1); r.due = Date.now() + BOXES[r.box] * DAY; }
       else { r.box = 0; r.due = Date.now() + DAY; queue.push(id); }
       save();
@@ -751,6 +886,10 @@ function copyOut(btn) {
 /* ---------- views: clip review ---------- */
 async function viewClips() {
   setNav('clips');
+  if (!REAL) {
+    app.innerHTML = `<section class="stack"><h1>Clip review</h1></section><div class="card empty"><h2>Coming soon</h2><p class="muted">Real YouTube clips, and this page for checking them, are switched off for now.</p><a class="btn" href="#/">Home</a></div>`;
+    return;
+  }
   const mods = COURSE.modules.filter((m) => m.ready);
   const groups = await Promise.all(mods.map(async (m) => ({ m, clips: (await getModule(m.id)).clips || [] })));
   const flat = groups.flatMap((g) => g.clips.map((c) => ({ m: g.m, base: c })));
