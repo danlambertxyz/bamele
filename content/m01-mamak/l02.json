@@ -1,0 +1,105 @@
+{
+  "id": "m01-l02",
+  "title": "Customising your order",
+  "blurb": "Kurang manis, kosong, tak nak timun — getting it the way you like it.",
+  "staff": {"label": "Kak", "name": "Kakak", "voice": "f"},
+  "you": {"voice": "m"},
+  "notes": [
+    {"title": "tak nak …", "body": "<b>Tak nak</b> + thing is the everyday “I don't want …”: <i>tak nak ais</i>, <i>tak nak timun</i>. Softer than it sounds in English, especially with <b>ye</b> on the end."},
+    {"title": "kurang vs kosong", "body": "<b>Kurang manis</b> is less sugar; <b>kosong</b> (lit. “empty”) is none at all. On roti, <i>kosong</i> means plain."},
+    {"title": "… boleh?", "body": "Tack <b>boleh?</b> onto a request to ask “is that okay?”: <i>sambal asing boleh?</i>"}
+  ],
+  "phrases": {
+    "p1": {"ms": "Kurang manis.", "en": "Less sweet."},
+    "p2": {"ms": "Tak nak pedas.", "en": "I don't want it spicy.", "note": "tak nak = tidak hendak."},
+    "p3": {"ms": "Ais tak nak banyak sangat.", "en": "Not too much ice.", "note": "sangat after a word = very / too."},
+    "p4": {"ms": "Sambal asing boleh?", "en": "Can the sambal be separate?", "note": "asing = separate, on the side."},
+    "p5": {"ms": "Nak tambah telur mata?", "en": "Want to add a fried egg?", "note": "telur mata = sunny-side-up egg (lit. “eye egg”).", "v": "f"},
+    "p6": {"ms": "Telur mata je.", "en": "Just the fried egg.", "note": "je = sahaja."},
+    "p7": {"ms": "Tak nak timun ye.", "en": "No cucumber, okay."},
+    "p8": {"ms": "Kopi o ais satu, kosong.", "en": "One iced black coffee, no sugar.", "note": "o = no milk; kosong = no sugar."},
+    "p9": {"ms": "Tak nak gula langsung.", "en": "No sugar at all.", "note": "langsung after a negative = at all."},
+    "p10": {"ms": "Takpe.", "en": "It's fine / never mind.", "note": "takpe = tidak apa."},
+    "p11": {"ms": "Tak payah letak.", "en": "No need to put it in.", "note": "tak payah = no need to."},
+    "p12": {"ms": "Tambah telur?", "en": "Add an egg?", "v": "f"},
+    "p13": {"ms": "Teh o ais satu.", "en": "One iced tea without milk.", "note": "teh o = tea, no milk (it still comes sweet unless you say otherwise)."},
+    "p14": {"ms": "Saya letak asing.", "en": "I'll put it on the side.", "v": "f"}
+  },
+  "match": [["tak nak", "tidak hendak"], ["je", "sahaja"], ["takpe", "tidak apa"], ["sikit", "sedikit"], ["tau", "tahu"], ["tak payah", "tidak perlu"], ["lepas tu", "selepas itu"]],
+  "clips": [],
+  "levels": {
+    "easy": {
+      "dialogue": [
+        {"id": "e1", "s": "staff", "ms": "Bang, nak minum apa?", "en": "What do you want to drink?"},
+        {"id": "e2", "s": "you", "ms": "Teh o ais satu. Kurang manis.", "en": "One iced tea, no milk. Less sweet."},
+        {"id": "e3", "s": "staff", "ms": "Makan?", "en": "Food?"},
+        {"id": "e4", "s": "you", "ms": "Nasi lemak satu. Tak nak pedas.", "en": "One nasi lemak. I don't want it spicy."},
+        {"id": "e5", "s": "staff", "ms": "Tambah telur?", "en": "Add an egg?"},
+        {"id": "e6", "s": "you", "ms": "Boleh. Terima kasih.", "en": "Sure. Thank you."}
+      ],
+      "gist": {"q": "How does he want his order?", "options": ["Tea less sweet, nasi lemak not spicy", "Tea with no ice, nasi lemak extra spicy", "Coffee less sweet, no food"], "answer": 0, "why": "Kurang manis for the tea, tak nak pedas for the nasi lemak."},
+      "phrases": ["p1", "p2", "p12", "p13"],
+      "exercises": [
+        {"type": "choose", "ref": "e4", "options": ["One nasi lemak. I don't want it spicy.", "One nasi lemak. Extra spicy.", "No nasi lemak. Just a drink."], "answer": 0},
+        {"type": "choose", "ref": "e5", "options": ["Add an egg?", "Is the egg finished?", "Do you want one more?"], "answer": 0},
+        {"type": "gap", "ref": "e2", "word": "manis"},
+        {"type": "dictation", "ref": "e4"},
+        {"type": "ladder", "ref": "e2"},
+        {"type": "reply", "prompt": "Tambah telur?", "options": ["Boleh. Terima kasih.", "Kurang manis.", "Teh o ais satu."], "answer": 0, "why": "She's offering an extra egg; “Boleh” accepts it."},
+        {"type": "order", "ref": "e4"},
+        {"type": "match"}
+      ]
+    },
+    "medium": {
+      "dialogue": [
+        {"id": "m1", "s": "staff", "ms": "Bang, nak order apa?", "en": "What would you like to order?"},
+        {"id": "m2", "s": "you", "ms": "Teh o ais limau satu, kurang manis. Ais tak nak banyak sangat.", "en": "One iced lime tea, less sweet. Not too much ice."},
+        {"id": "m3", "s": "staff", "ms": "Okay. Makan?", "en": "Okay. Food?"},
+        {"id": "m4", "s": "you", "ms": "Nasi lemak satu. Sambal asing boleh?", "en": "One nasi lemak. Can the sambal be separate?"},
+        {"id": "m5", "s": "staff", "ms": "Boleh. Nak tambah telur mata ke ayam goreng?", "en": "Sure. Want to add a fried egg or fried chicken?"},
+        {"id": "m6", "s": "you", "ms": "Telur mata je. Tak nak timun ye.", "en": "Just the fried egg. No cucumber, okay."},
+        {"id": "m7", "s": "staff", "ms": "Okay, sambal asing, tambah telur mata, tak nak timun. Air tadi kurang manis kan?", "en": "Okay, sambal separate, add a fried egg, no cucumber. The drink was less sweet, right?"},
+        {"id": "m8", "s": "you", "ms": "Ha'ah, kurang manis.", "en": "Yep, less sweet."}
+      ],
+      "gist": {"q": "Which of these did he ask for?", "options": ["Sambal on the side and no cucumber", "Extra sambal and extra cucumber", "Fried chicken instead of the egg", "A hot tea with no ice at all"], "answer": 0, "why": "Sambal asing boleh? … tak nak timun ye."},
+      "phrases": ["p1", "p3", "p4", "p5", "p6", "p7"],
+      "exercises": [
+        {"type": "choose", "ref": "m2", "options": ["One iced lime tea, less sweet, not too much ice.", "One iced lime tea, no sugar, no ice.", "One hot lime tea, extra sweet."], "answer": 0},
+        {"type": "choose", "ref": "m5", "options": ["Sure. Want to add a fried egg or fried chicken?", "Sorry, the fried egg and chicken are finished.", "Sure. It comes with a fried egg and chicken."], "answer": 0},
+        {"type": "gap", "ref": "m4", "word": "asing"},
+        {"type": "dictation", "ref": "m6"},
+        {"type": "ladder", "ref": "m7"},
+        {"type": "reply", "prompt": "Air tadi kurang manis kan?", "options": ["Ha'ah, kurang manis.", "Telur mata je.", "Sambal asing boleh?"], "answer": 0, "why": "She's double-checking with “kan?”; “Ha'ah” is the casual yes."},
+        {"type": "order", "ref": "m6"},
+        {"type": "match"}
+      ]
+    },
+    "hard": {
+      "dialogue": [
+        {"id": "h1", "s": "staff", "ms": "Bang, dah boleh order?", "en": "Ready to order?"},
+        {"id": "h2", "s": "you", "ms": "Dah. Kopi o ais satu, kosong. Betul-betul kosong tau, tak nak gula langsung.", "en": "Yes. One iced black coffee, no sugar. Really none, okay, no sugar at all."},
+        {"id": "h3", "s": "staff", "ms": "Okay, kopi o ais kosong. Tapi kopi kita memang pekat sikit, pahit tau. Okay ke?", "en": "Okay, iced black coffee, no sugar. But our coffee is quite strong, it's bitter, you know. Is that okay?"},
+        {"id": "h4", "s": "you", "ms": "Takpe, saya memang suka pahit.", "en": "That's fine, I actually like it bitter."},
+        {"id": "h5", "s": "staff", "ms": "Okay. Makan apa?", "en": "Okay. What are you eating?"},
+        {"id": "h6", "s": "you", "ms": "Nasi lemak biasa satu. Sambal tu pedas sangat tak?", "en": "One regular nasi lemak. Is that sambal very spicy?"},
+        {"id": "h7", "s": "staff", "ms": "Pedas jugak lah. Kalau tak tahan, saya letak asing.", "en": "It's fairly spicy. If you can't take it, I'll put it on the side."},
+        {"id": "h8", "s": "you", "ms": "Ha, letak asing lah. Lepas tu tak nak timun, ganti dengan telur rebus boleh?", "en": "Yeah, put it on the side. And no cucumber — can you swap it for a boiled egg?"},
+        {"id": "h9", "s": "staff", "ms": "Ganti tak boleh lah bang, tapi tambah telur seringgit je.", "en": "Can't swap it, but adding an egg is only one ringgit."},
+        {"id": "h10", "s": "you", "ms": "Okay lah, tambah je. Timun tu tak payah letak.", "en": "Okay then, just add it. No need to put the cucumber in."},
+        {"id": "h11", "s": "staff", "ms": "Okay, siap. Duduk dulu, nanti saya hantar.", "en": "Okay, done. Have a seat, I'll bring it over."}
+      ],
+      "gist": {"q": "What happened when he asked to swap the cucumber for an egg?", "options": ["No swap, but he could add an egg for one ringgit", "She swapped it for free", "She said eggs were sold out", "He decided to keep the cucumber"], "answer": 0, "why": "Ganti tak boleh … tapi tambah telur seringgit je."},
+      "phrases": ["p8", "p9", "p10", "p11", "p14", "p1"],
+      "exercises": [
+        {"type": "choose", "ref": "h3", "options": ["Our coffee is quite strong and bitter — is that okay?", "Our coffee is weak today — is that okay?", "We've run out of coffee — is tea okay?", "Our coffee already has sugar in it — is that okay?"], "answer": 0},
+        {"type": "choose", "ref": "h9", "options": ["Can't swap, but adding an egg is only one ringgit.", "Can swap, but it costs one ringgit more.", "Can't add an egg; there's only one left.", "The swap is free today."], "answer": 0},
+        {"type": "gap", "ref": "h7", "word": "tahan"},
+        {"type": "dictation", "ref": "h4"},
+        {"type": "ladder", "ref": "h8"},
+        {"type": "reply", "prompt": "Tapi kopi kita memang pekat sikit, pahit tau. Okay ke?", "options": ["Takpe, saya memang suka pahit.", "Tak payah letak.", "Tak nak gula langsung."], "answer": 0, "why": "She's warning you; “Takpe” waves the worry away."},
+        {"type": "order", "ref": "h4"},
+        {"type": "match"}
+      ]
+    }
+  }
+}

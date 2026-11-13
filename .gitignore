@@ -1,0 +1,20 @@
+# Claude Code / local working notes (kept out of the public repo)
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+docs/spec.md
+
+# Python tooling
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secrets (none are needed, but never commit them)
+.env
+.env.*

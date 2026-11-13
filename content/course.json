@@ -1,0 +1,14 @@
+{
+  "modules": [
+    {"id": "m01", "num": 1, "dir": "m01-mamak", "title": "Mamak & kopitiam", "blurb": "Ordering with tweaks — kurang manis, tak nak ais, makan sini or tapau.", "ready": true},
+    {"id": "m02", "num": 2, "title": "When things go wrong", "blurb": "Wrong order, sold out, what's in it, how pedas is pedas.", "ready": false},
+    {"id": "m03", "num": 3, "title": "Grab & getting around", "blurb": "Pickup confusion, landmarks, belok kiri, traffic chat.", "ready": false},
+    {"id": "m04", "num": 4, "title": "Paying & the bill", "blurb": "Splitting, DuitNow QR, card or cash, wrong change.", "ready": false},
+    {"id": "m05", "num": 5, "title": "Small talk", "blurb": "Drivers, neighbours, colleagues — hujan, jam, weekend plans.", "ready": false},
+    {"id": "m06", "num": 6, "title": "Pasar & shops", "blurb": "Weights, prices, gentle bargaining, asking for another.", "ready": false},
+    {"id": "m07", "num": 7, "title": "Condo & deliveries", "blurb": "Guardhouse, management office, riders on the phone.", "ready": false},
+    {"id": "m08", "num": 8, "title": "Phone calls & voice notes", "blurb": "Fast speech, no faces: bookings and rescheduling.", "ready": false},
+    {"id": "m09", "num": 9, "title": "Clinic & pharmacy", "blurb": "Describing symptoms, following instructions.", "ready": false},
+    {"id": "m10", "num": 10, "title": "Colloquial toolkit", "blurb": "lah, kan, je, pun — and every tak, nak, dah, kat.", "ready": false, "woven": true}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "m01",
+  "title": "Mamak & kopitiam",
+  "lessons": [
+    {"id": "l01", "file": "l01.json", "title": "Ordering at the mamak", "blurb": "Drinks first, then food — and what to do when the roti has run out."},
+    {"id": "l02", "file": "l02.json", "title": "Customising your order", "blurb": "Kurang manis, kosong, tak nak timun — getting it the way you like it."},
+    {"id": "l03", "file": "l03.json", "title": "Makan sini ke bungkus?", "blurb": "Eating in or taking away — bungkus, tapau and the drink in a bag."},
+    {"id": "l04", "file": "l04.json", "title": "Adding to your order", "blurb": "Tambah satu lagi — calling the kakak back for more."},
+    {"id": "l05", "file": "l05.json", "title": "At the nasi campur counter", "blurb": "Pointing, choosing lauk, and how much kuah you really want."}
+  ],
+  "finale": {
+    "title": "Finale: a real mamak",
+    "blurb": "A longer real clip, then a test drawn from all five lessons.",
+    "testSize": 12
+  },
+  "clips": [
+    {
+      "id": "m01-c1", "yt": "TqRelsd1Aho", "start": 0, "end": 120, "status": "candidate", "use": "finale",
+      "title": "“BOSS! Teh Tarik satu” — Only In Malaysia @Mamak (TV3 Malaysia)",
+      "listenFor": "Customers calling out orders to mamak staff — listen for item + number (teh tarik satu) and how staff are addressed (boss).",
+      "timesVerified": false,
+      "questions": {
+        "easy": [{"q": "Did you hear anyone order a drink using “[drink] satu”?", "self": true}],
+        "medium": [{"q": "How do customers address the staff? Did you catch “boss”, “bang” or something else?", "self": true}],
+        "hard": [{"q": "Write down one full order you understood, word for word, then replay to check it.", "self": true}]
+      }
+    },
+    {
+      "id": "m01-c2", "yt": "3U7nUGKYsoM", "start": 0, "end": 30, "status": "candidate", "use": "l01",
+      "title": "Night vlog — dinner time di kedai mamak (Fitri's Diary)",
+      "listenFor": "Any moment of ordering at the table: drinks first, then food.",
+      "timesVerified": false,
+      "questions": {
+        "easy": [{"q": "Did you catch the name of at least one drink or dish?", "self": true}],
+        "medium": [{"q": "Did you catch one complete order (item + number or tweak)?", "self": true}],
+        "hard": [{"q": "Could you follow the order without replaying? Note any word you missed.", "self": true}]
+      }
+    },
+    {
+      "id": "m01-c3", "yt": "0qtVSxXPBzw", "start": 0, "end": 30, "status": "candidate", "use": "l05",
+      "title": "Restoran Melayu macam kedai mamak — Sri Has review (FuyohhTV)",
+      "listenFor": "Food-review talk about dishes and lauk — listen for dish names and words like sedap, pedas, kuah.",
+      "timesVerified": false,
+      "questions": {
+        "easy": [{"q": "Did you recognise any dish name?", "self": true}],
+        "medium": [{"q": "Did you catch one describing word (sedap, pedas, manis…)?", "self": true}],
+        "hard": [{"q": "Summarise in one English sentence what the speaker thinks of the food.", "self": true}]
+      }
+    }
+  ]
+}
