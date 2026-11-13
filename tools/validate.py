@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check BaMaLe content: glossary coverage, exercise refs, audio files.
+"""Check BaMeLe content: glossary coverage, exercise refs, audio files.
 
 Usage: python tools/validate.py [--no-audio]
 """

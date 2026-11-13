@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate BaMaLe audio with Microsoft ms-MY neural voices via edge-tts.
+"""Generate BaMeLe audio with Microsoft ms-MY neural voices via edge-tts.
 
 Writes, skipping files that already exist:
   audio/<module>/<lesson>/<id>-normal.mp3 and <id>-slow.mp3  (lines, phrases)

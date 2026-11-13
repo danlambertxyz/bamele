@@ -1,4 +1,4 @@
-# BaMaLe
+# BaMeLe
 
 A small personal web app for learning everyday spoken Malaysian Malay, weighted towards listening. Plain HTML, CSS and JavaScript — no backend, no build step, no tracking.
 

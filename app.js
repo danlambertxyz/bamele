@@ -1,4 +1,4 @@
-/* BaMaLe — vanilla JS, no build step. Content lives in /content/*.json. */
+/* BaMeLe — vanilla JS, no build step. Content lives in /content/*.json. */
 'use strict';
 
 /* ---------- helpers ---------- */
@@ -29,7 +29,13 @@ const ICON = {
 };
 
 /* ---------- progress (localStorage, single key) ---------- */
-const KEY = 'bamale.progress';
+const KEY = 'bamele.progress';
+// The app was briefly named "BaMaLe": carry progress over from the old key once.
+try {
+  const OLD = 'bama' + 'le.progress';
+  if (!localStorage.getItem(KEY) && localStorage.getItem(OLD)) localStorage.setItem(KEY, localStorage.getItem(OLD));
+  localStorage.removeItem(OLD);
+} catch (e) { /* storage blocked */ }
 const S = Object.assign({ v: 1, levels: {}, done: {}, tests: {}, review: {}, flags: {}, clipEdits: {}, days: [], last: null }, (() => {
   try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
 })());
