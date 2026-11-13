@@ -257,6 +257,13 @@ const lessonStars = (mid, lid) => `<span class="stars">${LEVELS.map((l) => {
   return `<span class="star ${on ? 'on' : ''}" title="${FULL[l]}: ${on ? 'finished' : 'not yet'}">${ICON.star}<span class="sr">${FULL[l]} ${on ? 'finished' : 'not finished'}</span></span>`;
 }).join('')}</span>`;
 const crumbs = (parts) => `<nav class="crumbs" aria-label="Breadcrumb">${parts.map(([t, h]) => (h ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`)).join('<span aria-hidden="true">›</span>')}</nav>`;
+/** Malay used in the interface itself gets a hover / focus explainer. */
+const tip = (text, note) => `<span class="tip" tabindex="0" data-tip="${esc(note)}">${text}<span class="sr"> (${esc(note)})</span></span>`;
+const ADDRESS = {
+  Abg: 'Abg = abang, “older brother”. How you address a man serving you; said as “bang”.',
+  Kak: 'Kak = kakak, “older sister”. How you address a woman serving you.',
+};
+const staffHTML = (label) => (ADDRESS[label] ? tip(esc(label), ADDRESS[label]) : esc(label));
 const flagBtn = (on) => `<button type="button" class="flagbtn flag" aria-pressed="${!!on}">${ICON.flag}<span>${on ? 'Flagged' : 'Feels off?'}</span></button>`;
 function setFlagBtn(btn, on) { btn.setAttribute('aria-pressed', on); $('span', btn).textContent = on ? 'Flagged' : 'Feels off?'; }
 
@@ -274,7 +281,7 @@ document.addEventListener('click', (e) => {
   route();
 });
 function feedback(el, ok, html) {
-  el.insertAdjacentHTML('beforeend', `<div class="fb ${ok ? '' : 'bad'}" role="status"><b class="verdict">${ok ? 'Betul!' : 'Not quite.'}</b>${html || ''}</div>`);
+  el.insertAdjacentHTML('beforeend', `<div class="fb ${ok ? '' : 'bad'}" role="status"><b class="verdict">${ok ? tip('Betul!', 'Betul = correct') : 'Not quite.'}</b>${html || ''}</div>`);
 }
 /** Multiple choice. `q.options[q.answer]` is correct; options are shuffled on screen. */
 function mcq(el, q, done) {
@@ -420,8 +427,9 @@ async function viewCourse() {
   }
   const pct = starTotal ? Math.round((stars / starTotal) * 100) : 0, st = streak();
   app.innerHTML = `<section class="hero-row">
-      <div class="stack"><h1 class="hero">Jom, sambung belajar.</h1>
-        <p class="lede">Pick any module. Everything is open — set the difficulty per module and change it whenever.</p></div>
+      <div class="stack"><h1 class="hero">${tip('Jom, sambung belajar.', 'Jom = come on, let’s go. Sambung belajar = carry on learning.')}</h1>
+        <p class="lede">A simple tool for quick Malay learning and practice.</p>
+        <p class="muted">Pick any module. Everything is open — set the difficulty per module and change it whenever.</p></div>
       <a class="card key continue" href="${cont.href}"><span class="eyebrow">${cont.fresh ? 'Start here' : 'Continue'}</span>
         <h2>${esc(cont.title)}</h2><span class="muted" style="font-size:15px">${esc(cont.sub)}</span>
         <span class="btn">${cont.fresh ? 'Start' : 'Resume'} →</span></a>
@@ -488,7 +496,7 @@ async function viewLesson(mid, lid, step) {
   c.next = (cls) => (step < STEPS.length - 1 ? `<a class="btn next ${cls || ''}" href="#/l/${mid}/${lid}/${nx}">Next: ${STEPS[nx]} →</a>` : '');
   [stepListen, stepRead, stepPhrases, stepDrills, stepClip, stepWrap][step](c);
 }
-const speakerLabel = (c, s) => (s === 'you' ? 'You' : c.lesson.staff.label);
+const speakerHTML = (c, s) => (s === 'you' ? 'You' : staffHTML(c.lesson.staff.label));
 function speedControl() {
   return `<div class="speed" role="group" aria-label="Speed"><button type="button" data-speed="slow" aria-pressed="${LS.speed === 'slow'}">Slow 0.75×</button><button type="button" data-speed="normal" aria-pressed="${LS.speed === 'normal'}">Normal</button></div>`;
 }
@@ -507,7 +515,7 @@ function stepListen(c) {
   app.innerHTML = `<div class="lesson"><section>
       ${c.head('Listen first — the text stays hidden. Replay as often as you like, then answer.')}
       <div class="card key"><span class="eyebrow quiet">The dialogue · ${c.lv.dialogue.length} lines</span>
-        <div class="chips">${c.lv.dialogue.map((l, i) => `<span class="chip ${l.s}" data-i="${i}">${esc(speakerLabel(c, l.s))}</span>`).join('')}</div>
+        <div class="chips">${c.lv.dialogue.map((l, i) => `<span class="chip ${l.s}" data-i="${i}">${speakerHTML(c, l.s)}</span>`).join('')}</div>
         ${speedControl()}
         <button type="button" class="btn red block play-all" data-label="Play the dialogue">${ICON.play} Play the dialogue</button></div>
       <div class="card gist"><span class="eyebrow quiet">Gist check</span><p class="q">${esc(g.q)}</p></div>
@@ -528,7 +536,7 @@ function stepRead(c) {
   app.innerHTML = `<div class="lesson"><section>
       ${c.head('Tap any word for its meaning. Translations stay hidden until you ask. If a line sounds wrong in real life, press Feels off? to save it for correction.' + (c.level === 'hard' ? ' On Hard, word taps count as hints.' : ''))}
       <div class="dialogue">${c.lv.dialogue.map((l) => `<div class="line ${l.s}" data-id="${l.id}">
-        <span class="avatar">${esc(speakerLabel(c, l.s))}</span>
+        <span class="avatar">${speakerHTML(c, l.s)}</span>
         <div class="bubble"><p class="ms" lang="ms">${glossHTML(l.ms)}</p><p class="en" hidden>${esc(l.en)}</p>
           <div class="tools"><button type="button" class="iconbtn play-line" aria-label="Play line">${ICON.play}</button>
             <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>
@@ -608,7 +616,7 @@ function renderExercise(el, item, done) {
     add(`<p class="q">What does this mean?</p>${listen()}`);
     mcq(el, ex, (ok) => { feedback(el, ok, answerLine()); done(ok); });
   } else if (ex.type === 'reply') {
-    add(`<p class="q">What would you say back?</p><div class="line staff"><span class="avatar">${esc(item.staff)}</span><div class="bubble"><p class="ms" lang="ms">${glossHTML(ex.prompt)}</p></div></div>`);
+    add(`<p class="q">What would you say back?</p><div class="line staff"><span class="avatar">${staffHTML(item.staff)}</span><div class="bubble"><p class="ms" lang="ms">${glossHTML(ex.prompt)}</p></div></div>`);
     mcq(el, Object.assign({ gloss: true }, ex), (ok) => { feedback(el, ok, `<span>${esc(ex.why || '')}</span>`); done(ok); });
   } else if (ex.type === 'gap') {
     const re = new RegExp(`\\b${ex.word}\\b`, 'i');
@@ -649,7 +657,7 @@ function renderExercise(el, item, done) {
       const ok = b.dataset.r !== 'no';
       $('.pick', el).remove();
       feedback(el, ok, answerLine() + (b.dataset.r === 'slow' ? '<span>Now replay it at normal speed and follow along.</span>' : ''));
-      $('.fb .verdict', el).textContent = ok ? 'Bagus!' : 'It goes into your review queue.';
+      $('.fb .verdict', el).innerHTML = ok ? tip('Bagus!', 'Bagus = good, well done') : 'It goes into your review queue.';
       done(ok);
     });
   } else if (ex.type === 'order') {
@@ -766,7 +774,7 @@ function stepWrap(c) {
   save();
   const nextL = c.mod.lessons[c.num];
   app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head()}
-    <div class="card key"><span class="eyebrow">Lesson done · ${FULL[c.level]}</span><h2>Siap! Bagus.</h2>${firstTime ? `<p class="starline">${ICON.star} Star earned for ${FULL[c.level]}</p>` : ''}
+    <div class="card key"><span class="eyebrow">Lesson done · ${FULL[c.level]}</span><h2>${tip('Siap! Bagus.', 'Siap = done, finished. Bagus = good.')}</h2>${firstTime ? `<p class="starline">${ICON.star} Star earned for ${FULL[c.level]}</p>` : ''}
       <div class="row">${right !== null ? `<span class="pill">Drills ${right}/${d.results.length}</span>` : '<span class="pill yellow">Drills skipped</span>'}
         ${LS.gist !== null ? `<span class="pill ${LS.gist ? '' : 'red'}">Gist ${LS.gist ? 'right' : 'missed'}</span>` : ''}
         ${c.level === 'hard' ? `<span class="pill yellow">${SES.hints} word hint${SES.hints === 1 ? '' : 's'}</span>` : ''}</div>
@@ -809,7 +817,7 @@ async function viewFinale(mid) {
       S.tests[k] = { best: Math.max(right, old ? old.best : 0), total: items.length, at: Date.now() };
       save();
       $('.test').innerHTML = `<div class="card key"><span class="eyebrow">Test result · ${FULL[level]}</span><p class="score">${right}/${items.length}</p>
-        <p class="muted">${right >= items.length * 0.8 ? 'Mantap. Try the next level up, or a new module.' : 'Missed sentences are in your review queue. Come back to it any time.'}</p>
+        <p class="muted">${right >= items.length * 0.8 ? `${tip('Mantap.', 'Mantap = solid, excellent (slang)')} Try the next level up, or a new module.` : 'Missed sentences are in your review queue. Come back to it any time.'}</p>
         <div class="row"><a class="btn" href="#/m/${mid}">Module page</a><a class="btn ghost" href="#/review">Review</a></div></div>`;
     });
   });

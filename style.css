@@ -267,3 +267,13 @@ textarea.out { font: 13px/1.5 ui-monospace, Menlo, monospace; min-height: 220px;
 .starline { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--green); }
 .starline svg { color: var(--yellow); stroke: var(--green); width: 22px; height: 22px; }
 .badge svg { color: #fff; }
+
+/* Hover / focus explainers for Malay used in the interface */
+.tip { position: relative; cursor: help; }
+.tip::after { content: attr(data-tip); position: absolute; left: 0; top: calc(100% + 8px); z-index: 20; width: max-content; max-width: 280px; background: var(--text); color: #fff; font: 500 13px/1.45 Inter, system-ui, sans-serif; letter-spacing: 0; text-transform: none; text-align: left; white-space: normal; padding: 8px 12px; border-radius: 8px; box-shadow: 3px 3px 0 var(--yellow); opacity: 0; visibility: hidden; pointer-events: none; }
+.tip:hover::after, .tip:focus::after { opacity: 1; visibility: visible; }
+h1 .tip, h2 .tip, .verdict .tip { text-decoration: underline dotted 2px var(--green-3); text-underline-offset: 6px; }
+.tag.tip { text-decoration: underline dotted var(--green-3); text-underline-offset: 4px; }
+.avatar .tip, .chip .tip { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 999px; }
+.foot { color: var(--muted); }
+.foot b { color: var(--green); }
