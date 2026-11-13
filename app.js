@@ -269,6 +269,8 @@ const ADDRESS = {
   Abg: 'Abg = abang, “older brother”. How you address a man serving you; said as “bang”.',
   Kak: 'Kak = kakak, “older sister”. How you address a woman serving you.',
 };
+/** Marks a line copied unchanged from an open corpus (Tatoeba). */
+const realTag = (x) => (x && x.real ? `<span class="real" title="Copied unchanged from Tatoeba, sentence ${esc(x.src.map((t) => '#' + t.slice(1)).join(', '))}">${ICON.tick} Real sentence</span>` : '');
 const staffHTML = (label) => (ADDRESS[label] ? tip(esc(label), ADDRESS[label]) : esc(label));
 
 /* ---------- small UI builders ---------- */
@@ -545,7 +547,7 @@ function stepRead(c) {
         <span class="avatar">${speakerHTML(c, l.s)}</span>
         <div class="bubble"><p class="ms" lang="ms">${glossHTML(l.ms)}</p><p class="en" hidden>${esc(l.en)}</p>
           <div class="tools"><button type="button" class="iconbtn play-line" aria-label="Play line">${ICON.play}</button>
-            <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>
+            <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>${realTag(l)}
             </div>
         </div></div>`).join('')}</div>
     </section><aside>
@@ -578,7 +580,7 @@ function stepPhrases(c) {
       <p class="ms" lang="ms">${glossHTML(p.ms)}</p>
       <div class="row"><button type="button" class="iconbtn" data-sp="normal" aria-label="Play">${ICON.play}</button>
         <button type="button" class="iconbtn" data-sp="slow" aria-label="Play slowly">${ICON.slow}</button>
-        <button type="button" class="link show" aria-expanded="false">Show meaning</button></div>
+        <button type="button" class="link show" aria-expanded="false">Show meaning</button>${realTag(p)}</div>
       <div class="stack more" hidden><p class="en">${esc(p.en)}</p>${p.note ? `<p class="small muted">${esc(p.note)}</p>` : ''}</div></article>`; }).join('')}</div>
     ${c.nav()}</section>`;
   $('.phrases').addEventListener('click', (e) => {
@@ -597,7 +599,7 @@ const EX_TITLE = { choose: 'Listen and choose', gap: 'Gap fill by ear', dictatio
 function renderExercise(el, item, done) {
   const { ex, line, level } = item, hard = level === 'hard';
   const listen = () => `<div class="row"><button type="button" class="btn red" data-play="normal">${ICON.play} Play</button>${hard ? '' : `<button type="button" class="btn ghost" data-play="slow">${ICON.slow} Slow</button>`}</div>`;
-  const answerLine = () => `<p class="ms" lang="ms">${glossHTML(line.ms)}</p><span class="muted">${esc(line.en)}</span>`;
+  const answerLine = () => `<p class="ms" lang="ms">${glossHTML(line.ms)}</p><span class="muted">${esc(line.en)}</span>${realTag(line)}`;
   el.innerHTML = `<span class="eyebrow quiet">${EX_TITLE[ex.type]}</span>`;
   el.addEventListener('click', (e) => { const b = e.target.closest('[data-play]'); if (b) play([[item.src(b.dataset.play), b]]); });
   const add = (html) => el.insertAdjacentHTML('beforeend', html);
@@ -729,7 +731,7 @@ function runDrills(host, items, state, finish) {
 function drillItems(mid, lesson, level, lid, kinds) {
   const lv = lesson.levels[level], adir = `audio/${mid}/${lid}`;
   return (kinds || ['listen', 'read']).flatMap((kind) => lv.drills[kind].map((d) => {
-    const ex = Object.assign({}, d), line = d.ms ? { ms: d.ms, en: d.en } : null;
+    const ex = Object.assign({}, d), line = d.ms ? { ms: d.ms, en: d.en, real: d.real, src: d.src } : null;
     if (d.type === 'choose') { ex.options = [d.en].concat(d.wrong); ex.answer = 0; }
     if (d.type === 'reply') { ex.options = [d.right].concat(d.wrong); ex.answer = 0; }
     return { ex, line, level, match: lesson.match, staff: lesson.staff.label, reviewId: line ? `${lesson.id}:${level}:${d.id}` : null, src: (sp) => `${adir}/${d.id}-${sp}.mp3` };

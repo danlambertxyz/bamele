@@ -1,0 +1,832 @@
+{
+ "id": "m05-l05",
+ "title": "Kau rasa?",
+ "blurb": "Saying what you think — and that you don't really mind.",
+ "staff": {
+  "label": "Adi",
+  "name": "Adi, a friend",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "gila and betul",
+   "body": "After an adjective, <b>gila</b> (crazy) and <b>betul</b> (really) are intensifiers: <i>best gila</i>, <i>bising betul</i>. Very common, very casual."
+  },
+  {
+   "title": "tak kisah",
+   "body": "<b>Aku tak kisah</b> — I don't mind, either way is fine. <b>Malas aku nak kisah</b> is stronger: I can't be bothered to care."
+  },
+  {
+   "title": "camtu, camna",
+   "body": "Squeezed forms of <i>macam itu</i> (like that) and <i>macam mana</i> (how): <b>camtu</b>, <b>camna</b>."
+  }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Aku suka duduk kat sini.",
+   "en": "I like sitting here.",
+   "src": [
+    "t10730605"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p2": {
+   "ms": "Aircond ni bising betul.",
+   "en": "This aircon is really noisy.",
+   "src": [
+    "t10729127"
+   ],
+   "real": true,
+   "note": "betul after an adjective = really."
+  },
+  "p3": {
+   "ms": "Aku tak kisah.",
+   "en": "I don't mind.",
+   "src": [
+    "t9714147"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p4": {
+   "ms": "Kau rasa?",
+   "en": "What do you think?",
+   "src": [
+    "t11187984"
+   ],
+   "real": true,
+   "note": "Literally “you feel?”"
+  },
+  "p5": {
+   "ms": "Dua-dua best gila!",
+   "en": "Both are amazing!",
+   "src": [
+    "t11516638"
+   ],
+   "real": true,
+   "note": "best = great (from English); gila = crazy.",
+   "v": "m"
+  },
+  "p6": {
+   "ms": "Betul ke itu?",
+   "en": "Is that true?",
+   "src": [
+    "t9500986"
+   ],
+   "real": true
+  },
+  "p7": {
+   "ms": "Aku bukan selalu betul.",
+   "en": "I'm not always right.",
+   "src": [
+    "t10727760"
+   ],
+   "real": true,
+   "note": "bukan selalu = not always.",
+   "v": "m"
+  },
+  "p8": {
+   "ms": "Lama-lama OK la tu.",
+   "en": "It'll be okay after a while.",
+   "src": [
+    "t11535537"
+   ],
+   "real": true,
+   "note": "lama-lama = eventually."
+  },
+  "p9": {
+   "ms": "Aku pernah makan kat sini dulu.",
+   "en": "I've eaten here before.",
+   "src": [
+    "t10730593"
+   ],
+   "real": true,
+   "note": "pernah = have (at some point).",
+   "v": "m"
+  },
+  "p10": {
+   "ms": "Harga barang serba-serbi naik.",
+   "en": "The price of everything is going up.",
+   "src": [
+    "t11376504"
+   ],
+   "real": true,
+   "note": "serba-serbi = all sorts of things.",
+   "v": "m"
+  },
+  "p11": {
+   "ms": "Mana boleh camtu.",
+   "en": "No way, you can't do that.",
+   "src": [
+    "t9689202"
+   ],
+   "real": true,
+   "note": "camtu = macam itu.",
+   "v": "m"
+  },
+  "p12": {
+   "ms": "Malas aku nak kisah.",
+   "en": "I can't be bothered to care.",
+   "src": [
+    "t11380293"
+   ],
+   "real": true
+  },
+  "p13": {
+   "ms": "Aku rasa tak payah pun.",
+   "en": "I don't think there's any need.",
+   "src": [
+    "t10690069"
+   ],
+   "real": true
+  }
+ },
+ "match": [
+  [
+   "camtu",
+   "macam itu"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "takyah",
+   "tidak payah"
+  ],
+  [
+   "tau",
+   "tahu"
+  ],
+  [
+   "camna",
+   "macam mana"
+  ],
+  [
+   "tu",
+   "itu"
+  ],
+  [
+   "korang",
+   "kamu semua"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Aku suka duduk kat sini.",
+     "en": "I like sitting here.",
+     "src": [
+      "t10730605"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Aircond ni bising betul.",
+     "en": "This aircon is really noisy.",
+     "src": [
+      "t10729127"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Aku tak kisah.",
+     "en": "I don't mind.",
+     "src": [
+      "t9714147"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Kau rasa? Kopi ke teh?",
+     "en": "What do you think? Coffee or tea?",
+     "src": [
+      "t11187984"
+     ]
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Dua-dua best gila!",
+     "en": "Both are amazing!",
+     "src": [
+      "t11516638"
+     ],
+     "real": true
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Betul ke itu?",
+     "en": "Is that true?",
+     "src": [
+      "t9500986"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What does he think of the coffee and the tea?",
+    "options": [
+     "Both are great",
+     "Both are bad",
+     "Only the tea is good"
+    ],
+    "answer": 0,
+    "why": "Dua-dua best gila!"
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Aku suka lagu dia.",
+      "en": "I like his song.",
+      "src": [
+       "t10677771"
+      ],
+      "real": true,
+      "wrong": [
+       "I don't like his song.",
+       "I know his song."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Aku tak suka berenang.",
+      "en": "I don't like swimming.",
+      "src": [
+       "t10655093"
+      ],
+      "real": true,
+      "word": "suka"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Tak tahu.",
+      "en": "I don't know.",
+      "src": [
+       "t3936260"
+      ],
+      "real": true,
+      "wrong": [
+       "I don't want to.",
+       "I don't have it."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Semua orang suka dia.",
+      "en": "Everyone likes him.",
+      "src": [
+       "t711822"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Dia suka kopi tanpa gula.",
+      "en": "He likes coffee without sugar.",
+      "src": [
+       "t4587807"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Awak suka warna apa?",
+      "right": "Saya suka kuning.",
+      "wrong": [
+       "Aircond ni bising betul.",
+       "Dua-dua best gila!"
+      ],
+      "why": "What colour do you like? Name one."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Dia tak suka saya.",
+      "en": "He doesn't like me.",
+      "src": [
+       "t9028641"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Teh ke kopi? Kau rasa?",
+      "right": "Aku tak kisah. Dua-dua boleh.",
+      "wrong": [
+       "Semua orang suka dia.",
+       "Aku tak suka berenang."
+      ],
+      "why": "Either is fine: tak kisah, dua-dua boleh."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Aku tak ingat nama dia.",
+      "en": "I don't remember his name.",
+      "src": [
+       "t10158849"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Aku pernah makan kat sini dulu.",
+     "en": "I've eaten here before.",
+     "src": [
+      "t10730593"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Kau rasa? Kopi ke teh?",
+     "en": "What do you think? Coffee or tea?",
+     "src": [
+      "t11187984"
+     ]
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Dua-dua best gila!",
+     "en": "Both are amazing!",
+     "src": [
+      "t11516638"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Betul ke itu?",
+     "en": "Is that true?",
+     "src": [
+      "t9500986"
+     ],
+     "real": true
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Aku bukan selalu betul.",
+     "en": "I'm not always right.",
+     "src": [
+      "t10727760"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Aircond ni bising betul.",
+     "en": "This aircon is really noisy.",
+     "src": [
+      "t10729127"
+     ],
+     "real": true
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Aku tak kisah. Aku suka duduk kat sini.",
+     "en": "I don't mind. I like sitting here.",
+     "src": [
+      "t9714147",
+      "t10730605"
+     ],
+     "real": true
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Lama-lama OK la tu.",
+     "en": "It'll be okay after a while.",
+     "src": [
+      "t11535537"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What bothers her about the place?",
+    "options": [
+     "The noisy aircon",
+     "The slow service",
+     "The prices",
+     "The coffee"
+    ],
+    "answer": 0,
+    "why": "Aircond ni bising betul."
+   },
+   "phrases": [
+    "p9",
+    "p4",
+    "p5",
+    "p6",
+    "p7",
+    "p8"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Aku tau kau nervous.",
+      "en": "I know you're nervous.",
+      "src": [
+       "t10653436"
+      ],
+      "real": true,
+      "wrong": [
+       "I know you're angry.",
+       "I don't know why you're nervous."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Dia tu kaya gila.",
+      "en": "He's crazy rich.",
+      "src": [
+       "t11029261"
+      ],
+      "real": true,
+      "word": "kaya"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Kitorang semua suka dia.",
+      "en": "We all like him.",
+      "src": [
+       "t9724798"
+      ],
+      "real": true,
+      "wrong": [
+       "None of us like him.",
+       "They all like us."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Aku tak ingat nama dia.",
+      "en": "I don't remember his name.",
+      "src": [
+       "t10158849"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Aku setuju dengan rancangan kau.",
+      "en": "I agree with your plan.",
+      "src": [
+       "t9714028"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nampak saya ok tak?",
+      "right": "Kau nampak lawa gila.",
+      "wrong": [
+       "Aku bukan selalu betul.",
+       "Aku tak ingat nama dia."
+      ],
+      "why": "Do I look okay? You look gorgeous."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Aku rasa kau tipu aku.",
+      "en": "I think you're lying to me.",
+      "src": [
+       "t10730631"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Korang berdua camna OK?",
+      "right": "OK je. Kitorang tak kisah.",
+      "wrong": [
+       "Dia tu kaya gila.",
+       "Betul ke itu?"
+      ],
+      "why": "How are you two doing? OK je — fine."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Tu je aku ingat.",
+      "en": "That's all I remember.",
+      "src": [
+       "t11187923"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Ni aku malas nak makan kat kedai mamak ni.",
+     "en": "I can't be bothered to eat at this mamak.",
+     "src": [
+      "t11365036"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Kenapa? Aku pernah makan kat sini dulu. Roti dengan teh tarik, dua-dua best gila!",
+     "en": "Why? I've eaten here before. The roti and the teh tarik, both are amazing!",
+     "src": [
+      "t10730593"
+     ]
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Harga barang serba-serbi naik.",
+     "en": "The price of everything is going up.",
+     "src": [
+      "t11376504"
+     ],
+     "real": true
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Betul la orang cakap... Tapi aku tak kisah.",
+     "en": "It's true what people say… But I don't mind.",
+     "src": [
+      "t11540127"
+     ]
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Kau rasa? Nak makan kat sini ke?",
+     "en": "What do you think? Shall we eat here?",
+     "src": [
+      "t11187984"
+     ]
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Kalau kau malas, aku rasa tak payah pun.",
+     "en": "If you can't be bothered, I don't think there's any need."
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Mana boleh camtu.",
+     "en": "No way, you can't do that.",
+     "src": [
+      "t9689202"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Malas aku nak kisah. Kau nak pegi mana?",
+     "en": "I can't be bothered to care. Where do you want to go?",
+     "src": [
+      "t11380293"
+     ]
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Takyah susah-susah. Makan kat sini je la.",
+     "en": "No need to make it hard. Let's just eat here."
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Lama-lama OK la tu.",
+     "en": "It'll be okay after a while.",
+     "src": [
+      "t11535537"
+     ],
+     "real": true
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Boleh la.",
+     "en": "Sure, why not.",
+     "src": [
+      "t11535538"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "Where do they end up eating?",
+    "options": [
+     "At the mamak after all",
+     "At an expensive restaurant",
+     "At home",
+     "They skip the meal"
+    ],
+    "answer": 0,
+    "why": "Takyah susah-susah. Makan kat sini je la."
+   },
+   "phrases": [
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p8",
+    "p4"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Proses ni rumit gila.",
+      "en": "This process is insanely complicated.",
+      "src": [
+       "t9724643"
+      ],
+      "real": true,
+      "wrong": [
+       "This process is really simple.",
+       "This process is too slow.",
+       "This process is finished."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Degil betul kau ni!",
+      "en": "You're so stubborn!",
+      "src": [
+       "t9688075"
+      ],
+      "real": true,
+      "word": "degil"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Dia macam ni tau.",
+      "en": "He's like this, you know.",
+      "src": [
+       "t11380278"
+      ],
+      "real": true,
+      "wrong": [
+       "He knows about this.",
+       "He doesn't like this.",
+       "He did it this way."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Berani gila kau.",
+      "en": "You're crazy brave.",
+      "src": [
+       "t10784349"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Hampir semua kedai kat situ mahal, lagi-lagi yang jual tudung.",
+      "en": "Almost all the shops there are expensive, especially the ones selling headscarves.",
+      "src": [
+       "t11376530"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Harga naik lagi. Kau rasa?",
+      "right": "Nak buat macam mana. Aku tak kisah.",
+      "wrong": [
+       "Berani gila kau.",
+       "Kau nampak lawa gila."
+      ],
+      "why": "Prices are up again — what can you do? Nak buat macam mana."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Anjing aku pandai gila.",
+      "en": "My dog is crazy smart.",
+      "src": [
+       "t10727780"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Aku rasa kau tipu aku.",
+      "right": "Mana ada. Aku tak tipu kau.",
+      "wrong": [
+       "Proses ni rumit gila.",
+       "Lama-lama OK la tu."
+      ],
+      "why": "Accused of lying: mana ada = no way, that's not so."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Kitorang semua suka dia.",
+      "en": "We all like him.",
+      "src": [
+       "t9724798"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

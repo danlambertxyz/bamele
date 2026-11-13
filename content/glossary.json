@@ -9,19 +9,47 @@
   "en": "oh dear; ouch",
   "note": "A sympathetic or apologetic exclamation."
  },
+ "agak": {
+  "en": "rather; quite"
+ },
+ "ahad": {
+  "en": "Sunday"
+ },
  "air": {
   "en": "drink (lit. water)",
   "note": "At a food place, air means any drink."
  },
+ "aircond": {
+  "en": "air conditioner (English, used by everyone)",
+  "std": "penyaman udara"
+ },
  "ais": {
   "en": "ice; iced"
+ },
+ "aku": {
+  "en": "I; me; my (casual, with friends)",
+  "std": "saya",
+  "note": "Use saya with strangers, elders and at work."
  },
  "ambik": {
   "en": "take",
   "std": "ambil"
  },
+ "ambik cuti": {
+  "en": "take leave / time off",
+  "std": "ambil cuti"
+ },
+ "anjing": {
+  "en": "dog"
+ },
  "apa": {
   "en": "what"
+ },
+ "apa cerita": {
+  "en": "what's new? / what's the story?"
+ },
+ "apa khabar": {
+  "en": "how are you?"
  },
  "apa-apa": {
   "en": "anything"
@@ -32,8 +60,18 @@
  "asing-asing": {
   "en": "each one separate"
  },
+ "asyik": {
+  "en": "keep on; always (doing)"
+ },
  "atas": {
   "en": "on; on top of"
+ },
+ "awak": {
+  "en": "you (polite-casual)",
+  "note": "Safer than kau with people you don't know well."
+ },
+ "awal": {
+  "en": "early"
  },
  "ayam": {
   "en": "chicken"
@@ -50,16 +88,35 @@
   "std": "beri",
   "note": "A casual way to order: bagi teh satu."
  },
+ "bagitau": {
+  "en": "tell",
+  "std": "beritahu"
+ },
+ "bagus": {
+  "en": "good; great"
+ },
  "bahagian": {
   "en": "part; piece"
  },
+ "baik": {
+  "en": "good; fine; (also) better to"
+ },
  "balik": {
   "en": "back; return"
+ },
+ "balik kampung": {
+  "en": "go back to your home town"
+ },
+ "balik-balik": {
+  "en": "again and again; keeps on"
  },
  "bang": {
   "en": "bro — how you address a man",
   "std": "abang",
   "note": "Lit. older brother. Used both ways between staff and customers."
+ },
+ "bangun": {
+  "en": "get up; wake up"
  },
  "banjir": {
   "en": "flooded — drenched in gravy",
@@ -67,6 +124,9 @@
  },
  "banyak": {
   "en": "a lot; many"
+ },
+ "barang": {
+  "en": "goods; things"
  },
  "baru": {
   "en": "just (now); new"
@@ -79,6 +139,10 @@
   "en": "bring",
   "std": "bawa"
  },
+ "bawak kereta": {
+  "en": "drive (lit. bring a car)",
+  "std": "memandu"
+ },
  "bawang": {
   "en": "onion"
  },
@@ -88,21 +152,83 @@
  "belum": {
   "en": "not yet"
  },
+ "benda": {
+  "en": "thing"
+ },
+ "berani": {
+  "en": "brave; daring"
+ },
+ "bercuti": {
+  "en": "go on holiday; be on leave"
+ },
+ "berdua": {
+  "en": "the two (of you / us)"
+ },
+ "berenang": {
+  "en": "swim"
+ },
+ "bergerak": {
+  "en": "move; set off"
+ },
+ "bergurau": {
+  "en": "joke; kid around"
+ },
+ "berhati-hati": {
+  "en": "be careful"
+ },
+ "berjanggut": {
+  "en": "bearded",
+  "note": "Dah berjanggut tunggu = waited so long I grew a beard."
+ },
+ "besok": {
+  "en": "tomorrow",
+  "std": "esok"
+ },
+ "best": {
+  "en": "great; fun (from English)",
+  "note": "Used as an adjective: best gila = really great."
+ },
+ "bestnya": {
+  "en": "how great!; so nice!"
+ },
  "betul": {
   "en": "right; correct"
  },
  "betul-betul": {
   "en": "really; properly"
  },
+ "biar": {
+  "en": "let (someone do something)"
+ },
  "biasa": {
   "en": "regular; the normal way"
+ },
+ "bila": {
+  "en": "when"
+ },
+ "bising": {
+  "en": "noisy; (also) to make a fuss"
+ },
+ "bola": {
+  "en": "ball; football"
  },
  "boleh": {
   "en": "can; sure; okay"
  },
+ "bos": {
+  "en": "boss",
+  "std": "majikan"
+ },
  "boss": {
   "en": "boss — friendly address at a mamak",
   "note": "Staff and customers both use it."
+ },
+ "buang": {
+  "en": "throw away"
+ },
+ "buang kerja": {
+  "en": "fired (lit. thrown out of work)",
+  "note": "kena buang kerja = got fired."
  },
  "buat": {
   "en": "make; do"
@@ -111,24 +237,58 @@
   "en": "kid; child",
   "std": "kanak-kanak"
  },
+ "budak-budak": {
+  "en": "kids; children",
+  "std": "kanak-kanak"
+ },
  "bukan": {
   "en": "not (the) — for nouns"
  },
  "bungkus": {
   "en": "takeaway (lit. wrap)"
  },
+ "cadangnya": {
+  "en": "the plan is; the idea was"
+ },
  "cakap": {
   "en": "say; speak",
   "std": "berkata"
  },
+ "call": {
+  "en": "call (English)",
+  "std": "telefon"
+ },
+ "camna": {
+  "en": "how; how's it going",
+  "std": "macam mana"
+ },
  "campur": {
   "en": "mixed; mix"
+ },
+ "camtu": {
+  "en": "like that",
+  "std": "macam itu / begitu"
  },
  "canai": {
   "en": "(roti) canai — flaky flatbread"
  },
  "cepat": {
   "en": "fast; quick"
+ },
+ "cerita": {
+  "en": "story"
+ },
+ "covid": {
+  "en": "COVID"
+ },
+ "cuaca": {
+  "en": "weather"
+ },
+ "cuci": {
+  "en": "wash"
+ },
+ "cuti": {
+  "en": "holiday; leave; day off"
  },
  "dada": {
   "en": "breast (of chicken); chest"
@@ -141,6 +301,14 @@
   "en": "finished; sold out",
   "std": "sudah habis"
  },
+ "dah lama": {
+  "en": "it's been a long time",
+  "std": "sudah lama"
+ },
+ "dah pun": {
+  "en": "already (emphatic)",
+  "std": "sudah pun"
+ },
  "dalam": {
   "en": "in; within; about (a time)"
  },
@@ -150,17 +318,31 @@
  "datang balik": {
   "en": "come back"
  },
+ "degil": {
+  "en": "stubborn"
+ },
  "dengan": {
   "en": "with; and"
  },
+ "depan": {
+  "en": "front; next (week, month)"
+ },
  "dhal": {
   "en": "dhal — lentil gravy"
+ },
+ "di": {
+  "en": "at; in; on"
  },
  "dia": {
   "en": "he; she; him; her"
  },
  "diet": {
   "en": "diet (English)"
+ },
+ "diorang": {
+  "en": "they; them",
+  "std": "mereka",
+  "note": "From dia orang."
  },
  "dua": {
   "en": "two"
@@ -179,14 +361,40 @@
   "en": "oh / hey — softens or interrupts",
   "note": "At the start: “oh, wait”. At the end of a question: makes it casual."
  },
+ "entah-entah": {
+  "en": "for all we know; who knows, maybe"
+ },
+ "esok": {
+  "en": "tomorrow"
+ },
+ "fikir": {
+  "en": "think"
+ },
+ "gaji": {
+  "en": "salary; pay"
+ },
+ "gak": {
+  "en": "too; also; kind of",
+  "std": "juga"
+ },
  "ganti": {
   "en": "swap; replace"
  },
  "garpu": {
   "en": "fork"
  },
+ "gelabah": {
+  "en": "panic; get flustered"
+ },
+ "gila": {
+  "en": "crazy — after an adjective: extremely",
+  "note": "best gila = insanely good. Casual."
+ },
  "goreng": {
   "en": "fried"
+ },
+ "grab": {
+  "en": "Grab (the ride-hailing app)"
  },
  "gula": {
   "en": "sugar"
@@ -204,8 +412,14 @@
  "haha": {
   "en": "haha"
  },
+ "hampir": {
+  "en": "almost; nearly"
+ },
  "hantar": {
   "en": "send; bring over"
+ },
+ "harga": {
+  "en": "price"
  },
  "hari": {
   "en": "day"
@@ -213,6 +427,13 @@
  "hari ni": {
   "en": "today",
   "std": "hari ini"
+ },
+ "hari tu": {
+  "en": "that day; the other day",
+  "std": "hari itu"
+ },
+ "hujan": {
+  "en": "rain; raining"
  },
  "ikan": {
   "en": "fish"
@@ -227,6 +448,19 @@
   "en": "drink in a bag tied at the side",
   "note": "The classic takeaway drink."
  },
+ "ingat": {
+  "en": "remember; think"
+ },
+ "ingatkan": {
+  "en": "(I) thought that…",
+  "note": "Used when you turned out to be wrong."
+ },
+ "ini": {
+  "en": "this"
+ },
+ "isnin": {
+  "en": "Monday"
+ },
  "itu": {
   "en": "that"
  },
@@ -237,21 +471,58 @@
  "jadi": {
   "en": "become; into"
  },
+ "jalan": {
+  "en": "road; walk; go on"
+ },
+ "jalan raya": {
+  "en": "the road; main road"
+ },
  "jangan": {
   "en": "don't"
+ },
+ "jap": {
+  "en": "a sec",
+  "std": "sekejap"
+ },
+ "jap lagi": {
+  "en": "in a bit; shortly",
+  "std": "sekejap lagi"
  },
  "je": {
   "en": "only; just",
   "std": "sahaja"
  },
+ "jem": {
+  "en": "traffic jam; jammed",
+  "std": "sesak"
+ },
+ "jom": {
+  "en": "let's; come on",
+  "std": "mari"
+ },
+ "jomlah": {
+  "en": "come on, let's go!"
+ },
+ "jual": {
+  "en": "sell"
+ },
  "jugak": {
   "en": "also; quite; fairly",
   "std": "juga"
+ },
+ "jumpa": {
+  "en": "meet; see (someone); find"
+ },
+ "kacau": {
+  "en": "disturb; bother"
  },
  "kak": {
   "en": "sis — how you address a woman",
   "std": "kakak",
   "note": "Lit. older sister."
+ },
+ "kakak": {
+  "en": "older sister"
  },
  "kalau": {
   "en": "if"
@@ -262,6 +533,9 @@
  "kalau macam tu": {
   "en": "in that case",
   "std": "kalau begitu"
+ },
+ "kami": {
+  "en": "we; us (not including you)"
  },
  "kampung": {
   "en": "village; (nasi goreng) kampung-style, with anchovies and chilli"
@@ -283,16 +557,44 @@
   "en": "at; in",
   "std": "di / dekat"
  },
+ "katanya": {
+  "en": "he / she said; apparently"
+ },
+ "kau": {
+  "en": "you (casual, with friends)",
+  "std": "engkau / awak",
+  "note": "Not for strangers or elders."
+ },
  "kawan": {
   "en": "friend"
+ },
+ "kaya": {
+  "en": "rich"
  },
  "ke": {
   "en": "or? — between choices or at the end of a question",
   "std": "atau"
  },
+ "kedai": {
+  "en": "shop; eatery"
+ },
+ "kedai mamak": {
+  "en": "mamak eatery"
+ },
  "kejap": {
   "en": "a moment",
   "std": "sekejap"
+ },
+ "kelakar": {
+  "en": "funny"
+ },
+ "kelihatan": {
+  "en": "look; appear (standard)",
+  "note": "Spoken Malay usually says nampak."
+ },
+ "kelmarin": {
+  "en": "yesterday; the day before yesterday",
+  "note": "Usage varies by region."
  },
  "kembung": {
   "en": "(ikan) kembung — mackerel"
@@ -301,12 +603,54 @@
   "en": "have to; (also) touch, get on",
   "note": "kena tunggu = have to wait; jangan kena sayur = don't let it touch the veg."
  },
+ "kena marah": {
+  "en": "get told off"
+ },
+ "kenapa": {
+  "en": "why"
+ },
+ "kenapalah": {
+  "en": "why on earth"
+ },
  "kepak": {
   "en": "wing"
+ },
+ "kerana": {
+  "en": "because; for (standard)",
+  "note": "Spoken Malay usually says sebab."
+ },
+ "kereta": {
+  "en": "car"
+ },
+ "kerja": {
+  "en": "work; job"
+ },
+ "kerja kuat": {
+  "en": "work hard"
+ },
+ "kerja sekolah": {
+  "en": "homework"
+ },
+ "khabar": {
+  "en": "news"
+ },
+ "khabar baik": {
+  "en": "I'm fine (lit. good news)"
+ },
+ "khamis": {
+  "en": "Thursday"
+ },
+ "kisah": {
+  "en": "care; mind"
  },
  "kita": {
   "en": "we; our (including you)",
   "note": "Shops say kopi kita for “our coffee”."
+ },
+ "kitorang": {
+  "en": "we; us (not including you)",
+  "std": "kami",
+  "note": "From kita orang."
  },
  "kopi": {
   "en": "coffee"
@@ -316,6 +660,11 @@
  },
  "kopi o ais": {
   "en": "iced black coffee"
+ },
+ "korang": {
+  "en": "you all; you guys",
+  "std": "kamu semua",
+  "note": "From kau orang."
  },
  "kosong": {
   "en": "plain; (drinks) no sugar",
@@ -327,14 +676,29 @@
  "kuali": {
   "en": "wok; pan"
  },
+ "kuat": {
+  "en": "strong; hard"
+ },
+ "kuning": {
+  "en": "yellow"
+ },
  "kurang": {
   "en": "less"
  },
  "kurang manis": {
   "en": "less sweet"
  },
+ "la": {
+  "en": "softening particle (same as lah)"
+ },
  "lagi": {
   "en": "more; still"
+ },
+ "lagi-lagi": {
+  "en": "especially; all the more"
+ },
+ "lagu": {
+  "en": "song"
  },
  "lah": {
   "en": "softening particle",
@@ -346,14 +710,38 @@
  "lama": {
   "en": "long (time)"
  },
+ "lama dah": {
+  "en": "been long?; for a long time already"
+ },
+ "lama-lama": {
+  "en": "eventually; after a while"
+ },
+ "lambat": {
+  "en": "late; slow",
+  "std": "lewat"
+ },
  "langsung": {
   "en": "at all (after a negative)"
+ },
+ "laparlah": {
+  "en": "(I'm) hungry!"
+ },
+ "laparnya": {
+  "en": "so hungry!"
  },
  "lauk": {
   "en": "dishes eaten with rice"
  },
+ "lawa": {
+  "en": "pretty; good-looking",
+  "std": "cantik"
+ },
  "lemak": {
   "en": "(nasi) lemak — rich, coconut-milk"
+ },
+ "lepak": {
+  "en": "hang out; chill",
+  "std": "bersantai"
  },
  "lepas": {
   "en": "after"
@@ -362,8 +750,17 @@
   "en": "and then; after that",
   "std": "selepas itu"
  },
+ "lesen": {
+  "en": "licence"
+ },
  "letak": {
   "en": "put"
+ },
+ "letih": {
+  "en": "tired; worn out"
+ },
+ "lewat": {
+  "en": "late (standard)"
  },
  "lima": {
   "en": "five"
@@ -374,9 +771,19 @@
  "limau": {
   "en": "lime"
  },
+ "luar": {
+  "en": "outside; out"
+ },
+ "maaf": {
+  "en": "sorry; forgiveness"
+ },
  "macam": {
   "en": "like; kind of",
   "std": "seperti"
+ },
+ "macam mana": {
+  "en": "how; how about",
+  "std": "bagaimana"
  },
  "macam tu": {
   "en": "like that; or so",
@@ -388,15 +795,63 @@
  "maggi goreng": {
   "en": "fried instant noodles, mamak style"
  },
+ "mahal": {
+  "en": "expensive"
+ },
+ "mahu": {
+  "en": "want (standard)",
+  "note": "Spoken Malay says nak."
+ },
+ "main": {
+  "en": "play"
+ },
+ "main bola": {
+  "en": "play football"
+ },
+ "majlis": {
+  "en": "event; function; ceremony"
+ },
+ "mak": {
+  "en": "mum",
+  "std": "emak / ibu"
+ },
  "makan": {
   "en": "eat; food"
+ },
+ "makan luar": {
+  "en": "eat out"
  },
  "makan sini": {
   "en": "eat here; dine in",
   "std": "makan di sini"
  },
+ "makin": {
+  "en": "more and more; increasingly",
+  "std": "semakin"
+ },
+ "malam": {
+  "en": "night; evening"
+ },
+ "malam ni": {
+  "en": "tonight",
+  "std": "malam ini"
+ },
  "malas": {
   "en": "lazy; can't be bothered"
+ },
+ "mamak": {
+  "en": "mamak — Indian-Muslim eatery"
+ },
+ "mana": {
+  "en": "where; which"
+ },
+ "mana ada": {
+  "en": "no way; that's not true",
+  "note": "Lit. “where is there?” A casual denial."
+ },
+ "mana boleh": {
+  "en": "no way; you can't",
+  "note": "Lit. “where can?”"
  },
  "mana-mana": {
   "en": "anywhere; whichever"
@@ -404,11 +859,20 @@
  "manis": {
   "en": "sweet"
  },
+ "marah": {
+  "en": "angry; scold"
+ },
  "masak": {
   "en": "cook; cooked (in)"
  },
  "masin": {
   "en": "salty; salted"
+ },
+ "masuk": {
+  "en": "enter; go in"
+ },
+ "masuk kerja": {
+  "en": "go in to work; clock in"
  },
  "mata": {
   "en": "eye"
@@ -425,21 +889,62 @@
  "memang": {
   "en": "really; as a matter of fact"
  },
+ "member": {
+  "en": "friend(s); mate(s) (from English)",
+  "std": "kawan"
+ },
+ "mengantuk": {
+  "en": "sleepy"
+ },
  "merah": {
   "en": "red"
+ },
+ "mesti": {
+  "en": "must"
  },
  "milo": {
   "en": "Milo — malt chocolate drink"
  },
+ "minggu": {
+  "en": "week"
+ },
+ "minggu depan": {
+  "en": "next week"
+ },
+ "minggu lepas": {
+  "en": "last week"
+ },
  "minit": {
   "en": "minute(s)"
+ },
+ "minta": {
+  "en": "ask for"
+ },
+ "minta maaf": {
+  "en": "apologise; I'm sorry"
  },
  "minum": {
   "en": "drink"
  },
+ "mungkin": {
+  "en": "maybe; might"
+ },
+ "muzium": {
+  "en": "museum"
+ },
+ "naik": {
+  "en": "go up; ride / take (a vehicle)"
+ },
  "nak": {
   "en": "want",
   "std": "hendak"
+ },
+ "nak buat macam mana": {
+  "en": "what can you do",
+  "note": "A shrug in words."
+ },
+ "nama": {
+  "en": "name"
  },
  "nampak": {
   "en": "see; look (seems)"
@@ -466,6 +971,10 @@
  "nasi tambah": {
   "en": "extra rice"
  },
+ "nervous": {
+  "en": "nervous (English)",
+  "std": "gementar"
+ },
  "ni": {
   "en": "this; here/now",
   "std": "ini"
@@ -476,9 +985,19 @@
  "no problem": {
   "en": "no problem (English, very common)"
  },
+ "nyanyi": {
+  "en": "sing"
+ },
  "o": {
   "en": "(teh/kopi) o — without milk",
   "note": "From Hokkien for “black”."
+ },
+ "ofis": {
+  "en": "office (from English)",
+  "std": "pejabat"
+ },
+ "ok": {
+  "en": "okay"
  },
  "okay": {
   "en": "okay"
@@ -490,14 +1009,27 @@
   "en": "order (English, used all the time)",
   "std": "pesan"
  },
+ "padahal": {
+  "en": "even though; when in fact"
+ },
  "pahit": {
   "en": "bitter"
  },
  "panas": {
   "en": "hot"
  },
+ "panasnya": {
+  "en": "so hot!"
+ },
+ "pandai": {
+  "en": "clever; good at"
+ },
  "panggil": {
   "en": "call (someone)"
+ },
+ "pasal": {
+  "en": "about; because of",
+  "std": "tentang / fasal"
  },
  "payah": {
   "en": "(tak payah) no need"
@@ -505,28 +1037,71 @@
  "pedas": {
   "en": "spicy"
  },
+ "pegi": {
+  "en": "go",
+  "std": "pergi"
+ },
  "peha": {
   "en": "thigh"
  },
  "pekat": {
   "en": "strong; thick; concentrated"
  },
+ "penat": {
+  "en": "tired"
+ },
+ "pergi": {
+  "en": "go"
+ },
+ "pernah": {
+  "en": "have (done) before; ever"
+ },
+ "plan": {
+  "en": "plan (English)",
+  "std": "rancang"
+ },
  "problem": {
   "en": "problem (English)"
+ },
+ "proses": {
+  "en": "process"
+ },
+ "pulak": {
+  "en": "as for…; and then; of all things",
+  "std": "pula",
+  "note": "Kau pulak? = and you?"
  },
  "pun": {
   "en": "too; also; even",
   "note": "X pun boleh = X is fine too."
  },
+ "punya": {
+  "en": "have; own (standard); also a possessive marker"
+ },
  "ramai": {
   "en": "many (people); busy"
+ },
+ "rancangan": {
+  "en": "plan"
+ },
+ "rasa": {
+  "en": "feel; think; taste"
  },
  "rasanya": {
   "en": "I think; it seems",
   "std": "saya rasa"
  },
+ "raya": {
+  "en": "big; main (as in jalan raya); also the Raya festival"
+ },
  "rebus": {
   "en": "boiled"
+ },
+ "rehat": {
+  "en": "rest; break"
+ },
+ "rindu": {
+  "en": "miss; long for"
  },
  "roti": {
   "en": "bread; flatbread"
@@ -543,14 +1118,26 @@
  "rumah": {
   "en": "house; home"
  },
+ "rumit": {
+  "en": "complicated"
+ },
+ "sakit": {
+  "en": "sick; in pain"
+ },
  "sama": {
   "en": "same"
  },
  "sambal": {
   "en": "chilli paste / relish"
  },
+ "sambung": {
+  "en": "continue; carry on"
+ },
  "sampai": {
   "en": "arrive; until"
+ },
+ "sampai-sampai": {
+  "en": "the moment (we) arrived; (also) still not arriving"
  },
  "sangat": {
   "en": "very; too (after the word)"
@@ -570,8 +1157,57 @@
  "sebelah": {
   "en": "next to; beside"
  },
+ "sebelum": {
+  "en": "before"
+ },
+ "sebentar": {
+  "en": "a moment (standard)",
+  "note": "Spoken Malay says sekejap or jap."
+ },
+ "sejak": {
+  "en": "since"
+ },
+ "sejam": {
+  "en": "one hour"
+ },
+ "sejuk": {
+  "en": "cold"
+ },
  "sekali": {
   "en": "together; at the same time; once"
+ },
+ "sekali-sekala": {
+  "en": "once in a while"
+ },
+ "sekarang": {
+  "en": "now"
+ },
+ "sekarang ni": {
+  "en": "right now; these days",
+  "std": "sekarang ini"
+ },
+ "sekejap": {
+  "en": "a moment",
+  "std": "sebentar"
+ },
+ "sekolah": {
+  "en": "school"
+ },
+ "selalu": {
+  "en": "always; often"
+ },
+ "selalunya": {
+  "en": "usually"
+ },
+ "selasa": {
+  "en": "Tuesday"
+ },
+ "selepas": {
+  "en": "after (standard)",
+  "note": "Spoken Malay says lepas."
+ },
+ "semalam": {
+  "en": "yesterday; last night"
  },
  "sempat": {
   "en": "have time to; make it in time"
@@ -588,14 +1224,38 @@
  "sepuluh": {
   "en": "ten"
  },
+ "serba-serbi": {
+  "en": "all sorts of; everything"
+ },
  "seringgit": {
   "en": "one ringgit"
+ },
+ "seronok": {
+  "en": "fun; having a good time"
+ },
+ "sesat": {
+  "en": "lost (can't find the way)"
  },
  "set": {
   "en": "done; sorted (English “set”)"
  },
+ "setahun": {
+  "en": "one year"
+ },
+ "setuju": {
+  "en": "agree"
+ },
  "siap": {
   "en": "ready; done"
+ },
+ "siapkan": {
+  "en": "finish; get (something) done"
+ },
+ "sibuk": {
+  "en": "busy"
+ },
+ "sihat": {
+  "en": "healthy; well"
  },
  "sikit": {
   "en": "a little; a bit",
@@ -603,6 +1263,9 @@
  },
  "sini": {
   "en": "here"
+ },
+ "situ": {
+  "en": "there"
  },
  "so": {
   "en": "so (English, common in KL speech)"
@@ -620,15 +1283,29 @@
  "suka": {
   "en": "like"
  },
+ "susah-susah": {
+  "en": "go to the trouble"
+ },
  "tadi": {
   "en": "just now; earlier (today)"
  },
  "tahan": {
   "en": "stand; bear; take (it)"
  },
+ "tahu": {
+  "en": "know"
+ },
  "tak": {
   "en": "not; no — or “or not?” at the end of a question",
   "std": "tidak"
+ },
+ "tak boleh": {
+  "en": "can't; not possible",
+  "std": "tidak boleh"
+ },
+ "tak kisah": {
+  "en": "don't mind; don't care",
+  "std": "tidak kisah"
  },
  "tak nak": {
   "en": "don't want",
@@ -644,6 +1321,10 @@
  "tak tahan": {
   "en": "can't take it; can't stand it"
  },
+ "takat": {
+  "en": "if it's only; as far as",
+  "std": "setakat"
+ },
  "takde": {
   "en": "there isn't; don't have",
   "std": "tiada / tidak ada"
@@ -651,12 +1332,23 @@
  "takde dah": {
   "en": "nothing more; all gone"
  },
+ "takkan": {
+  "en": "won't; surely not",
+  "std": "tidak akan"
+ },
  "takpe": {
   "en": "never mind; it's fine",
   "std": "tidak apa"
  },
+ "takyah": {
+  "en": "no need to",
+  "std": "tidak payah"
+ },
  "tambah": {
   "en": "add; extra"
+ },
+ "tanpa": {
+  "en": "without"
  },
  "tanya": {
   "en": "ask"
@@ -677,6 +1369,9 @@
   "en": "you know; okay? (also: know)",
   "std": "tahu",
   "note": "At the end of a sentence it flags something the listener should note."
+ },
+ "tau-tau": {
+  "en": "before I knew it; next thing you know"
  },
  "teh": {
   "en": "tea (with condensed milk unless you say o)"
@@ -709,6 +1404,12 @@
   "en": "in the middle of (doing)",
   "std": "sedang"
  },
+ "tengok": {
+  "en": "look; watch; see"
+ },
+ "tenis": {
+  "en": "tennis"
+ },
  "tepi": {
   "en": "side; edge"
  },
@@ -717,6 +1418,21 @@
  },
  "terima kasih": {
   "en": "thank you"
+ },
+ "teringin": {
+  "en": "would love to; have a craving to"
+ },
+ "teruk": {
+  "en": "bad; terrible"
+ },
+ "terus": {
+  "en": "straight away; directly; keep on"
+ },
+ "tetap": {
+  "en": "still; regardless"
+ },
+ "tidur": {
+  "en": "sleep"
  },
  "tiga": {
   "en": "three"
@@ -727,9 +1443,19 @@
  "tinggal": {
   "en": "left; remaining"
  },
+ "tipu": {
+  "en": "lie; cheat"
+ },
  "tu": {
   "en": "that; the (one mentioned)",
   "std": "itu"
+ },
+ "tu la": {
+  "en": "exactly; I know, right",
+  "std": "itulah"
+ },
+ "tudung": {
+  "en": "headscarf"
  },
  "tukar": {
   "en": "change; switch"
@@ -740,8 +1466,23 @@
  "tunggu": {
   "en": "wait"
  },
+ "turun": {
+  "en": "go down; (of rain) fall"
+ },
+ "ujian": {
+  "en": "test; exam"
+ },
  "untuk": {
   "en": "for"
+ },
+ "wah": {
+  "en": "wow"
+ },
+ "walaupun": {
+  "en": "even though"
+ },
+ "warna": {
+  "en": "colour"
  },
  "ya": {
   "en": "yes"

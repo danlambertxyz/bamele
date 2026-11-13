@@ -1,0 +1,892 @@
+[
+ {
+  "id": 711822,
+  "by": "sestersparrow",
+  "ms": "Semua orang suka dia."
+ },
+ {
+  "id": 961177,
+  "by": "Adou_Fr",
+  "ms": "Saya mahu tidur."
+ },
+ {
+  "id": 1021697,
+  "by": "Adou_Fr",
+  "ms": "Awak mahu pergi?"
+ },
+ {
+  "id": 1403351,
+  "by": "Adou_Fr",
+  "ms": "Jumpa hari Ahad!"
+ },
+ {
+  "id": 1929801,
+  "by": "Adou_Fr",
+  "ms": "Wah, hari ini panas kan?"
+ },
+ {
+  "id": 2913001,
+  "by": "j0rd4nkzf",
+  "ms": "Kita mesti tunggu."
+ },
+ {
+  "id": 3351855,
+  "by": "DostKaplan",
+  "ms": "Apa khabar?"
+ },
+ {
+  "id": 3936260,
+  "by": "buddy6621",
+  "ms": "Tak tahu."
+ },
+ {
+  "id": 3936267,
+  "by": "buddy6621",
+  "ms": "Laparnya..."
+ },
+ {
+  "id": 3936283,
+  "by": "buddy6621",
+  "ms": "Dia dah datang!"
+ },
+ {
+  "id": 3936286,
+  "by": "buddy6621",
+  "ms": "Saya nak pergi."
+ },
+ {
+  "id": 3936306,
+  "by": "buddy6621",
+  "ms": "Awak buat apa?"
+ },
+ {
+  "id": 3936339,
+  "by": "buddy6621",
+  "ms": "Jumpa lagi!"
+ },
+ {
+  "id": 3936366,
+  "by": "buddy6621",
+  "ms": "Sekarang sibuk."
+ },
+ {
+  "id": 3936625,
+  "by": "buddy6621",
+  "ms": "Saya minta maaf kerana lewat."
+ },
+ {
+  "id": 3936635,
+  "by": "buddy6621",
+  "ms": "Hari ini sangat sibuk."
+ },
+ {
+  "id": 4551709,
+  "by": "LeeSooHa",
+  "ms": "Saya nak jumpa awak."
+ },
+ {
+  "id": 4555877,
+  "by": "dbahasa",
+  "ms": "Tunggu sekejap."
+ },
+ {
+  "id": 4556556,
+  "by": "dbahasa",
+  "ms": "Saya tak punya kereta."
+ },
+ {
+  "id": 4560192,
+  "by": "LeeSooHa",
+  "ms": "Kita lama tak jumpa."
+ },
+ {
+  "id": 4563523,
+  "by": "LeeSooHa",
+  "ms": "Penat ke?"
+ },
+ {
+  "id": 4563532,
+  "by": "LeeSooHa",
+  "ms": "Jomlah!"
+ },
+ {
+  "id": 4563543,
+  "by": "LeeSooHa",
+  "ms": "Dah makan?"
+ },
+ {
+  "id": 4563544,
+  "by": "LeeSooHa",
+  "ms": "Dah makan malam ke?"
+ },
+ {
+  "id": 4563592,
+  "by": "LeeSooHa",
+  "ms": "Bila kita makan? Saya laparlah!"
+ },
+ {
+  "id": 4573764,
+  "by": "LeeSooHa",
+  "ms": "Saya sibuk."
+ },
+ {
+  "id": 4587807,
+  "by": "LeeSooHa",
+  "ms": "Dia suka kopi tanpa gula."
+ },
+ {
+  "id": 4587818,
+  "by": "LeeSooHa",
+  "ms": "Dia ada banyak kerja."
+ },
+ {
+  "id": 4609672,
+  "by": "LeeSooHa",
+  "ms": "Bergurau je!"
+ },
+ {
+  "id": 4611714,
+  "by": "LeeSooHa",
+  "ms": "Aku tak boleh pergi."
+ },
+ {
+  "id": 4731877,
+  "by": "Ricardo14",
+  "ms": "Hari ini cuaca sejuk."
+ },
+ {
+  "id": 4895684,
+  "by": "LeeSooHa",
+  "ms": "Nampak saya ok tak?"
+ },
+ {
+  "id": 5310568,
+  "by": "Skaty",
+  "ms": "Bagus!"
+ },
+ {
+  "id": 5900157,
+  "by": "Adou_Fr",
+  "ms": "Awak sibuk sekarang?"
+ },
+ {
+  "id": 5900198,
+  "by": "Adou_Fr",
+  "ms": "Esok mungkin hujan."
+ },
+ {
+  "id": 5900236,
+  "by": "Adou_Fr",
+  "ms": "Boleh awak tunggu sebentar?"
+ },
+ {
+  "id": 5900278,
+  "by": "Adou_Fr",
+  "ms": "Awak ada kerja selepas ini?"
+ },
+ {
+  "id": 5900351,
+  "by": "Adou_Fr",
+  "ms": "Dia sangat lewat."
+ },
+ {
+  "id": 6457991,
+  "by": "LeeSooHa",
+  "ms": "Kenapa awak lambat sangat?"
+ },
+ {
+  "id": 6469709,
+  "by": "LeeSooHa",
+  "ms": "Panasnya."
+ },
+ {
+  "id": 6482949,
+  "by": "LeeSooHa",
+  "ms": "Dia cuti hari ni."
+ },
+ {
+  "id": 6569289,
+  "by": "LeeSooHa",
+  "ms": "Nak tengok?"
+ },
+ {
+  "id": 8346971,
+  "by": "LeeSooHa",
+  "ms": "Saya nak balik rumah."
+ },
+ {
+  "id": 8875186,
+  "by": "LeeSooHa",
+  "ms": "Jom pergi main bola."
+ },
+ {
+  "id": 9028641,
+  "by": "LeeSooHa",
+  "ms": "Dia tak suka saya."
+ },
+ {
+  "id": 9152698,
+  "by": "LeeSooHa",
+  "ms": "Kenapa dia tak tidur?"
+ },
+ {
+  "id": 9500986,
+  "by": "LeeSooHa",
+  "ms": "Betul ke itu?"
+ },
+ {
+  "id": 9620997,
+  "by": "LeeSooHa",
+  "ms": "Banyak kerja saya ini."
+ },
+ {
+  "id": 9682981,
+  "by": "imperiex",
+  "ms": "Biar dia tunggu."
+ },
+ {
+  "id": 9688075,
+  "by": "imperiex",
+  "ms": "Degil betul kau ni!"
+ },
+ {
+  "id": 9688105,
+  "by": "imperiex",
+  "ms": "Kau nak jumpa aku ke?"
+ },
+ {
+  "id": 9689202,
+  "by": "imperiex",
+  "ms": "Mana boleh camtu."
+ },
+ {
+  "id": 9689235,
+  "by": "imperiex",
+  "ms": "Lepas rehat sekejap, dia sambung balik kerja."
+ },
+ {
+  "id": 9695851,
+  "by": "imperiex",
+  "ms": "Kau tengah sejuk kan?"
+ },
+ {
+  "id": 9700554,
+  "by": "imperiex",
+  "ms": "Dia bagitau aku dia dah letih sangat."
+ },
+ {
+  "id": 9700640,
+  "by": "imperiex",
+  "ms": "Jom nyanyi dengan aku."
+ },
+ {
+  "id": 9708941,
+  "by": "imperiex",
+  "ms": "Kitorang bergerak nak balik rumah."
+ },
+ {
+  "id": 9708981,
+  "by": "imperiex",
+  "ms": "Bagus kerja kau."
+ },
+ {
+  "id": 9714005,
+  "by": "imperiex",
+  "ms": "Hari ni mak aku nak datang rumah."
+ },
+ {
+  "id": 9714028,
+  "by": "imperiex",
+  "ms": "Aku setuju dengan rancangan kau."
+ },
+ {
+  "id": 9714029,
+  "by": "imperiex",
+  "ms": "Selalunya aku bangun lambat."
+ },
+ {
+  "id": 9714147,
+  "by": "imperiex",
+  "ms": "Aku tak kisah."
+ },
+ {
+  "id": 9714159,
+  "by": "imperiex",
+  "ms": "Khamis minggu depan cuti."
+ },
+ {
+  "id": 9724643,
+  "by": "imperiex",
+  "ms": "Proses ni rumit gila."
+ },
+ {
+  "id": 9724798,
+  "by": "imperiex",
+  "ms": "Kitorang semua suka dia."
+ },
+ {
+  "id": 9724812,
+  "by": "imperiex",
+  "ms": "Aku ni asyik sibuk dengan kerja."
+ },
+ {
+  "id": 9724813,
+  "by": "imperiex",
+  "ms": "Dia rasa macam tak sihat."
+ },
+ {
+  "id": 9871547,
+  "by": "LeeSooHa",
+  "ms": "Kenapa awak tak balik?"
+ },
+ {
+  "id": 10158849,
+  "by": "Kazuki278",
+  "ms": "Aku tak ingat nama dia."
+ },
+ {
+  "id": 10229447,
+  "by": "Kazuki278",
+  "ms": "Aku tak ambik cuti."
+ },
+ {
+  "id": 10304170,
+  "by": "LeeSooHa",
+  "ms": "Awak buat apa semalam?"
+ },
+ {
+  "id": 10305802,
+  "by": "LeeSooHa",
+  "ms": "Apa khabar korang berdua?"
+ },
+ {
+  "id": 10500846,
+  "by": "LeeSooHa",
+  "ms": "Bila awak dah balik?"
+ },
+ {
+  "id": 10512583,
+  "by": "Kazuki278",
+  "ms": "Saya suka kuning."
+ },
+ {
+  "id": 10542284,
+  "by": "LeeSooHa",
+  "ms": "Awak suka warna apa?"
+ },
+ {
+  "id": 10619687,
+  "by": "LeeSooHa",
+  "ms": "Awak pergi tidur."
+ },
+ {
+  "id": 10652981,
+  "by": "imperiex",
+  "ms": "Jangan kacau aku. Aku tengah sibuk."
+ },
+ {
+  "id": 10653396,
+  "by": "imperiex",
+  "ms": "Hari ni aku pegi muzium."
+ },
+ {
+  "id": 10653436,
+  "by": "imperiex",
+  "ms": "Aku tau kau nervous."
+ },
+ {
+  "id": 10655093,
+  "by": "imperiex",
+  "ms": "Aku tak suka berenang."
+ },
+ {
+  "id": 10656051,
+  "by": "imperiex",
+  "ms": "Dah lama kita tak jumpa."
+ },
+ {
+  "id": 10656055,
+  "by": "imperiex",
+  "ms": "Budak-budak tu dah makin penat."
+ },
+ {
+  "id": 10656062,
+  "by": "imperiex",
+  "ms": "Kau ni kerja kuat sangat."
+ },
+ {
+  "id": 10657647,
+  "by": "imperiex",
+  "ms": "Dia baru je pegi."
+ },
+ {
+  "id": 10657673,
+  "by": "imperiex",
+  "ms": "Aku rasa kita takkan sempat sampai."
+ },
+ {
+  "id": 10657685,
+  "by": "imperiex",
+  "ms": "Kau dah kena buang kerja ke?"
+ },
+ {
+  "id": 10657718,
+  "by": "imperiex",
+  "ms": "Aku rasa aku dah sesat."
+ },
+ {
+  "id": 10666257,
+  "by": "imperiex",
+  "ms": "Kita ada ujian hari ni."
+ },
+ {
+  "id": 10666278,
+  "by": "imperiex",
+  "ms": "Kau nampak lawa gila."
+ },
+ {
+  "id": 10674959,
+  "by": "imperiex",
+  "ms": "Kau tak boleh pegi."
+ },
+ {
+  "id": 10677732,
+  "by": "imperiex",
+  "ms": "Sekarang ni aku takde kereta."
+ },
+ {
+  "id": 10677771,
+  "by": "imperiex",
+  "ms": "Aku suka lagu dia."
+ },
+ {
+  "id": 10677812,
+  "by": "imperiex",
+  "ms": "Boleh tak aku pegi dulu?"
+ },
+ {
+  "id": 10678817,
+  "by": "imperiex",
+  "ms": "Kerja ni mesti siap sebelum besok."
+ },
+ {
+  "id": 10681083,
+  "by": "LeeSooHa",
+  "ms": "Dia balik kelmarin."
+ },
+ {
+  "id": 10682866,
+  "by": "LeeSooHa",
+  "ms": "Tunggu saya sebentar."
+ },
+ {
+  "id": 10684033,
+  "by": "imperiex",
+  "ms": "Jangan pegi cepat sangat."
+ },
+ {
+  "id": 10690069,
+  "by": "imperiex",
+  "ms": "Aku rasa tak payah pun."
+ },
+ {
+  "id": 10723479,
+  "by": "imperiex",
+  "ms": "Kami sesat nak sampai sini."
+ },
+ {
+  "id": 10726211,
+  "by": "imperiex",
+  "ms": "Kitorang dah siapkan kerja untuk hari ni."
+ },
+ {
+  "id": 10726242,
+  "by": "imperiex",
+  "ms": "Aku dah siapkan kerja sekolah aku lah."
+ },
+ {
+  "id": 10727704,
+  "by": "imperiex",
+  "ms": "Esok mungkin aku jumpa kau."
+ },
+ {
+  "id": 10727760,
+  "by": "imperiex",
+  "ms": "Aku bukan selalu betul."
+ },
+ {
+  "id": 10727780,
+  "by": "imperiex",
+  "ms": "Anjing aku pandai gila."
+ },
+ {
+  "id": 10727829,
+  "by": "imperiex",
+  "ms": "Mungkin jap lagi aku pegi."
+ },
+ {
+  "id": 10727853,
+  "by": "imperiex",
+  "ms": "Aku kena cuci kereta."
+ },
+ {
+  "id": 10729086,
+  "by": "imperiex",
+  "ms": "Kau buat apa minggu lepas?"
+ },
+ {
+  "id": 10729096,
+  "by": "imperiex",
+  "ms": "Takde orang kerja kat situ dah."
+ },
+ {
+  "id": 10729127,
+  "by": "imperiex",
+  "ms": "Aircond ni bising betul."
+ },
+ {
+  "id": 10730593,
+  "by": "imperiex",
+  "ms": "Aku pernah makan kat sini dulu."
+ },
+ {
+  "id": 10730595,
+  "by": "imperiex",
+  "ms": "Aku seronok betul malam ni."
+ },
+ {
+  "id": 10730605,
+  "by": "imperiex",
+  "ms": "Aku suka duduk kat sini."
+ },
+ {
+  "id": 10730628,
+  "by": "imperiex",
+  "ms": "Aku dah buat banyak kerja dah."
+ },
+ {
+  "id": 10730631,
+  "by": "imperiex",
+  "ms": "Aku rasa kau tipu aku."
+ },
+ {
+  "id": 10730656,
+  "by": "imperiex",
+  "ms": "Korang berdua camna OK?"
+ },
+ {
+  "id": 10732600,
+  "by": "imperiex",
+  "ms": "Semua jadi cepat sangat."
+ },
+ {
+  "id": 10738298,
+  "by": "LeeSooHa",
+  "ms": "Katanya, nak datang kat sini."
+ },
+ {
+  "id": 10772373,
+  "by": "LeeSooHa",
+  "ms": "Jom makan luar malam ni!"
+ },
+ {
+  "id": 10778245,
+  "by": "imperiex",
+  "ms": "Aku suka bawak kereta."
+ },
+ {
+  "id": 10778270,
+  "by": "imperiex",
+  "ms": "Aku rasa kau kena datang."
+ },
+ {
+  "id": 10784349,
+  "by": "imperiex",
+  "ms": "Berani gila kau."
+ },
+ {
+  "id": 10789929,
+  "by": "imperiex",
+  "ms": "Jom Isnin main tenis."
+ },
+ {
+  "id": 10903311,
+  "by": "LeeSooHa",
+  "ms": "Hujan turun sejak semalam."
+ },
+ {
+  "id": 10905545,
+  "by": "LeeSooHa",
+  "ms": "Awak kelihatan penat."
+ },
+ {
+  "id": 11029261,
+  "by": "imperiex",
+  "ms": "Dia tu kaya gila."
+ },
+ {
+  "id": 11029302,
+  "by": "imperiex",
+  "ms": "Aku rasa aku kena rehat sekejap."
+ },
+ {
+  "id": 11029373,
+  "by": "imperiex",
+  "ms": "Kita kena tunggu diorang."
+ },
+ {
+  "id": 11029392,
+  "by": "imperiex",
+  "ms": "Saya agak mengantuk."
+ },
+ {
+  "id": 11029399,
+  "by": "imperiex",
+  "ms": "Aku mengantuk gak la."
+ },
+ {
+  "id": 11056849,
+  "by": "LeeSooHa",
+  "ms": "Esok awak tak boleh datang."
+ },
+ {
+  "id": 11074689,
+  "by": "LeeSooHa",
+  "ms": "Saya nak awak datang."
+ },
+ {
+  "id": 11129830,
+  "by": "LeeSooHa",
+  "ms": "Saya kena bangun awal."
+ },
+ {
+  "id": 11187882,
+  "by": "imperiex",
+  "ms": "Kenapa sampai macam tu?"
+ },
+ {
+  "id": 11187923,
+  "by": "imperiex",
+  "ms": "Tu je aku ingat."
+ },
+ {
+  "id": 11187964,
+  "by": "imperiex",
+  "ms": "Sekali satu ofis kena COVID."
+ },
+ {
+  "id": 11187973,
+  "by": "imperiex",
+  "ms": "Entah-entah lesen kereta pun takde."
+ },
+ {
+  "id": 11187979,
+  "by": "imperiex",
+  "ms": "Kami sampai-sampai terus kena marah."
+ },
+ {
+  "id": 11187984,
+  "by": "imperiex",
+  "ms": "Kau rasa?"
+ },
+ {
+  "id": 11365036,
+  "by": "imperiex",
+  "ms": "Ni aku malas nak makan kat kedai mamak ni."
+ },
+ {
+  "id": 11368180,
+  "by": "imperiex",
+  "ms": "Gaji tak pernah masuk padahal kerja jalan."
+ },
+ {
+  "id": 11368213,
+  "by": "imperiex",
+  "ms": "Bila nak pegi minum sekali?"
+ },
+ {
+  "id": 11368237,
+  "by": "imperiex",
+  "ms": "Takkan nak kerja je kan, sekali-sekala kena gak bercuti."
+ },
+ {
+  "id": 11376487,
+  "by": "imperiex",
+  "ms": "Dah lama tak balik kampung"
+ },
+ {
+  "id": 11376504,
+  "by": "imperiex",
+  "ms": "Harga barang serba-serbi naik."
+ },
+ {
+  "id": 11376530,
+  "by": "imperiex",
+  "ms": "Hampir semua kedai kat situ mahal, lagi-lagi yang jual tudung."
+ },
+ {
+  "id": 11380278,
+  "by": "imperiex",
+  "ms": "Dia macam ni tau."
+ },
+ {
+  "id": 11380293,
+  "by": "imperiex",
+  "ms": "Malas aku nak kisah."
+ },
+ {
+  "id": 11380330,
+  "by": "imperiex",
+  "ms": "Fikir nak balik je."
+ },
+ {
+  "id": 11380339,
+  "by": "imperiex",
+  "ms": "Kau tak kerja, kau takyah nak bising."
+ },
+ {
+  "id": 11395899,
+  "by": "imperiex",
+  "ms": "Dah berjanggut tunggu tak sampai-sampai."
+ },
+ {
+  "id": 11395984,
+  "by": "imperiex",
+  "ms": "Bila ingat balik, memang kelakar."
+ },
+ {
+  "id": 11395994,
+  "by": "imperiex",
+  "ms": "Takat jumpa setahun sekali, baik tak payah."
+ },
+ {
+  "id": 11516633,
+  "by": "imperiex",
+  "ms": "Cepat la habis majlis ni."
+ },
+ {
+  "id": 11516638,
+  "by": "imperiex",
+  "ms": "Dua-dua best gila!"
+ },
+ {
+  "id": 11518670,
+  "by": "imperiex",
+  "ms": "Lama dah kerja kat sini?"
+ },
+ {
+  "id": 11518671,
+  "by": "imperiex",
+  "ms": "Lama dah buat kerja ni?"
+ },
+ {
+  "id": 11518699,
+  "by": "imperiex",
+  "ms": "La, ingatkan tak balik?"
+ },
+ {
+  "id": 11518701,
+  "by": "imperiex",
+  "ms": "Dah sampai dah pun."
+ },
+ {
+  "id": 11518707,
+  "by": "imperiex",
+  "ms": "Dah sampai mana?"
+ },
+ {
+  "id": 11518710,
+  "by": "imperiex",
+  "ms": "Kalau tak suka, cakap."
+ },
+ {
+  "id": 11518716,
+  "by": "imperiex",
+  "ms": "Dulu nak jumpa setahun sekali pun payah."
+ },
+ {
+  "id": 11518726,
+  "by": "imperiex",
+  "ms": "Tau-tau dah sampai rumah."
+ },
+ {
+  "id": 11518729,
+  "by": "imperiex",
+  "ms": "Cadangnya nak pegi bercuti."
+ },
+ {
+  "id": 11518730,
+  "by": "imperiex",
+  "ms": "Sekali bos panggil kena masuk kerja."
+ },
+ {
+  "id": 11518731,
+  "by": "imperiex",
+  "ms": "Rasa macam tak nak balik."
+ },
+ {
+  "id": 11518733,
+  "by": "imperiex",
+  "ms": "Kenapalah aku tak ambik cuti hari tu."
+ },
+ {
+  "id": 11518810,
+  "by": "imperiex",
+  "ms": "Rindu nak lepak dengan member."
+ },
+ {
+  "id": 11518831,
+  "by": "imperiex",
+  "ms": "Balik-balik cakap pasal benda sama."
+ },
+ {
+  "id": 11518847,
+  "by": "imperiex",
+  "ms": "Tetap jugak datang kerja walaupun sakit."
+ },
+ {
+  "id": 11535537,
+  "by": "imperiex",
+  "ms": "Lama-lama OK la tu."
+ },
+ {
+  "id": 11535538,
+  "by": "imperiex",
+  "ms": "Boleh la."
+ },
+ {
+  "id": 11535547,
+  "by": "imperiex",
+  "ms": "Apa kau tunggu lagi?"
+ },
+ {
+  "id": 11540092,
+  "by": "imperiex",
+  "ms": "Lepas sejam, dia call balik."
+ },
+ {
+  "id": 11540115,
+  "by": "imperiex",
+  "ms": "Esok nak hantar, baru gelabah."
+ },
+ {
+  "id": 11540127,
+  "by": "imperiex",
+  "ms": "Betul la orang cakap..."
+ },
+ {
+  "id": 12624134,
+  "by": "LeeSooHa",
+  "ms": "Berhati-hati di jalan raya!"
+ },
+ {
+  "id": 12752313,
+  "by": "LeeSooHa",
+  "ms": "Kakak saya ada kerja."
+ },
+ {
+  "id": 13696566,
+  "by": "LeeSooHa",
+  "ms": "Saya baru dalam kerja macam ni."
+ }
+]

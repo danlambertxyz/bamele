@@ -1,0 +1,812 @@
+{
+ "id": "m05-l02",
+ "title": "Kerja, kerja, kerja",
+ "blurb": "Tired, busy and counting the days to the next holiday.",
+ "staff": {
+  "label": "Lin",
+  "name": "Lin, a colleague",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "… ke?",
+   "body": "Tack <b>ke</b> onto the end and a statement becomes a question: <i>Penat ke?</i> — tired, are you?"
+  },
+  {
+   "title": "kena",
+   "body": "<b>kena</b> + verb means “have to”: <i>kena rehat</i>, <i>kena masuk kerja</i>. Before a noun it means you got hit by it: <i>kena COVID</i>."
+  },
+  {
+   "title": "sekali",
+   "body": "At the start of a clause in a story, <b>sekali</b> means “and then, all of a sudden”: <i>Sekali bos panggil…</i>"
+  }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Penat ke?",
+   "en": "Are you tired?",
+   "src": [
+    "t4563523"
+   ],
+   "real": true,
+   "v": "f"
+  },
+  "p2": {
+   "ms": "Aku mengantuk gak la.",
+   "en": "I'm pretty sleepy, actually.",
+   "src": [
+    "t11029399"
+   ],
+   "real": true,
+   "note": "gak = juga; la softens it."
+  },
+  "p3": {
+   "ms": "Aku dah buat banyak kerja dah.",
+   "en": "I've already done a lot of work.",
+   "src": [
+    "t10730628"
+   ],
+   "real": true,
+   "note": "The doubled dah … dah stresses “already”."
+  },
+  "p4": {
+   "ms": "Kerja ni mesti siap sebelum besok.",
+   "en": "This work has to be finished before tomorrow.",
+   "src": [
+    "t10678817"
+   ],
+   "real": true,
+   "note": "besok = esok.",
+   "v": "f"
+  },
+  "p5": {
+   "ms": "Aku rasa aku kena rehat sekejap.",
+   "en": "I think I need to rest for a moment.",
+   "src": [
+    "t11029302"
+   ],
+   "real": true,
+   "note": "kena = have to."
+  },
+  "p6": {
+   "ms": "Khamis minggu depan cuti.",
+   "en": "Next Thursday is a holiday.",
+   "src": [
+    "t9714159"
+   ],
+   "real": true,
+   "v": "f"
+  },
+  "p7": {
+   "ms": "Hari ini sangat sibuk.",
+   "en": "Today is very busy.",
+   "src": [
+    "t3936635"
+   ],
+   "real": true
+  },
+  "p8": {
+   "ms": "Saya agak mengantuk.",
+   "en": "I'm rather sleepy.",
+   "src": [
+    "t11029392"
+   ],
+   "real": true,
+   "note": "agak = rather, quite."
+  },
+  "p9": {
+   "ms": "Sekali bos panggil kena masuk kerja.",
+   "en": "And then the boss called and I had to go in to work.",
+   "src": [
+    "t11518730"
+   ],
+   "real": true,
+   "note": "sekali = and then suddenly."
+  },
+  "p10": {
+   "ms": "Tetap jugak datang kerja walaupun sakit.",
+   "en": "Still came to work even though sick.",
+   "src": [
+    "t11518847"
+   ],
+   "real": true,
+   "note": "tetap = still, regardless; walaupun = even though.",
+   "v": "f"
+  },
+  "p11": {
+   "ms": "Cadangnya nak pegi bercuti.",
+   "en": "The plan is to go on holiday.",
+   "src": [
+    "t11518729"
+   ],
+   "real": true,
+   "note": "cadangnya = the plan is."
+  },
+  "p12": {
+   "ms": "Saya mahu tidur.",
+   "en": "I want to sleep.",
+   "src": [
+    "t961177"
+   ],
+   "real": true,
+   "note": "mahu is the standard word; nak is what you'll hear."
+  }
+ },
+ "match": [
+  [
+   "gak",
+   "juga"
+  ],
+  [
+   "besok",
+   "esok"
+  ],
+  [
+   "sekejap",
+   "sebentar"
+  ],
+  [
+   "jugak",
+   "juga"
+  ],
+  [
+   "pegi",
+   "pergi"
+  ],
+  [
+   "takyah",
+   "tidak payah"
+  ],
+  [
+   "bagitau",
+   "beritahu"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Penat ke?",
+     "en": "Are you tired?",
+     "src": [
+      "t4563523"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Saya agak mengantuk.",
+     "en": "I'm rather sleepy.",
+     "src": [
+      "t11029392"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Ada banyak kerja?",
+     "en": "Got a lot of work?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Hari ini sangat sibuk.",
+     "en": "Today is very busy.",
+     "src": [
+      "t3936635"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Awak pergi tidur.",
+     "en": "You go and sleep.",
+     "src": [
+      "t10619687"
+     ],
+     "real": true
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Saya mahu tidur.",
+     "en": "I want to sleep.",
+     "src": [
+      "t961177"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "How is he feeling?",
+    "options": [
+     "Sleepy after a very busy day",
+     "Hungry and bored",
+     "Excited about a holiday"
+    ],
+    "answer": 0,
+    "why": "Saya agak mengantuk … Hari ini sangat sibuk."
+   },
+   "phrases": [
+    "p1",
+    "p8",
+    "p7",
+    "p12"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Awak ada kerja selepas ini?",
+      "en": "Do you have work after this?",
+      "src": [
+       "t5900278"
+      ],
+      "real": true,
+      "wrong": [
+       "Did you finish your work?",
+       "Do you like your work?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Dia ada banyak kerja.",
+      "en": "He has a lot of work.",
+      "src": [
+       "t4587818"
+      ],
+      "real": true,
+      "word": "banyak"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Dia cuti hari ni.",
+      "en": "He's on leave today.",
+      "src": [
+       "t6482949"
+      ],
+      "real": true,
+      "wrong": [
+       "He's working today.",
+       "He's on leave tomorrow."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Banyak kerja saya ini.",
+      "en": "I have a lot of work.",
+      "src": [
+       "t9620997"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Awak kelihatan penat.",
+      "en": "You look tired.",
+      "src": [
+       "t10905545"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Awak sibuk sekarang?",
+      "right": "Sibuk. Banyak kerja.",
+      "wrong": [
+       "Saya mahu tidur.",
+       "Penat ke?"
+      ],
+      "why": "She asks if you're busy now: sibuk, lots of work."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "staff",
+      "ms": "Kenapa dia tak tidur?",
+      "en": "Why isn't he sleeping?",
+      "src": [
+       "t9152698"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Awak okay?",
+      "right": "Okay. Penat sikit je.",
+      "wrong": [
+       "Ada banyak kerja?",
+       "Awak pergi tidur."
+      ],
+      "why": "Okay, just a bit tired: penat sikit je."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Kakak saya ada kerja.",
+      "en": "My older sister has work.",
+      "src": [
+       "t12752313"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Penat ke?",
+     "en": "Are you tired?",
+     "src": [
+      "t4563523"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Aku mengantuk gak la.",
+     "en": "I'm pretty sleepy, actually.",
+     "src": [
+      "t11029399"
+     ],
+     "real": true
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Hari ini sangat sibuk.",
+     "en": "Today is very busy.",
+     "src": [
+      "t3936635"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Aku dah buat banyak kerja dah.",
+     "en": "I've already done a lot of work.",
+     "src": [
+      "t10730628"
+     ],
+     "real": true
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Kerja ni mesti siap sebelum besok.",
+     "en": "This work has to be finished before tomorrow.",
+     "src": [
+      "t10678817"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Aku rasa aku kena rehat sekejap.",
+     "en": "I think I need to rest for a moment.",
+     "src": [
+      "t11029302"
+     ],
+     "real": true
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Khamis minggu depan cuti.",
+     "en": "Next Thursday is a holiday.",
+     "src": [
+      "t9714159"
+     ],
+     "real": true
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Bagus! Aku nak tidur je.",
+     "en": "Great! I just want to sleep.",
+     "src": [
+      "t5310568"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "What's the good news?",
+    "options": [
+     "Next Thursday is a holiday",
+     "The work is already finished",
+     "The boss is away tomorrow",
+     "He got a pay rise"
+    ],
+    "answer": 0,
+    "why": "Khamis minggu depan cuti."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Bagus kerja kau.",
+      "en": "Nice work.",
+      "src": [
+       "t9708981"
+      ],
+      "real": true,
+      "wrong": [
+       "Your job is boring.",
+       "Do you have a good job?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Jangan kacau aku. Aku tengah sibuk.",
+      "en": "Don't bother me. I'm busy.",
+      "src": [
+       "t10652981"
+      ],
+      "real": true,
+      "word": "tengah"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Kitorang dah siapkan kerja untuk hari ni.",
+      "en": "We've finished the work for today.",
+      "src": [
+       "t10726211"
+      ],
+      "real": true,
+      "wrong": [
+       "We haven't started today's work.",
+       "We have more work today."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Aku tak ambik cuti.",
+      "en": "I didn't take leave.",
+      "src": [
+       "t10229447"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Lepas rehat sekejap, dia sambung balik kerja.",
+      "en": "After a short rest, he went back to work.",
+      "src": [
+       "t9689235"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Lama dah buat kerja ni?",
+      "right": "Saya baru dalam kerja macam ni.",
+      "wrong": [
+       "Khamis minggu depan cuti.",
+       "Bagus kerja kau."
+      ],
+      "why": "Lama dah…? asks how long; baru = I'm new to it."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "staff",
+      "ms": "Dia bagitau aku dia dah letih sangat.",
+      "en": "He told me he was really tired.",
+      "src": [
+       "t9700554"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Esok kau kerja tak?",
+      "right": "Kerja. Aku tak ambik cuti.",
+      "wrong": [
+       "Penat ke?",
+       "Bagus kerja kau."
+      ],
+      "why": "Answer a … tak? question by repeating the verb: kerja."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "you",
+      "ms": "Takde orang kerja kat situ dah.",
+      "en": "Nobody works there anymore.",
+      "src": [
+       "t10729096"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Penat ke? Kau ni kerja kuat sangat.",
+     "en": "Tired? You work too hard.",
+     "src": [
+      "t4563523",
+      "t10656062"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Aku dah buat banyak kerja dah. Aku mengantuk gak la.",
+     "en": "I've already done a lot of work. I'm pretty sleepy, actually.",
+     "src": [
+      "t10730628",
+      "t11029399"
+     ],
+     "real": true
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Kerja ni mesti siap sebelum besok.",
+     "en": "This work has to be finished before tomorrow.",
+     "src": [
+      "t10678817"
+     ],
+     "real": true
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Tu la. Semalam cuti. Sekali bos panggil kena masuk kerja.",
+     "en": "I know. Yesterday was my day off. And then the boss called and I had to go in to work.",
+     "src": [
+      "t11518730"
+     ]
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Tetap jugak datang kerja walaupun sakit.",
+     "en": "And you still come to work even though you're sick.",
+     "src": [
+      "t11518847"
+     ],
+     "real": true
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Aku rasa aku kena rehat sekejap.",
+     "en": "I think I need to rest for a moment.",
+     "src": [
+      "t11029302"
+     ],
+     "real": true
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Khamis minggu depan cuti.",
+     "en": "Next Thursday is a holiday.",
+     "src": [
+      "t9714159"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Cadangnya nak pegi bercuti.",
+     "en": "The plan is to go on holiday.",
+     "src": [
+      "t11518729"
+     ],
+     "real": true
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Bestnya. Aku pun teringin nak pegi bercuti.",
+     "en": "Nice. I'd love to go on holiday too."
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Jom la.",
+     "en": "Come along, then."
+    }
+   ],
+   "gist": {
+    "q": "What happened on his day off?",
+    "options": [
+     "The boss called him in to work",
+     "He slept all day",
+     "He went on holiday",
+     "He stayed home sick"
+    ],
+    "answer": 0,
+    "why": "Semalam cuti. Sekali bos panggil kena masuk kerja."
+   },
+   "phrases": [
+    "p9",
+    "p10",
+    "p11",
+    "p5",
+    "p4",
+    "p6"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Kau dah kena buang kerja ke?",
+      "en": "Did you get fired?",
+      "src": [
+       "t10657685"
+      ],
+      "real": true,
+      "wrong": [
+       "Did you quit your job?",
+       "Have you found a job?",
+       "Did you fire someone?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kenapalah aku tak ambik cuti hari tu.",
+      "en": "Why on earth didn't I take leave that time.",
+      "src": [
+       "t11518733"
+      ],
+      "real": true,
+      "word": "cuti"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Gaji tak pernah masuk padahal kerja jalan.",
+      "en": "The pay never comes in, even though the work carries on.",
+      "src": [
+       "t11368180"
+      ],
+      "real": true,
+      "wrong": [
+       "The pay came in before the work started.",
+       "The pay is good but the work is hard.",
+       "No work, so no pay."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Budak-budak tu dah makin penat.",
+      "en": "Those kids are getting more and more tired.",
+      "src": [
+       "t10656055"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Kau tak kerja, kau takyah nak bising.",
+      "en": "If you're not working, you don't get to make noise about it.",
+      "src": [
+       "t11380339"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Lama dah kerja kat sini?",
+      "right": "Baru je. Saya baru dalam kerja macam ni.",
+      "wrong": [
+       "Cadangnya nak pegi bercuti.",
+       "Khamis minggu depan cuti."
+      ],
+      "why": "Lama dah kerja kat sini? = been working here long?"
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "staff",
+      "ms": "Sekali satu ofis kena COVID.",
+      "en": "And then the whole office got COVID.",
+      "src": [
+       "t11187964"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kau sakit, kenapa datang kerja?",
+      "right": "Bos panggil. Kena masuk kerja jugak.",
+      "wrong": [
+       "Khamis minggu depan cuti.",
+       "Bagus kerja kau."
+      ],
+      "why": "Why come in sick? The boss called, so you had to."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "you",
+      "ms": "Aku dah siapkan kerja sekolah aku lah.",
+      "en": "I've finished my homework.",
+      "src": [
+       "t10726242"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

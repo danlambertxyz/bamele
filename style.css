@@ -283,3 +283,10 @@ button.chip:hover { border-color: var(--green); }
 
 /* Word order: a used tile leaves its slot behind */
 .tile.gone { color: transparent; background: var(--ground); border-style: dashed; border-color: var(--border); box-shadow: none; cursor: default; }
+
+/* Marker for sentences copied unchanged from an open corpus */
+.real { display: inline-flex; align-items: center; gap: 4px; align-self: flex-start; font-size: 12px; font-weight: 600; color: var(--ok); background: var(--ok-tint); border-radius: 999px; padding: 3px 9px; cursor: help; }
+.real svg { width: 12px; height: 12px; }
+.tools .real { margin-left: auto; }
+.sources { columns: 2 320px; font-size: 13px; padding-left: 18px; }
+.sources li { break-inside: avoid; margin-bottom: 4px; }

@@ -1,0 +1,806 @@
+{
+ "id": "m05-l03",
+ "title": "Jom!",
+ "blurb": "Making plans, turning them down, and making them again.",
+ "staff": {
+  "label": "Adi",
+  "name": "Adi, a friend",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "jom",
+   "body": "<b>Jom</b> is “let's”: <i>jom makan</i>, <i>jom pergi</i>. <b>Jomlah!</b> on its own is “come on, let's do it!”"
+  },
+  {
+   "title": "mungkin",
+   "body": "<b>Mungkin</b> (maybe) is the polite way to stay non-committal: <i>Esok mungkin aku jumpa kau.</i>"
+  },
+  {
+   "title": "tak boleh",
+   "body": "<b>Tak boleh</b> covers “can't”, “not allowed” and “doesn't work for me”. Add the day and you have a full excuse: <i>Isnin tak boleh.</i>"
+  }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Jom pergi main bola.",
+   "en": "Let's go and play football.",
+   "src": [
+    "t8875186"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p2": {
+   "ms": "Aku tak boleh pergi.",
+   "en": "I can't go.",
+   "src": [
+    "t4611714"
+   ],
+   "real": true
+  },
+  "p3": {
+   "ms": "Esok mungkin hujan.",
+   "en": "It might rain tomorrow.",
+   "src": [
+    "t5900198"
+   ],
+   "real": true,
+   "note": "mungkin = maybe."
+  },
+  "p4": {
+   "ms": "Kalau tak suka, cakap.",
+   "en": "If you don't like it, say so.",
+   "src": [
+    "t11518710"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p5": {
+   "ms": "Bergurau je!",
+   "en": "Just kidding!",
+   "src": [
+    "t4609672"
+   ],
+   "real": true,
+   "note": "bergurau = to joke."
+  },
+  "p6": {
+   "ms": "Esok mungkin aku jumpa kau.",
+   "en": "Maybe I'll see you tomorrow.",
+   "src": [
+    "t10727704"
+   ],
+   "real": true
+  },
+  "p7": {
+   "ms": "Jomlah!",
+   "en": "Come on, let's go!",
+   "src": [
+    "t4563532"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p8": {
+   "ms": "Jom makan luar malam ni!",
+   "en": "Let's eat out tonight!",
+   "src": [
+    "t10772373"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p9": {
+   "ms": "Jom Isnin main tenis.",
+   "en": "Let's play tennis on Monday.",
+   "src": [
+    "t10789929"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p10": {
+   "ms": "Dulu nak jumpa setahun sekali pun payah.",
+   "en": "It used to be hard to meet up even once a year.",
+   "src": [
+    "t11518716"
+   ],
+   "real": true,
+   "note": "dulu = back then; payah = difficult."
+  },
+  "p11": {
+   "ms": "Takat jumpa setahun sekali, baik tak payah.",
+   "en": "If we only meet once a year, better not bother.",
+   "src": [
+    "t11395994"
+   ],
+   "real": true,
+   "note": "takat = if it's only; baik = better.",
+   "v": "m"
+  },
+  "p12": {
+   "ms": "Hari ni mak aku nak datang rumah.",
+   "en": "My mum is coming over today.",
+   "src": [
+    "t9714005"
+   ],
+   "real": true
+  }
+ },
+ "match": [
+  [
+   "jom",
+   "mari"
+  ],
+  [
+   "pegi",
+   "pergi"
+  ],
+  [
+   "macam mana",
+   "bagaimana"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "mak",
+   "emak / ibu"
+  ],
+  [
+   "jap",
+   "sekejap"
+  ],
+  [
+   "tak payah",
+   "tidak perlu"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Jom pergi main bola.",
+     "en": "Let's go and play football.",
+     "src": [
+      "t8875186"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Aku tak boleh pergi.",
+     "en": "I can't go.",
+     "src": [
+      "t4611714"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Esok?",
+     "en": "Tomorrow?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Esok mungkin hujan.",
+     "en": "It might rain tomorrow.",
+     "src": [
+      "t5900198"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Jom makan luar malam ni!",
+     "en": "Let's eat out tonight!",
+     "src": [
+      "t10772373"
+     ],
+     "real": true
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Boleh la. Jumpa lagi!",
+     "en": "Sure, why not. See you!",
+     "src": [
+      "t11535538",
+      "t3936339"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What do they end up planning?",
+    "options": [
+     "Eating out tonight",
+     "Football tomorrow",
+     "Nothing at all"
+    ],
+    "answer": 0,
+    "why": "Jom makan luar malam ni! … Boleh la."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p8"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Nak tengok?",
+      "en": "Do you want to take a look?",
+      "src": [
+       "t6569289"
+      ],
+      "real": true,
+      "wrong": [
+       "Do you want to go?",
+       "Did you see it?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Saya nak pergi.",
+      "en": "I'd like to go.",
+      "src": [
+       "t3936286"
+      ],
+      "real": true,
+      "word": "pergi"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Dia dah datang!",
+      "en": "He's here!",
+      "src": [
+       "t3936283"
+      ],
+      "real": true,
+      "wrong": [
+       "He's already left!",
+       "He isn't coming!"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Jumpa hari Ahad!",
+      "en": "See you on Sunday!",
+      "src": [
+       "t1403351"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Esok awak tak boleh datang.",
+      "en": "You can't come tomorrow.",
+      "src": [
+       "t11056849"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Jom nyanyi dengan aku.",
+      "right": "Tak nak. Aku tak boleh nyanyi.",
+      "wrong": [
+       "Esok mungkin hujan.",
+       "Dia dah datang!"
+      ],
+      "why": "He's inviting you to sing; you turn it down with tak nak."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Saya nak awak datang.",
+      "en": "I want you to come.",
+      "src": [
+       "t11074689"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Awak mahu pergi?",
+      "right": "Nak. Jomlah!",
+      "wrong": [
+       "Jumpa hari Ahad!",
+       "Nak tengok?"
+      ],
+      "why": "Do you want to go? Nak — and jomlah gets things moving."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Hari ni aku pegi muzium.",
+      "en": "Today I'm going to the museum.",
+      "src": [
+       "t10653396"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Jom pergi main bola.",
+     "en": "Let's go and play football.",
+     "src": [
+      "t8875186"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Aku tak boleh pergi. Hari ni mak aku nak datang rumah.",
+     "en": "I can't go. My mum is coming over today.",
+     "src": [
+      "t4611714",
+      "t9714005"
+     ],
+     "real": true
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Esok macam mana?",
+     "en": "How about tomorrow?"
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Esok mungkin hujan.",
+     "en": "It might rain tomorrow.",
+     "src": [
+      "t5900198"
+     ],
+     "real": true
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Kalau tak suka, cakap.",
+     "en": "If you don't like it, say so.",
+     "src": [
+      "t11518710"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Bergurau je! Esok mungkin aku jumpa kau.",
+     "en": "Just kidding! Maybe I'll see you tomorrow.",
+     "src": [
+      "t4609672",
+      "t10727704"
+     ],
+     "real": true
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Okay. Jomlah!",
+     "en": "Okay. Let's do it!",
+     "src": [
+      "t4563532"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "Why can't she go today?",
+    "options": [
+     "Her mum is coming over",
+     "She has a test",
+     "It's raining",
+     "She's working late"
+    ],
+    "answer": 0,
+    "why": "Hari ni mak aku nak datang rumah."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p12",
+    "p3",
+    "p4",
+    "p5",
+    "p6"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Aku rasa kau kena datang.",
+      "en": "I think you have to come.",
+      "src": [
+       "t10778270"
+      ],
+      "real": true,
+      "wrong": [
+       "I think you can't come.",
+       "I think I have to go."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Boleh tak aku pegi dulu?",
+      "en": "Can I go first?",
+      "src": [
+       "t10677812"
+      ],
+      "real": true,
+      "word": "dulu"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Katanya, nak datang kat sini.",
+      "en": "Apparently he wants to come here.",
+      "src": [
+       "t10738298"
+      ],
+      "real": true,
+      "wrong": [
+       "Apparently he isn't coming.",
+       "He said to come here quickly."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Kau tak boleh pegi.",
+      "en": "You can't go.",
+      "src": [
+       "t10674959"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Aku seronok betul malam ni.",
+      "en": "I'm having a really great time tonight.",
+      "src": [
+       "t10730595"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Jom Isnin main tenis.",
+      "right": "Isnin tak boleh. Selasa macam mana?",
+      "wrong": [
+       "Bergurau je!",
+       "Dia dah datang!"
+      ],
+      "why": "Turn down the day, then offer another."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Mungkin jap lagi aku pegi.",
+      "en": "Maybe I'll go in a little while.",
+      "src": [
+       "t10727829"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kau datang tak malam ni?",
+      "right": "Datang. Jumpa lagi!",
+      "wrong": [
+       "Esok mungkin hujan.",
+       "Kalau tak suka, cakap."
+      ],
+      "why": "Answer a … tak? question with the verb: datang."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Dia baru je pegi.",
+      "en": "He only just left.",
+      "src": [
+       "t10657647"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Bila nak pegi minum sekali?",
+     "en": "When are we going for a drink together?",
+     "src": [
+      "t11368213"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Rindu nak lepak dengan member. Tapi minggu ni tak boleh.",
+     "en": "I miss hanging out with friends. But this week I can't.",
+     "src": [
+      "t11518810"
+     ]
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Jom Isnin main tenis.",
+     "en": "Let's play tennis on Monday.",
+     "src": [
+      "t10789929"
+     ],
+     "real": true
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Isnin aku dah plan nak balik kampung.",
+     "en": "On Monday I've already planned to go back to my kampung."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Wah. Dah lama tak balik kampung?",
+     "en": "Wow. Been a long time since you went back?"
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Dulu nak jumpa setahun sekali pun payah.",
+     "en": "It used to be hard to meet up even once a year.",
+     "src": [
+      "t11518716"
+     ],
+     "real": true
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Takat jumpa setahun sekali, baik tak payah.",
+     "en": "If we only meet once a year, better not bother.",
+     "src": [
+      "t11395994"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Kalau tak suka, cakap.",
+     "en": "If you don't like it, say so.",
+     "src": [
+      "t11518710"
+     ],
+     "real": true
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Bergurau je!",
+     "en": "Just kidding!",
+     "src": [
+      "t4609672"
+     ],
+     "real": true
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Okay la. Esok mungkin aku jumpa kau.",
+     "en": "Okay then. Maybe I'll see you tomorrow.",
+     "src": [
+      "t10727704"
+     ]
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Jomlah!",
+     "en": "Come on, let's go!",
+     "src": [
+      "t4563532"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What is she doing on Monday?",
+    "options": [
+     "Going back to her kampung",
+     "Playing tennis",
+     "Working late",
+     "Meeting him for a drink"
+    ],
+    "answer": 0,
+    "why": "Isnin aku dah plan nak balik kampung."
+   },
+   "phrases": [
+    "p9",
+    "p10",
+    "p11",
+    "p4",
+    "p5",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Esok nak hantar, baru gelabah.",
+      "en": "It's due tomorrow, and only now the panic starts.",
+      "src": [
+       "t11540115"
+      ],
+      "real": true,
+      "wrong": [
+       "It was sent yesterday, so relax.",
+       "Send it tomorrow, there's no rush.",
+       "Tomorrow we can panic together."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Jangan pegi cepat sangat.",
+      "en": "Don't go so fast.",
+      "src": [
+       "t10684033"
+      ],
+      "real": true,
+      "word": "cepat"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Kita ada ujian hari ni.",
+      "en": "We have a test today.",
+      "src": [
+       "t10666257"
+      ],
+      "real": true,
+      "wrong": [
+       "We had a test yesterday.",
+       "There's no test today.",
+       "We have a party today."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Hari ni aku pegi muzium.",
+      "en": "Today I'm going to the museum.",
+      "src": [
+       "t10653396"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Takkan nak kerja je kan, sekali-sekala kena gak bercuti.",
+      "en": "You can't just work, right — once in a while you have to take a holiday.",
+      "src": [
+       "t11368237"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kau nak jumpa aku ke?",
+      "right": "Nak la. Dah lama kita tak jumpa.",
+      "wrong": [
+       "Jangan pegi cepat sangat.",
+       "Kita ada ujian hari ni."
+      ],
+      "why": "Do you want to see me? Of course — it's been ages."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "staff",
+      "ms": "Katanya, nak datang kat sini.",
+      "en": "Apparently he wants to come here.",
+      "src": [
+       "t10738298"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kenapa kau tak datang semalam?",
+      "right": "Sorry. Semalam mak aku datang rumah.",
+      "wrong": [
+       "Jomlah!",
+       "Takat jumpa setahun sekali, baik tak payah."
+      ],
+      "why": "A kenapa question wants a reason."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "you",
+      "ms": "Aku rasa kau kena datang.",
+      "en": "I think you have to come.",
+      "src": [
+       "t10778270"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

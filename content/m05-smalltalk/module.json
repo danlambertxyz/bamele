@@ -1,0 +1,42 @@
+{
+ "id": "m05",
+ "title": "Small talk",
+ "lessons": [
+  {
+   "id": "l01",
+   "file": "l01.json",
+   "title": "Lama tak jumpa",
+   "blurb": "Catching up with a friend you haven't seen in ages."
+  },
+  {
+   "id": "l02",
+   "file": "l02.json",
+   "title": "Kerja, kerja, kerja",
+   "blurb": "Tired, busy and counting the days to the next holiday."
+  },
+  {
+   "id": "l03",
+   "file": "l03.json",
+   "title": "Jom!",
+   "blurb": "Making plans, turning them down, and making them again."
+  },
+  {
+   "id": "l04",
+   "file": "l04.json",
+   "title": "Dah sampai mana?",
+   "blurb": "Rain, jams and running late — the KL classics."
+  },
+  {
+   "id": "l05",
+   "file": "l05.json",
+   "title": "Kau rasa?",
+   "blurb": "Saying what you think — and that you don't really mind."
+  }
+ ],
+ "finale": {
+  "title": "Module 5 test",
+  "blurb": "Twelve questions drawn from all five lessons.",
+  "testSize": 12
+ },
+ "clips": []
+}

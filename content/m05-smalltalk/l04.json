@@ -1,0 +1,821 @@
+{
+ "id": "m05-l04",
+ "title": "Dah sampai mana?",
+ "blurb": "Rain, jams and running late — the KL classics.",
+ "staff": {
+  "label": "Lin",
+  "name": "Lin, a friend",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "Dah sampai mana?",
+   "body": "Literally “arrived where already?” — the standard call or text to someone who is late."
+  },
+  {
+   "title": "sempat",
+   "body": "<b>Sempat</b> means there's enough time: <i>sempat</i> (we'll make it), <i>tak sempat</i> (we won't)."
+  },
+  {
+   "title": "diorang, kitorang, korang",
+   "body": "Spoken plurals: <b>diorang</b> (they), <b>kitorang</b> (we, not you), <b>korang</b> (you all). They come from <i>dia orang</i>, <i>kita orang</i>, <i>kau orang</i>."
+  }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Dah sampai mana?",
+   "en": "Where have you got to?",
+   "src": [
+    "t11518707"
+   ],
+   "real": true,
+   "note": "What you ask someone who's on the way.",
+   "v": "f"
+  },
+  "p2": {
+   "ms": "Aku rasa aku dah sesat.",
+   "en": "I think I'm lost.",
+   "src": [
+    "t10657718"
+   ],
+   "real": true,
+   "note": "sesat = lost."
+  },
+  "p3": {
+   "ms": "Kenapa awak lambat sangat?",
+   "en": "Why are you so late?",
+   "src": [
+    "t6457991"
+   ],
+   "real": true,
+   "v": "f"
+  },
+  "p4": {
+   "ms": "Hujan turun sejak semalam.",
+   "en": "It's been raining since yesterday.",
+   "src": [
+    "t10903311"
+   ],
+   "real": true,
+   "note": "sejak = since."
+  },
+  "p5": {
+   "ms": "Aku rasa kita takkan sempat sampai.",
+   "en": "I don't think we'll make it in time.",
+   "src": [
+    "t10657673"
+   ],
+   "real": true,
+   "note": "takkan = won't; sempat = make it in time.",
+   "v": "f"
+  },
+  "p6": {
+   "ms": "Tunggu sekejap.",
+   "en": "Wait a moment.",
+   "src": [
+    "t4555877"
+   ],
+   "real": true
+  },
+  "p7": {
+   "ms": "Dah sampai dah pun.",
+   "en": "I'm actually already here.",
+   "src": [
+    "t11518701"
+   ],
+   "real": true,
+   "note": "dah … dah pun stresses that it's already done."
+  },
+  "p8": {
+   "ms": "Wah, hari ini panas kan?",
+   "en": "Wow, it's hot today, isn't it?",
+   "src": [
+    "t1929801"
+   ],
+   "real": true,
+   "v": "f"
+  },
+  "p9": {
+   "ms": "Saya minta maaf kerana lewat.",
+   "en": "I'm sorry for being late.",
+   "src": [
+    "t3936625"
+   ],
+   "real": true,
+   "note": "Polite and fairly formal; with friends, just “sorry lambat”."
+  },
+  "p10": {
+   "ms": "Dah berjanggut tunggu tak sampai-sampai.",
+   "en": "I've waited so long I've grown a beard, and you're still not here.",
+   "src": [
+    "t11395899"
+   ],
+   "real": true,
+   "note": "A joke: berjanggut = bearded.",
+   "v": "f"
+  },
+  "p11": {
+   "ms": "Sekarang ni aku takde kereta.",
+   "en": "Right now I don't have a car.",
+   "src": [
+    "t10677732"
+   ],
+   "real": true,
+   "note": "takde = tiada."
+  },
+  "p12": {
+   "ms": "Kita kena tunggu diorang.",
+   "en": "We have to wait for them.",
+   "src": [
+    "t11029373"
+   ],
+   "real": true,
+   "note": "diorang = they / them.",
+   "v": "f"
+  },
+  "p13": {
+   "ms": "Panasnya.",
+   "en": "So hot!",
+   "src": [
+    "t6469709"
+   ],
+   "real": true,
+   "note": "-nya on an adjective = “so …!”"
+  }
+ },
+ "match": [
+  [
+   "takde",
+   "tiada"
+  ],
+  [
+   "diorang",
+   "mereka"
+  ],
+  [
+   "lambat",
+   "lewat"
+  ],
+  [
+   "sekejap",
+   "sebentar"
+  ],
+  [
+   "takkan",
+   "tidak akan"
+  ],
+  [
+   "kitorang",
+   "kami"
+  ],
+  [
+   "bawak",
+   "bawa"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Wah, hari ini panas kan?",
+     "en": "Wow, it's hot today, isn't it?",
+     "src": [
+      "t1929801"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Panasnya.",
+     "en": "So hot!",
+     "src": [
+      "t6469709"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Kenapa awak lambat sangat?",
+     "en": "Why are you so late?",
+     "src": [
+      "t6457991"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Saya minta maaf kerana lewat.",
+     "en": "I'm sorry for being late.",
+     "src": [
+      "t3936625"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Jalan jem ke?",
+     "en": "Was the traffic jammed?"
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Ya. Kami sesat nak sampai sini.",
+     "en": "Yes. We got lost getting here.",
+     "src": [
+      "t10723479"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "Why was he late?",
+    "options": [
+     "He got lost on the way",
+     "His car broke down",
+     "He overslept"
+    ],
+    "answer": 0,
+    "why": "Kami sesat nak sampai sini."
+   },
+   "phrases": [
+    "p8",
+    "p13",
+    "p3",
+    "p9"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Hari ini cuaca sejuk.",
+      "en": "The weather is cold today.",
+      "src": [
+       "t4731877"
+      ],
+      "real": true,
+      "wrong": [
+       "The weather is hot today.",
+       "It rained today."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Kita mesti tunggu.",
+      "en": "We must wait.",
+      "src": [
+       "t2913001"
+      ],
+      "real": true,
+      "word": "tunggu"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Dia sangat lewat.",
+      "en": "He is very late.",
+      "src": [
+       "t5900351"
+      ],
+      "real": true,
+      "wrong": [
+       "He is very early.",
+       "He is very fast."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Tunggu saya sebentar.",
+      "en": "Wait for me a moment.",
+      "src": [
+       "t10682866"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Saya kena bangun awal.",
+      "en": "I have to get up early.",
+      "src": [
+       "t11129830"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Boleh awak tunggu sebentar?",
+      "right": "Boleh. Saya tunggu.",
+      "wrong": [
+       "Panasnya.",
+       "Saya minta maaf kerana lewat."
+      ],
+      "why": "Can you wait a moment? Boleh — I'll wait."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Saya tak punya kereta.",
+      "en": "I don't have a car.",
+      "src": [
+       "t4556556"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Hujan ke?",
+      "right": "Tak. Hari ini panas.",
+      "wrong": [
+       "Kita mesti tunggu.",
+       "Dia sangat lewat."
+      ],
+      "why": "Is it raining? No — it's hot today."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Biar dia tunggu.",
+      "en": "Let him wait.",
+      "src": [
+       "t9682981"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Dah sampai mana?",
+     "en": "Where have you got to?",
+     "src": [
+      "t11518707"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Aku rasa aku dah sesat.",
+     "en": "I think I'm lost.",
+     "src": [
+      "t10657718"
+     ],
+     "real": true
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Kenapa awak lambat sangat?",
+     "en": "Why are you so late?",
+     "src": [
+      "t6457991"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Hujan turun sejak semalam. Jalan jem.",
+     "en": "It's been raining since yesterday. The roads are jammed.",
+     "src": [
+      "t10903311"
+     ]
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Aku rasa kita takkan sempat sampai.",
+     "en": "I don't think we'll make it in time.",
+     "src": [
+      "t10657673"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Sempat. Tunggu sekejap.",
+     "en": "We will. Wait a moment.",
+     "src": [
+      "t4555877"
+     ]
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Okay. Berhati-hati di jalan raya!",
+     "en": "Okay. Be careful on the road!",
+     "src": [
+      "t12624134"
+     ]
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Dah sampai dah pun.",
+     "en": "I'm actually already here.",
+     "src": [
+      "t11518701"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What is slowing him down?",
+    "options": [
+     "Rain and traffic, and he's lost",
+     "He left the house late",
+     "His phone died",
+     "He stopped to eat"
+    ],
+    "answer": 0,
+    "why": ""
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Selalunya aku bangun lambat.",
+      "en": "I usually get up late.",
+      "src": [
+       "t9714029"
+      ],
+      "real": true,
+      "wrong": [
+       "I usually get up early.",
+       "I only got up late today."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Apa kau tunggu lagi?",
+      "en": "What are you still waiting for?",
+      "src": [
+       "t11535547"
+      ],
+      "real": true,
+      "word": "lagi"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Sekarang ni aku takde kereta.",
+      "en": "Right now I don't have a car.",
+      "src": [
+       "t10677732"
+      ],
+      "real": true,
+      "wrong": [
+       "Right now I have a new car.",
+       "My car is right here."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Aku kena cuci kereta.",
+      "en": "I have to wash the car.",
+      "src": [
+       "t10727853"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Tau-tau dah sampai rumah.",
+      "en": "Before I knew it, I was home.",
+      "src": [
+       "t11518726"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kau kat mana? Dah lambat ni.",
+      "right": "Sorry. Jalan jem teruk.",
+      "wrong": [
+       "Aku kena cuci kereta.",
+       "Berhati-hati di jalan raya!"
+      ],
+      "why": "Where are you, it's late: apologise and give the reason."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Aku suka bawak kereta.",
+      "en": "I like driving.",
+      "src": [
+       "t10778245"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kau tengah sejuk kan?",
+      "right": "Ha'ah. Aircond ni sejuk gila.",
+      "wrong": [
+       "Dah sampai dah pun.",
+       "Aku rasa aku dah sesat."
+      ],
+      "why": "You're cold, right? Ha'ah — and say why."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Kita kena tunggu diorang.",
+      "en": "We have to wait for them.",
+      "src": [
+       "t11029373"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Dah sampai mana?",
+     "en": "Where have you got to?",
+     "src": [
+      "t11518707"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Aku rasa aku dah sesat.",
+     "en": "I think I'm lost.",
+     "src": [
+      "t10657718"
+     ],
+     "real": true
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "La. Dah berjanggut tunggu tak sampai-sampai.",
+     "en": "Oh, come on. I've waited so long I've grown a beard, and you're still not here.",
+     "src": [
+      "t11395899"
+     ]
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Sorry la. Hujan turun sejak semalam. Jalan jem teruk.",
+     "en": "Sorry. It's been raining since yesterday. The jam is terrible.",
+     "src": [
+      "t10903311"
+     ]
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Aku rasa kita takkan sempat sampai.",
+     "en": "I don't think we'll make it in time.",
+     "src": [
+      "t10657673"
+     ],
+     "real": true
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Sempat. Sekarang ni aku takde kereta. Aku naik Grab.",
+     "en": "We will. Right now I don't have a car. I'm taking a Grab.",
+     "src": [
+      "t10677732"
+     ]
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Kita kena tunggu diorang.",
+     "en": "We have to wait for them.",
+     "src": [
+      "t11029373"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Diorang pun lambat?",
+     "en": "They're late too?"
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Entah-entah lesen kereta pun takde.",
+     "en": "For all we know, they don't even have a driving licence.",
+     "src": [
+      "t11187973"
+     ],
+     "real": true
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Haha. Tunggu sekejap. Dah sampai dah pun.",
+     "en": "Haha. Wait a moment. I'm actually already here.",
+     "src": [
+      "t4555877",
+      "t11518701"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "How is he getting there?",
+    "options": [
+     "By Grab, because he has no car right now",
+     "Driving his own car",
+     "Walking in the rain",
+     "Getting a lift from the others"
+    ],
+    "answer": 0,
+    "why": "Sekarang ni aku takde kereta. Aku naik Grab."
+   },
+   "phrases": [
+    "p10",
+    "p11",
+    "p12",
+    "p5",
+    "p1",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Kami sampai-sampai terus kena marah.",
+      "en": "The moment we arrived, we got told off.",
+      "src": [
+       "t11187979"
+      ],
+      "real": true,
+      "wrong": [
+       "We arrived and everyone was happy.",
+       "We got angry and left straight away.",
+       "We arrived before anyone else."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Semua jadi cepat sangat.",
+      "en": "Everything happened so fast.",
+      "src": [
+       "t10732600"
+      ],
+      "real": true,
+      "word": "jadi"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Cepat la habis majlis ni.",
+      "en": "I wish this event would hurry up and end.",
+      "src": [
+       "t11516633"
+      ],
+      "real": true,
+      "wrong": [
+       "This event ended too quickly.",
+       "Hurry, the event is starting.",
+       "The event finished early."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Kenapa sampai macam tu?",
+      "en": "Why did it get to that point?",
+      "src": [
+       "t11187882"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Kami sesat nak sampai sini.",
+      "en": "We got lost getting here.",
+      "src": [
+       "t10723479"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Diorang dah sampai?",
+      "right": "Belum. Diorang pun sesat.",
+      "wrong": [
+       "Semua jadi cepat sangat.",
+       "Aku kena cuci kereta."
+      ],
+      "why": "Have they arrived? Belum — they're lost too."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Tau-tau dah sampai rumah.",
+      "en": "Before I knew it, I was home.",
+      "src": [
+       "t11518726"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Sempat tak ni?",
+      "right": "Tak sempat. Jalan jem teruk.",
+      "wrong": [
+       "Rumah aku sejuk gila.",
+       "Selalunya aku bangun lambat."
+      ],
+      "why": "Will we make it? Tak sempat, and the reason."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Selalunya aku bangun lambat.",
+      "en": "I usually get up late.",
+      "src": [
+       "t9714029"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

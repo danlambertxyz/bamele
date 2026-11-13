@@ -1,0 +1,812 @@
+{
+ "id": "m05-l01",
+ "title": "Lama tak jumpa",
+ "blurb": "Catching up with a friend you haven't seen in ages.",
+ "staff": {
+  "label": "Adi",
+  "name": "Adi, a friend",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "aku and kau",
+   "body": "With friends it's <b>aku</b> (I) and <b>kau</b> (you). With people you don't know well, or at work, it's <b>saya</b> and <b>awak</b>. You'll hear both in this module."
+  },
+  {
+   "title": "Dah makan?",
+   "body": "“Have you eaten?” is as much a greeting as a question. <i>Dah</i> (already) or <i>belum</i> (not yet) are the two answers."
+  },
+  {
+   "title": "Spoken spellings",
+   "body": "People write the way they talk: <b>pegi</b> for pergi, <b>ambik</b> for ambil, <b>gak</b> for juga, <b>takde</b> for tiada."
+  }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Dah lama kita tak jumpa.",
+   "en": "It's been a long time since we met.",
+   "src": [
+    "t10656051"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p2": {
+   "ms": "Dah makan?",
+   "en": "Have you eaten?",
+   "src": [
+    "t4563543"
+   ],
+   "real": true,
+   "note": "The everyday greeting between friends.",
+   "v": "m"
+  },
+  "p3": {
+   "ms": "Aku ni asyik sibuk dengan kerja.",
+   "en": "I'm always busy with work.",
+   "src": [
+    "t9724812"
+   ],
+   "real": true,
+   "note": "asyik = keep on, always."
+  },
+  "p4": {
+   "ms": "Kau ni kerja kuat sangat.",
+   "en": "You work too hard.",
+   "src": [
+    "t10656062"
+   ],
+   "real": true,
+   "note": "kuat = strong, hard."
+  },
+  "p5": {
+   "ms": "Bila nak pegi minum sekali?",
+   "en": "When are we going for a drink together?",
+   "src": [
+    "t11368213"
+   ],
+   "real": true,
+   "note": "sekali here = together."
+  },
+  "p6": {
+   "ms": "Jom makan luar malam ni!",
+   "en": "Let's eat out tonight!",
+   "src": [
+    "t10772373"
+   ],
+   "real": true,
+   "note": "jom = let's."
+  },
+  "p7": {
+   "ms": "Boleh la.",
+   "en": "Sure, why not.",
+   "src": [
+    "t11535538"
+   ],
+   "real": true,
+   "note": "A relaxed, slightly lukewarm yes."
+  },
+  "p8": {
+   "ms": "Apa khabar?",
+   "en": "How are you?",
+   "src": [
+    "t3351855"
+   ],
+   "real": true,
+   "v": "m"
+  },
+  "p9": {
+   "ms": "Kita lama tak jumpa.",
+   "en": "We haven't met in a long time.",
+   "src": [
+    "t4560192"
+   ],
+   "real": true
+  },
+  "p10": {
+   "ms": "Rindu nak lepak dengan member.",
+   "en": "I miss hanging out with friends.",
+   "src": [
+    "t11518810"
+   ],
+   "real": true,
+   "note": "lepak = hang out; member = friends."
+  },
+  "p11": {
+   "ms": "Takkan nak kerja je kan, sekali-sekala kena gak bercuti.",
+   "en": "You can't just work, right — once in a while you have to take a holiday.",
+   "src": [
+    "t11368237"
+   ],
+   "real": true,
+   "note": "takkan = surely not; gak = juga.",
+   "v": "m"
+  },
+  "p12": {
+   "ms": "Jumpa lagi!",
+   "en": "See you again!",
+   "src": [
+    "t3936339"
+   ],
+   "real": true
+  }
+ },
+ "match": [
+  [
+   "pegi",
+   "pergi"
+  ],
+  [
+   "tak",
+   "tidak"
+  ],
+  [
+   "nak",
+   "hendak"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "ambik",
+   "ambil"
+  ],
+  [
+   "gak",
+   "juga"
+  ],
+  [
+   "takkan",
+   "tidak akan"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Apa khabar?",
+     "en": "How are you?",
+     "src": [
+      "t3351855"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Khabar baik. Kita lama tak jumpa.",
+     "en": "I'm fine. We haven't met in a long time.",
+     "src": [
+      "t4560192"
+     ]
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Awak sibuk sekarang?",
+     "en": "Are you busy now?",
+     "src": [
+      "t5900157"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Sekarang sibuk.",
+     "en": "Busy right now.",
+     "src": [
+      "t3936366"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Dah makan?",
+     "en": "Have you eaten?",
+     "src": [
+      "t4563543"
+     ],
+     "real": true
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Belum. Jom makan!",
+     "en": "Not yet. Let's eat!"
+    }
+   ],
+   "gist": {
+    "q": "What do they decide to do?",
+    "options": [
+     "Go and eat",
+     "Go back to work",
+     "Meet again next week"
+    ],
+    "answer": 0,
+    "why": "Dah makan? … Belum. Jom makan!"
+   },
+   "phrases": [
+    "p8",
+    "p9",
+    "p2",
+    "p12"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Apa khabar korang berdua?",
+      "en": "How are you two?",
+      "src": [
+       "t10305802"
+      ],
+      "real": true,
+      "wrong": [
+       "Where are you two going?",
+       "Have you two eaten?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Saya nak balik rumah.",
+      "en": "I want to go home.",
+      "src": [
+       "t8346971"
+      ],
+      "real": true,
+      "word": "balik"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Awak buat apa semalam?",
+      "en": "What did you do yesterday?",
+      "src": [
+       "t10304170"
+      ],
+      "real": true,
+      "wrong": [
+       "What are you doing tomorrow?",
+       "Where were you yesterday?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Saya sibuk.",
+      "en": "I'm busy.",
+      "src": [
+       "t4573764"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Dah makan malam ke?",
+      "en": "Have you had dinner?",
+      "src": [
+       "t4563544"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Awak buat apa?",
+      "right": "Tak buat apa-apa.",
+      "wrong": [
+       "Khabar baik.",
+       "Jumpa lagi!"
+      ],
+      "why": "He asks what you're doing; tak buat apa-apa = nothing much."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Saya nak jumpa awak.",
+      "en": "I want to see you.",
+      "src": [
+       "t4551709"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Laparnya...",
+      "right": "Jom makan!",
+      "wrong": [
+       "Khabar baik.",
+       "Sekarang sibuk."
+      ],
+      "why": "Laparnya = so hungry. The friendly answer is to go and eat."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Bila awak dah balik?",
+      "en": "When did you get back?",
+      "src": [
+       "t10500846"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Dah lama kita tak jumpa.",
+     "en": "It's been a long time since we met.",
+     "src": [
+      "t10656051"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Tu la. Kau buat apa sekarang?",
+     "en": "I know, right. What are you up to now?"
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Aku ni asyik sibuk dengan kerja.",
+     "en": "I'm always busy with work.",
+     "src": [
+      "t9724812"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Kau ni kerja kuat sangat.",
+     "en": "You work too hard.",
+     "src": [
+      "t10656062"
+     ],
+     "real": true
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Kau pulak? Dah makan?",
+     "en": "And you? Have you eaten?",
+     "src": [
+      "t4563543"
+     ]
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Belum. Bila nak pegi minum sekali?",
+     "en": "Not yet. When are we going for a drink together?",
+     "src": [
+      "t11368213"
+     ]
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Jom makan luar malam ni!",
+     "en": "Let's eat out tonight!",
+     "src": [
+      "t10772373"
+     ],
+     "real": true
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Boleh la.",
+     "en": "Sure, why not.",
+     "src": [
+      "t11535538"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What is his life like at the moment?",
+    "options": [
+     "He's always busy with work",
+     "He just lost his job",
+     "He's on holiday",
+     "He's about to move away"
+    ],
+    "answer": 0,
+    "why": "Aku ni asyik sibuk dengan kerja."
+   },
+   "phrases": [
+    "p1",
+    "p3",
+    "p4",
+    "p2",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Kau buat apa minggu lepas?",
+      "en": "What did you do last week?",
+      "src": [
+       "t10729086"
+      ],
+      "real": true,
+      "wrong": [
+       "What are you doing next week?",
+       "Where did you go last week?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Rasa macam tak nak balik.",
+      "en": "It feels like I don't want to go back.",
+      "src": [
+       "t11518731"
+      ],
+      "real": true,
+      "word": "macam"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Kau nak jumpa aku ke?",
+      "en": "Do you want to see me?",
+      "src": [
+       "t9688105"
+      ],
+      "real": true,
+      "wrong": [
+       "Did you see me?",
+       "Do you want me to go?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Dia balik kelmarin.",
+      "en": "He went home yesterday.",
+      "src": [
+       "t10681083"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Bila kita makan? Saya laparlah!",
+      "en": "When are we eating? I'm hungry!",
+      "src": [
+       "t4563592"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kenapa awak tak balik?",
+      "right": "Banyak kerja. Fikir nak balik je.",
+      "wrong": [
+       "Boleh la.",
+       "Jom makan luar malam ni!"
+      ],
+      "why": "He asks why you didn't go home: too much work."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Kitorang bergerak nak balik rumah.",
+      "en": "We're heading home.",
+      "src": [
+       "t9708941"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Bila nak jumpa?",
+      "right": "Esok mungkin aku jumpa kau.",
+      "wrong": [
+       "Kau ni kerja kuat sangat.",
+       "Dah makan?"
+      ],
+      "why": "A when-question wants a time: esok mungkin…"
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Dia rasa macam tak sihat.",
+      "en": "He feels kind of unwell.",
+      "src": [
+       "t9724813"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "La, ingatkan tak balik?",
+     "en": "Oh, I thought you weren't coming back?",
+     "src": [
+      "t11518699"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Dah lama tak balik kampung. Rindu nak lepak dengan member.",
+     "en": "It's been ages since I came back to the kampung. I miss hanging out with friends.",
+     "src": [
+      "t11376487",
+      "t11518810"
+     ],
+     "real": true
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Dah lama kita tak jumpa. Kau apa cerita?",
+     "en": "It's been a long time since we met. What's new with you?",
+     "src": [
+      "t10656051"
+     ]
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Aku ni asyik sibuk dengan kerja. Fikir nak balik je.",
+     "en": "I'm always busy with work. All I think about is going home.",
+     "src": [
+      "t9724812",
+      "t11380330"
+     ],
+     "real": true
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Takkan nak kerja je kan, sekali-sekala kena gak bercuti.",
+     "en": "You can't just work, right — once in a while you have to take a holiday.",
+     "src": [
+      "t11368237"
+     ],
+     "real": true
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Tu la. Kenapalah aku tak ambik cuti hari tu.",
+     "en": "I know. Why on earth didn't I take leave that time.",
+     "src": [
+      "t11518733"
+     ]
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Kau ni kerja kuat sangat. Bila nak pegi minum sekali?",
+     "en": "You work too hard. When are we going for a drink together?",
+     "src": [
+      "t10656062",
+      "t11368213"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Jom makan luar malam ni!",
+     "en": "Let's eat out tonight!",
+     "src": [
+      "t10772373"
+     ],
+     "real": true
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Malam ni tak boleh. Esok mungkin aku jumpa kau.",
+     "en": "Tonight I can't. Maybe I'll see you tomorrow.",
+     "src": [
+      "t10727704"
+     ]
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Okay. Jumpa lagi!",
+     "en": "Okay. See you!",
+     "src": [
+      "t3936339"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "When will they probably meet up?",
+    "options": [
+     "Tomorrow",
+     "Tonight",
+     "Next Thursday",
+     "Not at all"
+    ],
+    "answer": 0,
+    "why": "Malam ni tak boleh. Esok mungkin aku jumpa kau."
+   },
+   "phrases": [
+    "p10",
+    "p11",
+    "p1",
+    "p5",
+    "p12",
+    "p3"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Lepas sejam, dia call balik.",
+      "en": "An hour later, he called back.",
+      "src": [
+       "t11540092"
+      ],
+      "real": true,
+      "wrong": [
+       "He called an hour ago and left.",
+       "He'll call back in an hour.",
+       "He called back every hour."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Balik-balik cakap pasal benda sama.",
+      "en": "Keeps going on about the same thing.",
+      "src": [
+       "t11518831"
+      ],
+      "real": true,
+      "word": "pasal"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Bila ingat balik, memang kelakar.",
+      "en": "When I think back, it's really funny.",
+      "src": [
+       "t11395984"
+      ],
+      "real": true,
+      "wrong": [
+       "When I get back, it'll be fun.",
+       "I remember he was really funny.",
+       "I can't remember what was funny."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Kau buat apa minggu lepas?",
+      "en": "What did you do last week?",
+      "src": [
+       "t10729086"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Dulu nak jumpa setahun sekali pun payah.",
+      "en": "It used to be hard to meet up even once a year.",
+      "src": [
+       "t11518716"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kau apa cerita sekarang?",
+      "right": "Asyik kerja. Fikir nak balik je.",
+      "wrong": [
+       "Lepas sejam, dia call balik.",
+       "Jumpa lagi!"
+      ],
+      "why": "Kau apa cerita = what's new with you."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Rasa macam tak nak balik.",
+      "en": "It feels like I don't want to go back.",
+      "src": [
+       "t11518731"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Cuti ni kau balik kampung tak?",
+      "right": "Balik. Dah lama tak balik kampung.",
+      "wrong": [
+       "Kau ni kerja kuat sangat.",
+       "Malam ni tak boleh."
+      ],
+      "why": "A yes/no question with tak: answer with the verb, balik."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Kau nak jumpa aku ke?",
+      "en": "Do you want to see me?",
+      "src": [
+       "t9688105"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}
