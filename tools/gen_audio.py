@@ -53,6 +53,11 @@ def jobs():
                 for line in lv["dialogue"]:
                     for sp, rate in RATES.items():
                         yield out / f"{line['id']}-{sp}.mp3", line["ms"], VOICES[voice[line["s"]]], rate
+                for kind in ("listen", "read"):
+                    for ex in lv["drills"][kind]:
+                        if "ms" in ex:
+                            for sp, rate in RATES.items():
+                                yield out / f"{ex['id']}-{sp}.mp3", ex["ms"], VOICES[voice[ex["s"]]], rate
     glossary = json.loads((ROOT / "content/glossary.json").read_text())
     for key in glossary:
         yield ROOT / "audio/words" / f"{slug(key)}.mp3", key, VOICES["f"], "-10%"

@@ -14,7 +14,8 @@ const nav = $('#nav');
 const LEVELS = ['easy', 'medium', 'hard'];
 const SHORT = { easy: 'Easy', medium: 'Med', hard: 'Hard' };
 const FULL = { easy: 'Easy', medium: 'Medium', hard: 'Hard' };
-const STEPS = ['Listen', 'Read along', 'Phrases', 'Drills', 'Real clip', 'Wrap-up'];
+const STEPS = ['Listen', 'Read along', 'Phrases', 'Listening drills', 'Reading drills', 'Real clip', 'Wrap-up'];
+const CLIP_STEP = 5;
 const DAY = 864e5;
 const BOXES = [1, 3, 7, 14, 30]; // days
 
@@ -23,7 +24,6 @@ const ICON = {
   x: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
   star: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/></svg>',
   play: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg>',
-  flag: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4h11l-2 4 2 4H5"/></svg>',
   tick: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>',
   slow: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
 };
@@ -36,7 +36,7 @@ try {
   if (!localStorage.getItem(KEY) && localStorage.getItem(OLD)) localStorage.setItem(KEY, localStorage.getItem(OLD));
   localStorage.removeItem(OLD);
 } catch (e) { /* storage blocked */ }
-const S = Object.assign({ v: 1, levels: {}, done: {}, tests: {}, review: {}, flags: {}, clipEdits: {}, days: [], last: null }, (() => {
+const S = Object.assign({ v: 1, levels: {}, done: {}, tests: {}, review: {}, clipEdits: {}, days: [], last: null }, (() => {
   try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
 })());
 function save() {
@@ -270,8 +270,6 @@ const ADDRESS = {
   Kak: 'Kak = kakak, “older sister”. How you address a woman serving you.',
 };
 const staffHTML = (label) => (ADDRESS[label] ? tip(esc(label), ADDRESS[label]) : esc(label));
-const flagBtn = (on) => `<button type="button" class="flagbtn flag" aria-pressed="${!!on}">${ICON.flag}<span>${on ? 'Flagged' : 'Feels off?'}</span></button>`;
-function setFlagBtn(btn, on) { btn.setAttribute('aria-pressed', on); $('span', btn).textContent = on ? 'Flagged' : 'Feels off?'; }
 
 /* ---------- small UI builders ---------- */
 function levelSwitch(mid, disabled) {
@@ -325,7 +323,7 @@ function setNav(active, lesson) {
   if (lesson) {
     nav.className = 'steps';
     nav.setAttribute('aria-label', 'Lesson steps');
-    nav.innerHTML = STEPS.map((s, i) => (i === 4 && !REAL
+    nav.innerHTML = STEPS.map((s, i) => (i === CLIP_STEP && !REAL
       ? `<span class="off" aria-disabled="true">${i + 1} ${s} <span class="soon-tag">soon</span></span>`
       : `<a href="#/l/${lesson.mid}/${lesson.lid}/${i}" class="${i === lesson.step ? 'on' : i < lesson.step ? 'done' : ''}" ${i === lesson.step ? 'aria-current="step"' : ''}>${i + 1} ${s}</a>`)).join('');
     return;
@@ -334,8 +332,7 @@ function setNav(active, lesson) {
   nav.setAttribute('aria-label', 'Main');
   const item = (id, href, label) => `<a href="${href}" class="${active === id ? 'on' : ''}" ${active === id ? 'aria-current="page"' : ''}>${label}</a>`;
   nav.innerHTML = item('course', '#/', 'Home') + item('review', '#/review', 'Review <span class="count" hidden></span>')
-    + (REAL ? item('clips', '#/clips', 'Clip review') : '<span class="off" aria-disabled="true">Clip review <span class="soon-tag">soon</span></span>')
-    + item('flags', '#/flags', 'Feels off?');
+    + (REAL ? item('clips', '#/clips', 'Clip review') : '<span class="off" aria-disabled="true">Clip review <span class="soon-tag">soon</span></span>');
   renderNavCount();
 }
 
@@ -486,7 +483,7 @@ async function viewLesson(mid, lid, step) {
   const [mod, lesson] = await Promise.all([getModule(mid), getLesson(mid, lid)]);
   const level = levelOf(mid), lv = lesson.levels[level];
   const key = `${lesson.id}:${level}`;
-  if (LS.key !== key) { LS = { key, speed: level === 'easy' ? 'slow' : 'normal', auto: false, drill: null, gist: null }; SES.hints = 0; }
+  if (LS.key !== key) { LS = { key, speed: level === 'easy' ? 'slow' : 'normal', auto: false, drill: {}, gist: null }; SES.hints = 0; }
   SES.level = level;
   step = Math.max(0, Math.min(STEPS.length - 1, step || 0));
   const num = mod.lessons.findIndex((l) => l.id === lid) + 1;
@@ -496,11 +493,14 @@ async function viewLesson(mid, lid, step) {
   const c = { mid, lid, step, meta, mod, lesson, level, lv, num, key, adir: `audio/${mid}/${lid}` };
   c.src = (id, speed) => `${c.adir}/${id}-${speed || LS.speed}.mp3`;
   c.head = (sub) => `<div class="stack" style="gap:6px"><div class="row spread">${crumbs([['Home', '#/'], [`Module ${meta.num}: ${meta.title}`, `#/m/${mid}`], [`Lesson ${num}`]])}
-    <a class="btn ghost exit" href="#/m/${mid}">${ICON.x} Exit lesson</a></div>
-    <span class="eyebrow">Lesson ${num} of ${mod.lessons.length} · ${FULL[level]} · Step ${step + 1}: ${STEPS[step]}</span><h1>${esc(lesson.title)}</h1>${sub ? `<p class="muted" style="font-size:15px">${sub}</p>` : ''}</div>`;
-  const nx = !REAL && step === 3 ? 5 : step + 1;
-  c.next = (cls) => (step < STEPS.length - 1 ? `<a class="btn next ${cls || ''}" href="#/l/${mid}/${lid}/${nx}">Next: ${STEPS[nx]} →</a>` : '');
-  [stepListen, stepRead, stepPhrases, stepDrills, stepClip, stepWrap][step](c);
+    <div class="row"><span class="lvlbadge" title="Change the difficulty on the module page">Difficulty: <b>${FULL[level]}</b></span><a class="btn ghost exit" href="#/m/${mid}">${ICON.x} Exit lesson</a></div></div>
+    <span class="eyebrow">Lesson ${num} of ${mod.lessons.length} · Step ${step + 1}: ${STEPS[step]}</span><h1>${esc(lesson.title)}</h1>${sub ? `<p class="muted" style="font-size:15px">${sub}</p>` : ''}</div>`;
+  const skip = (i, dir) => (!REAL && i === CLIP_STEP ? i + dir : i);
+  const nx = skip(step + 1, 1), pv = skip(step - 1, -1);
+  c.next = () => (step < STEPS.length - 1 ? `<a class="btn next" href="#/l/${mid}/${lid}/${nx}">Next: ${STEPS[nx]} →</a>` : '');
+  c.back = () => (step > 0 ? `<a class="btn ghost back" href="#/l/${mid}/${lid}/${pv}">← Back: ${STEPS[pv]}</a>` : `<a class="btn ghost back" href="#/m/${mid}">← Back: Module page</a>`);
+  c.nav = () => `<div class="row spread stepnav">${c.back()}${c.next()}</div>`;
+  [stepListen, stepRead, stepPhrases, (x) => stepDrills(x, 'listen'), (x) => stepDrills(x, 'read'), stepClip, stepWrap][step](c);
 }
 const speakerHTML = (c, s) => (s === 'you' ? 'You' : staffHTML(c.lesson.staff.label));
 function speedControl() {
@@ -517,36 +517,36 @@ function bindSpeed(root) {
 }
 
 function stepListen(c) {
-  const g = c.lv.gist;
+  const g = c.lv.gist, lines = c.lv.dialogue;
   app.innerHTML = `<div class="lesson"><section>
       ${c.head('Listen first — the text stays hidden. Replay as often as you like, then answer.')}
-      <div class="card key"><span class="eyebrow quiet">The dialogue · ${c.lv.dialogue.length} lines</span>
-        <div class="chips">${c.lv.dialogue.map((l, i) => `<span class="chip ${l.s}" data-i="${i}">${speakerHTML(c, l.s)}</span>`).join('')}</div>
+      <div class="card key"><span class="eyebrow quiet">The dialogue · ${lines.length} lines</span>
+        <div class="chips">${lines.map((l, i) => { const who = l.s === 'you' ? 'You' : c.lesson.staff.label; return `<button type="button" class="chip ${l.s}" data-i="${i}" aria-label="Play from line ${i + 1}, ${esc(who)}" title="Play from here">${esc(who)}</button>`; }).join('')}</div>
+        <span class="small muted">Tap any speaker to go back and play from that line.</span>
         ${speedControl()}
         <button type="button" class="btn red block play-all" data-label="Play the dialogue">${ICON.play} Play the dialogue</button></div>
       <div class="card gist"><span class="eyebrow quiet">Gist check</span><p class="q">${esc(g.q)}</p></div>
     </section><aside>
       <div class="card note"><span class="eyebrow quiet">Why listen blind?</span><p>The goal is whole sentences at natural speed. Reading first trains your eyes; this trains your ears. Guessing is fine.</p></div>
-      ${c.next()}</aside></div>`;
+      ${c.nav()}</aside></div>`;
   bindSpeed(app);
-  $('.play-all').addEventListener('click', () => playAll(() => {
-    $$('.chip').forEach((x) => x.classList.remove('heard'));
-    return c.lv.dialogue.map((l, i) => [() => c.src(l.id), $(`.chip[data-i="${i}"]`)]);
-  }, (el) => el.classList.add('heard')));
+  const items = (from) => lines.slice(from).map((l, k) => [() => c.src(l.id), $(`.chip[data-i="${from + k}"]`)]);
+  const heard = (el) => el.classList.add('heard');
+  $('.play-all').addEventListener('click', () => playAll(() => { $$('.chip').forEach((x) => x.classList.remove('heard')); return items(0); }, heard));
+  $('.chips').addEventListener('click', (e) => { const b = e.target.closest('.chip'); if (b) play(items(+b.dataset.i), heard, 0, 'all'); });
   const box = $('.gist');
   mcq(box, g, (ok) => { LS.gist = ok; feedback(box, ok, `<span>${esc(g.why || '')}</span>`); box.insertAdjacentHTML('beforeend', c.next()); });
 }
 
 function stepRead(c) {
-  const flagId = (l) => `${c.key}:${l.id}`;
   app.innerHTML = `<div class="lesson"><section>
-      ${c.head('Tap any word for its meaning. Translations stay hidden until you ask. If a line sounds wrong in real life, press Feels off? to save it for correction.' + (c.level === 'hard' ? ' On Hard, word taps count as hints.' : ''))}
+      ${c.head('Tap any word for its meaning. Translations stay hidden until you ask.' + (c.level === 'hard' ? ' On Hard, word taps count as hints.' : ''))}
       <div class="dialogue">${c.lv.dialogue.map((l) => `<div class="line ${l.s}" data-id="${l.id}">
         <span class="avatar">${speakerHTML(c, l.s)}</span>
         <div class="bubble"><p class="ms" lang="ms">${glossHTML(l.ms)}</p><p class="en" hidden>${esc(l.en)}</p>
           <div class="tools"><button type="button" class="iconbtn play-line" aria-label="Play line">${ICON.play}</button>
             <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>
-            ${flagBtn(S.flags[flagId(l)])}</div>
+            </div>
         </div></div>`).join('')}</div>
     </section><aside>
       <div class="card key"><span class="eyebrow quiet">Audio</span>
@@ -556,7 +556,7 @@ function stepRead(c) {
         <button type="button" class="btn red block play-all" data-label="Play whole dialogue">${ICON.play} Play whole dialogue</button>
         <span class="small muted">Real Malay clips of real speakers are coming soon.</span></div>
       ${c.lesson.notes.map((n) => `<div class="card note"><span class="eyebrow quiet">Colloquial note · ${esc(n.title)}</span><p>${n.body}</p></div>`).join('')}
-      ${c.next()}</aside></div>`;
+      ${c.nav()}</aside></div>`;
   bindSpeed(app);
   const lines = c.lv.dialogue, rowOf = (l) => $(`.line[data-id="${l.id}"]`);
   const from = (i, all) => play((all ? lines.slice(i) : [lines[i]]).map((l) => [() => c.src(l.id), rowOf(l)]), null, 0, all ? 'all' : null);
@@ -569,14 +569,6 @@ function stepRead(c) {
     if (e.target.closest('.play-line')) from(i, LS.auto);
     const rv = e.target.closest('.reveal');
     if (rv) { const en = $('.en', row); en.hidden = !en.hidden; rv.textContent = en.hidden ? 'Reveal sentence' : 'Hide'; rv.setAttribute('aria-expanded', !en.hidden); }
-    const fl = e.target.closest('.flag');
-    if (fl) {
-      const id = flagId(l);
-      if (S.flags[id]) delete S.flags[id];
-      else S.flags[id] = { ms: l.ms, en: l.en, where: `Module ${c.meta.num} · ${c.lesson.title} · ${FULL[c.level]} · line ${l.id}`, at: Date.now() };
-      setFlagBtn(fl, !!S.flags[id]);
-      save();
-    }
   });
 }
 
@@ -586,22 +578,14 @@ function stepPhrases(c) {
       <p class="ms" lang="ms">${glossHTML(p.ms)}</p>
       <div class="row"><button type="button" class="iconbtn" data-sp="normal" aria-label="Play">${ICON.play}</button>
         <button type="button" class="iconbtn" data-sp="slow" aria-label="Play slowly">${ICON.slow}</button>
-        <button type="button" class="link show" aria-expanded="false">Show meaning</button>${flagBtn(S.flags[`${c.lesson.id}:${pid}`])}</div>
+        <button type="button" class="link show" aria-expanded="false">Show meaning</button></div>
       <div class="stack more" hidden><p class="en">${esc(p.en)}</p>${p.note ? `<p class="small muted">${esc(p.note)}</p>` : ''}</div></article>`; }).join('')}</div>
-    <div class="row" style="justify-content:flex-end">${c.next()}</div></section>`;
+    ${c.nav()}</section>`;
   $('.phrases').addEventListener('click', (e) => {
     const card = e.target.closest('.phrase');
     if (!card) return;
     const sp = e.target.closest('[data-sp]');
     if (sp) play([[c.src(card.dataset.id, sp.dataset.sp), sp]]);
-    const fl = e.target.closest('.flag');
-    if (fl) {
-      const pid = card.dataset.id, p = c.lesson.phrases[pid], id = `${c.lesson.id}:${pid}`;
-      if (S.flags[id]) delete S.flags[id];
-      else S.flags[id] = { ms: p.ms, en: p.en, where: `Module ${c.meta.num} · ${c.lesson.title} · key phrase ${pid}`, at: Date.now() };
-      setFlagBtn(fl, !!S.flags[id]);
-      save();
-    }
     const sh = e.target.closest('.show');
     if (sh) { const m = $('.more', card); m.hidden = !m.hidden; sh.textContent = m.hidden ? 'Show meaning' : 'Hide meaning'; sh.setAttribute('aria-expanded', !m.hidden); }
   });
@@ -668,20 +652,30 @@ function renderExercise(el, item, done) {
     });
   } else if (ex.type === 'order') {
     const words = plainWords(line.ms);
-    let pool = shuffle(words.map((w, i) => ({ w, i })));
-    if (pool.map((t) => t.w).join(' ') === words.join(' ') && words.length > 1) pool.reverse();
+    const tiles = shuffle(words.map((w, i) => ({ w, i, used: false })));
+    if (tiles.map((t) => t.w).join(' ') === words.join(' ') && words.length > 1) tiles.reverse();
     const picked = [];
     add(`<p class="q">Rebuild the sentence.</p><p class="muted">“${esc(line.en)}”</p>
       <div class="tiles answer" aria-label="Your sentence"></div><div class="tiles pool" aria-label="Word tiles"></div>
       <div class="row"><button type="button" class="btn check" disabled>Check</button></div>`);
     const draw = () => {
       $('.answer', el).innerHTML = picked.map((t) => `<button type="button" class="tile" data-i="${t.i}">${esc(t.w)}</button>`).join('') || '<span class="muted small">Tap the tiles in order</span>';
-      $('.pool', el).innerHTML = pool.map((t) => `<button type="button" class="tile" data-i="${t.i}">${esc(t.w)}</button>`).join('');
-      $('.check', el).disabled = pool.length > 0;
+      // used tiles leave an empty slot, so the rest never shift
+      $('.pool', el).innerHTML = tiles.map((t) => `<button type="button" class="tile ${t.used ? 'gone' : ''}" data-i="${t.i}" ${t.used ? 'disabled aria-hidden="true"' : ''}>${esc(t.w)}</button>`).join('');
+      $('.check', el).disabled = picked.length < tiles.length;
     };
-    const move = (fromArr, toArr, i) => { const k = fromArr.findIndex((t) => t.i === i); if (k >= 0) toArr.push(fromArr.splice(k, 1)[0]); draw(); };
-    $('.pool', el).addEventListener('click', (e) => { const b = e.target.closest('.tile'); if (b) move(pool, picked, +b.dataset.i); });
-    $('.answer', el).addEventListener('click', (e) => { const b = e.target.closest('.tile'); if (b) move(picked, pool, +b.dataset.i); });
+    $('.pool', el).addEventListener('click', (e) => {
+      const b = e.target.closest('.tile');
+      const t = b && tiles.find((x) => x.i === +b.dataset.i);
+      if (!t || t.used) return;
+      t.used = true; picked.push(t); draw();
+    });
+    $('.answer', el).addEventListener('click', (e) => {
+      const b = e.target.closest('.tile');
+      const k = b ? picked.findIndex((x) => x.i === +b.dataset.i) : -1;
+      if (k < 0) return;
+      picked[k].used = false; picked.splice(k, 1); draw();
+    });
     $('.check', el).addEventListener('click', () => {
       const ok = picked.map((t) => t.w.toLowerCase()).join(' ') === words.map((w) => w.toLowerCase()).join(' ');
       $$('.tiles, .check', el).forEach((x) => x.remove());
@@ -731,23 +725,27 @@ function runDrills(host, items, state, finish) {
   };
   draw();
 }
-function drillItems(c, lesson, level, lid) {
-  const lv = lesson.levels[level], adir = `audio/${c.mid}/${lid}`;
-  return lv.exercises.map((ex) => {
-    const line = ex.ref ? lv.dialogue.find((l) => l.id === ex.ref) : null;
-    return { ex, line, level, match: lesson.match, staff: lesson.staff.label, reviewId: line ? `${lesson.id}:${level}:${line.id}` : null, src: (sp) => `${adir}/${ex.ref}-${sp}.mp3` };
-  });
+/** Build runnable items from a level's `drills`. Each drill carries its own sentence. */
+function drillItems(mid, lesson, level, lid, kinds) {
+  const lv = lesson.levels[level], adir = `audio/${mid}/${lid}`;
+  return (kinds || ['listen', 'read']).flatMap((kind) => lv.drills[kind].map((d) => {
+    const ex = Object.assign({}, d), line = d.ms ? { ms: d.ms, en: d.en } : null;
+    if (d.type === 'choose') { ex.options = [d.en].concat(d.wrong); ex.answer = 0; }
+    if (d.type === 'reply') { ex.options = [d.right].concat(d.wrong); ex.answer = 0; }
+    return { ex, line, level, match: lesson.match, staff: lesson.staff.label, reviewId: line ? `${lesson.id}:${level}:${d.id}` : null, src: (sp) => `${adir}/${d.id}-${sp}.mp3` };
+  }));
 }
-function stepDrills(c) {
-  const items = drillItems(c, c.lesson, c.level, c.lid);
-  if (!LS.drill) LS.drill = { i: 0, results: [] };
-  app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head()}<div class="stack host" style="gap:14px"></div></section>`;
-  runDrills($('.host'), items, LS.drill, (st) => {
-    const right = st.results.filter(Boolean).length;
-    $('.host').innerHTML = `<div class="card key"><span class="eyebrow">Drills done</span><p class="score">${right}/${items.length}</p>
+function stepDrills(c, kind) {
+  const items = drillItems(c.mid, c.lesson, c.level, c.lid, [kind]);
+  const st = (LS.drill[kind] = LS.drill[kind] || { i: 0, results: [] });
+  const intro = kind === 'listen' ? 'Ears only. These are new sentences built from this lesson’s phrases, not the dialogue again.' : 'Eyes only: replying, rebuilding sentences and matching forms. New sentences again.';
+  app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head(intro)}<div class="stack host" style="gap:14px"></div>${c.nav()}</section>`;
+  runDrills($('.host'), items, st, (done) => {
+    const right = done.results.filter(Boolean).length;
+    $('.host').innerHTML = `<div class="card key"><span class="eyebrow">${STEPS[c.step]} done</span><p class="score">${right}/${items.length}</p>
       <p class="muted">${right === items.length ? 'Clean sweep.' : 'Missed sentences are in your review queue.'}</p>
-      <div class="row"><button type="button" class="btn ghost again">Do them again</button>${c.next()}</div></div>`;
-    $('.again').addEventListener('click', () => { LS.drill = { i: 0, results: [] }; stepDrills(c); });
+      <div class="row"><button type="button" class="btn ghost again">Do them again</button></div></div>`;
+    $('.again').addEventListener('click', () => { LS.drill[kind] = null; stepDrills(c, kind); });
   });
 }
 
@@ -755,13 +753,13 @@ async function stepClip(c) {
   if (!REAL) {
     app.innerHTML = `<section class="stack" style="gap:18px; max-width:760px; width:100%; align-self:center">${c.head()}
       <div class="card"><span class="eyebrow quiet">Real clip</span><h2>Coming soon</h2><p class="muted">Short clips of real people speaking will appear here in a later version.</p></div>
-      <div class="row" style="justify-content:flex-end">${c.next()}</div></section>`;
+      ${c.nav()}</section>`;
     return;
   }
   const all = (c.mod.clips || []).map(clipOf).filter((k) => k.use === c.lid);
   const ok = all.filter((k) => k.status === 'confirmed'), waiting = all.filter((k) => k.status === 'candidate').length;
   app.innerHTML = `<section class="stack" style="gap:18px; max-width:860px; width:100%; align-self:center">${c.head('Real speech is faster and messier than the learning voice. Catching a few words is a win.')}
-    <div class="stack clips" style="gap:18px"></div><div class="row" style="justify-content:flex-end">${c.next()}</div></section>`;
+    <div class="stack clips" style="gap:18px"></div>${c.nav()}</section>`;
   const host = $('.clips');
   if (!ok.length) {
     host.innerHTML = `<div class="card"><span class="eyebrow quiet">Real clip</span><h2>No confirmed clip for this lesson yet</h2>
@@ -773,7 +771,8 @@ async function stepClip(c) {
 
 function stepWrap(c) {
   const added = c.lv.phrases.filter((pid) => { const p = c.lesson.phrases[pid]; return addReview({ id: `${c.lesson.id}:${pid}`, ms: p.ms, en: p.en, audio: `${c.adir}/${pid}-normal.mp3` }); }).length;
-  const d = LS.drill, right = d ? d.results.filter(Boolean).length : null;
+  const res = ['listen', 'read'].flatMap((k) => (LS.drill[k] ? LS.drill[k].results : []));
+  const d = res.length ? { results: res } : null, right = d ? res.filter(Boolean).length : null;
   touchDay();
   const firstTime = !S.done[c.key];
   S.done[c.key] = { at: Date.now(), right, total: d ? d.results.length : null, hints: SES.hints };
@@ -786,7 +785,7 @@ function stepWrap(c) {
         ${c.level === 'hard' ? `<span class="pill yellow">${SES.hints} word hint${SES.hints === 1 ? '' : 's'}</span>` : ''}</div>
       <p>${added ? `${added} phrase${added > 1 ? 's' : ''} joined your review queue; first review is due tomorrow.` : 'These phrases are already in your review queue.'}</p>
       <ul style="margin:0; padding-left:20px">${c.lv.phrases.map((pid) => `<li lang="ms">${esc(c.lesson.phrases[pid].ms)}</li>`).join('')}</ul>
-      <div class="row">${nextL ? `<a class="btn" href="#/l/${c.mid}/${nextL.id}/0">Next lesson: ${esc(nextL.title)} →</a>` : `<a class="btn red" href="#/f/${c.mid}">Module finale →</a>`}
+      <div class="row">${c.back()}${nextL ? `<a class="btn" href="#/l/${c.mid}/${nextL.id}/0">Next lesson: ${esc(nextL.title)} →</a>` : `<a class="btn red" href="#/f/${c.mid}">Module finale →</a>`}
         <a class="btn ghost" href="#/m/${c.mid}">Module page</a><a class="btn ghost" href="#/review">Review</a></div></div></section>`;
 }
 
@@ -815,7 +814,7 @@ async function viewFinale(mid) {
   $('.start').addEventListener('click', async () => {
     const lessons = await Promise.all(mod.lessons.map((l) => getLesson(mid, l.id)));
     let pool = [];
-    lessons.forEach((lesson, i) => { pool = pool.concat(drillItems({ mid }, lesson, level, mod.lessons[i].id).filter((it) => ['choose', 'gap', 'dictation', 'reply', 'order'].includes(it.ex.type))); });
+    lessons.forEach((lesson, i) => { pool = pool.concat(drillItems(mid, lesson, level, mod.lessons[i].id).filter((it) => ['choose', 'gap', 'dictation', 'reply', 'order'].includes(it.ex.type))); });
     const items = shuffle(pool).slice(0, mod.finale.testSize);
     runDrills($('.test'), items, { i: 0, results: [] }, (st) => {
       const right = st.results.filter(Boolean).length, k = `${mid}:${level}`, old = S.tests[k];
@@ -874,23 +873,7 @@ function viewReview(practiseAll) {
   draw();
 }
 
-/* ---------- views: Feels off? ---------- */
-function viewFlags() {
-  setNav('flags');
-  const items = Object.entries(S.flags).sort((a, b) => b[1].at - a[1].at);
-  const text = items.map(([id, f]) => `${id}\n  ms: ${f.ms}\n  en: ${f.en}\n  note: ${f.note || ''}`).join('\n\n');
-  app.innerHTML = `<section class="stack"><h1>Feels off?</h1><p class="lede">Lines you flagged because they sounded wrong in real life. Add a note, then copy the list back to Claude for correction.</p></section>
-    ${items.length ? `<section class="list">${items.map(([id, f]) => `<article class="card" data-id="${esc(id)}"><div class="stack"><p class="ms" lang="ms">${esc(f.ms)}</p><p class="muted">${esc(f.en)}</p><span class="small muted">${esc(f.where)}</span>
-        <input class="field note" style="font-size:15px; margin-top:6px" placeholder="What did you hear instead? (optional)" aria-label="Note for this line" value="${esc(f.note || '')}"></div>
-        <button type="button" class="btn ghost unflag">Remove flag</button></article>`).join('')}</section>
-      <section class="card"><span class="eyebrow quiet">Copy for correction</span><textarea class="field out" readonly aria-label="Flagged lines">${esc(text)}</textarea>
-        <div class="row"><button type="button" class="btn copy">Copy list</button></div></section>`
-    : `<div class="card empty"><h2>Nothing flagged</h2><p class="muted">In any lesson's Read along step, tap the flag on a line that feels off. It will be listed here.</p></div>`}`;
-  app.onchange = (e) => { const n = e.target.closest('.note'); if (n) { S.flags[n.closest('[data-id]').dataset.id].note = n.value; save(); viewFlags(); } };
-  $$('.unflag').forEach((b) => b.addEventListener('click', () => { delete S.flags[b.closest('[data-id]').dataset.id]; save(); viewFlags(); }));
-  const cp = $('.copy');
-  if (cp) cp.addEventListener('click', () => copyOut(cp));
-}
+/* ---------- copy helper ---------- */
 function copyOut(btn) {
   const ta = $('.out');
   ta.select();
@@ -962,7 +945,6 @@ async function route() {
     else if (h[0] === 'f') await viewFinale(h[1]);
     else if (h[0] === 'review') viewReview();
     else if (h[0] === 'clips') await viewClips();
-    else if (h[0] === 'flags') viewFlags();
     else await viewCourse();
   } catch (err) {
     console.error(err);

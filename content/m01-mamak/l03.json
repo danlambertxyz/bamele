@@ -1,104 +1,609 @@
 {
-  "id": "m01-l03",
-  "title": "Makan sini ke bungkus?",
-  "blurb": "Eating in or taking away — bungkus, tapau and the drink in a bag.",
-  "staff": {"label": "Abg", "name": "Waiter", "voice": "m"},
-  "you": {"voice": "f"},
-  "notes": [
-    {"title": "… ke …?", "body": "<b>ke</b> between two choices means “or?” — standard Malay would use <i>atau</i>. <i>Makan sini ke bungkus?</i> is the first thing you'll hear at many counters."},
-    {"title": "bungkus and tapau", "body": "Both mean takeaway. <b>Bungkus</b> (to wrap) is Malay; <b>tapau</b> comes from Cantonese and is just as common in KL."},
-    {"title": "ikat tepi", "body": "A takeaway drink in a plastic bag tied at the side with a straw poking out. Say <b>ikat tepi</b> and you'll get exactly that."}
-  ],
-  "phrases": {
-    "p1": {"ms": "Makan sini ke bungkus?", "en": "Eating here or takeaway?", "note": "ke = or (atau).", "v": "m"},
-    "p2": {"ms": "Bungkus.", "en": "Takeaway.", "note": "Lit. “wrap”. tapau works too."},
-    "p3": {"ms": "Dua-dua bungkus?", "en": "Both to take away?", "note": "dua-dua = both.", "v": "m"},
-    "p4": {"ms": "Teh ais satu, ikat tepi.", "en": "One iced milk tea, in a tied bag.", "note": "ikat tepi = tied at the side; the classic takeaway drink bag."},
-    "p5": {"ms": "Kena tunggu sepuluh minit, boleh?", "en": "It's a ten-minute wait, is that okay?", "note": "kena = have to.", "v": "m"},
-    "p6": {"ms": "Boleh, takpe.", "en": "Sure, no problem.", "note": "takpe = tidak apa."},
-    "p7": {"ms": "Saya tunggu sini.", "en": "I'll wait here."},
-    "p8": {"ms": "Tunggu kejap ye.", "en": "Wait a moment, okay.", "v": "m"},
-    "p9": {"ms": "Nak tapau boleh?", "en": "Can I get takeaway?", "note": "tapau = takeaway (from Cantonese)."},
-    "p10": {"ms": "Kuah asing-asing ye, jangan campur.", "en": "Gravies separate, please — don't mix them.", "note": "jangan = don't."},
-    "p11": {"ms": "Tak payah lah.", "en": "No need.", "note": "tak payah = no need."},
-    "p12": {"ms": "Dah siap panggil ye.", "en": "Call me when it's ready, okay.", "note": "dah siap = (once it's) ready."},
-    "p13": {"ms": "Nak tunggu ke datang balik?", "en": "Want to wait or come back?", "v": "m"}
+ "id": "m01-l03",
+ "title": "Makan sini ke bungkus?",
+ "blurb": "Eating in or taking away — bungkus, tapau and the drink in a bag.",
+ "staff": {
+  "label": "Abg",
+  "name": "Waiter",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "… ke …?",
+   "body": "<b>ke</b> between two choices means “or?” — standard Malay would use <i>atau</i>. <i>Makan sini ke bungkus?</i> is the first thing you'll hear at many counters."
   },
-  "match": [["ke", "atau"], ["takpe", "tidak apa"], ["kejap", "sekejap"], ["tapau", "bungkus"], ["kat", "di"], ["tak payah", "tidak perlu"], ["budak", "kanak-kanak"]],
-  "clips": [],
-  "levels": {
-    "easy": {
-      "dialogue": [
-        {"id": "e1", "s": "staff", "ms": "Makan sini ke bungkus?", "en": "Eating here or takeaway?"},
-        {"id": "e2", "s": "you", "ms": "Bungkus.", "en": "Takeaway."},
-        {"id": "e3", "s": "staff", "ms": "Nak apa?", "en": "What would you like?"},
-        {"id": "e4", "s": "you", "ms": "Nasi goreng satu, teh ais satu.", "en": "One fried rice, one iced milk tea."},
-        {"id": "e5", "s": "staff", "ms": "Okay, tunggu kejap ye.", "en": "Okay, wait a moment."},
-        {"id": "e6", "s": "you", "ms": "Okay, terima kasih.", "en": "Okay, thank you."}
-      ],
-      "gist": {"q": "Is she eating in or taking away?", "options": ["Taking away fried rice and an iced tea", "Eating in with fried rice and an iced tea", "Taking away only a drink"], "answer": 0, "why": "She answers “Bungkus” — takeaway."},
-      "phrases": ["p1", "p2", "p8", "p6"],
-      "exercises": [
-        {"type": "choose", "ref": "e1", "options": ["Eating here or takeaway?", "Do you want to eat or drink?", "Are you eating alone?"], "answer": 0},
-        {"type": "choose", "ref": "e5", "options": ["Okay, wait a moment.", "Okay, it's ready.", "Okay, sit here."], "answer": 0},
-        {"type": "gap", "ref": "e1", "word": "bungkus"},
-        {"type": "dictation", "ref": "e4"},
-        {"type": "ladder", "ref": "e1"},
-        {"type": "reply", "prompt": "Makan sini ke bungkus?", "options": ["Bungkus.", "Terima kasih.", "Tunggu kejap ye."], "answer": 0, "why": "It's an either/or question — pick one: “Makan sini” or “Bungkus”."},
-        {"type": "order", "ref": "e1"},
-        {"type": "match"}
-      ]
-    },
-    "medium": {
-      "dialogue": [
-        {"id": "m1", "s": "staff", "ms": "Makan sini ke bungkus?", "en": "Eating here or takeaway?"},
-        {"id": "m2", "s": "you", "ms": "Bungkus. Nasi goreng kampung satu, mee goreng satu.", "en": "Takeaway. One kampung fried rice, one fried noodles."},
-        {"id": "m3", "s": "staff", "ms": "Dua-dua bungkus?", "en": "Both to take away?"},
-        {"id": "m4", "s": "you", "ms": "Ha'ah, dua-dua. Mee goreng tu tak nak pedas.", "en": "Yep, both. The fried noodles not spicy."},
-        {"id": "m5", "s": "staff", "ms": "Air?", "en": "Drinks?"},
-        {"id": "m6", "s": "you", "ms": "Teh ais satu, ikat tepi.", "en": "One iced milk tea, in a tied bag."},
-        {"id": "m7", "s": "staff", "ms": "Okay. Kena tunggu sepuluh minit, boleh?", "en": "Okay. It's a ten-minute wait, is that alright?"},
-        {"id": "m8", "s": "you", "ms": "Boleh, takpe. Saya tunggu sini.", "en": "Sure, no problem. I'll wait here."}
-      ],
-      "gist": {"q": "What will she do while the food is prepared?", "options": ["Wait there for about ten minutes", "Come back in an hour", "Sit down and eat in instead", "Cancel the drink"], "answer": 0, "why": "Kena tunggu sepuluh minit … saya tunggu sini."},
-      "phrases": ["p1", "p2", "p3", "p4", "p5", "p6", "p7"],
-      "exercises": [
-        {"type": "choose", "ref": "m4", "options": ["Yes, both. The fried noodles not spicy.", "Yes, both. The fried rice extra spicy.", "No, just one. The noodles are for here."], "answer": 0},
-        {"type": "choose", "ref": "m7", "options": ["It's a ten-minute wait, is that alright?", "It'll be ready in two minutes.", "You have to pay ten ringgit first, okay?"], "answer": 0},
-        {"type": "gap", "ref": "m6", "word": "ikat"},
-        {"type": "dictation", "ref": "m8"},
-        {"type": "ladder", "ref": "m2"},
-        {"type": "reply", "prompt": "Kena tunggu sepuluh minit, boleh?", "options": ["Boleh, takpe. Saya tunggu sini.", "Dua-dua bungkus?", "Teh ais satu, ikat tepi."], "answer": 0, "why": "He's checking you're okay to wait; “Boleh, takpe” says it's no problem."},
-        {"type": "order", "ref": "m8"},
-        {"type": "match"}
-      ]
-    },
-    "hard": {
-      "dialogue": [
-        {"id": "h1", "s": "you", "ms": "Bang, nak tapau boleh?", "en": "Can I get takeaway?"},
-        {"id": "h2", "s": "staff", "ms": "Boleh, boleh. Nak tapau apa?", "en": "Sure, sure. What do you want to take away?"},
-        {"id": "h3", "s": "you", "ms": "Nasi goreng kampung dua. Satu pedas, satu tak nak pedas langsung, untuk budak.", "en": "Two kampung fried rice. One spicy, one not spicy at all, for a kid."},
-        {"id": "h4", "s": "staff", "ms": "Okay. Yang tak pedas tu nak letak telur mata?", "en": "Okay. Want a fried egg on the non-spicy one?"},
-        {"id": "h5", "s": "you", "ms": "Boleh jugak. Lepas tu roti canai tiga, kuah asing-asing ye, jangan campur.", "en": "Sure. And then three roti canai, gravies separate, please — don't mix them."},
-        {"id": "h6", "s": "staff", "ms": "Kuah dhal ke kari?", "en": "Dhal or curry?"},
-        {"id": "h7", "s": "you", "ms": "Dhal dua, kari satu. Eh, air pun nak. Teh o ais dua, ikat tepi.", "en": "Two dhal, one curry. Oh, drinks too. Two iced teas without milk, in tied bags."},
-        {"id": "h8", "s": "staff", "ms": "Ikat tepi dua. Sudu garpu nak?", "en": "Two in tied bags. Do you want spoons and forks?"},
-        {"id": "h9", "s": "you", "ms": "Tak payah lah, makan kat rumah je.", "en": "No need, we're just eating at home."},
-        {"id": "h10", "s": "staff", "ms": "Okay. Ramai orang sikit ni, dalam lima belas minit siap. Nak tunggu ke datang balik?", "en": "Okay. It's a bit busy now, ready in about fifteen minutes. Want to wait or come back?"},
-        {"id": "h11", "s": "you", "ms": "Saya tunggu lah. Dah siap panggil ye.", "en": "I'll wait. Call me when it's ready, okay."}
-      ],
-      "gist": {"q": "Which detail is right about this takeaway order?", "options": ["One fried rice is not spicy at all, for a child", "She wants the gravies mixed together", "She asked for extra spoons and forks", "She will come back in fifteen minutes"], "answer": 0, "why": "Satu tak nak pedas langsung, untuk budak."},
-      "phrases": ["p9", "p10", "p11", "p12", "p13", "p4"],
-      "exercises": [
-        {"type": "choose", "ref": "h3", "options": ["Two fried rice: one spicy, one not spicy at all, for a kid.", "Two fried rice, both very spicy.", "One fried rice for a kid, not spicy.", "Two fried rice: one for here, one takeaway."], "answer": 0},
-        {"type": "choose", "ref": "h10", "options": ["It's a bit busy; about fifteen minutes. Wait or come back?", "It's quiet; five minutes. Please sit down.", "We're closing in fifteen minutes; come back tomorrow.", "Fifteen people are waiting; better come back later."], "answer": 0},
-        {"type": "gap", "ref": "h5", "word": "jangan"},
-        {"type": "dictation", "ref": "h9"},
-        {"type": "ladder", "ref": "h7"},
-        {"type": "reply", "prompt": "Sudu garpu nak?", "options": ["Tak payah lah, makan kat rumah je.", "Dah siap panggil ye.", "Kuah dhal ke kari?"], "answer": 0, "why": "He's offering cutlery; “Tak payah” politely turns it down."},
-        {"type": "order", "ref": "h11"},
-        {"type": "match"}
-      ]
-    }
+  {
+   "title": "bungkus and tapau",
+   "body": "Both mean takeaway. <b>Bungkus</b> (to wrap) is Malay; <b>tapau</b> comes from Cantonese and is just as common in KL."
+  },
+  {
+   "title": "ikat tepi",
+   "body": "A takeaway drink in a plastic bag tied at the side with a straw poking out. Say <b>ikat tepi</b> and you'll get exactly that."
   }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Makan sini ke bungkus?",
+   "en": "Eating here or takeaway?",
+   "note": "ke = or (atau).",
+   "v": "m"
+  },
+  "p2": {
+   "ms": "Bungkus.",
+   "en": "Takeaway.",
+   "note": "Lit. “wrap”. tapau works too."
+  },
+  "p3": {
+   "ms": "Dua-dua bungkus?",
+   "en": "Both to take away?",
+   "note": "dua-dua = both.",
+   "v": "m"
+  },
+  "p4": {
+   "ms": "Teh ais satu, ikat tepi.",
+   "en": "One iced milk tea, in a tied bag.",
+   "note": "ikat tepi = tied at the side; the classic takeaway drink bag."
+  },
+  "p5": {
+   "ms": "Kena tunggu sepuluh minit, boleh?",
+   "en": "It's a ten-minute wait, is that okay?",
+   "note": "kena = have to.",
+   "v": "m"
+  },
+  "p6": {
+   "ms": "Boleh, takpe.",
+   "en": "Sure, no problem.",
+   "note": "takpe = tidak apa."
+  },
+  "p7": {
+   "ms": "Saya tunggu sini.",
+   "en": "I'll wait here."
+  },
+  "p8": {
+   "ms": "Tunggu kejap ye.",
+   "en": "Wait a moment, okay.",
+   "v": "m"
+  },
+  "p9": {
+   "ms": "Nak tapau boleh?",
+   "en": "Can I get takeaway?",
+   "note": "tapau = takeaway (from Cantonese)."
+  },
+  "p10": {
+   "ms": "Kuah asing-asing ye, jangan campur.",
+   "en": "Gravies separate, please — don't mix them.",
+   "note": "jangan = don't."
+  },
+  "p11": {
+   "ms": "Tak payah lah.",
+   "en": "No need.",
+   "note": "tak payah = no need."
+  },
+  "p12": {
+   "ms": "Dah siap panggil ye.",
+   "en": "Call me when it's ready, okay.",
+   "note": "dah siap = (once it's) ready."
+  },
+  "p13": {
+   "ms": "Nak tunggu ke datang balik?",
+   "en": "Want to wait or come back?",
+   "v": "m"
+  }
+ },
+ "match": [
+  [
+   "ke",
+   "atau"
+  ],
+  [
+   "takpe",
+   "tidak apa"
+  ],
+  [
+   "kejap",
+   "sekejap"
+  ],
+  [
+   "tapau",
+   "bungkus"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "tak payah",
+   "tidak perlu"
+  ],
+  [
+   "budak",
+   "kanak-kanak"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Makan sini ke bungkus?",
+     "en": "Eating here or takeaway?"
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Bungkus.",
+     "en": "Takeaway."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Nak apa?",
+     "en": "What would you like?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Nasi goreng satu, teh ais satu.",
+     "en": "One fried rice, one iced milk tea."
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Okay, tunggu kejap ye.",
+     "en": "Okay, wait a moment."
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Okay, terima kasih.",
+     "en": "Okay, thank you."
+    }
+   ],
+   "gist": {
+    "q": "Is she eating in or taking away?",
+    "options": [
+     "Taking away fried rice and an iced tea",
+     "Eating in with fried rice and an iced tea",
+     "Taking away only a drink"
+    ],
+    "answer": 0,
+    "why": "She answers “Bungkus” — takeaway."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p8",
+    "p6"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Bungkus ke makan sini?",
+      "en": "Takeaway or eating here?",
+      "wrong": [
+       "Do you want a bag?",
+       "Are you eating now or later?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Nasi goreng dua, bungkus.",
+      "en": "Two fried rice, takeaway.",
+      "word": "goreng"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "you",
+      "ms": "Makan sini. Mee goreng satu.",
+      "en": "Eating here. One fried noodles.",
+      "wrong": [
+       "Takeaway. One fried noodles.",
+       "Eating here. One fried rice."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Makan sini. Teh ais dua.",
+      "en": "Eating here. Two iced milk teas."
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Nasi goreng satu, teh ais satu, bungkus. Tunggu kejap ye.",
+      "en": "One fried rice, one iced tea, takeaway. Wait a moment."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nak makan sini ke nak bungkus?",
+      "right": "Makan sini.",
+      "wrong": [
+       "Okay, terima kasih.",
+       "Nak apa?"
+      ],
+      "why": "An either/or question: pick one of the two."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Nak bungkus mee goreng satu.",
+      "en": "I want one fried noodles to take away."
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak order apa?",
+      "right": "Mee goreng satu, bungkus.",
+      "wrong": [
+       "Makan sini ke bungkus?",
+       "Tunggu kejap ye."
+      ],
+      "why": "He's asking what you want, so order."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Nasi goreng bungkus, tunggu kejap ye.",
+      "en": "Fried rice to take away, wait a moment."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Makan sini ke bungkus?",
+     "en": "Eating here or takeaway?"
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Bungkus. Nasi goreng kampung satu, mee goreng satu.",
+     "en": "Takeaway. One kampung fried rice, one fried noodles."
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Dua-dua bungkus?",
+     "en": "Both to take away?"
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Ha'ah, dua-dua. Mee goreng tu tak nak pedas.",
+     "en": "Yep, both. The fried noodles not spicy."
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Air?",
+     "en": "Drinks?"
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Teh ais satu, ikat tepi.",
+     "en": "One iced milk tea, in a tied bag."
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Okay. Kena tunggu sepuluh minit, boleh?",
+     "en": "Okay. It's a ten-minute wait, is that alright?"
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Boleh, takpe. Saya tunggu sini.",
+     "en": "Sure, no problem. I'll wait here."
+    }
+   ],
+   "gist": {
+    "q": "What will she do while the food is prepared?",
+    "options": [
+     "Wait there for about ten minutes",
+     "Come back in an hour",
+     "Sit down and eat in instead",
+     "Cancel the drink"
+    ],
+    "answer": 0,
+    "why": "Kena tunggu sepuluh minit … saya tunggu sini."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "you",
+      "ms": "Satu makan sini, satu bungkus.",
+      "en": "One to eat here, one to take away.",
+      "wrong": [
+       "Both to take away.",
+       "Both to eat here."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Nasi goreng tu pedas sikit, mee goreng tak nak pedas.",
+      "en": "The fried rice a bit spicy, the noodles not spicy.",
+      "word": "sikit"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Kena tunggu lima belas minit. Nak tunggu ke?",
+      "en": "It's a fifteen-minute wait. Do you want to wait?",
+      "wrong": [
+       "It'll be ready in five minutes. Please sit.",
+       "You've waited fifteen minutes already, right?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Teh o ais dua, ikat tepi.",
+      "en": "Two iced teas without milk, in tied bags."
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "you",
+      "ms": "Bungkus ye. Mee goreng dua, satu tak nak pedas. Air tak nak.",
+      "en": "Takeaway, please. Two fried noodles, one not spicy. No drinks."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Air nak apa?",
+      "right": "Air tak nak. Makan je.",
+      "wrong": [
+       "Dua-dua bungkus?",
+       "Kena tunggu sepuluh minit, boleh?"
+      ],
+      "why": "No drinks: air tak nak."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Saya tak tunggu sini, nanti datang balik.",
+      "en": "I won't wait here, I'll come back later."
+     },
+     {
+      "type": "reply",
+      "prompt": "Kena tunggu lima belas minit, boleh?",
+      "right": "Lama jugak. Takpe lah, saya tunggu.",
+      "wrong": [
+       "Teh ais satu, ikat tepi.",
+       "Makan sini ke bungkus?"
+      ],
+      "why": "It's long, but you accept it: takpe lah."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Dua-dua makan sini ke?",
+      "en": "Both eating here?"
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "you",
+     "ms": "Bang, nak tapau boleh?",
+     "en": "Can I get takeaway?"
+    },
+    {
+     "id": "h2",
+     "s": "staff",
+     "ms": "Boleh, boleh. Nak tapau apa?",
+     "en": "Sure, sure. What do you want to take away?"
+    },
+    {
+     "id": "h3",
+     "s": "you",
+     "ms": "Nasi goreng kampung dua. Satu pedas, satu tak nak pedas langsung, untuk budak.",
+     "en": "Two kampung fried rice. One spicy, one not spicy at all, for a kid."
+    },
+    {
+     "id": "h4",
+     "s": "staff",
+     "ms": "Okay. Yang tak pedas tu nak letak telur mata?",
+     "en": "Okay. Want a fried egg on the non-spicy one?"
+    },
+    {
+     "id": "h5",
+     "s": "you",
+     "ms": "Boleh jugak. Lepas tu roti canai tiga, kuah asing-asing ye, jangan campur.",
+     "en": "Sure. And then three roti canai, gravies separate, please — don't mix them."
+    },
+    {
+     "id": "h6",
+     "s": "staff",
+     "ms": "Kuah dhal ke kari?",
+     "en": "Dhal or curry?"
+    },
+    {
+     "id": "h7",
+     "s": "you",
+     "ms": "Dhal dua, kari satu. Eh, air pun nak. Teh o ais dua, ikat tepi.",
+     "en": "Two dhal, one curry. Oh, drinks too. Two iced teas without milk, in tied bags."
+    },
+    {
+     "id": "h8",
+     "s": "staff",
+     "ms": "Ikat tepi dua. Sudu garpu nak?",
+     "en": "Two in tied bags. Do you want spoons and forks?"
+    },
+    {
+     "id": "h9",
+     "s": "you",
+     "ms": "Tak payah lah, makan kat rumah je.",
+     "en": "No need, we're just eating at home."
+    },
+    {
+     "id": "h10",
+     "s": "staff",
+     "ms": "Okay. Ramai orang sikit ni, dalam lima belas minit siap. Nak tunggu ke datang balik?",
+     "en": "Okay. It's a bit busy now, ready in about fifteen minutes. Want to wait or come back?"
+    },
+    {
+     "id": "h11",
+     "s": "you",
+     "ms": "Saya tunggu lah. Dah siap panggil ye.",
+     "en": "I'll wait. Call me when it's ready, okay."
+    }
+   ],
+   "gist": {
+    "q": "Which detail is right about this takeaway order?",
+    "options": [
+     "One fried rice is not spicy at all, for a child",
+     "She wants the gravies mixed together",
+     "She asked for extra spoons and forks",
+     "She will come back in fifteen minutes"
+    ],
+    "answer": 0,
+    "why": "Satu tak nak pedas langsung, untuk budak."
+   },
+   "phrases": [
+    "p9",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p4"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "you",
+      "ms": "Nasi goreng tiga. Dua pedas, satu tak nak pedas langsung, untuk budak.",
+      "en": "Three fried rice: two spicy, one not spicy at all, for a kid.",
+      "wrong": [
+       "Two fried rice, both not spicy, for kids.",
+       "Three fried rice, all spicy.",
+       "Three fried rice: one spicy, two for kids."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kuah campur je, tak payah asing-asing.",
+      "en": "Just mix the gravies, no need to separate them.",
+      "word": "payah"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Tak ramai orang ni, lima minit siap. Tunggu kejap je.",
+      "en": "It's not busy now, ready in five minutes. Just a short wait.",
+      "wrong": [
+       "It's very busy, about fifteen minutes.",
+       "We close in five minutes.",
+       "Five people are ahead of you."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Sudu garpu bagi dua ye.",
+      "en": "Give me two sets of cutlery, please."
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Roti canai tiga, kuah asing-asing, teh o ais dua ikat tepi. Dalam sepuluh minit siap, nak tunggu ke datang balik?",
+      "en": "Three roti canai, gravies separate, two iced teas in tied bags. Ready in about ten minutes — wait or come back?"
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nak tunggu ke datang balik?",
+      "right": "Saya datang balik lah. Lima belas minit kan?",
+      "wrong": [
+       "Tak payah lah, makan kat rumah je.",
+       "Kuah dhal ke kari?"
+      ],
+      "why": "Pick one of the two, then double-check the time with kan?"
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Saya datang balik dalam sepuluh minit.",
+      "en": "I'll come back in ten minutes."
+     },
+     {
+      "type": "reply",
+      "prompt": "Yang pedas tu nak letak telur mata?",
+      "right": "Tak payah. Yang tak pedas je letak telur.",
+      "wrong": [
+       "Dhal dua, kari satu.",
+       "Dah siap panggil ye."
+      ],
+      "why": "Not on that one: only the non-spicy one gets the egg."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "you",
+      "ms": "Kuah kari dua, dhal tak nak.",
+      "en": "Two curry gravies, no dhal."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
 }

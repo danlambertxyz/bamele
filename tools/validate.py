@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check BaMeLe content: glossary coverage, exercise refs, audio files.
+"""Check BaMeLe content: glossary coverage, drill structure, audio files.
 
 Usage: python tools/validate.py [--no-audio]
 """
@@ -10,6 +10,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TOKEN = re.compile(r"[a-zA-Z][a-zA-Z'\-]*")
+LISTEN = {"choose", "gap", "dictation", "ladder"}
+READ = {"reply", "order", "match"}
 
 
 def tokens(text):
@@ -48,14 +50,15 @@ def main():
                 need_words(p["ms"], f"{lid} {pid}")
                 for sp in ("normal", "slow"):
                     need_audio(f"{adir}/{pid}-{sp}.mp3")
-            for a, b in lesson["match"]:
+            for a, _ in lesson["match"]:
                 if a not in glossary:
                     missing_words.setdefault(a, f"{lid} match")
             for level in ("easy", "medium", "hard"):
                 lv = lesson["levels"][level]
-                ids = {}
+                seen_ids, seen_ms = set(), set()
                 for line in lv["dialogue"]:
-                    ids[line["id"]] = line
+                    seen_ids.add(line["id"])
+                    seen_ms.add(line["ms"].lower())
                     if line["s"] not in ("staff", "you"):
                         problems.append(f"{lid} {line['id']}: bad speaker")
                     need_words(line["ms"], f"{lid} {line['id']}")
@@ -67,19 +70,34 @@ def main():
                 g = lv["gist"]
                 if not 0 <= g["answer"] < len(g["options"]):
                     problems.append(f"{lid} {level}: gist answer out of range")
-                for i, ex in enumerate(lv["exercises"]):
-                    tag = f"{lid} {level} ex{i} ({ex['type']})"
-                    if "ref" in ex and ex["ref"] not in ids:
-                        problems.append(f"{tag}: unknown ref {ex['ref']}")
-                        continue
-                    if ex["type"] == "gap" and ex["word"] not in tokens(ids[ex["ref"]]["ms"]):
-                        problems.append(f"{tag}: word '{ex['word']}' not in line")
-                    if ex["type"] in ("choose", "reply") and not 0 <= ex["answer"] < len(ex["options"]):
-                        problems.append(f"{tag}: answer out of range")
-                    if ex["type"] == "reply":
-                        need_words(ex["prompt"], tag)
-                        for o in ex["options"]:
-                            need_words(o, tag)
+                for kind, allowed in (("listen", LISTEN), ("read", READ)):
+                    for i, ex in enumerate(lv["drills"][kind]):
+                        tag = f"{lid} {level} {kind}{i} ({ex['type']})"
+                        if ex["type"] not in allowed:
+                            problems.append(f"{tag}: type not allowed in {kind} drills")
+                        if "ms" in ex:
+                            # drills must vary the dialogue, never repeat a sentence
+                            if ex["ms"].lower() in seen_ms:
+                                problems.append(f"{tag}: sentence repeats one already used")
+                            seen_ms.add(ex["ms"].lower())
+                            if ex.get("id") in seen_ids or "id" not in ex:
+                                problems.append(f"{tag}: missing or duplicate id")
+                            seen_ids.add(ex.get("id"))
+                            if ex.get("s") not in ("staff", "you"):
+                                problems.append(f"{tag}: bad speaker")
+                            need_words(ex["ms"], tag)
+                            for sp in ("normal", "slow"):
+                                need_audio(f"{adir}/{ex['id']}-{sp}.mp3")
+                        if ex["type"] == "gap" and tokens(ex["ms"]).count(ex["word"]) != 1:
+                            problems.append(f"{tag}: word '{ex['word']}' must appear exactly once")
+                        if ex["type"] == "choose" and len(ex["wrong"]) < 2:
+                            problems.append(f"{tag}: needs at least two wrong options")
+                        if ex["type"] == "reply":
+                            if ex["prompt"].lower() in seen_ms:
+                                problems.append(f"{tag}: prompt repeats a sentence already used")
+                            seen_ms.add(ex["prompt"].lower())
+                            for text in [ex["prompt"], ex["right"], *ex["wrong"]]:
+                                need_words(text, tag)
 
     for key in glossary:
         need_audio(f"audio/words/{slug(key)}.mp3")

@@ -1,101 +1,598 @@
 {
-  "id": "m01-l01",
-  "title": "Ordering at the mamak",
-  "blurb": "Drinks first, then food — and what to do when the roti has run out.",
-  "staff": {"label": "Abg", "name": "Waiter", "voice": "m"},
-  "you": {"voice": "f"},
-  "notes": [
-    {"title": "nak, tak, dah", "body": "Three short forms carry most of this lesson: <b>nak</b> (hendak, want), <b>tak</b> (tidak, not) and <b>dah</b> (sudah, already). Nobody at a mamak says the long forms."},
-    {"title": "Question with tak", "body": "Put <b>tak</b> at the end to make a yes/no question: <i>ada lagi tak?</i> — is there still any (or not)?"},
-    {"title": "Item, then number", "body": "The number comes after the thing: <i>teh tarik satu</i>, <i>roti telur dua</i>. Tweaks like <i>kurang manis</i> go last."}
-  ],
-  "phrases": {
-    "p1": {"ms": "Nak minum apa?", "en": "What do you want to drink?", "note": "nak = hendak. Staff often shorten it to just “Minum?”", "v": "m"},
-    "p2": {"ms": "Teh tarik satu, kurang manis.", "en": "One teh tarik, less sweet.", "note": "Item, number, then the tweak."},
-    "p3": {"ms": "Roti canai ada lagi tak?", "en": "Is there still roti canai?", "note": "ada … tak? = is there … or not. lagi here means “still”."},
-    "p4": {"ms": "Dah habis.", "en": "It's finished / sold out.", "note": "dah = sudah (already).", "v": "m"},
-    "p5": {"ms": "Itu je?", "en": "Is that all?", "note": "je = sahaja (only).", "v": "m"},
-    "p6": {"ms": "Itu je dulu.", "en": "That's all for now.", "note": "dulu = first / for now; it leaves the door open to add more later."},
-    "p7": {"ms": "Kejap ye.", "en": "Just a moment, okay.", "note": "kejap = sekejap. ye softens it, like “okay?”", "v": "m"},
-    "p8": {"ms": "Kena tunggu.", "en": "You'll have to wait.", "note": "kena + verb = have to.", "v": "m"},
-    "p9": {"ms": "Boleh jugak.", "en": "Sure, why not.", "note": "jugak = juga. A relaxed yes to a suggestion."}
+ "id": "m01-l01",
+ "title": "Ordering at the mamak",
+ "blurb": "Drinks first, then food — and what to do when the roti has run out.",
+ "staff": {
+  "label": "Abg",
+  "name": "Waiter",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "nak, tak, dah",
+   "body": "Three short forms carry most of this lesson: <b>nak</b> (hendak, want), <b>tak</b> (tidak, not) and <b>dah</b> (sudah, already). Nobody at a mamak says the long forms."
   },
-  "match": [["nak", "hendak"], ["tak", "tidak"], ["dah", "sudah"], ["je", "sahaja"], ["kejap", "sekejap"], ["jugak", "juga"], ["macam tu", "begitu"]],
-  "clips": [],
-  "levels": {
-    "easy": {
-      "dialogue": [
-        {"id": "e1", "s": "staff", "ms": "Nak minum apa?", "en": "What do you want to drink?"},
-        {"id": "e2", "s": "you", "ms": "Teh tarik satu, kurang manis.", "en": "One teh tarik, less sweet."},
-        {"id": "e3", "s": "staff", "ms": "Makan?", "en": "Food?"},
-        {"id": "e4", "s": "you", "ms": "Roti canai satu.", "en": "One roti canai."},
-        {"id": "e5", "s": "staff", "ms": "Itu je?", "en": "Is that all?"},
-        {"id": "e6", "s": "you", "ms": "Itu je dulu. Terima kasih.", "en": "That's all for now. Thank you."}
-      ],
-      "gist": {"q": "What did the customer order?", "options": ["A teh tarik and one roti canai", "Two teh tarik and no food", "A roti canai and no drink"], "answer": 0, "why": "Teh tarik satu … roti canai satu — one of each."},
-      "phrases": ["p1", "p2", "p5", "p6"],
-      "exercises": [
-        {"type": "choose", "ref": "e1", "options": ["What do you want to drink?", "What do you want to eat?", "Where do you want to sit?"], "answer": 0},
-        {"type": "choose", "ref": "e5", "options": ["Is that all?", "Is that one?", "Is it there?"], "answer": 0},
-        {"type": "gap", "ref": "e2", "word": "kurang"},
-        {"type": "dictation", "ref": "e4"},
-        {"type": "ladder", "ref": "e6"},
-        {"type": "reply", "prompt": "Itu je?", "options": ["Itu je dulu. Terima kasih.", "Nak minum apa?", "Makan?"], "answer": 0, "why": "He's asking if that's everything; “Itu je dulu” says yes, for now."},
-        {"type": "order", "ref": "e2"},
-        {"type": "match"}
-      ]
-    },
-    "medium": {
-      "dialogue": [
-        {"id": "m1", "s": "staff", "ms": "Ya, nak minum apa?", "en": "Yes, what do you want to drink?"},
-        {"id": "m2", "s": "you", "ms": "Teh tarik satu, kurang manis.", "en": "One teh tarik, less sweet."},
-        {"id": "m3", "s": "staff", "ms": "Makan?", "en": "Food?"},
-        {"id": "m4", "s": "you", "ms": "Roti canai ada lagi tak?", "en": "Is there still roti canai?"},
-        {"id": "m5", "s": "staff", "ms": "Roti canai dah habis lah. Roti telur ada.", "en": "The roti canai's finished. There's roti telur."},
-        {"id": "m6", "s": "you", "ms": "Okay, roti telur satu lah. Kuah kari ye.", "en": "Okay, one roti telur then. With curry gravy, please."},
-        {"id": "m7", "s": "staff", "ms": "Itu je?", "en": "Is that all?"},
-        {"id": "m8", "s": "you", "ms": "Itu je dulu. Terima kasih.", "en": "That's all for now. Thank you."},
-        {"id": "m9", "s": "staff", "ms": "Okay, kejap ye.", "en": "Okay, just a moment."}
-      ],
-      "gist": {"q": "What happened with the food order?", "options": ["Roti canai was sold out, so she took roti telur", "She ordered two roti canai", "Roti telur was sold out, so she took roti canai", "She skipped food and only had tea"], "answer": 0, "why": "Roti canai dah habis … roti telur ada — so she switched to roti telur."},
-      "phrases": ["p1", "p2", "p3", "p4", "p5", "p6", "p7"],
-      "exercises": [
-        {"type": "choose", "ref": "m5", "options": ["The roti canai is finished; there is roti telur.", "The roti canai is ready; the roti telur is finished.", "Both roti canai and roti telur are finished."], "answer": 0},
-        {"type": "choose", "ref": "m6", "options": ["Okay, one roti telur then, with curry gravy.", "Okay, one roti telur, no gravy.", "Okay, one roti canai and one curry."], "answer": 0},
-        {"type": "gap", "ref": "m4", "word": "lagi"},
-        {"type": "dictation", "ref": "m8"},
-        {"type": "ladder", "ref": "m5"},
-        {"type": "reply", "prompt": "Roti canai dah habis lah. Roti telur ada.", "options": ["Okay, roti telur satu lah.", "Itu je?", "Nak minum apa?"], "answer": 0, "why": "He offered an alternative; taking it with a soft “lah” is the natural move."},
-        {"type": "order", "ref": "m4"},
-        {"type": "match"}
-      ]
-    },
-    "hard": {
-      "dialogue": [
-        {"id": "h1", "s": "staff", "ms": "Ya, duduk mana-mana pun boleh. Nak minum apa?", "en": "Yes, sit anywhere you like. What do you want to drink?"},
-        {"id": "h2", "s": "you", "ms": "Teh tarik satu, kurang manis. Kalau boleh, jangan manis sangat ye.", "en": "One teh tarik, less sweet. If you can, not too sweet, okay."},
-        {"id": "h3", "s": "staff", "ms": "Boleh, no problem. Makan apa hari ni?", "en": "Sure, no problem. What are you eating today?"},
-        {"id": "h4", "s": "you", "ms": "Roti canai ada lagi tak? Tadi nampak macam ramai orang.", "en": "Is there still roti canai? It looked pretty busy just now."},
-        {"id": "h5", "s": "staff", "ms": "Aduh, roti canai baru je habis. Kalau nak, kena tunggu lima belas minit macam tu.", "en": "Ah, the roti canai just ran out. If you want it, you'll have to wait fifteen minutes or so."},
-        {"id": "h6", "s": "you", "ms": "Lama jugak tu. Roti telur ada tak?", "en": "That's quite long. Is there roti telur?"},
-        {"id": "h7", "s": "staff", "ms": "Roti telur pun sama lah, semua roti kena tunggu. Maggi goreng ke, nasi goreng ke, cepat sikit.", "en": "Roti telur's the same, all the roti need a wait. Maggi goreng or nasi goreng would be a bit quicker."},
-        {"id": "h8", "s": "you", "ms": "Okay lah, kalau macam tu bagi maggi goreng satu. Tak nak pedas sangat.", "en": "Okay then, in that case give me one maggi goreng. Not too spicy."},
-        {"id": "h9", "s": "staff", "ms": "Maggi goreng satu, kurang pedas. Telur mata nak tambah?", "en": "One maggi goreng, less spicy. Want to add a fried egg?"},
-        {"id": "h10", "s": "you", "ms": "Boleh jugak. Itu je dulu.", "en": "Sure, why not. That's all for now."},
-        {"id": "h11", "s": "staff", "ms": "Okay, set. Kejap ye.", "en": "Okay, done. Just a moment."}
-      ],
-      "gist": {"q": "Why did she end up with maggi goreng?", "options": ["Every kind of roti needed a fifteen-minute wait", "Maggi goreng was the cheapest thing", "The waiter misheard her order", "She changed her mind about the tea"], "answer": 0, "why": "Semua roti kena tunggu — all the roti needed a wait, and he suggested something quicker."},
-      "phrases": ["p2", "p3", "p6", "p7", "p8", "p9"],
-      "exercises": [
-        {"type": "choose", "ref": "h5", "options": ["The roti canai just ran out; it's about a fifteen-minute wait.", "The roti canai will be ready in five minutes.", "The roti canai ran out fifteen minutes ago and won't be made again.", "There's roti canai, but only fifteen pieces left."], "answer": 0},
-        {"type": "choose", "ref": "h7", "options": ["All the roti need a wait; fried noodles or rice would be quicker.", "Roti telur is ready, but the fried rice needs a wait.", "Everything on the menu needs a wait today.", "Maggi goreng and nasi goreng are both finished."], "answer": 0},
-        {"type": "gap", "ref": "h8", "word": "bagi"},
-        {"type": "dictation", "ref": "h6"},
-        {"type": "ladder", "ref": "h7"},
-        {"type": "reply", "prompt": "Telur mata nak tambah?", "options": ["Boleh jugak.", "Dah habis.", "Kena tunggu."], "answer": 0, "why": "He's offering an extra; “Boleh jugak” is the easy-going yes."},
-        {"type": "order", "ref": "h10"},
-        {"type": "match"}
-      ]
-    }
+  {
+   "title": "Question with tak",
+   "body": "Put <b>tak</b> at the end to make a yes/no question: <i>ada lagi tak?</i> — is there still any (or not)?"
+  },
+  {
+   "title": "Item, then number",
+   "body": "The number comes after the thing: <i>teh tarik satu</i>, <i>roti telur dua</i>. Tweaks like <i>kurang manis</i> go last."
   }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Nak minum apa?",
+   "en": "What do you want to drink?",
+   "note": "nak = hendak. Staff often shorten it to just “Minum?”",
+   "v": "m"
+  },
+  "p2": {
+   "ms": "Teh tarik satu, kurang manis.",
+   "en": "One teh tarik, less sweet.",
+   "note": "Item, number, then the tweak."
+  },
+  "p3": {
+   "ms": "Roti canai ada lagi tak?",
+   "en": "Is there still roti canai?",
+   "note": "ada … tak? = is there … or not. lagi here means “still”."
+  },
+  "p4": {
+   "ms": "Dah habis.",
+   "en": "It's finished / sold out.",
+   "note": "dah = sudah (already).",
+   "v": "m"
+  },
+  "p5": {
+   "ms": "Itu je?",
+   "en": "Is that all?",
+   "note": "je = sahaja (only).",
+   "v": "m"
+  },
+  "p6": {
+   "ms": "Itu je dulu.",
+   "en": "That's all for now.",
+   "note": "dulu = first / for now; it leaves the door open to add more later."
+  },
+  "p7": {
+   "ms": "Kejap ye.",
+   "en": "Just a moment, okay.",
+   "note": "kejap = sekejap. ye softens it, like “okay?”",
+   "v": "m"
+  },
+  "p8": {
+   "ms": "Kena tunggu.",
+   "en": "You'll have to wait.",
+   "note": "kena + verb = have to.",
+   "v": "m"
+  },
+  "p9": {
+   "ms": "Boleh jugak.",
+   "en": "Sure, why not.",
+   "note": "jugak = juga. A relaxed yes to a suggestion."
+  }
+ },
+ "match": [
+  [
+   "nak",
+   "hendak"
+  ],
+  [
+   "tak",
+   "tidak"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "kejap",
+   "sekejap"
+  ],
+  [
+   "jugak",
+   "juga"
+  ],
+  [
+   "macam tu",
+   "begitu"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Nak minum apa?",
+     "en": "What do you want to drink?"
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Teh tarik satu, kurang manis.",
+     "en": "One teh tarik, less sweet."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Makan?",
+     "en": "Food?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Roti canai satu.",
+     "en": "One roti canai."
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Itu je?",
+     "en": "Is that all?"
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Itu je dulu. Terima kasih.",
+     "en": "That's all for now. Thank you."
+    }
+   ],
+   "gist": {
+    "q": "What did the customer order?",
+    "options": [
+     "A teh tarik and one roti canai",
+     "Two teh tarik and no food",
+     "A roti canai and no drink"
+    ],
+    "answer": 0,
+    "why": "Teh tarik satu … roti canai satu — one of each."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p5",
+    "p6"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Nak makan apa?",
+      "en": "What do you want to eat?",
+      "wrong": [
+       "What do you want to drink?",
+       "Do you want to eat here?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Roti telur dua.",
+      "en": "Two roti telur.",
+      "word": "dua"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "you",
+      "ms": "Kopi o satu, kurang manis.",
+      "en": "One black coffee, less sweet.",
+      "wrong": [
+       "One black coffee, no sugar.",
+       "One milk tea, less sweet."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Teh tarik dua, roti canai satu.",
+      "en": "Two teh tarik, one roti canai."
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Teh tarik satu, roti canai dua. Itu je?",
+      "en": "One teh tarik, two roti canai. Is that all?"
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Makan apa?",
+      "right": "Roti telur satu.",
+      "wrong": [
+       "Teh tarik satu.",
+       "Itu je?"
+      ],
+      "why": "He asked about food, so name a dish."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Milo ais satu, kurang manis.",
+      "en": "One iced Milo, less sweet."
+     },
+     {
+      "type": "reply",
+      "prompt": "Makan tak nak?",
+      "right": "Tak nak makan. Minum je.",
+      "wrong": [
+       "Nak minum apa?",
+       "Itu je?"
+      ],
+      "why": "You can turn food down: tak nak makan — just a drink."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Saya nak roti telur satu.",
+      "en": "I want one roti telur."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Ya, nak minum apa?",
+     "en": "Yes, what do you want to drink?"
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Teh tarik satu, kurang manis.",
+     "en": "One teh tarik, less sweet."
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Makan?",
+     "en": "Food?"
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Roti canai ada lagi tak?",
+     "en": "Is there still roti canai?"
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Roti canai dah habis lah. Roti telur ada.",
+     "en": "The roti canai's finished. There's roti telur."
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Okay, roti telur satu lah. Kuah kari ye.",
+     "en": "Okay, one roti telur then. With curry gravy, please."
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Itu je?",
+     "en": "Is that all?"
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Itu je dulu. Terima kasih.",
+     "en": "That's all for now. Thank you."
+    },
+    {
+     "id": "m9",
+     "s": "staff",
+     "ms": "Okay, kejap ye.",
+     "en": "Okay, just a moment."
+    }
+   ],
+   "gist": {
+    "q": "What happened with the food order?",
+    "options": [
+     "Roti canai was sold out, so she took roti telur",
+     "She ordered two roti canai",
+     "Roti telur was sold out, so she took roti canai",
+     "She skipped food and only had tea"
+    ],
+    "answer": 0,
+    "why": "Roti canai dah habis … roti telur ada — so she switched to roti telur."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Roti telur dah habis. Roti canai ada lagi.",
+      "en": "Roti telur is finished. There's still roti canai.",
+      "wrong": [
+       "Roti canai is finished. There's still roti telur.",
+       "Both are still available."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Maggi goreng ada lagi tak?",
+      "en": "Is there still maggi goreng?",
+      "word": "lagi"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "you",
+      "ms": "Teh tarik dua. Satu kurang manis, satu biasa.",
+      "en": "Two teh tarik. One less sweet, one regular.",
+      "wrong": [
+       "Two teh tarik, both less sweet.",
+       "One teh tarik, regular."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Okay, roti canai dua lah. Kuah dhal ye.",
+      "en": "Okay, two roti canai then. With dhal, please."
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Teh tarik kurang manis satu, roti telur satu. Itu je?",
+      "en": "One less-sweet teh tarik, one roti telur. Is that all?"
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Ada apa-apa lagi?",
+      "right": "Ada. Nak tambah teh tarik satu.",
+      "wrong": [
+       "Dah habis.",
+       "Kejap ye."
+      ],
+      "why": "Yes, there is: ada, then say what to add."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Saya tak nak kuah kari.",
+      "en": "I don't want curry gravy."
+     },
+     {
+      "type": "reply",
+      "prompt": "Nasi goreng dah habis lah. Mee goreng ada.",
+      "right": "Okay, mee goreng satu lah.",
+      "wrong": [
+       "Itu je?",
+       "Nak minum apa?"
+      ],
+      "why": "He offered an alternative; take it with a soft lah."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Roti canai belum habis lagi.",
+      "en": "The roti canai isn't finished yet."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Ya, duduk mana-mana pun boleh. Nak minum apa?",
+     "en": "Yes, sit anywhere you like. What do you want to drink?"
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Teh tarik satu, kurang manis. Kalau boleh, jangan manis sangat ye.",
+     "en": "One teh tarik, less sweet. If you can, not too sweet, okay."
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Boleh, no problem. Makan apa hari ni?",
+     "en": "Sure, no problem. What are you eating today?"
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Roti canai ada lagi tak? Tadi nampak macam ramai orang.",
+     "en": "Is there still roti canai? It looked pretty busy just now."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Aduh, roti canai baru je habis. Kalau nak, kena tunggu lima belas minit macam tu.",
+     "en": "Ah, the roti canai just ran out. If you want it, you'll have to wait fifteen minutes or so."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Lama jugak tu. Roti telur ada tak?",
+     "en": "That's quite long. Is there roti telur?"
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Roti telur pun sama lah, semua roti kena tunggu. Maggi goreng ke, nasi goreng ke, cepat sikit.",
+     "en": "Roti telur's the same, all the roti need a wait. Maggi goreng or nasi goreng would be a bit quicker."
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Okay lah, kalau macam tu bagi maggi goreng satu. Tak nak pedas sangat.",
+     "en": "Okay then, in that case give me one maggi goreng. Not too spicy."
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Maggi goreng satu, kurang pedas. Telur mata nak tambah?",
+     "en": "One maggi goreng, less spicy. Want to add a fried egg?"
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Boleh jugak. Itu je dulu.",
+     "en": "Sure, why not. That's all for now."
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Okay, set. Kejap ye.",
+     "en": "Okay, done. Just a moment."
+    }
+   ],
+   "gist": {
+    "q": "Why did she end up with maggi goreng?",
+    "options": [
+     "Every kind of roti needed a fifteen-minute wait",
+     "Maggi goreng was the cheapest thing",
+     "The waiter misheard her order",
+     "She changed her mind about the tea"
+    ],
+    "answer": 0,
+    "why": "Semua roti kena tunggu — all the roti needed a wait, and he suggested something quicker."
+   },
+   "phrases": [
+    "p2",
+    "p3",
+    "p6",
+    "p7",
+    "p8",
+    "p9"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Nasi goreng baru je habis. Kalau nak, kena tunggu sepuluh minit macam tu.",
+      "en": "The fried rice just ran out; about a ten-minute wait if you want it.",
+      "wrong": [
+       "The fried rice will be ready in two minutes.",
+       "There's no more fried rice at all today.",
+       "The fried rice takes ten minutes; the noodles are finished."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kalau macam tu, bagi nasi goreng satu. Pedas sikit takpe.",
+      "en": "In that case, give me one fried rice. A bit spicy is fine.",
+      "word": "sikit"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Semua roti ada, tapi maggi goreng kena tunggu sikit.",
+      "en": "All the roti are available, but the maggi goreng needs a short wait.",
+      "wrong": [
+       "All the roti need a wait, but maggi goreng is quick.",
+       "Everything is finished except maggi goreng.",
+       "Roti and maggi goreng both need a long wait."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Lima belas minit lama jugak tu. Mee goreng ada tak?",
+      "en": "Fifteen minutes is quite long. Is there fried noodles?"
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Maggi goreng satu, tak nak pedas, tambah telur mata. Air teh tarik kurang manis kan?",
+      "en": "One maggi goreng, not spicy, add a fried egg. And the drink is a less-sweet teh tarik, right?"
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Roti kena tunggu lima belas minit. Okay ke?",
+      "right": "Lama jugak tu. Maggi goreng cepat sikit tak?",
+      "wrong": [
+       "Kejap ye.",
+       "Nak minum apa?"
+      ],
+      "why": "Too long for you, so ask whether something else is quicker."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Tak nak telur mata, itu je dulu.",
+      "en": "No fried egg, that's all for now."
+     },
+     {
+      "type": "reply",
+      "prompt": "Telur mata tak nak tambah?",
+      "right": "Tak payah lah, itu je dulu.",
+      "wrong": [
+       "Kena tunggu.",
+       "Okay, set. Kejap ye."
+      ],
+      "why": "Turning down an extra: tak payah."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "you",
+      "ms": "Tadi nampak macam tak ramai orang.",
+      "en": "It didn't look that busy just now."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
 }

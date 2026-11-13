@@ -1,107 +1,625 @@
 {
-  "id": "m01-l05",
-  "title": "At the nasi campur counter",
-  "blurb": "Pointing, choosing lauk, and how much kuah you really want.",
-  "staff": {"label": "Abg", "name": "Counter staff", "voice": "m"},
-  "you": {"voice": "f"},
-  "notes": [
-    {"title": "yang ni, yang tu", "body": "When you don't know the name, point: <b>yang ni</b> (this one), <b>yang tu</b> (that one). <b>ni</b> and <b>tu</b> are short for <i>ini</i> and <i>itu</i>."},
-    {"title": "banjir", "body": "<b>Kuah banjir</b> — literally “flooded gravy” — means drench the rice. The opposite is <i>kuah sikit</i> or <i>letak tepi</i> (on the side)."},
-    {"title": "separuh", "body": "Portions of rice are big. <b>Nasi separuh</b> gets you half; <b>nasi tambah</b> gets you extra."}
-  ],
-  "phrases": {
-    "p1": {"ms": "Nasi separuh ye.", "en": "Half rice, please.", "note": "separuh = half."},
-    "p2": {"ms": "Lauk nak apa?", "en": "Which dishes do you want?", "note": "lauk = the dishes that go with rice.", "v": "m"},
-    "p3": {"ms": "Dengan sayur yang ni.", "en": "With this vegetable.", "note": "yang ni = this one (ini)."},
-    "p4": {"ms": "Pedas sikit tau.", "en": "It's a bit spicy, you know.", "note": "tau = tahu; a friendly heads-up.", "v": "m"},
-    "p5": {"ms": "Kuah nak banjir.", "en": "I want the gravy flooded.", "note": "banjir = flood; lots of gravy over the rice."},
-    "p6": {"ms": "Kuah kari ke kuah campur?", "en": "Curry gravy or mixed gravy?", "v": "m"},
-    "p7": {"ms": "Telur masin ada tak?", "en": "Do you have salted egg?", "note": "ada tak? = is there any?"},
-    "p8": {"ms": "Nak yang ni.", "en": "I want this one."},
-    "p9": {"ms": "Sikit je.", "en": "Just a little.", "note": "sikit = sedikit; je = sahaja."},
-    "p10": {"ms": "Yang tu ikan apa eh?", "en": "What fish is that one?", "note": "eh softens a question, like “hey, …?”"},
-    "p11": {"ms": "Ada tulang banyak tak?", "en": "Does it have a lot of bones?"},
-    "p12": {"ms": "Ambik ayam je, senang.", "en": "Just take the chicken, it's easier.", "note": "ambik = ambil.", "v": "m"},
-    "p13": {"ms": "Kuah nak banjir ke letak tepi?", "en": "Gravy flooded or on the side?", "v": "m"},
-    "p14": {"ms": "Jangan kena sayur.", "en": "Don't let it touch the vegetables.", "note": "kena here = touch / get on."}
+ "id": "m01-l05",
+ "title": "At the nasi campur counter",
+ "blurb": "Pointing, choosing lauk, and how much kuah you really want.",
+ "staff": {
+  "label": "Abg",
+  "name": "Counter staff",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "yang ni, yang tu",
+   "body": "When you don't know the name, point: <b>yang ni</b> (this one), <b>yang tu</b> (that one). <b>ni</b> and <b>tu</b> are short for <i>ini</i> and <i>itu</i>."
   },
-  "match": [["ni", "ini"], ["tu", "itu"], ["sikit", "sedikit"], ["tau", "tahu"], ["ambik", "ambil"], ["kat", "di"], ["tengah", "sedang"]],
-  "clips": [],
-  "levels": {
-    "easy": {
-      "dialogue": [
-        {"id": "e1", "s": "staff", "ms": "Lauk nak apa?", "en": "Which dishes do you want?"},
-        {"id": "e2", "s": "you", "ms": "Ayam goreng satu.", "en": "One fried chicken."},
-        {"id": "e3", "s": "staff", "ms": "Sayur?", "en": "Vegetables?"},
-        {"id": "e4", "s": "you", "ms": "Nak yang ni.", "en": "I want this one."},
-        {"id": "e5", "s": "staff", "ms": "Kuah?", "en": "Gravy?"},
-        {"id": "e6", "s": "you", "ms": "Kuah kari. Sikit je.", "en": "Curry gravy. Just a little."}
-      ],
-      "gist": {"q": "How much gravy does she want?", "options": ["Just a little curry gravy", "Lots of curry gravy", "No gravy at all"], "answer": 0, "why": "Kuah kari. Sikit je — just a little."},
-      "phrases": ["p2", "p8", "p9", "p3"],
-      "exercises": [
-        {"type": "choose", "ref": "e1", "options": ["Which dishes do you want?", "How much rice do you want?", "Do you want a drink?"], "answer": 0},
-        {"type": "choose", "ref": "e6", "options": ["Curry gravy. Just a little.", "Curry gravy. A lot.", "No curry gravy."], "answer": 0},
-        {"type": "gap", "ref": "e4", "word": "yang"},
-        {"type": "dictation", "ref": "e2"},
-        {"type": "ladder", "ref": "e6"},
-        {"type": "reply", "prompt": "Sayur?", "options": ["Nak yang ni.", "Lauk nak apa?", "Kuah?"], "answer": 0, "why": "He's asking about vegetables; pointing with “yang ni” is all you need."},
-        {"type": "order", "ref": "e1"},
-        {"type": "match"}
-      ]
-    },
-    "medium": {
-      "dialogue": [
-        {"id": "m1", "s": "you", "ms": "Bang, nasi separuh ye.", "en": "Half rice, please."},
-        {"id": "m2", "s": "staff", "ms": "Okay. Lauk nak apa?", "en": "Okay. Which dishes do you want?"},
-        {"id": "m3", "s": "you", "ms": "Ayam goreng satu, dengan sayur yang ni.", "en": "One fried chicken, with this vegetable."},
-        {"id": "m4", "s": "staff", "ms": "Sayur kangkung ni? Pedas sikit tau.", "en": "This kangkung? It's a bit spicy, you know."},
-        {"id": "m5", "s": "you", "ms": "Takpe, pedas sikit okay. Kuah nak banjir.", "en": "That's fine, a bit spicy is okay. I want the gravy flooded."},
-        {"id": "m6", "s": "staff", "ms": "Kuah kari ke kuah campur?", "en": "Curry gravy or mixed gravy?"},
-        {"id": "m7", "s": "you", "ms": "Campur lah. Telur masin ada tak?", "en": "Mixed. Do you have salted egg?"},
-        {"id": "m8", "s": "staff", "ms": "Ada. Nak satu?", "en": "Yes. Want one?"},
-        {"id": "m9", "s": "you", "ms": "Nak satu. Itu je.", "en": "One, please. That's all."}
-      ],
-      "gist": {"q": "What does she ask for with her rice?", "options": ["Half rice, fried chicken, kangkung, lots of mixed gravy and a salted egg", "Full rice, fish, no vegetables and no gravy", "Half rice with only vegetables and curry on the side", "Fried chicken only, no rice"], "answer": 0, "why": "Nasi separuh … ayam goreng … sayur … kuah banjir, campur … telur masin."},
-      "phrases": ["p1", "p2", "p3", "p4", "p5", "p6", "p7"],
-      "exercises": [
-        {"type": "choose", "ref": "m4", "options": ["This kangkung? It's a bit spicy, you know.", "This kangkung? It's not spicy at all.", "The kangkung is finished, you know."], "answer": 0},
-        {"type": "choose", "ref": "m5", "options": ["That's fine, a bit spicy is okay. Flood the gravy.", "No thanks, I can't eat spicy. No gravy.", "That's fine, but put the gravy on the side."], "answer": 0},
-        {"type": "gap", "ref": "m1", "word": "separuh"},
-        {"type": "dictation", "ref": "m7"},
-        {"type": "ladder", "ref": "m3"},
-        {"type": "reply", "prompt": "Kuah kari ke kuah campur?", "options": ["Campur lah.", "Nasi separuh ye.", "Pedas sikit tau."], "answer": 0, "why": "An either/or question; pick one and soften with “lah”."},
-        {"type": "order", "ref": "m7"},
-        {"type": "match"}
-      ]
-    },
-    "hard": {
-      "dialogue": [
-        {"id": "h1", "s": "staff", "ms": "Ya, nasi biasa ke nasi tambah?", "en": "Yes, regular rice or extra rice?"},
-        {"id": "h2", "s": "you", "ms": "Nasi separuh je bang, tengah diet sikit.", "en": "Just half rice, I'm on a bit of a diet."},
-        {"id": "h3", "s": "staff", "ms": "Haha, okay. Lauk ambik apa?", "en": "Haha, okay. Which dishes are you taking?"},
-        {"id": "h4", "s": "you", "ms": "Yang tu ikan apa eh? Yang merah tu.", "en": "What fish is that one? The red one."},
-        {"id": "h5", "s": "staff", "ms": "Tu ikan kembung masak sambal. Sebelah tu ayam masak merah.", "en": "That's mackerel cooked in sambal. Next to it is ayam masak merah."},
-        {"id": "h6", "s": "you", "ms": "Ikan tu ada tulang banyak tak?", "en": "Does that fish have a lot of bones?"},
-        {"id": "h7", "s": "staff", "ms": "Ikan kembung memang ada tulang sikit lah. Kalau malas, ambik ayam je, senang.", "en": "Mackerel does have some bones. If you can't be bothered, just take the chicken, it's easier."},
-        {"id": "h8", "s": "you", "ms": "Okay lah, ayam masak merah satu. Dengan sayur campur tu sikit.", "en": "Okay then, one ayam masak merah. With a bit of that mixed veg."},
-        {"id": "h9", "s": "staff", "ms": "Kuah nak banjir ke letak tepi?", "en": "Gravy flooded or on the side?"},
-        {"id": "h10", "s": "you", "ms": "Banjir, tapi jangan kena sayur. Kuah kari ye, bukan kuah ikan.", "en": "Flooded, but don't let it touch the vegetables. Curry gravy, okay, not fish gravy."},
-        {"id": "h11", "s": "staff", "ms": "Okay boss, set. Makan sini kan? Air order kat meja ye.", "en": "Okay boss, done. Eating here, right? Order drinks at the table."},
-        {"id": "h12", "s": "you", "ms": "Okay, terima kasih bang.", "en": "Okay, thank you."}
-      ],
-      "gist": {"q": "Why did she choose the chicken over the fish?", "options": ["The fish has bones and chicken is easier", "The fish was too spicy", "The fish was sold out", "The chicken was cheaper"], "answer": 0, "why": "Ikan kembung memang ada tulang … ambik ayam je, senang."},
-      "phrases": ["p10", "p11", "p12", "p13", "p14", "p1"],
-      "exercises": [
-        {"type": "choose", "ref": "h5", "options": ["That's mackerel in sambal; next to it is ayam masak merah.", "That's chicken in sambal; next to it is red fish.", "That's mackerel curry; the chicken is finished.", "Both of those are chicken dishes."], "answer": 0},
-        {"type": "choose", "ref": "h11", "options": ["Done. Eating here, right? Order drinks at the table.", "Done. Takeaway, right? Pay at the table.", "Done. Drinks are at the counter over there.", "Sorry boss, no tables left. Takeaway only."], "answer": 0},
-        {"type": "gap", "ref": "h7", "word": "malas"},
-        {"type": "dictation", "ref": "h6"},
-        {"type": "ladder", "ref": "h10"},
-        {"type": "reply", "prompt": "Kuah nak banjir ke letak tepi?", "options": ["Banjir, tapi jangan kena sayur.", "Yang tu ikan apa eh?", "Nasi separuh je bang."], "answer": 0, "why": "Either/or again; answer with one choice, then add your condition."},
-        {"type": "order", "ref": "h6"},
-        {"type": "match"}
-      ]
-    }
+  {
+   "title": "banjir",
+   "body": "<b>Kuah banjir</b> — literally “flooded gravy” — means drench the rice. The opposite is <i>kuah sikit</i> or <i>letak tepi</i> (on the side)."
+  },
+  {
+   "title": "separuh",
+   "body": "Portions of rice are big. <b>Nasi separuh</b> gets you half; <b>nasi tambah</b> gets you extra."
   }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Nasi separuh ye.",
+   "en": "Half rice, please.",
+   "note": "separuh = half."
+  },
+  "p2": {
+   "ms": "Lauk nak apa?",
+   "en": "Which dishes do you want?",
+   "note": "lauk = the dishes that go with rice.",
+   "v": "m"
+  },
+  "p3": {
+   "ms": "Dengan sayur yang ni.",
+   "en": "With this vegetable.",
+   "note": "yang ni = this one (ini)."
+  },
+  "p4": {
+   "ms": "Pedas sikit tau.",
+   "en": "It's a bit spicy, you know.",
+   "note": "tau = tahu; a friendly heads-up.",
+   "v": "m"
+  },
+  "p5": {
+   "ms": "Kuah nak banjir.",
+   "en": "I want the gravy flooded.",
+   "note": "banjir = flood; lots of gravy over the rice."
+  },
+  "p6": {
+   "ms": "Kuah kari ke kuah campur?",
+   "en": "Curry gravy or mixed gravy?",
+   "v": "m"
+  },
+  "p7": {
+   "ms": "Telur masin ada tak?",
+   "en": "Do you have salted egg?",
+   "note": "ada tak? = is there any?"
+  },
+  "p8": {
+   "ms": "Nak yang ni.",
+   "en": "I want this one."
+  },
+  "p9": {
+   "ms": "Sikit je.",
+   "en": "Just a little.",
+   "note": "sikit = sedikit; je = sahaja."
+  },
+  "p10": {
+   "ms": "Yang tu ikan apa eh?",
+   "en": "What fish is that one?",
+   "note": "eh softens a question, like “hey, …?”"
+  },
+  "p11": {
+   "ms": "Ada tulang banyak tak?",
+   "en": "Does it have a lot of bones?"
+  },
+  "p12": {
+   "ms": "Ambik ayam je, senang.",
+   "en": "Just take the chicken, it's easier.",
+   "note": "ambik = ambil.",
+   "v": "m"
+  },
+  "p13": {
+   "ms": "Kuah nak banjir ke letak tepi?",
+   "en": "Gravy flooded or on the side?",
+   "v": "m"
+  },
+  "p14": {
+   "ms": "Jangan kena sayur.",
+   "en": "Don't let it touch the vegetables.",
+   "note": "kena here = touch / get on."
+  }
+ },
+ "match": [
+  [
+   "ni",
+   "ini"
+  ],
+  [
+   "tu",
+   "itu"
+  ],
+  [
+   "sikit",
+   "sedikit"
+  ],
+  [
+   "tau",
+   "tahu"
+  ],
+  [
+   "ambik",
+   "ambil"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "tengah",
+   "sedang"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Lauk nak apa?",
+     "en": "Which dishes do you want?"
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Ayam goreng satu.",
+     "en": "One fried chicken."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Sayur?",
+     "en": "Vegetables?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Nak yang ni.",
+     "en": "I want this one."
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Kuah?",
+     "en": "Gravy?"
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Kuah kari. Sikit je.",
+     "en": "Curry gravy. Just a little."
+    }
+   ],
+   "gist": {
+    "q": "How much gravy does she want?",
+    "options": [
+     "Just a little curry gravy",
+     "Lots of curry gravy",
+     "No gravy at all"
+    ],
+    "answer": 0,
+    "why": "Kuah kari. Sikit je — just a little."
+   },
+   "phrases": [
+    "p2",
+    "p8",
+    "p9",
+    "p3"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Nak sayur apa?",
+      "en": "Which vegetable do you want?",
+      "wrong": [
+       "Which dishes do you want?",
+       "Do you want gravy?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Ayam goreng dua.",
+      "en": "Two fried chicken.",
+      "word": "ayam"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "you",
+      "ms": "Kuah kari. Nak banyak.",
+      "en": "Curry gravy. Lots.",
+      "wrong": [
+       "Curry gravy. Just a little.",
+       "No gravy."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Nak yang tu. Sikit je.",
+      "en": "I want that one. Just a little."
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Ayam goreng satu, sayur, kuah kari sikit. Itu je?",
+      "en": "One fried chicken, vegetables, a little curry gravy. Is that all?"
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kuah nak?",
+      "right": "Tak nak kuah.",
+      "wrong": [
+       "Ayam goreng satu.",
+       "Lauk nak apa?"
+      ],
+      "why": "He's asking about gravy; tak nak kuah says none."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Sayur tak nak, ayam je.",
+      "en": "No vegetables, just chicken."
+     },
+     {
+      "type": "reply",
+      "prompt": "Ayam ke ikan?",
+      "right": "Ayam goreng satu.",
+      "wrong": [
+       "Kuah kari. Sikit je.",
+       "Sayur?"
+      ],
+      "why": "Either/or: pick one of the two."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Nak kuah kari sikit je.",
+      "en": "I want just a little curry gravy."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "you",
+     "ms": "Bang, nasi separuh ye.",
+     "en": "Half rice, please."
+    },
+    {
+     "id": "m2",
+     "s": "staff",
+     "ms": "Okay. Lauk nak apa?",
+     "en": "Okay. Which dishes do you want?"
+    },
+    {
+     "id": "m3",
+     "s": "you",
+     "ms": "Ayam goreng satu, dengan sayur yang ni.",
+     "en": "One fried chicken, with this vegetable."
+    },
+    {
+     "id": "m4",
+     "s": "staff",
+     "ms": "Sayur kangkung ni? Pedas sikit tau.",
+     "en": "This kangkung? It's a bit spicy, you know."
+    },
+    {
+     "id": "m5",
+     "s": "you",
+     "ms": "Takpe, pedas sikit okay. Kuah nak banjir.",
+     "en": "That's fine, a bit spicy is okay. I want the gravy flooded."
+    },
+    {
+     "id": "m6",
+     "s": "staff",
+     "ms": "Kuah kari ke kuah campur?",
+     "en": "Curry gravy or mixed gravy?"
+    },
+    {
+     "id": "m7",
+     "s": "you",
+     "ms": "Campur lah. Telur masin ada tak?",
+     "en": "Mixed. Do you have salted egg?"
+    },
+    {
+     "id": "m8",
+     "s": "staff",
+     "ms": "Ada. Nak satu?",
+     "en": "Yes. Want one?"
+    },
+    {
+     "id": "m9",
+     "s": "you",
+     "ms": "Nak satu. Itu je.",
+     "en": "One, please. That's all."
+    }
+   ],
+   "gist": {
+    "q": "What does she ask for with her rice?",
+    "options": [
+     "Half rice, fried chicken, kangkung, lots of mixed gravy and a salted egg",
+     "Full rice, fish, no vegetables and no gravy",
+     "Half rice with only vegetables and curry on the side",
+     "Fried chicken only, no rice"
+    ],
+    "answer": 0,
+    "why": "Nasi separuh … ayam goreng … sayur … kuah banjir, campur … telur masin."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Nasi nak separuh ke biasa?",
+      "en": "Half rice or regular?",
+      "wrong": [
+       "Rice or noodles?",
+       "Do you want extra rice?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "staff",
+      "ms": "Sayur ni tak pedas, yang tu pedas sikit.",
+      "en": "This vegetable isn't spicy; that one is a bit spicy.",
+      "word": "sayur"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "you",
+      "ms": "Kuah tak nak banjir. Sikit je.",
+      "en": "I don't want the gravy flooded. Just a little.",
+      "wrong": [
+       "I want the gravy flooded.",
+       "No gravy at all."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Telur masin nak dua.",
+      "en": "Two salted eggs."
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "you",
+      "ms": "Bang, nasi biasa ye. Ayam goreng satu, sayur tak nak. Kuah kari banjir.",
+      "en": "Regular rice, please. One fried chicken, no vegetables. Flood it with curry gravy."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Pedas sikit tau. Okay?",
+      "right": "Tak nak lah. Sayur lain ada tak?",
+      "wrong": [
+       "Campur lah.",
+       "Nasi separuh ye."
+      ],
+      "why": "Not okay for you, so ask for a different vegetable."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "staff",
+      "ms": "Telur masin dah habis lah.",
+      "en": "The salted egg's finished."
+     },
+     {
+      "type": "reply",
+      "prompt": "Telur masin nak?",
+      "right": "Tak nak. Itu je.",
+      "wrong": [
+       "Kuah kari ke kuah campur?",
+       "Lauk nak apa?"
+      ],
+      "why": "A plain no, and you're done: itu je."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "you",
+      "ms": "Dengan ayam goreng yang tu.",
+      "en": "With that fried chicken."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Ya, nasi biasa ke nasi tambah?",
+     "en": "Yes, regular rice or extra rice?"
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Nasi separuh je bang, tengah diet sikit.",
+     "en": "Just half rice, I'm on a bit of a diet."
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Haha, okay. Lauk ambik apa?",
+     "en": "Haha, okay. Which dishes are you taking?"
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Yang tu ikan apa eh? Yang merah tu.",
+     "en": "What fish is that one? The red one."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Tu ikan kembung masak sambal. Sebelah tu ayam masak merah.",
+     "en": "That's mackerel cooked in sambal. Next to it is ayam masak merah."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Ikan tu ada tulang banyak tak?",
+     "en": "Does that fish have a lot of bones?"
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Ikan kembung memang ada tulang sikit lah. Kalau malas, ambik ayam je, senang.",
+     "en": "Mackerel does have some bones. If you can't be bothered, just take the chicken, it's easier."
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Okay lah, ayam masak merah satu. Dengan sayur campur tu sikit.",
+     "en": "Okay then, one ayam masak merah. With a bit of that mixed veg."
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Kuah nak banjir ke letak tepi?",
+     "en": "Gravy flooded or on the side?"
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Banjir, tapi jangan kena sayur. Kuah kari ye, bukan kuah ikan.",
+     "en": "Flooded, but don't let it touch the vegetables. Curry gravy, okay, not fish gravy."
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Okay boss, set. Makan sini kan? Air order kat meja ye.",
+     "en": "Okay boss, done. Eating here, right? Order drinks at the table."
+    },
+    {
+     "id": "h12",
+     "s": "you",
+     "ms": "Okay, terima kasih bang.",
+     "en": "Okay, thank you."
+    }
+   ],
+   "gist": {
+    "q": "Why did she choose the chicken over the fish?",
+    "options": [
+     "The fish has bones and chicken is easier",
+     "The fish was too spicy",
+     "The fish was sold out",
+     "The chicken was cheaper"
+    ],
+    "answer": 0,
+    "why": "Ikan kembung memang ada tulang … ambik ayam je, senang."
+   },
+   "phrases": [
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p14",
+    "p1"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Tu ayam masak merah. Sebelah tu ikan kembung goreng.",
+      "en": "That's ayam masak merah. Next to it is fried mackerel.",
+      "wrong": [
+       "That's fried mackerel. Next to it is ayam masak merah.",
+       "Both are fish dishes.",
+       "That's fried chicken; the fish is finished."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kuah letak tepi je, jangan banjir.",
+      "en": "Gravy on the side only, don't flood it.",
+      "word": "tepi"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Ayam tu pedas jugak. Kalau tak tahan, ambik ikan goreng je.",
+      "en": "That chicken is fairly spicy. If you can't take it, just have the fried fish.",
+      "wrong": [
+       "The fish is spicy; take the chicken instead.",
+       "Neither one is spicy.",
+       "The chicken isn't spicy, but it has bones."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Ayam tu ada tulang tak?",
+      "en": "Does that chicken have bones?"
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "you",
+      "ms": "Nasi separuh je. Ikan kembung satu, sayur campur sikit. Kuah ikan ye, bukan kuah kari, letak tepi.",
+      "en": "Just half rice. One mackerel, a bit of mixed veg. Fish gravy, not curry, on the side."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nasi biasa ke nasi tambah?",
+      "right": "Nasi biasa je, tak payah tambah.",
+      "wrong": [
+       "Banjir, tapi jangan kena sayur.",
+       "Okay boss, set."
+      ],
+      "why": "Either/or: pick one, and tak payah turns down the extra."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Yang merah tu ayam ke ikan?",
+      "en": "Is the red one chicken or fish?"
+     },
+     {
+      "type": "reply",
+      "prompt": "Ikan kembung ada tulang sikit. Okay ke?",
+      "right": "Malas lah. Ambik ayam je.",
+      "wrong": [
+       "Kuah kari ye, bukan kuah ikan.",
+       "Makan sini kan?"
+      ],
+      "why": "Can't be bothered with bones: malas lah, take the chicken."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Air order kat meja, bukan kat sini.",
+      "en": "Order drinks at the table, not here."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
 }

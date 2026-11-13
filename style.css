@@ -75,7 +75,6 @@ h3 { font-family: var(--head); font-weight: 700; font-size: 18px; }
 .iconbtn { flex: none; width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid var(--green); background: #fff; color: var(--green); display: inline-flex; align-items: center; justify-content: center; }
 .iconbtn:hover { background: var(--mint); }
 .iconbtn.plain { border-color: transparent; background: transparent; color: #6B766F; }
-.iconbtn.flag[aria-pressed="true"] { color: #fff; background: var(--red); border-color: var(--red); }
 .iconbtn.playing, .btn.playing { background: var(--yellow); color: var(--text); border-color: var(--text); }
 .seg { display: inline-flex; border: 1.5px solid var(--green); border-radius: 999px; overflow: hidden; background: #fff; }
 .seg button { border: 0; background: #fff; color: var(--green); font-weight: 500; font-size: 13px; padding: 8px 14px; min-width: 48px; min-height: 44px; }
@@ -141,7 +140,6 @@ h3 { font-family: var(--head); font-weight: 700; font-size: 18px; }
 .ms { font-size: 20px; line-height: 1.5; }
 .en { font-size: 15px; color: #3C4741; border-top: 1px dashed #A9BDB1; padding-top: 8px; }
 .tools { display: flex; gap: 8px; align-items: center; }
-.tools .flag { margin-left: auto; }
 .w { border: 0; background: transparent; padding: 0 2px; margin: 0 -2px; font: inherit; color: inherit; border-radius: 4px; cursor: pointer; }
 .w:hover { background: #FBEFC9; }
 .w.on { background: var(--yellow); box-shadow: 0 2px 0 var(--green); }
@@ -239,11 +237,6 @@ textarea.out { font: 13px/1.5 ui-monospace, Menlo, monospace; min-height: 220px;
 .crumbs [aria-current] { font-weight: 600; color: var(--text); }
 .btn.exit { font-size: 13px; padding: 8px 16px; }
 
-/* Feels off? button */
-.flagbtn { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; border: 1.5px solid var(--border); background: #fff; color: var(--muted); font-size: 13px; font-weight: 600; padding: 8px 14px; min-height: 44px; border-radius: 999px; }
-.flagbtn:hover { border-color: var(--red); color: var(--red-dark); }
-.flagbtn[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: #fff; }
-
 /* Progress strip, level meters, stars */
 .progress { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 24px; }
 .progress .meter { flex: 3 1 320px; }
@@ -277,3 +270,16 @@ h1 .tip, h2 .tip, .verdict .tip { text-decoration: underline dotted 2px var(--gr
 .avatar .tip, .chip .tip { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 999px; }
 .foot { color: var(--muted); }
 .foot b { color: var(--green); }
+
+/* Lesson frame: difficulty badge, back / next */
+.lvlbadge { display: inline-flex; align-items: center; gap: 5px; font-size: 13px; padding: 7px 14px; border-radius: 999px; background: var(--yellow); color: var(--text); border: 1.5px solid var(--green); }
+.stepnav { margin-top: 4px; }
+.stepnav .next:only-child { margin-left: auto; }
+.lesson > aside .stepnav { flex-direction: row; }
+
+/* Listen step: speakers are buttons */
+button.chip { padding: 0; font-family: inherit; cursor: pointer; }
+button.chip:hover { border-color: var(--green); }
+
+/* Word order: a used tile leaves its slot behind */
+.tile.gone { color: transparent; background: var(--ground); border-style: dashed; border-color: var(--border); box-shadow: none; cursor: default; }

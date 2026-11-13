@@ -1,105 +1,614 @@
 {
-  "id": "m01-l04",
-  "title": "Adding to your order",
-  "blurb": "Tambah satu lagi — calling the kakak back for more.",
-  "staff": {"label": "Kak", "name": "Kakak", "voice": "f"},
-  "you": {"voice": "m"},
-  "notes": [
-    {"title": "tambah and lagi", "body": "<b>Tambah</b> is “add”; <b>satu lagi</b> is “one more”. Together they cover almost any top-up: <i>tambah roti satu lagi</i>."},
-    {"title": "tadi", "body": "<b>Tadi</b> points back to earlier today: <i>teh tarik tadi</i> = the teh tarik from before. Staff use it to check which order you mean."},
-    {"title": "… kan?", "body": "<b>kan?</b> on the end asks for confirmation, like “right?”: <i>kurang manis kan?</i>"}
-  ],
-  "phrases": {
-    "p1": {"ms": "Kak, nak tambah order boleh?", "en": "Can I add to my order?", "note": "Kak (kakak) is how you call a woman a bit older than you; Bang for a man."},
-    "p2": {"ms": "Nak tambah apa?", "en": "What do you want to add?", "v": "f"},
-    "p3": {"ms": "Roti telur satu lagi.", "en": "One more roti telur.", "note": "satu lagi = one more."},
-    "p4": {"ms": "Yang ni biasa je.", "en": "This one's just regular.", "note": "yang ni = this one; biasa = normal, no tweaks."},
-    "p5": {"ms": "Ada apa-apa lagi?", "en": "Anything else?", "v": "f"},
-    "p6": {"ms": "Kuah kari boleh tambah sikit?", "en": "Can I get a bit more curry gravy?", "note": "sikit = sedikit (a little)."},
-    "p7": {"ms": "Nanti saya bawak.", "en": "I'll bring it in a bit.", "note": "bawak = bawa. nanti = later, shortly.", "v": "f"},
-    "p8": {"ms": "Teh tarik satu lagi.", "en": "One more teh tarik."},
-    "p9": {"ms": "Dah habis lah, tinggal dada dengan kepak je.", "en": "It's finished; only breast and wing are left.", "note": "tinggal = what's left.", "v": "f"},
-    "p10": {"ms": "Kejap ye, saya tanya dia.", "en": "One sec, I'll ask him."},
-    "p11": {"ms": "Dah buat belum?", "en": "Has it been made yet?", "note": "dah … belum? = already … or not yet?"},
-    "p12": {"ms": "Tak sempat tukar dah.", "en": "Too late to change it now.", "note": "tak sempat = didn't make it in time.", "v": "f"},
-    "p13": {"ms": "Takpe lah.", "en": "Never mind, it's fine.", "note": "takpe = tidak apa."}
+ "id": "m01-l04",
+ "title": "Adding to your order",
+ "blurb": "Tambah satu lagi — calling the kakak back for more.",
+ "staff": {
+  "label": "Kak",
+  "name": "Kakak",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "tambah and lagi",
+   "body": "<b>Tambah</b> is “add”; <b>satu lagi</b> is “one more”. Together they cover almost any top-up: <i>tambah roti satu lagi</i>."
   },
-  "match": [["sikit", "sedikit"], ["bawak", "bawa"], ["ni", "ini"], ["dah", "sudah"], ["takpe", "tidak apa"], ["cakap", "berkata"], ["rasanya", "saya rasa"]],
-  "clips": [],
-  "levels": {
-    "easy": {
-      "dialogue": [
-        {"id": "e1", "s": "you", "ms": "Kak, nak tambah.", "en": "I'd like to add something."},
-        {"id": "e2", "s": "staff", "ms": "Nak tambah apa?", "en": "What do you want to add?"},
-        {"id": "e3", "s": "you", "ms": "Roti canai satu lagi.", "en": "One more roti canai."},
-        {"id": "e4", "s": "staff", "ms": "Air?", "en": "Drinks?"},
-        {"id": "e5", "s": "you", "ms": "Teh tarik satu lagi.", "en": "One more teh tarik."},
-        {"id": "e6", "s": "staff", "ms": "Okay, kejap ye.", "en": "Okay, just a moment."}
-      ],
-      "gist": {"q": "What does he add to his order?", "options": ["One more roti canai and one more teh tarik", "Two more roti canai and no drink", "Only one more teh tarik"], "answer": 0, "why": "Roti canai satu lagi … teh tarik satu lagi."},
-      "phrases": ["p2", "p8", "p3", "p5"],
-      "exercises": [
-        {"type": "choose", "ref": "e2", "options": ["What do you want to add?", "What do you want to drink?", "Do you want the bill?"], "answer": 0},
-        {"type": "choose", "ref": "e3", "options": ["One more roti canai.", "No more roti canai.", "One roti canai later."], "answer": 0},
-        {"type": "gap", "ref": "e5", "word": "lagi"},
-        {"type": "dictation", "ref": "e3"},
-        {"type": "ladder", "ref": "e5"},
-        {"type": "reply", "prompt": "Nak tambah apa?", "options": ["Roti canai satu lagi.", "Okay, kejap ye.", "Nak tambah apa?"], "answer": 0, "why": "She's asking what to add; name the item + “satu lagi”."},
-        {"type": "order", "ref": "e5"},
-        {"type": "match"}
-      ]
-    },
-    "medium": {
-      "dialogue": [
-        {"id": "m1", "s": "you", "ms": "Kak, nak tambah order boleh?", "en": "Can I add to my order?"},
-        {"id": "m2", "s": "staff", "ms": "Boleh. Nak tambah apa?", "en": "Sure. What do you want to add?"},
-        {"id": "m3", "s": "you", "ms": "Roti telur satu lagi. Dengan teh tarik satu lagi.", "en": "One more roti telur. And one more teh tarik."},
-        {"id": "m4", "s": "staff", "ms": "Teh tarik tadi kurang manis kan? Yang ni pun sama?", "en": "The teh tarik earlier was less sweet, right? Same for this one?"},
-        {"id": "m5", "s": "you", "ms": "Yang ni biasa je. Untuk kawan saya.", "en": "This one's just regular. It's for my friend."},
-        {"id": "m6", "s": "staff", "ms": "Okay. Roti telur satu, teh tarik biasa satu. Ada apa-apa lagi?", "en": "Okay. One roti telur, one regular teh tarik. Anything else?"},
-        {"id": "m7", "s": "you", "ms": "Kuah kari boleh tambah sikit?", "en": "Can I get a bit more curry gravy?"},
-        {"id": "m8", "s": "staff", "ms": "Boleh, nanti saya bawak.", "en": "Sure, I'll bring it in a bit."}
-      ],
-      "gist": {"q": "How should the second teh tarik be made?", "options": ["Regular — it's for his friend", "Less sweet, like the first one", "With no sugar at all", "Iced instead of hot"], "answer": 0, "why": "Yang ni biasa je. Untuk kawan saya."},
-      "phrases": ["p1", "p2", "p3", "p4", "p5", "p6", "p7"],
-      "exercises": [
-        {"type": "choose", "ref": "m4", "options": ["The earlier teh tarik was less sweet, right? Same for this one?", "The earlier teh tarik was too sweet, right? Want a new one?", "The teh tarik is finished. Want something else?"], "answer": 0},
-        {"type": "choose", "ref": "m8", "options": ["Sure, I'll bring it in a bit.", "Sorry, there's none left.", "Sure, take it from the counter."], "answer": 0},
-        {"type": "gap", "ref": "m7", "word": "sikit"},
-        {"type": "dictation", "ref": "m5"},
-        {"type": "ladder", "ref": "m6"},
-        {"type": "reply", "prompt": "Teh tarik tadi kurang manis kan? Yang ni pun sama?", "options": ["Yang ni biasa je.", "Nak tambah apa?", "Nanti saya bawak."], "answer": 0, "why": "She asks if the new one should match; “biasa je” says make it the normal way."},
-        {"type": "order", "ref": "m7"},
-        {"type": "match"}
-      ]
-    },
-    "hard": {
-      "dialogue": [
-        {"id": "h1", "s": "you", "ms": "Kak, sorry, nak tambah order sikit.", "en": "Sorry, I'd like to add a bit to my order."},
-        {"id": "h2", "s": "staff", "ms": "Ha, boleh. Meja ni kan? Tadi dah order roti telur dengan teh tarik.", "en": "Yeah, sure. This table, right? You ordered roti telur and teh tarik earlier."},
-        {"id": "h3", "s": "you", "ms": "Betul. Kawan saya baru sampai, so nak tambah untuk dia.", "en": "Right. My friend just arrived, so I want to add something for him."},
-        {"id": "h4", "s": "staff", "ms": "Okay, dia nak makan apa?", "en": "Okay, what does he want to eat?"},
-        {"id": "h5", "s": "you", "ms": "Dia nak nasi lemak ayam, tapi ayam tu nak bahagian peha kalau ada.", "en": "He wants nasi lemak with chicken, but the thigh piece if you have it."},
-        {"id": "h6", "s": "staff", "ms": "Peha dah habis lah, tinggal dada dengan kepak je.", "en": "Thigh's finished; only breast and wing are left."},
-        {"id": "h7", "s": "you", "ms": "Kejap ye, saya tanya dia. Okay, dia cakap kepak pun boleh.", "en": "One sec, I'll ask him. Okay, he says wing is fine too."},
-        {"id": "h8", "s": "staff", "ms": "Okay, nasi lemak ayam, kepak. Air?", "en": "Okay, nasi lemak with chicken, wing. Drinks?"},
-        {"id": "h9", "s": "you", "ms": "Milo ais satu, kurang manis. Eh, roti telur saya tadi dah buat belum? Kalau belum, tukar jadi roti bawang boleh?", "en": "One iced Milo, less sweet. Oh, has my roti telur been made yet? If not, can you change it to roti bawang?"},
-        {"id": "h10", "s": "staff", "ms": "Rasanya dah atas kuali tu. Tak sempat tukar dah.", "en": "I think it's already on the pan. Too late to change it now."},
-        {"id": "h11", "s": "you", "ms": "Takpe lah, takpe. Tambah yang tadi je.", "en": "Never mind, that's fine. Just add what I said."},
-        {"id": "h12", "s": "staff", "ms": "Okay, nanti saya hantar sekali.", "en": "Okay, I'll bring it all together."}
-      ],
-      "gist": {"q": "Why couldn't he change his roti telur to roti bawang?", "options": ["It was already cooking on the pan", "Roti bawang was sold out", "The kakak didn't understand him", "His friend wanted the roti telur"], "answer": 0, "why": "Rasanya dah atas kuali tu. Tak sempat tukar dah."},
-      "phrases": ["p9", "p10", "p11", "p12", "p13", "p1"],
-      "exercises": [
-        {"type": "choose", "ref": "h6", "options": ["Thigh is finished; only breast and wing are left.", "Thigh and wing are finished; only breast is left.", "There's plenty of thigh, but no wing.", "The chicken is all finished."], "answer": 0},
-        {"type": "choose", "ref": "h10", "options": ["I think it's already on the pan — too late to change.", "I think it hasn't been started — I'll change it.", "The pan is broken — it'll take a while.", "I'll check with the kitchen and change it."], "answer": 0},
-        {"type": "gap", "ref": "h3", "word": "sampai"},
-        {"type": "dictation", "ref": "h11"},
-        {"type": "ladder", "ref": "h9"},
-        {"type": "reply", "prompt": "Rasanya dah atas kuali tu. Tak sempat tukar dah.", "options": ["Takpe lah, takpe.", "Dah buat belum?", "Kejap ye, saya tanya dia."], "answer": 0, "why": "Nothing to be done; “Takpe lah” lets it go gracefully."},
-        {"type": "order", "ref": "h6"},
-        {"type": "match"}
-      ]
-    }
+  {
+   "title": "tadi",
+   "body": "<b>Tadi</b> points back to earlier today: <i>teh tarik tadi</i> = the teh tarik from before. Staff use it to check which order you mean."
+  },
+  {
+   "title": "… kan?",
+   "body": "<b>kan?</b> on the end asks for confirmation, like “right?”: <i>kurang manis kan?</i>"
   }
+ ],
+ "phrases": {
+  "p1": {
+   "ms": "Kak, nak tambah order boleh?",
+   "en": "Can I add to my order?",
+   "note": "Kak (kakak) is how you call a woman a bit older than you; Bang for a man."
+  },
+  "p2": {
+   "ms": "Nak tambah apa?",
+   "en": "What do you want to add?",
+   "v": "f"
+  },
+  "p3": {
+   "ms": "Roti telur satu lagi.",
+   "en": "One more roti telur.",
+   "note": "satu lagi = one more."
+  },
+  "p4": {
+   "ms": "Yang ni biasa je.",
+   "en": "This one's just regular.",
+   "note": "yang ni = this one; biasa = normal, no tweaks."
+  },
+  "p5": {
+   "ms": "Ada apa-apa lagi?",
+   "en": "Anything else?",
+   "v": "f"
+  },
+  "p6": {
+   "ms": "Kuah kari boleh tambah sikit?",
+   "en": "Can I get a bit more curry gravy?",
+   "note": "sikit = sedikit (a little)."
+  },
+  "p7": {
+   "ms": "Nanti saya bawak.",
+   "en": "I'll bring it in a bit.",
+   "note": "bawak = bawa. nanti = later, shortly.",
+   "v": "f"
+  },
+  "p8": {
+   "ms": "Teh tarik satu lagi.",
+   "en": "One more teh tarik."
+  },
+  "p9": {
+   "ms": "Dah habis lah, tinggal dada dengan kepak je.",
+   "en": "It's finished; only breast and wing are left.",
+   "note": "tinggal = what's left.",
+   "v": "f"
+  },
+  "p10": {
+   "ms": "Kejap ye, saya tanya dia.",
+   "en": "One sec, I'll ask him."
+  },
+  "p11": {
+   "ms": "Dah buat belum?",
+   "en": "Has it been made yet?",
+   "note": "dah … belum? = already … or not yet?"
+  },
+  "p12": {
+   "ms": "Tak sempat tukar dah.",
+   "en": "Too late to change it now.",
+   "note": "tak sempat = didn't make it in time.",
+   "v": "f"
+  },
+  "p13": {
+   "ms": "Takpe lah.",
+   "en": "Never mind, it's fine.",
+   "note": "takpe = tidak apa."
+  }
+ },
+ "match": [
+  [
+   "sikit",
+   "sedikit"
+  ],
+  [
+   "bawak",
+   "bawa"
+  ],
+  [
+   "ni",
+   "ini"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "takpe",
+   "tidak apa"
+  ],
+  [
+   "cakap",
+   "berkata"
+  ],
+  [
+   "rasanya",
+   "saya rasa"
+  ]
+ ],
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "you",
+     "ms": "Kak, nak tambah.",
+     "en": "I'd like to add something."
+    },
+    {
+     "id": "e2",
+     "s": "staff",
+     "ms": "Nak tambah apa?",
+     "en": "What do you want to add?"
+    },
+    {
+     "id": "e3",
+     "s": "you",
+     "ms": "Roti canai satu lagi.",
+     "en": "One more roti canai."
+    },
+    {
+     "id": "e4",
+     "s": "staff",
+     "ms": "Air?",
+     "en": "Drinks?"
+    },
+    {
+     "id": "e5",
+     "s": "you",
+     "ms": "Teh tarik satu lagi.",
+     "en": "One more teh tarik."
+    },
+    {
+     "id": "e6",
+     "s": "staff",
+     "ms": "Okay, kejap ye.",
+     "en": "Okay, just a moment."
+    }
+   ],
+   "gist": {
+    "q": "What does he add to his order?",
+    "options": [
+     "One more roti canai and one more teh tarik",
+     "Two more roti canai and no drink",
+     "Only one more teh tarik"
+    ],
+    "answer": 0,
+    "why": "Roti canai satu lagi … teh tarik satu lagi."
+   },
+   "phrases": [
+    "p2",
+    "p8",
+    "p3",
+    "p5"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Nak tambah air?",
+      "en": "Do you want to add a drink?",
+      "wrong": [
+       "Do you want to add food?",
+       "Is the drink finished?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Kak, nak tambah teh tarik satu.",
+      "en": "I'd like to add one teh tarik.",
+      "word": "tambah"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "you",
+      "ms": "Roti telur satu lagi.",
+      "en": "One more roti telur.",
+      "wrong": [
+       "No more roti telur.",
+       "Two roti telur."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Roti canai dua lagi.",
+      "en": "Two more roti canai."
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "you",
+      "ms": "Kak, nak tambah. Roti telur satu lagi, air tak nak.",
+      "en": "I'd like to add something. One more roti telur, no drink."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Air nak tambah?",
+      "right": "Air tak nak.",
+      "wrong": [
+       "Roti canai satu lagi.",
+       "Nak tambah apa?"
+      ],
+      "why": "She's asking about drinks; air tak nak says none."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Kak, nak tambah roti canai.",
+      "en": "I'd like to add roti canai."
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak tambah makan ke air?",
+      "right": "Teh tarik satu lagi.",
+      "wrong": [
+       "Okay, kejap ye.",
+       "Air?"
+      ],
+      "why": "Name the item, then satu lagi."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Air tak nak, makan je.",
+      "en": "No drink, just food."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "you",
+     "ms": "Kak, nak tambah order boleh?",
+     "en": "Can I add to my order?"
+    },
+    {
+     "id": "m2",
+     "s": "staff",
+     "ms": "Boleh. Nak tambah apa?",
+     "en": "Sure. What do you want to add?"
+    },
+    {
+     "id": "m3",
+     "s": "you",
+     "ms": "Roti telur satu lagi. Dengan teh tarik satu lagi.",
+     "en": "One more roti telur. And one more teh tarik."
+    },
+    {
+     "id": "m4",
+     "s": "staff",
+     "ms": "Teh tarik tadi kurang manis kan? Yang ni pun sama?",
+     "en": "The teh tarik earlier was less sweet, right? Same for this one?"
+    },
+    {
+     "id": "m5",
+     "s": "you",
+     "ms": "Yang ni biasa je. Untuk kawan saya.",
+     "en": "This one's just regular. It's for my friend."
+    },
+    {
+     "id": "m6",
+     "s": "staff",
+     "ms": "Okay. Roti telur satu, teh tarik biasa satu. Ada apa-apa lagi?",
+     "en": "Okay. One roti telur, one regular teh tarik. Anything else?"
+    },
+    {
+     "id": "m7",
+     "s": "you",
+     "ms": "Kuah kari boleh tambah sikit?",
+     "en": "Can I get a bit more curry gravy?"
+    },
+    {
+     "id": "m8",
+     "s": "staff",
+     "ms": "Boleh, nanti saya bawak.",
+     "en": "Sure, I'll bring it in a bit."
+    }
+   ],
+   "gist": {
+    "q": "How should the second teh tarik be made?",
+    "options": [
+     "Regular — it's for his friend",
+     "Less sweet, like the first one",
+     "With no sugar at all",
+     "Iced instead of hot"
+    ],
+    "answer": 0,
+    "why": "Yang ni biasa je. Untuk kawan saya."
+   },
+   "phrases": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p6",
+    "p7"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Roti telur tadi satu kan? Nak tambah satu lagi?",
+      "en": "You had one roti telur earlier, right? Want one more?",
+      "wrong": [
+       "You had two roti telur, right? Want the bill?",
+       "The roti telur is finished. Want something else?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Teh tarik satu lagi, untuk kawan saya.",
+      "en": "One more teh tarik, for my friend.",
+      "word": "kawan"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "you",
+      "ms": "Yang ni kurang manis. Yang tadi biasa.",
+      "en": "This one less sweet. The earlier one was regular.",
+      "wrong": [
+       "This one regular. The earlier one was less sweet.",
+       "Both less sweet."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Kuah dhal boleh tambah sikit?",
+      "en": "Can I get a bit more dhal?"
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Okay. Roti canai satu lagi, teh tarik kurang manis satu. Kuah nanti saya bawak.",
+      "en": "Okay. One more roti canai, one less-sweet teh tarik. I'll bring the gravy shortly."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Ada apa-apa lagi?",
+      "right": "Takde dah. Itu je.",
+      "wrong": [
+       "Nak tambah apa?",
+       "Nanti saya bawak."
+      ],
+      "why": "Nothing more: takde dah."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Yang ni untuk kawan saya.",
+      "en": "This one is for my friend."
+     },
+     {
+      "type": "reply",
+      "prompt": "Yang ni pun kurang manis?",
+      "right": "Tak, yang ni biasa je.",
+      "wrong": [
+       "Boleh, nanti saya bawak.",
+       "Kak, nak tambah order boleh?"
+      ],
+      "why": "A plain tak, then say how you do want it."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "you",
+      "ms": "Takde apa-apa lagi, terima kasih.",
+      "en": "Nothing else, thank you."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "you",
+     "ms": "Kak, sorry, nak tambah order sikit.",
+     "en": "Sorry, I'd like to add a bit to my order."
+    },
+    {
+     "id": "h2",
+     "s": "staff",
+     "ms": "Ha, boleh. Meja ni kan? Tadi dah order roti telur dengan teh tarik.",
+     "en": "Yeah, sure. This table, right? You ordered roti telur and teh tarik earlier."
+    },
+    {
+     "id": "h3",
+     "s": "you",
+     "ms": "Betul. Kawan saya baru sampai, so nak tambah untuk dia.",
+     "en": "Right. My friend just arrived, so I want to add something for him."
+    },
+    {
+     "id": "h4",
+     "s": "staff",
+     "ms": "Okay, dia nak makan apa?",
+     "en": "Okay, what does he want to eat?"
+    },
+    {
+     "id": "h5",
+     "s": "you",
+     "ms": "Dia nak nasi lemak ayam, tapi ayam tu nak bahagian peha kalau ada.",
+     "en": "He wants nasi lemak with chicken, but the thigh piece if you have it."
+    },
+    {
+     "id": "h6",
+     "s": "staff",
+     "ms": "Peha dah habis lah, tinggal dada dengan kepak je.",
+     "en": "Thigh's finished; only breast and wing are left."
+    },
+    {
+     "id": "h7",
+     "s": "you",
+     "ms": "Kejap ye, saya tanya dia. Okay, dia cakap kepak pun boleh.",
+     "en": "One sec, I'll ask him. Okay, he says wing is fine too."
+    },
+    {
+     "id": "h8",
+     "s": "staff",
+     "ms": "Okay, nasi lemak ayam, kepak. Air?",
+     "en": "Okay, nasi lemak with chicken, wing. Drinks?"
+    },
+    {
+     "id": "h9",
+     "s": "you",
+     "ms": "Milo ais satu, kurang manis. Eh, roti telur saya tadi dah buat belum? Kalau belum, tukar jadi roti bawang boleh?",
+     "en": "One iced Milo, less sweet. Oh, has my roti telur been made yet? If not, can you change it to roti bawang?"
+    },
+    {
+     "id": "h10",
+     "s": "staff",
+     "ms": "Rasanya dah atas kuali tu. Tak sempat tukar dah.",
+     "en": "I think it's already on the pan. Too late to change it now."
+    },
+    {
+     "id": "h11",
+     "s": "you",
+     "ms": "Takpe lah, takpe. Tambah yang tadi je.",
+     "en": "Never mind, that's fine. Just add what I said."
+    },
+    {
+     "id": "h12",
+     "s": "staff",
+     "ms": "Okay, nanti saya hantar sekali.",
+     "en": "Okay, I'll bring it all together."
+    }
+   ],
+   "gist": {
+    "q": "Why couldn't he change his roti telur to roti bawang?",
+    "options": [
+     "It was already cooking on the pan",
+     "Roti bawang was sold out",
+     "The kakak didn't understand him",
+     "His friend wanted the roti telur"
+    ],
+    "answer": 0,
+    "why": "Rasanya dah atas kuali tu. Tak sempat tukar dah."
+   },
+   "phrases": [
+    "p9",
+    "p10",
+    "p11",
+    "p12",
+    "p13",
+    "p1"
+   ],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Kepak dah habis lah, tinggal peha dengan dada je.",
+      "en": "Wing is finished; only thigh and breast are left.",
+      "wrong": [
+       "Thigh is finished; only wing and breast are left.",
+       "Only wing is left.",
+       "All the chicken is finished."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kawan saya belum sampai, so order dia nanti dulu.",
+      "en": "My friend hasn't arrived yet, so hold his order for now.",
+      "word": "belum"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Roti tadi belum buat lagi. Nak tukar, boleh.",
+      "en": "The roti from earlier hasn't been made yet. You can change it if you want.",
+      "wrong": [
+       "The roti is already on the pan; too late to change.",
+       "The roti is finished; choose something else.",
+       "The roti is ready; I'll bring it now."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Dia cakap dada pun boleh.",
+      "en": "He says breast is fine too."
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "you",
+      "ms": "Kak, sorry, roti telur tadi kalau belum buat, tukar jadi roti bawang boleh? Kalau dah buat, takpe.",
+      "en": "Sorry, if the roti telur hasn't been made, can you change it to roti bawang? If it has, never mind."
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Peha dah habis lah. Dada boleh?",
+      "right": "Kejap ye, saya tanya dia.",
+      "wrong": [
+       "Rasanya dah atas kuali tu.",
+       "Meja ni kan?"
+      ],
+      "why": "It's your friend's order, so check with him first."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Kawan saya nak milo ais, kurang manis.",
+      "en": "My friend wants an iced Milo, less sweet."
+     },
+     {
+      "type": "reply",
+      "prompt": "Roti telur tadi belum buat. Nak tukar ke?",
+      "right": "Ha, tukar jadi roti bawang lah.",
+      "wrong": [
+       "Tak sempat tukar dah.",
+       "Peha dah habis lah."
+      ],
+      "why": "It can still be changed, so say what to change it into."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Nanti saya hantar sekali dengan air.",
+      "en": "I'll bring it together with the drinks."
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
 }
