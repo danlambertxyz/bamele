@@ -2,7 +2,9 @@
 
 A small personal web app for learning everyday spoken Malaysian Malay, weighted towards listening. Plain HTML, CSS and JavaScript — no backend, no build step, no tracking.
 
-## Run it
+**Use it online: https://danlambertxyz.github.io/bamale/**
+
+## Run it locally
 
 ```bash
 python3 -m http.server 8765
