@@ -56,7 +56,7 @@ function addReview(item, dueNow) {
 
 /* ---------- content ---------- */
 const cache = {};
-const getJSON = (p) => (cache[p] = cache[p] || fetch(p).then((r) => { if (!r.ok) throw new Error('Could not load ' + p); return r.json(); }));
+const getJSON = (p) => (cache[p] = cache[p] || fetch(p, { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error('Could not load ' + p); return r.json(); }));
 let COURSE, GLOSS;
 const modMeta = (mid) => COURSE.modules.find((m) => m.id === mid);
 const getModule = (mid) => getJSON(`content/${modMeta(mid).dir}/module.json`);

@@ -19,8 +19,9 @@
       "id": "m03",
       "num": 3,
       "title": "Grab & getting around",
-      "blurb": "Pickup confusion, landmarks, belok kiri, traffic chat.",
-      "ready": false
+      "blurb": "Where to, pickup confusion, belok kiri, buses and trains, getting dropped off.",
+      "ready": true,
+      "dir": "m03-grab"
     },
     {
       "id": "m04",

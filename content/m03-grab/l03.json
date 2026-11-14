@@ -1,0 +1,759 @@
+{
+ "id": "m03-l03",
+ "title": "Belok kiri, belok kanan",
+ "blurb": "Directing the driver when the map gets it wrong.",
+ "staff": {
+  "label": "Kak",
+  "name": "Driver",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "belok, terus, pusing",
+   "body": "<b>Belok kiri / kanan</b> — turn left / right. <b>Jalan terus</b> — go straight. <b>Pusing balik</b> — turn back round."
+  },
+  {
+   "title": "depan tu, sini",
+   "body": "Pointing words do most of the work: <b>depan tu</b> (just ahead there), <b>sini</b> (here), <b>sebelah kedai</b> (next to the shop)."
+  },
+  {
+   "title": "ikut",
+   "body": "<b>Ikut</b> = follow, go by. <i>Tak payah ikut Waze</i> — no need to follow Waze. <i>Ikut jalan dalam</i> — take the back roads."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "lepas tu",
+   "selepas itu"
+  ],
+  [
+   "tak payah",
+   "tidak perlu"
+  ],
+  [
+   "ke",
+   "atau"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "ni",
+   "ini"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "ha'ah",
+   "ya"
+  ]
+ ],
+ "tr": {
+  "Abang pakai kereta apa?": "What car are you driving?",
+  "Aku rasa tiket aku dah hilang.": "I think I've lost my ticket.",
+  "Awak kat pintu depan ke pintu belakang?": "Are you at the front gate or the back gate?",
+  "Awak pakai baju apa?": "What are you wearing?",
+  "Awak tunggu kat mana?": "Where are you waiting?",
+  "Baju merah. Saya kat depan lobi.": "A red top. I'm in front of the lobby.",
+  "Baru je pergi. Kena tunggu lima belas minit.": "It only just left. You'll have to wait fifteen minutes.",
+  "Bas nombor lima dah pergi?": "Has bus number five gone?",
+  "Bas nombor lima.": "Bus number five.",
+  "Belok kiri, lepas tu jalan terus.": "Turn left, then go straight.",
+  "Belok sini.": "Turn here.",
+  "Belum. Nak beli kat mana?": "Not yet. Where do I buy one?",
+  "Berapa ringgit?": "How many ringgit?",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Berhenti kat sini je.": "Just stop here.",
+  "Berhenti kat sini.": "Stop here.",
+  "Betul ke?": "Is that right?",
+  "Boleh berhenti kat bank kejap?": "Can we stop at a bank for a moment?",
+  "Boleh. Tapi jangan lama sangat.": "Sure. But don't be too long.",
+  "Cash. Lapan ringgit kan?": "Cash. Eight ringgit, right?",
+  "Dah sampai ke belum?": "Have you arrived yet?",
+  "Dah sampai.": "We're here.",
+  "Dah. Saya kat depan lobi.": "Yes. I'm in front of the lobby.",
+  "Dekat je.": "It's close.",
+  "Depan sikit.": "A bit further on.",
+  "Dua minit.": "Two minutes.",
+  "Dua tiket.": "Two tickets.",
+  "Guard bagi masuk.": "The guard lets you in.",
+  "Guard tak bagi masuk. Macam mana?": "The guard won't let me in. What now?",
+  "Itu pintu depan.": "That's the front gate.",
+  "Jalan dalam jem teruk.": "The back roads are badly jammed.",
+  "Jalan dalam. Highway jem.": "The back roads. The highway is jammed.",
+  "Jalan terus.": "Go straight.",
+  "Jangan lupa barang.": "Don't forget your things.",
+  "Jauh jugak.": "It's fairly far.",
+  "KLCC jauh tak dari sini?": "Is KLCC far from here?",
+  "Kak, sekarang pukul berapa?": "What time is it now?",
+  "Kanan. Lepas tu jalan terus.": "Right. Then go straight.",
+  "Kat sini okay.": "Here is fine.",
+  "Kat tempat duduk belakang tu.": "On the back seat there.",
+  "Kena tukar bas dua kali. Okay ke?": "You have to change buses twice. Is that okay?",
+  "Kereta putih.": "A white car.",
+  "Kiri ke kanan?": "Left or right?",
+  "Lapan ringgit je.": "Just eight ringgit.",
+  "Lapangan terbang. Sempat tak?": "The airport. Will we make it?",
+  "Leceh la. LRT ada tak?": "What a hassle. Is there an LRT?",
+  "Lepas lampu isyarat, belok mana?": "After the traffic lights, which way do I turn?",
+  "Lintas jalan ni.": "Cross this road.",
+  "Naik LRT.": "Take the LRT.",
+  "Nak bayar macam mana?": "How do you want to pay?",
+  "Nak beli berapa tiket?": "How many tickets do you want to buy?",
+  "Nak berhenti kat mana?": "Where do you want to stop?",
+  "Nak ikut highway ke jalan dalam?": "Shall I take the highway or the back roads?",
+  "Nak masuk ikut pintu mana?": "Which gate do you want to go in by?",
+  "Okay, nampak.": "Okay, I see it.",
+  "Pintu belakang.": "The back gate.",
+  "Pintu belakang. Dekat lobi.": "The back gate. Near the lobby.",
+  "Pintu belakang. Pintu depan jem.": "The back gate. The front gate is jammed.",
+  "Pukul berapa?": "What time?",
+  "Pukul lapan.": "Eight o'clock.",
+  "Pukul sembilan suku.": "Quarter past nine.",
+  "Rumah awak yang mana?": "Which one is your house?",
+  "Rumah saya sebelah kedai.": "My house is next to the shop.",
+  "Saya dah sampai.": "I've arrived.",
+  "Saya dah terlepas simpang. Macam mana?": "I've missed the turning. What now?",
+  "Saya pakai baju merah.": "I'm wearing a red top.",
+  "Saya tunggu kat lobi.": "I'm waiting at the lobby.",
+  "Sempat tak sampai sebelum pukul sembilan?": "Will we make it before nine?",
+  "Sini boleh berhenti?": "Can we stop here?",
+  "Sorry.": "Sorry.",
+  "Stesen dekat je.": "The station is close.",
+  "Stesen jauh tak?": "Is the station far?",
+  "Tak boleh lama. Turun cepat sikit.": "Not for long. Get out quickly.",
+  "Tak jauh.": "Not far.",
+  "Tak jauh. Dekat je.": "Not far. It's close.",
+  "Tak payah ikut Waze.": "No need to follow Waze.",
+  "Tak sempat rasanya. Jalan jem.": "I don't think so. The road is jammed.",
+  "Takpe, saya jalan pergi pintu depan.": "Never mind, I'll walk to the front gate.",
+  "Takpe. Depan tu boleh u-turn.": "Never mind. You can U-turn just ahead.",
+  "Tambang dah bayar.": "The fare is paid.",
+  "Telefon saya mana?": "Where's my phone?",
+  "Terima kasih, bang.": "Thank you.",
+  "Terima kasih, kak.": "Thank you.",
+  "Terima kasih.": "Thank you.",
+  "Tiket awak mana?": "Where's your ticket?",
+  "Tunggu saya sebentar.": "Wait for me a moment.",
+  "Tunggu sekejap.": "Wait a moment.",
+  "Yang sebelah kedai tu.": "The one next to the shop."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Lepas ni belok mana?",
+     "en": "Which way do I turn after this?"
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Belok kiri.",
+     "en": "Turn left.",
+     "src": [
+      "t9133324"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Lepas tu?",
+     "en": "And then?"
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Belok kanan.",
+     "en": "Turn right.",
+     "src": [
+      "t9133329"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Sini?",
+     "en": "Here?"
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Ya. Belok sini.",
+     "en": "Yes. Turn here.",
+     "src": [
+      "t10937562"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "Which way first?",
+    "options": [
+     "Left, then right",
+     "Right, then left",
+     "Straight on"
+    ],
+    "answer": 0,
+    "why": "Belok kiri … lepas tu … belok kanan."
+   },
+   "vocab": [
+    "belok",
+    "kiri",
+    "kanan",
+    "lepas tu",
+    "sini",
+    "mana"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Saya pusing ke kanan.",
+      "en": "I turned right.",
+      "src": [
+       "t974236"
+      ],
+      "real": true,
+      "wrong": [
+       "I turned left.",
+       "I went straight."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Saya mahu pergi ke kiri.",
+      "en": "I want to go left.",
+      "src": [
+       "t10655356"
+      ],
+      "real": true,
+      "word": "kiri"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Berhenti!",
+      "en": "Stop!",
+      "src": [
+       "t961928"
+      ],
+      "real": true,
+      "wrong": [
+       "Go!",
+       "Turn!"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Duduk sebelah saya.",
+      "en": "Sit next to me.",
+      "src": [
+       "t10900655"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Belok kiri anda akan menemui hentian bas.",
+      "en": "Turn left and you'll find the bus stop.",
+      "src": [
+       "t10145743"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kiri ke kanan?",
+      "right": "Kanan. Lepas tu jalan terus.",
+      "wrong": [
+       "Terima kasih.",
+       "Lepas ni belok mana?"
+      ],
+      "why": "Left or right? Pick one, then add what comes next."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Jom lintas padang ni.",
+      "en": "Let's cut across this field.",
+      "src": [
+       "t10730657"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak berhenti kat mana?",
+      "right": "Berhenti kat sini.",
+      "wrong": [
+       "Belok kiri.",
+       "Lepas tu?"
+      ],
+      "why": "Where to stop: berhenti kat sini."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Dia tinggal di seberang sungai.",
+      "en": "He lives across the river.",
+      "src": [
+       "t4572556"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Waze cakap jalan terus. Betul ke?",
+     "en": "Waze says go straight. Is that right?"
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Tak payah ikut Waze. Depan tu belok kiri.",
+     "en": "No need to follow Waze. Turn left just ahead."
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Belok kiri. Okay. Lepas tu?",
+     "en": "Turn left. Okay. And then?",
+     "src": [
+      "t9133324"
+     ]
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Jalan terus sampai lampu isyarat.",
+     "en": "Go straight until the traffic lights."
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Lepas lampu isyarat?",
+     "en": "After the traffic lights?"
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Belok kanan. Rumah saya sebelah kedai.",
+     "en": "Turn right. My house is next to the shop.",
+     "src": [
+      "t9133329"
+     ]
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Sini ke?",
+     "en": "Is it here?"
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Belok sini. Okay, berhenti kat sini.",
+     "en": "Turn here. Okay, stop here.",
+     "src": [
+      "t10937562"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "Where is his house?",
+    "options": [
+     "Next to a shop, right after the traffic lights",
+     "On the highway",
+     "Straight on, as Waze says",
+     "Before the traffic lights, on the left"
+    ],
+    "answer": 0,
+    "why": "Lepas lampu isyarat … belok kanan. Rumah saya sebelah kedai."
+   },
+   "vocab": [
+    "ikut",
+    "jalan terus",
+    "lampu isyarat",
+    "sebelah",
+    "berhenti",
+    "depan"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Di persimpangan T, sila belok kiri.",
+      "en": "At the T-junction, please turn left.",
+      "src": [
+       "t9932477"
+      ],
+      "real": true,
+      "wrong": [
+       "At the T-junction, please turn right.",
+       "Before the junction, please stop."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Dia sedang berdiri di depan pintu itu.",
+      "en": "He is standing in front of that door.",
+      "src": [
+       "t974186"
+      ],
+      "real": true,
+      "word": "depan"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Mengapa awak berhenti?",
+      "en": "Why did you stop?",
+      "src": [
+       "t10657665"
+      ],
+      "real": true,
+      "wrong": [
+       "Where did you stop?",
+       "Why won't you stop?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Saya pusing ke kanan.",
+      "en": "I turned right.",
+      "src": [
+       "t974236"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Ketika lampu isyarat menunjukkan warna kuning, kami berhenti.",
+      "en": "When the traffic light turned yellow, we stopped.",
+      "src": [
+       "t963239"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Lepas lampu isyarat, belok mana?",
+      "right": "Belok kiri, lepas tu jalan terus.",
+      "wrong": [
+       "Rumah saya sebelah kedai.",
+       "Tak payah ikut Waze."
+      ],
+      "why": "Belok mana? wants a direction."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Bas berhenti di hadapan rumah saya.",
+      "en": "The bus stops in front of my house.",
+      "src": [
+       "t8751059"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Rumah awak yang mana?",
+      "right": "Yang sebelah kedai tu.",
+      "wrong": [
+       "Jalan terus.",
+       "Betul ke?"
+      ],
+      "why": "Yang mana? — which one: yang + how to spot it."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Saya mahu pergi ke kiri.",
+      "en": "I want to go left.",
+      "src": [
+       "t10655356"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Waze suruh masuk highway. Nak ikut ke?",
+     "en": "Waze says to get on the highway. Shall I follow it?"
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Tak payah. Highway jem teruk waktu macam ni. Ikut jalan dalam.",
+     "en": "No need. The highway is badly jammed at this hour. Take the back roads."
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Okay. Depan ni belok mana?",
+     "en": "Okay. Which way do I turn up ahead?"
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Di persimpangan T, sila belok kiri.",
+     "en": "At the T-junction, please turn left.",
+     "src": [
+      "t9932477"
+     ],
+     "real": true
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Kiri. Lepas tu?",
+     "en": "Left. And then?"
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Jalan terus, lepas tu belok kanan kat lampu isyarat kedua.",
+     "en": "Go straight, then turn right at the second traffic lights."
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Eh, saya dah terlepas ke?",
+     "en": "Oh, have I missed it?"
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Ha'ah. Kita telah masuk ke simpang yang salah.",
+     "en": "Yep. We've gone down the wrong turning.",
+     "src": [
+      "t963234"
+     ]
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Sorry. Boleh u-turn kat depan?",
+     "en": "Sorry. Can I make a U-turn up ahead?"
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Bukan, lebih baik kamu kena pusing dan balik.",
+     "en": "No, you'd better turn around and go back.",
+     "src": [
+      "t9133918"
+     ],
+     "real": true
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Okay, pusing balik.",
+     "en": "Okay, turning back."
+    },
+    {
+     "id": "h12",
+     "s": "you",
+     "ms": "Belok sini. Okay, berhenti. Dah sampai.",
+     "en": "Turn here. Okay, stop. We're here.",
+     "src": [
+      "t10937562"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "What went wrong on the way?",
+    "options": [
+     "She missed the turn and had to go back",
+     "They got stuck on the highway",
+     "Waze sent them to the wrong house",
+     "The car broke down"
+    ],
+    "answer": 0,
+    "why": "Saya dah terlepas ke? … Kita telah masuk ke simpang yang salah."
+   },
+   "vocab": [
+    "suruh",
+    "highway",
+    "jalan dalam",
+    "terlepas",
+    "u-turn",
+    "pusing balik"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Kereta itu diletakkan di hadapan bangunan.",
+      "en": "The car was parked in front of the building.",
+      "src": [
+       "t11037459"
+      ],
+      "real": true,
+      "wrong": [
+       "The car was parked behind the building.",
+       "The building is in front of the car park.",
+       "The car hit the front of the building."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Belok kiri anda akan menemui hentian bas.",
+      "en": "Turn left and you'll find the bus stop.",
+      "src": [
+       "t10145743"
+      ],
+      "real": true,
+      "word": "kiri"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Siap parking tengah jalan bhai.",
+      "en": "He even parked in the middle of the road, man.",
+      "src": [
+       "t11395965"
+      ],
+      "real": true,
+      "wrong": [
+       "He couldn't find parking anywhere, man.",
+       "He's stuck in the middle of a jam, man.",
+       "He parked nicely at the side, man."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Mengapa awak berhenti?",
+      "en": "Why did you stop?",
+      "src": [
+       "t10657665"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Ketika lampu isyarat menunjukkan warna kuning, kami berhenti.",
+      "en": "When the traffic light turned yellow, we stopped.",
+      "src": [
+       "t963239"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Saya dah terlepas simpang. Macam mana?",
+      "right": "Takpe. Depan tu boleh u-turn.",
+      "wrong": [
+       "Jalan dalam jem teruk.",
+       "Belok sini."
+      ],
+      "why": "She's missed the turn: takpe, and the fix."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Saya pusing ke kanan.",
+      "en": "I turned right.",
+      "src": [
+       "t974236"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak ikut highway ke jalan dalam?",
+      "right": "Jalan dalam. Highway jem.",
+      "wrong": [
+       "Dah sampai.",
+       "Sorry."
+      ],
+      "why": "An either/or with ke: choose, and say why."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Bas berhenti di hadapan rumah saya.",
+      "en": "The bus stops in front of my house.",
+      "src": [
+       "t8751059"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

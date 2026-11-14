@@ -1,0 +1,757 @@
+{
+ "id": "m03-l04",
+ "title": "Naik apa?",
+ "blurb": "Buses, trains and tickets — and missing the one you wanted.",
+ "staff": {
+  "label": "Abg",
+  "name": "A stranger at the bus stop",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "tumpang tanya",
+   "body": "<b>Tumpang tanya</b> — “may I ask?” — is the polite way to stop a stranger with a question."
+  },
+  {
+   "title": "naik, turun, tukar",
+   "body": "<b>Naik</b> bas / LRT = get on, take. <b>Turun</b> = get off. <b>Tukar</b> bas = change buses."
+  },
+  {
+   "title": "terlepas",
+   "body": "<b>Terlepas</b> = missed (it got away): <i>terlepas bas</i>, <i>terlepas simpang</i>."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "pegi",
+   "pergi"
+  ],
+  [
+   "baru je",
+   "baru sahaja"
+  ],
+  [
+   "takpe",
+   "tidak apa"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "tak payah",
+   "tidak perlu"
+  ],
+  [
+   "leceh",
+   "menyusahkan"
+  ],
+  [
+   "tak",
+   "tidak"
+  ]
+ ],
+ "tr": {
+  "Abang pakai kereta apa?": "What car are you driving?",
+  "Aku rasa tiket aku dah hilang.": "I think I've lost my ticket.",
+  "Awak kat pintu depan ke pintu belakang?": "Are you at the front gate or the back gate?",
+  "Awak pakai baju apa?": "What are you wearing?",
+  "Awak tunggu kat mana?": "Where are you waiting?",
+  "Baju merah. Saya kat depan lobi.": "A red top. I'm in front of the lobby.",
+  "Baru je pergi. Kena tunggu lima belas minit.": "It only just left. You'll have to wait fifteen minutes.",
+  "Bas nombor lima dah pergi?": "Has bus number five gone?",
+  "Bas nombor lima.": "Bus number five.",
+  "Belok kiri, lepas tu jalan terus.": "Turn left, then go straight.",
+  "Belok sini.": "Turn here.",
+  "Belum. Nak beli kat mana?": "Not yet. Where do I buy one?",
+  "Berapa ringgit?": "How many ringgit?",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Berhenti kat sini je.": "Just stop here.",
+  "Berhenti kat sini.": "Stop here.",
+  "Betul ke?": "Is that right?",
+  "Boleh berhenti kat bank kejap?": "Can we stop at a bank for a moment?",
+  "Boleh. Tapi jangan lama sangat.": "Sure. But don't be too long.",
+  "Cash. Lapan ringgit kan?": "Cash. Eight ringgit, right?",
+  "Dah sampai ke belum?": "Have you arrived yet?",
+  "Dah sampai.": "We're here.",
+  "Dah. Saya kat depan lobi.": "Yes. I'm in front of the lobby.",
+  "Dekat je.": "It's close.",
+  "Depan sikit.": "A bit further on.",
+  "Dua minit.": "Two minutes.",
+  "Dua tiket.": "Two tickets.",
+  "Guard bagi masuk.": "The guard lets you in.",
+  "Guard tak bagi masuk. Macam mana?": "The guard won't let me in. What now?",
+  "Itu pintu depan.": "That's the front gate.",
+  "Jalan dalam jem teruk.": "The back roads are badly jammed.",
+  "Jalan dalam. Highway jem.": "The back roads. The highway is jammed.",
+  "Jalan terus.": "Go straight.",
+  "Jangan lupa barang.": "Don't forget your things.",
+  "Jauh jugak.": "It's fairly far.",
+  "KLCC jauh tak dari sini?": "Is KLCC far from here?",
+  "Kak, sekarang pukul berapa?": "What time is it now?",
+  "Kanan. Lepas tu jalan terus.": "Right. Then go straight.",
+  "Kat sini okay.": "Here is fine.",
+  "Kat tempat duduk belakang tu.": "On the back seat there.",
+  "Kena tukar bas dua kali. Okay ke?": "You have to change buses twice. Is that okay?",
+  "Kereta putih.": "A white car.",
+  "Kiri ke kanan?": "Left or right?",
+  "Lapan ringgit je.": "Just eight ringgit.",
+  "Lapangan terbang. Sempat tak?": "The airport. Will we make it?",
+  "Leceh la. LRT ada tak?": "What a hassle. Is there an LRT?",
+  "Lepas lampu isyarat, belok mana?": "After the traffic lights, which way do I turn?",
+  "Lintas jalan ni.": "Cross this road.",
+  "Naik LRT.": "Take the LRT.",
+  "Nak bayar macam mana?": "How do you want to pay?",
+  "Nak beli berapa tiket?": "How many tickets do you want to buy?",
+  "Nak berhenti kat mana?": "Where do you want to stop?",
+  "Nak ikut highway ke jalan dalam?": "Shall I take the highway or the back roads?",
+  "Nak masuk ikut pintu mana?": "Which gate do you want to go in by?",
+  "Okay, nampak.": "Okay, I see it.",
+  "Pintu belakang.": "The back gate.",
+  "Pintu belakang. Dekat lobi.": "The back gate. Near the lobby.",
+  "Pintu belakang. Pintu depan jem.": "The back gate. The front gate is jammed.",
+  "Pukul berapa?": "What time?",
+  "Pukul lapan.": "Eight o'clock.",
+  "Pukul sembilan suku.": "Quarter past nine.",
+  "Rumah awak yang mana?": "Which one is your house?",
+  "Rumah saya sebelah kedai.": "My house is next to the shop.",
+  "Saya dah sampai.": "I've arrived.",
+  "Saya dah terlepas simpang. Macam mana?": "I've missed the turning. What now?",
+  "Saya pakai baju merah.": "I'm wearing a red top.",
+  "Saya tunggu kat lobi.": "I'm waiting at the lobby.",
+  "Sempat tak sampai sebelum pukul sembilan?": "Will we make it before nine?",
+  "Sini boleh berhenti?": "Can we stop here?",
+  "Sorry.": "Sorry.",
+  "Stesen dekat je.": "The station is close.",
+  "Stesen jauh tak?": "Is the station far?",
+  "Tak boleh lama. Turun cepat sikit.": "Not for long. Get out quickly.",
+  "Tak jauh.": "Not far.",
+  "Tak jauh. Dekat je.": "Not far. It's close.",
+  "Tak payah ikut Waze.": "No need to follow Waze.",
+  "Tak sempat rasanya. Jalan jem.": "I don't think so. The road is jammed.",
+  "Takpe, saya jalan pergi pintu depan.": "Never mind, I'll walk to the front gate.",
+  "Takpe. Depan tu boleh u-turn.": "Never mind. You can U-turn just ahead.",
+  "Tambang dah bayar.": "The fare is paid.",
+  "Telefon saya mana?": "Where's my phone?",
+  "Terima kasih, bang.": "Thank you.",
+  "Terima kasih, kak.": "Thank you.",
+  "Terima kasih.": "Thank you.",
+  "Tiket awak mana?": "Where's your ticket?",
+  "Tunggu saya sebentar.": "Wait for me a moment.",
+  "Tunggu sekejap.": "Wait a moment.",
+  "Yang sebelah kedai tu.": "The one next to the shop."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "you",
+     "ms": "Bang. Di mana stesen metro?",
+     "en": "Excuse me. Where is the metro station?",
+     "src": [
+      "t10908300"
+     ]
+    },
+    {
+     "id": "e2",
+     "s": "staff",
+     "ms": "Dekat je. Jalan terus.",
+     "en": "It's close. Go straight on."
+    },
+    {
+     "id": "e3",
+     "s": "you",
+     "ms": "Okay.",
+     "en": "Okay."
+    },
+    {
+     "id": "e4",
+     "s": "staff",
+     "ms": "Awak ada tiket?",
+     "en": "Do you have a ticket?",
+     "src": [
+      "t5069513"
+     ],
+     "real": true
+    },
+    {
+     "id": "e5",
+     "s": "you",
+     "ms": "Belum. Nak beli dua tiket.",
+     "en": "Not yet. I want to buy two tickets."
+    },
+    {
+     "id": "e6",
+     "s": "staff",
+     "ms": "Sila bayar di sini.",
+     "en": "Please pay here.",
+     "src": [
+      "t12623531"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "How many tickets does she want?",
+    "options": [
+     "Two",
+     "One",
+     "None — she already has one"
+    ],
+    "answer": 0,
+    "why": "Nak beli dua tiket."
+   },
+   "vocab": [
+    "stesen",
+    "dekat",
+    "jalan terus",
+    "tiket",
+    "beli",
+    "bayar"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Saya terlepas bas.",
+      "en": "I missed the bus.",
+      "src": [
+       "t972158"
+      ],
+      "real": true,
+      "wrong": [
+       "I'm waiting for the bus.",
+       "I got on the bus."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Mari berjumpa di stesen.",
+      "en": "Let's meet at the station.",
+      "src": [
+       "t10456252"
+      ],
+      "real": true,
+      "word": "stesen"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Berikan saya dua tiket.",
+      "en": "Give me two tickets.",
+      "src": [
+       "t9724553"
+      ],
+      "real": true,
+      "wrong": [
+       "Give me one ticket.",
+       "I have two tickets."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Jangan lupa tiket!",
+      "en": "Don't forget the ticket!",
+      "src": [
+       "t720156"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Saya harap bas datang segera.",
+      "en": "I hope the bus comes soon.",
+      "src": [
+       "t10766025"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nak beli berapa tiket?",
+      "right": "Dua tiket.",
+      "wrong": [
+       "Dekat je.",
+       "Jalan terus."
+      ],
+      "why": "Berapa? asks how many."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Saya belum bayar tiket.",
+      "en": "I haven't paid for the ticket yet.",
+      "src": [
+       "t8941351"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Stesen jauh tak?",
+      "right": "Tak jauh. Dekat je.",
+      "wrong": [
+       "Dua tiket.",
+       "Sila bayar di sini."
+      ],
+      "why": "Jauh tak? — tak jauh, it's close."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Dia ada basikal tak?",
+      "en": "Does he have a bicycle?",
+      "src": [
+       "t9689227"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "you",
+     "ms": "Bang, tumpang tanya. Mana satu bas ni pegi downtown?",
+     "en": "Excuse me, may I ask? Which of these buses goes downtown?",
+     "src": [
+      "t10663715"
+     ]
+    },
+    {
+     "id": "m2",
+     "s": "staff",
+     "ms": "Bas nombor lima. Tapi baru je pergi.",
+     "en": "Bus number five. But it only just left."
+    },
+    {
+     "id": "m3",
+     "s": "you",
+     "ms": "Alamak. Saya terlepas bas.",
+     "en": "Oh no. I missed the bus.",
+     "src": [
+      "t972158"
+     ]
+    },
+    {
+     "id": "m4",
+     "s": "staff",
+     "ms": "Takpe. Lagi lima belas minit ada lagi satu.",
+     "en": "Never mind. There's another one in fifteen minutes."
+    },
+    {
+     "id": "m5",
+     "s": "you",
+     "ms": "Saya harap bas datang segera.",
+     "en": "I hope the bus comes soon.",
+     "src": [
+      "t10766025"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "staff",
+     "ms": "Kalau nak cepat, naik LRT. Stesen dekat je.",
+     "en": "If you're in a hurry, take the LRT. The station is close."
+    },
+    {
+     "id": "m7",
+     "s": "you",
+     "ms": "Di mana stesen metro?",
+     "en": "Where is the metro station?",
+     "src": [
+      "t10908300"
+     ],
+     "real": true
+    },
+    {
+     "id": "m8",
+     "s": "staff",
+     "ms": "Jalan terus, lepas tu belok kiri.",
+     "en": "Go straight, then turn left."
+    }
+   ],
+   "gist": {
+    "q": "What does he suggest if she is in a hurry?",
+    "options": [
+     "Take the LRT",
+     "Wait for the next bus",
+     "Call a Grab",
+     "Walk downtown"
+    ],
+    "answer": 0,
+    "why": "Kalau nak cepat, naik LRT."
+   },
+   "vocab": [
+    "tumpang tanya",
+    "bas",
+    "terlepas",
+    "harap",
+    "naik",
+    "segera"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Saya perlu menukar bas dua kali.",
+      "en": "I have to change buses twice.",
+      "src": [
+       "t10624564"
+      ],
+      "real": true,
+      "wrong": [
+       "I took two buses today.",
+       "I changed my bus ticket twice."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Awak perlu turun di perhentian berikutnya.",
+      "en": "You need to get off at the next stop.",
+      "src": [
+       "t961066"
+      ],
+      "real": true,
+      "word": "turun"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Bas berhenti di hadapan rumah saya.",
+      "en": "The bus stops in front of my house.",
+      "src": [
+       "t8751059"
+      ],
+      "real": true,
+      "wrong": [
+       "The bus doesn't stop near my house.",
+       "The bus stop is behind my house."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Berikan saya dua tiket.",
+      "en": "Give me two tickets.",
+      "src": [
+       "t9724553"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Dari mana awak menaiki bas ini?",
+      "en": "Where did you get on this bus?",
+      "src": [
+       "t10301828"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Bas nombor lima dah pergi?",
+      "right": "Baru je pergi. Kena tunggu lima belas minit.",
+      "wrong": [
+       "Stesen dekat je.",
+       "Naik LRT."
+      ],
+      "why": "Has it gone? Only just — and the wait."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Saya belum bayar tiket.",
+      "en": "I haven't paid for the ticket yet.",
+      "src": [
+       "t8941351"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Awak ada tiket?",
+      "right": "Belum. Nak beli kat mana?",
+      "wrong": [
+       "Bas nombor lima.",
+       "Jalan terus, lepas tu belok kiri."
+      ],
+      "why": "No ticket yet, so ask where to buy one."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Anda harus naik bas nombor 5.",
+      "en": "You should take bus number 5.",
+      "src": [
+       "t720198"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "you",
+     "ms": "Bang, tumpang tanya. Mana satu bas ni pegi downtown?",
+     "en": "Excuse me, may I ask? Which of these buses goes downtown?",
+     "src": [
+      "t10663715"
+     ]
+    },
+    {
+     "id": "h2",
+     "s": "staff",
+     "ms": "Bas nombor lima. Tapi baru je pergi.",
+     "en": "Bus number five. But it only just left."
+    },
+    {
+     "id": "h3",
+     "s": "you",
+     "ms": "Saya terlepas bas. Bas lain ada tak?",
+     "en": "I missed the bus. Is there another bus?",
+     "src": [
+      "t972158"
+     ]
+    },
+    {
+     "id": "h4",
+     "s": "staff",
+     "ms": "Ada, tapi kena tukar bas dua kali.",
+     "en": "There is, but you have to change buses twice."
+    },
+    {
+     "id": "h5",
+     "s": "you",
+     "ms": "Leceh la macam tu.",
+     "en": "That's such a hassle."
+    },
+    {
+     "id": "h6",
+     "s": "staff",
+     "ms": "Kalau nak senang, naik LRT. Sekali je, tak payah tukar.",
+     "en": "If you want it easy, take the LRT. Just one ride, no changing."
+    },
+    {
+     "id": "h7",
+     "s": "you",
+     "ms": "Di mana stesen metro?",
+     "en": "Where is the metro station?",
+     "src": [
+      "t10908300"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "staff",
+     "ms": "Dekat je. Lintas jalan ni, lepas tu jalan terus lima minit.",
+     "en": "It's close. Cross this road, then walk straight for five minutes."
+    },
+    {
+     "id": "h9",
+     "s": "you",
+     "ms": "Okay. Eh, kejap. Aku rasa tiket aku dah hilang.",
+     "en": "Okay. Oh, hang on. I think I've lost my ticket.",
+     "src": [
+      "t9700600"
+     ]
+    },
+    {
+     "id": "h10",
+     "s": "staff",
+     "ms": "Takpe. Kat stesen boleh beli tiket.",
+     "en": "Never mind. You can buy a ticket at the station."
+    },
+    {
+     "id": "h11",
+     "s": "you",
+     "ms": "Okay. Terima kasih, bang.",
+     "en": "Okay. Thank you."
+    }
+   ],
+   "gist": {
+    "q": "Why does she choose the LRT?",
+    "options": [
+     "The other bus means changing twice",
+     "The LRT is cheaper",
+     "Bus number five is cancelled",
+     "She has an LRT ticket already"
+    ],
+    "answer": 0,
+    "why": "Kena tukar bas dua kali … naik LRT. Sekali je, tak payah tukar."
+   },
+   "vocab": [
+    "tukar",
+    "leceh",
+    "senang",
+    "lintas",
+    "hilang",
+    "dua kali"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Bila kereta api selanjutnya akan berangkat?",
+      "en": "When does the next train leave?",
+      "src": [
+       "t723283"
+      ],
+      "real": true,
+      "wrong": [
+       "When did the last train leave?",
+       "Where does the next train go?",
+       "Is the next train late?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Dari mana awak menaiki bas ini?",
+      "en": "Where did you get on this bus?",
+      "src": [
+       "t10301828"
+      ],
+      "real": true,
+      "word": "bas"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Nampaknya keretapi lewat.",
+      "en": "It looks like the train is late.",
+      "src": [
+       "t9419765"
+      ],
+      "real": true,
+      "wrong": [
+       "It looks like the train is early.",
+       "It looks like the train has gone.",
+       "The train never runs late."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Saya harap bas datang segera.",
+      "en": "I hope the bus comes soon.",
+      "src": [
+       "t10766025"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Awak perlu turun di perhentian berikutnya.",
+      "en": "You need to get off at the next stop.",
+      "src": [
+       "t961066"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kena tukar bas dua kali. Okay ke?",
+      "right": "Leceh la. LRT ada tak?",
+      "wrong": [
+       "Bas nombor lima.",
+       "Terima kasih, bang."
+      ],
+      "why": "Two changes is a hassle: leceh la — and ask about the LRT."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Saya perlu menukar bas dua kali.",
+      "en": "I have to change buses twice.",
+      "src": [
+       "t10624564"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Tiket awak mana?",
+      "right": "Aku rasa tiket aku dah hilang.",
+      "wrong": [
+       "Naik LRT.",
+       "Lintas jalan ni."
+      ],
+      "why": "Where's your ticket? You think you've lost it."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Anda mahu saya tolong panggilkan teksi?",
+      "en": "Would you like me to call a taxi for you?",
+      "src": [
+       "t974168"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

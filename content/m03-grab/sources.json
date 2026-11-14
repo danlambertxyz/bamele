@@ -1,0 +1,442 @@
+[
+ {
+  "id": 372566,
+  "by": "yuuri_wolfram",
+  "ms": "Saya berada di lapangan terbang sekarang."
+ },
+ {
+  "id": 720156,
+  "by": "Skaty",
+  "ms": "Jangan lupa tiket!"
+ },
+ {
+  "id": 720198,
+  "by": "Skaty",
+  "ms": "Anda harus naik bas nombor 5."
+ },
+ {
+  "id": 723283,
+  "by": "Skaty",
+  "ms": "Bila kereta api selanjutnya akan berangkat?"
+ },
+ {
+  "id": 961066,
+  "by": "Adou_Fr",
+  "ms": "Awak perlu turun di perhentian berikutnya."
+ },
+ {
+  "id": 961928,
+  "by": "Adou_Fr",
+  "ms": "Berhenti!"
+ },
+ {
+  "id": 963234,
+  "by": "Adou_Fr",
+  "ms": "Kita telah masuk ke simpang yang salah."
+ },
+ {
+  "id": 963239,
+  "by": "Adou_Fr",
+  "ms": "Ketika lampu isyarat menunjukkan warna kuning, kami berhenti."
+ },
+ {
+  "id": 972158,
+  "by": "Skaty",
+  "ms": "Saya terlepas bas."
+ },
+ {
+  "id": 974168,
+  "by": "Skaty",
+  "ms": "Anda mahu saya tolong panggilkan teksi?"
+ },
+ {
+  "id": 974186,
+  "by": "Skaty",
+  "ms": "Dia sedang berdiri di depan pintu itu."
+ },
+ {
+  "id": 974236,
+  "by": "Skaty",
+  "ms": "Saya pusing ke kanan."
+ },
+ {
+  "id": 1230171,
+  "by": "falcons84",
+  "ms": "Di mana bank terdekat?"
+ },
+ {
+  "id": 1929812,
+  "by": "Adou_Fr",
+  "ms": "Ini kereta saya."
+ },
+ {
+  "id": 3276535,
+  "by": "Adou_Fr",
+  "ms": "Pukul sembilan suku."
+ },
+ {
+  "id": 3351796,
+  "by": "DostKaplan",
+  "ms": "Mana dia?"
+ },
+ {
+  "id": 3936315,
+  "by": "buddy6621",
+  "ms": "Awak mesti pergi."
+ },
+ {
+  "id": 3936348,
+  "by": "buddy6621",
+  "ms": "Pergi ke mana?"
+ },
+ {
+  "id": 3936648,
+  "by": "buddy6621",
+  "ms": "Di manakah hospital yang terdekat?"
+ },
+ {
+  "id": 3942138,
+  "by": "buddy6621",
+  "ms": "Tunggu sebentar."
+ },
+ {
+  "id": 4551631,
+  "by": "LeeSooHa",
+  "ms": "Pukul berapa?"
+ },
+ {
+  "id": 4555877,
+  "by": "dbahasa",
+  "ms": "Tunggu sekejap."
+ },
+ {
+  "id": 4556345,
+  "by": "dbahasa",
+  "ms": "Maaf, sekarang pukul berapa?"
+ },
+ {
+  "id": 4564034,
+  "by": "Dusun_Les",
+  "ms": "Saya hendak pergi sekarang."
+ },
+ {
+  "id": 4572556,
+  "by": "LeeSooHa",
+  "ms": "Dia tinggal di seberang sungai."
+ },
+ {
+  "id": 5069513,
+  "by": "demoanokkelate",
+  "ms": "Awak ada tiket?"
+ },
+ {
+  "id": 6469559,
+  "by": "LeeSooHa",
+  "ms": "Berapa jauhnya dari lapangan terbang ke hotel?"
+ },
+ {
+  "id": 6479886,
+  "by": "LeeSooHa",
+  "ms": "Beritahu saya di mana anda?"
+ },
+ {
+  "id": 7776227,
+  "by": "BB__031216",
+  "ms": "Sila menunggu saya di sini."
+ },
+ {
+  "id": 7849575,
+  "by": "dbahasa",
+  "ms": "Tuan nak pergi mana?"
+ },
+ {
+  "id": 8248462,
+  "by": "LeeSooHa",
+  "ms": "Macam mana awak datang kesini?"
+ },
+ {
+  "id": 8662811,
+  "by": "Kazuki278",
+  "ms": "Saya tak tahu dekat mana."
+ },
+ {
+  "id": 8751059,
+  "by": "LeeSooHa",
+  "ms": "Bas berhenti di hadapan rumah saya."
+ },
+ {
+  "id": 8884426,
+  "by": "LeeSooHa",
+  "ms": "Masihkah berada di sini?"
+ },
+ {
+  "id": 8941351,
+  "by": "LeeSooHa",
+  "ms": "Saya belum bayar tiket."
+ },
+ {
+  "id": 9107510,
+  "by": "LeeSooHa",
+  "ms": "Ada tempat duduk kosong tak?"
+ },
+ {
+  "id": 9133324,
+  "by": "LeeSooHa",
+  "ms": "Belok kiri."
+ },
+ {
+  "id": 9133329,
+  "by": "LeeSooHa",
+  "ms": "Belok kanan."
+ },
+ {
+  "id": 9133918,
+  "by": "LeeSooHa",
+  "ms": "Bukan, lebih baik kamu kena pusing dan balik."
+ },
+ {
+  "id": 9243819,
+  "by": "LeeSooHa",
+  "ms": "Kami akan berada di sini."
+ },
+ {
+  "id": 9419765,
+  "by": "LeeSooHa",
+  "ms": "Nampaknya keretapi lewat."
+ },
+ {
+  "id": 9689227,
+  "by": "imperiex",
+  "ms": "Dia ada basikal tak?"
+ },
+ {
+  "id": 9695854,
+  "by": "imperiex",
+  "ms": "Dia makin datang dekat."
+ },
+ {
+  "id": 9700600,
+  "by": "imperiex",
+  "ms": "Aku rasa tiket aku dah hilang."
+ },
+ {
+  "id": 9700620,
+  "by": "imperiex",
+  "ms": "Jom bawak dia sekali dengan kita."
+ },
+ {
+  "id": 9724553,
+  "by": "imperiex",
+  "ms": "Berikan saya dua tiket."
+ },
+ {
+  "id": 9724557,
+  "by": "imperiex",
+  "ms": "Dua tiket."
+ },
+ {
+  "id": 9881225,
+  "by": "LeeSooHa",
+  "ms": "Saya akan makan di sini."
+ },
+ {
+  "id": 9932477,
+  "by": "LeeSooHa",
+  "ms": "Di persimpangan T, sila belok kiri."
+ },
+ {
+  "id": 10125953,
+  "by": "Kazuki278",
+  "ms": "Sekarang pukul berapa?"
+ },
+ {
+  "id": 10145743,
+  "by": "LeeSooHa",
+  "ms": "Belok kiri anda akan menemui hentian bas."
+ },
+ {
+  "id": 10162975,
+  "by": "Kazuki278",
+  "ms": "Aku tak leh pandu."
+ },
+ {
+  "id": 10167110,
+  "by": "Kazuki278",
+  "ms": "Dia dah tak duduk sini."
+ },
+ {
+  "id": 10228811,
+  "by": "LeeSooHa",
+  "ms": "Makin lambat ini."
+ },
+ {
+  "id": 10301828,
+  "by": "LeeSooHa",
+  "ms": "Dari mana awak menaiki bas ini?"
+ },
+ {
+  "id": 10456252,
+  "by": "LeeSooHa",
+  "ms": "Mari berjumpa di stesen."
+ },
+ {
+  "id": 10601385,
+  "by": "LeeSooHa",
+  "ms": "Polis menuntut saya mengalihkan kereta saya."
+ },
+ {
+  "id": 10624564,
+  "by": "LeeSooHa",
+  "ms": "Saya perlu menukar bas dua kali."
+ },
+ {
+  "id": 10655356,
+  "by": "LeeSooHa",
+  "ms": "Saya mahu pergi ke kiri."
+ },
+ {
+  "id": 10657665,
+  "by": "imperiex",
+  "ms": "Mengapa awak berhenti?"
+ },
+ {
+  "id": 10663715,
+  "by": "imperiex",
+  "ms": "Mana satu bas ni pegi downtown?"
+ },
+ {
+  "id": 10674916,
+  "by": "imperiex",
+  "ms": "Ada tour guide tak kat sini?"
+ },
+ {
+  "id": 10677811,
+  "by": "imperiex",
+  "ms": "Boleh saya pergi dahulu?"
+ },
+ {
+  "id": 10682853,
+  "by": "LeeSooHa",
+  "ms": "Kamu tunggu siapa?"
+ },
+ {
+  "id": 10682866,
+  "by": "LeeSooHa",
+  "ms": "Tunggu saya sebentar."
+ },
+ {
+  "id": 10690024,
+  "by": "imperiex",
+  "ms": "Semuanya di dalam kereta."
+ },
+ {
+  "id": 10727787,
+  "by": "imperiex",
+  "ms": "Kau boleh tak naik sini jap?"
+ },
+ {
+  "id": 10727790,
+  "by": "imperiex",
+  "ms": "Aku nampak kau kat sana."
+ },
+ {
+  "id": 10727799,
+  "by": "imperiex",
+  "ms": "Saya nampak awak di sana."
+ },
+ {
+  "id": 10727853,
+  "by": "imperiex",
+  "ms": "Aku kena cuci kereta."
+ },
+ {
+  "id": 10730603,
+  "by": "imperiex",
+  "ms": "Aku boleh bawak kau ke sana."
+ },
+ {
+  "id": 10730657,
+  "by": "imperiex",
+  "ms": "Jom lintas padang ni."
+ },
+ {
+  "id": 10761168,
+  "by": "imperiex",
+  "ms": "Kau ada sedara kat sini?"
+ },
+ {
+  "id": 10766025,
+  "by": "LeeSooHa",
+  "ms": "Saya harap bas datang segera."
+ },
+ {
+  "id": 10900655,
+  "by": "LeeSooHa",
+  "ms": "Duduk sebelah saya."
+ },
+ {
+  "id": 10908300,
+  "by": "LeeSooHa",
+  "ms": "Di mana stesen metro?"
+ },
+ {
+  "id": 10937562,
+  "by": "LeeSooHa",
+  "ms": "Belok sini."
+ },
+ {
+  "id": 10984318,
+  "by": "LeeSooHa",
+  "ms": "Tunggu sampai jam enam."
+ },
+ {
+  "id": 11029397,
+  "by": "imperiex",
+  "ms": "Dia duduk sorang-sorang kat sana."
+ },
+ {
+  "id": 11037459,
+  "by": "LeeSooHa",
+  "ms": "Kereta itu diletakkan di hadapan bangunan."
+ },
+ {
+  "id": 11077427,
+  "by": "LeeSooHa",
+  "ms": "Sudah pukul lapan lebih."
+ },
+ {
+  "id": 11368187,
+  "by": "imperiex",
+  "ms": "Orang lambat seminit je terus tutup pintu."
+ },
+ {
+  "id": 11395965,
+  "by": "imperiex",
+  "ms": "Siap parking tengah jalan bhai."
+ },
+ {
+  "id": 11518701,
+  "by": "imperiex",
+  "ms": "Dah sampai dah pun."
+ },
+ {
+  "id": 11518726,
+  "by": "imperiex",
+  "ms": "Tau-tau dah sampai rumah."
+ },
+ {
+  "id": 12623531,
+  "by": "LeeSooHa",
+  "ms": "Sila bayar di sini."
+ },
+ {
+  "id": 12624134,
+  "by": "LeeSooHa",
+  "ms": "Berhati-hati di jalan raya!"
+ },
+ {
+  "id": 13683438,
+  "by": "dbahasa",
+  "ms": "Kereta siapa itu?"
+ }
+]

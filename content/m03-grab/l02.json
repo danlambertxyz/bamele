@@ -1,0 +1,757 @@
+{
+ "id": "m03-l02",
+ "title": "Kat mana ni?",
+ "blurb": "The pickup call: where are you, which car, which gate.",
+ "staff": {
+  "label": "Abg",
+  "name": "Driver",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "kat",
+   "body": "<b>kat</b> is the spoken “at / in”: <i>kat lobi</i>, <i>kat depan</i>, <i>kat mana?</i> Written Malay uses <i>di</i>."
+  },
+  {
+   "title": "nampak",
+   "body": "<b>Nampak</b> = can see. <i>Saya nampak awak</i> — I can see you. <i>Tak nampak</i> — can't see (you / it)."
+  },
+  {
+   "title": "dah sampai",
+   "body": "“I've arrived.” What every driver says when they are roughly, approximately, somewhere near you."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "tak",
+   "tidak"
+  ],
+  [
+   "ni",
+   "ini"
+  ],
+  [
+   "tu",
+   "itu"
+  ],
+  [
+   "ambik",
+   "ambil"
+  ],
+  [
+   "bagi",
+   "beri"
+  ]
+ ],
+ "tr": {
+  "Abang pakai kereta apa?": "What car are you driving?",
+  "Aku rasa tiket aku dah hilang.": "I think I've lost my ticket.",
+  "Awak kat pintu depan ke pintu belakang?": "Are you at the front gate or the back gate?",
+  "Awak pakai baju apa?": "What are you wearing?",
+  "Awak tunggu kat mana?": "Where are you waiting?",
+  "Baju merah. Saya kat depan lobi.": "A red top. I'm in front of the lobby.",
+  "Baru je pergi. Kena tunggu lima belas minit.": "It only just left. You'll have to wait fifteen minutes.",
+  "Bas nombor lima dah pergi?": "Has bus number five gone?",
+  "Bas nombor lima.": "Bus number five.",
+  "Belok kiri, lepas tu jalan terus.": "Turn left, then go straight.",
+  "Belok sini.": "Turn here.",
+  "Belum. Nak beli kat mana?": "Not yet. Where do I buy one?",
+  "Berapa ringgit?": "How many ringgit?",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Berhenti kat sini je.": "Just stop here.",
+  "Berhenti kat sini.": "Stop here.",
+  "Betul ke?": "Is that right?",
+  "Boleh berhenti kat bank kejap?": "Can we stop at a bank for a moment?",
+  "Boleh. Tapi jangan lama sangat.": "Sure. But don't be too long.",
+  "Cash. Lapan ringgit kan?": "Cash. Eight ringgit, right?",
+  "Dah sampai ke belum?": "Have you arrived yet?",
+  "Dah sampai.": "We're here.",
+  "Dah. Saya kat depan lobi.": "Yes. I'm in front of the lobby.",
+  "Dekat je.": "It's close.",
+  "Depan sikit.": "A bit further on.",
+  "Dua minit.": "Two minutes.",
+  "Dua tiket.": "Two tickets.",
+  "Guard bagi masuk.": "The guard lets you in.",
+  "Guard tak bagi masuk. Macam mana?": "The guard won't let me in. What now?",
+  "Itu pintu depan.": "That's the front gate.",
+  "Jalan dalam jem teruk.": "The back roads are badly jammed.",
+  "Jalan dalam. Highway jem.": "The back roads. The highway is jammed.",
+  "Jalan terus.": "Go straight.",
+  "Jangan lupa barang.": "Don't forget your things.",
+  "Jauh jugak.": "It's fairly far.",
+  "KLCC jauh tak dari sini?": "Is KLCC far from here?",
+  "Kak, sekarang pukul berapa?": "What time is it now?",
+  "Kanan. Lepas tu jalan terus.": "Right. Then go straight.",
+  "Kat sini okay.": "Here is fine.",
+  "Kat tempat duduk belakang tu.": "On the back seat there.",
+  "Kena tukar bas dua kali. Okay ke?": "You have to change buses twice. Is that okay?",
+  "Kereta putih.": "A white car.",
+  "Kiri ke kanan?": "Left or right?",
+  "Lapan ringgit je.": "Just eight ringgit.",
+  "Lapangan terbang. Sempat tak?": "The airport. Will we make it?",
+  "Leceh la. LRT ada tak?": "What a hassle. Is there an LRT?",
+  "Lepas lampu isyarat, belok mana?": "After the traffic lights, which way do I turn?",
+  "Lintas jalan ni.": "Cross this road.",
+  "Naik LRT.": "Take the LRT.",
+  "Nak bayar macam mana?": "How do you want to pay?",
+  "Nak beli berapa tiket?": "How many tickets do you want to buy?",
+  "Nak berhenti kat mana?": "Where do you want to stop?",
+  "Nak ikut highway ke jalan dalam?": "Shall I take the highway or the back roads?",
+  "Nak masuk ikut pintu mana?": "Which gate do you want to go in by?",
+  "Okay, nampak.": "Okay, I see it.",
+  "Pintu belakang.": "The back gate.",
+  "Pintu belakang. Dekat lobi.": "The back gate. Near the lobby.",
+  "Pintu belakang. Pintu depan jem.": "The back gate. The front gate is jammed.",
+  "Pukul berapa?": "What time?",
+  "Pukul lapan.": "Eight o'clock.",
+  "Pukul sembilan suku.": "Quarter past nine.",
+  "Rumah awak yang mana?": "Which one is your house?",
+  "Rumah saya sebelah kedai.": "My house is next to the shop.",
+  "Saya dah sampai.": "I've arrived.",
+  "Saya dah terlepas simpang. Macam mana?": "I've missed the turning. What now?",
+  "Saya pakai baju merah.": "I'm wearing a red top.",
+  "Saya tunggu kat lobi.": "I'm waiting at the lobby.",
+  "Sempat tak sampai sebelum pukul sembilan?": "Will we make it before nine?",
+  "Sini boleh berhenti?": "Can we stop here?",
+  "Sorry.": "Sorry.",
+  "Stesen dekat je.": "The station is close.",
+  "Stesen jauh tak?": "Is the station far?",
+  "Tak boleh lama. Turun cepat sikit.": "Not for long. Get out quickly.",
+  "Tak jauh.": "Not far.",
+  "Tak jauh. Dekat je.": "Not far. It's close.",
+  "Tak payah ikut Waze.": "No need to follow Waze.",
+  "Tak sempat rasanya. Jalan jem.": "I don't think so. The road is jammed.",
+  "Takpe, saya jalan pergi pintu depan.": "Never mind, I'll walk to the front gate.",
+  "Takpe. Depan tu boleh u-turn.": "Never mind. You can U-turn just ahead.",
+  "Tambang dah bayar.": "The fare is paid.",
+  "Telefon saya mana?": "Where's my phone?",
+  "Terima kasih, bang.": "Thank you.",
+  "Terima kasih, kak.": "Thank you.",
+  "Terima kasih.": "Thank you.",
+  "Tiket awak mana?": "Where's your ticket?",
+  "Tunggu saya sebentar.": "Wait for me a moment.",
+  "Tunggu sekejap.": "Wait a moment.",
+  "Yang sebelah kedai tu.": "The one next to the shop."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Hello, Grab. Awak kat mana?",
+     "en": "Hello, Grab. Where are you?"
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Saya kat lobi.",
+     "en": "I'm at the lobby."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Saya nampak awak di sana.",
+     "en": "I can see you there.",
+     "src": [
+      "t10727799"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Kereta warna apa?",
+     "en": "What colour is the car?"
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Putih. Ini kereta saya.",
+     "en": "White. This is my car.",
+     "src": [
+      "t1929812"
+     ]
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Okay, nampak. Tunggu sekejap.",
+     "en": "Okay, I see it. Wait a moment.",
+     "src": [
+      "t4555877"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "What colour is the driver's car?",
+    "options": [
+     "White",
+     "Red",
+     "Black"
+    ],
+    "answer": 0,
+    "why": "Putih. Ini kereta saya."
+   },
+   "vocab": [
+    "kat mana",
+    "lobi",
+    [
+     "nampak",
+     "see; can see"
+    ],
+    "kereta",
+    "warna",
+    "putih"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Mana dia?",
+      "en": "Where is he?",
+      "src": [
+       "t3351796"
+      ],
+      "real": true,
+      "wrong": [
+       "Who is he?",
+       "Which one is it?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Kamu tunggu siapa?",
+      "en": "Who are you waiting for?",
+      "src": [
+       "t10682853"
+      ],
+      "real": true,
+      "word": "tunggu"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Ada tempat duduk kosong tak?",
+      "en": "Is there an empty seat?",
+      "src": [
+       "t9107510"
+      ],
+      "real": true,
+      "wrong": [
+       "Is this your seat?",
+       "Can I sit down later?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Sila menunggu saya di sini.",
+      "en": "Please wait for me here.",
+      "src": [
+       "t7776227"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Mari berjumpa di stesen.",
+      "en": "Let's meet at the station.",
+      "src": [
+       "t10456252"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Awak tunggu kat mana?",
+      "right": "Saya tunggu kat lobi.",
+      "wrong": [
+       "Kereta putih.",
+       "Okay, nampak."
+      ],
+      "why": "Kat mana? wants a place: kat lobi."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "staff",
+      "ms": "Kereta siapa itu?",
+      "en": "Whose car is that?",
+      "src": [
+       "t13683438"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Abang pakai kereta apa?",
+      "right": "Kereta putih.",
+      "wrong": [
+       "Saya kat lobi.",
+       "Tunggu sekejap."
+      ],
+      "why": "He's asked which car; the colour is the easy answer."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Beritahu saya di mana anda?",
+      "en": "Tell me where you are.",
+      "src": [
+       "t6479886"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Hello, Grab. Saya dah sampai.",
+     "en": "Hello, Grab. I've arrived."
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Okay. Abang kat mana?",
+     "en": "Okay. Where are you?"
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Saya kat depan pondok guard.",
+     "en": "I'm in front of the guardhouse."
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Saya tak tahu dekat mana. Saya kat lobi.",
+     "en": "I don't know where that is. I'm at the lobby.",
+     "src": [
+      "t8662811"
+     ]
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Lobi? Okay, tunggu kat situ. Saya pusing.",
+     "en": "The lobby? Okay, wait there. I'll come round."
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Kereta warna apa?",
+     "en": "What colour is the car?"
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Putih. Saya nampak awak di sana.",
+     "en": "White. I can see you there.",
+     "src": [
+      "t10727799"
+     ]
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Okay, saya pun nampak. Terima kasih.",
+     "en": "Okay, I see you too. Thank you."
+    }
+   ],
+   "gist": {
+    "q": "Where does she wait?",
+    "options": [
+     "At the lobby",
+     "At the guardhouse",
+     "On the main road",
+     "In the car park"
+    ],
+    "answer": 0,
+    "why": "Saya kat lobi … tunggu kat situ."
+   },
+   "vocab": [
+    "dah sampai",
+    "depan",
+    "pondok guard",
+    "situ",
+    [
+     "pusing",
+     "turn; go round"
+    ],
+    "nampak"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Aku nampak kau kat sana.",
+      "en": "I saw you there.",
+      "src": [
+       "t10727790"
+      ],
+      "real": true,
+      "wrong": [
+       "I'll see you there.",
+       "I didn't see you there."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Dia dah tak duduk sini.",
+      "en": "He doesn't live here anymore.",
+      "src": [
+       "t10167110"
+      ],
+      "real": true,
+      "word": "duduk"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Dia duduk sorang-sorang kat sana.",
+      "en": "He's sitting over there all alone.",
+      "src": [
+       "t11029397"
+      ],
+      "real": true,
+      "wrong": [
+       "He's waiting over there with friends.",
+       "Nobody is sitting over there."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Kamu tunggu siapa?",
+      "en": "Who are you waiting for?",
+      "src": [
+       "t10682853"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Macam mana awak datang kesini?",
+      "en": "How did you get here?",
+      "src": [
+       "t8248462"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Awak kat pintu depan ke pintu belakang?",
+      "right": "Pintu belakang. Dekat lobi.",
+      "wrong": [
+       "Kereta putih.",
+       "Saya dah sampai."
+      ],
+      "why": "An either/or with ke: choose one."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Kau boleh tak naik sini jap?",
+      "en": "Can you come up here for a sec?",
+      "src": [
+       "t10727787"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Dah sampai ke belum?",
+      "right": "Dah. Saya kat depan lobi.",
+      "wrong": [
+       "Kereta warna apa?",
+       "Terima kasih."
+      ],
+      "why": "Dah … ke belum? — answer dah or belum."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Dia makin datang dekat.",
+      "en": "He's coming closer and closer.",
+      "src": [
+       "t9695854"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Hello, Grab. Saya dah sampai, tapi tak nampak awak.",
+     "en": "Hello, Grab. I've arrived, but I can't see you."
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Abang kat mana? Saya kat lobi Blok B.",
+     "en": "Where are you? I'm at the Block B lobby."
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Blok B? Saya tak tahu dekat mana. Saya kat pondok guard depan.",
+     "en": "Block B? I don't know where that is. I'm at the front guardhouse.",
+     "src": [
+      "t8662811"
+     ]
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Oh, itu pintu depan. Lobi B kat pintu belakang.",
+     "en": "Oh, that's the front gate. Lobby B is at the back gate."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Aduh, saya dah masuk simpang yang salah.",
+     "en": "Oh no, I've taken the wrong turning."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Takpe. Abang kena pusing balik, lepas tu belok kiri.",
+     "en": "Never mind. You have to turn back, then turn left."
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Okay. Guard bagi masuk tak?",
+     "en": "Okay. Will the guard let me in?"
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Bagi. Cakap je nak ambik orang kat Blok B.",
+     "en": "Yes. Just say you're picking someone up at Block B."
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Okay, dua minit. Tunggu saya sebentar.",
+     "en": "Okay, two minutes. Wait for me a moment.",
+     "src": [
+      "t10682866"
+     ]
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Okay. Saya pakai baju merah.",
+     "en": "Okay. I'm wearing a red top."
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Saya nampak awak di sana.",
+     "en": "I can see you there.",
+     "src": [
+      "t10727799"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "Why can't the driver find her at first?",
+    "options": [
+     "He went to the front gate; she's at the back",
+     "She gave the wrong block",
+     "The guard stopped him",
+     "His phone map was off"
+    ],
+    "answer": 0,
+    "why": "Itu pintu depan. Lobi B kat pintu belakang."
+   },
+   "vocab": [
+    "pintu depan",
+    "pintu belakang",
+    "simpang",
+    "pusing balik",
+    [
+     "bagi",
+     "let; allow"
+    ],
+    [
+     "pakai",
+     "wear"
+    ]
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Bukan, lebih baik kamu kena pusing dan balik.",
+      "en": "No, you'd better turn around and go back.",
+      "src": [
+       "t9133918"
+      ],
+      "real": true,
+      "wrong": [
+       "No, you'd better keep going straight.",
+       "Yes, turn around and stop here.",
+       "No, you can't turn here."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kita telah masuk ke simpang yang salah.",
+      "en": "We've gone down the wrong turning.",
+      "src": [
+       "t963234"
+      ],
+      "real": true,
+      "word": "simpang"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Kau ada sedara kat sini?",
+      "en": "Do you have relatives here?",
+      "src": [
+       "t10761168"
+      ],
+      "real": true,
+      "wrong": [
+       "Do you live around here?",
+       "Are your friends here?",
+       "Did you grow up here?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Dia dah tak duduk sini.",
+      "en": "He doesn't live here anymore.",
+      "src": [
+       "t10167110"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Belok kiri anda akan menemui hentian bas.",
+      "en": "Turn left and you'll find the bus stop.",
+      "src": [
+       "t10145743"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Guard tak bagi masuk. Macam mana?",
+      "right": "Takpe, saya jalan pergi pintu depan.",
+      "wrong": [
+       "Saya pakai baju merah.",
+       "Kereta warna apa?"
+      ],
+      "why": "The guard won't let him in, so you offer to walk to the front gate."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "staff",
+      "ms": "Dia duduk sorang-sorang kat sana.",
+      "en": "He's sitting over there all alone.",
+      "src": [
+       "t11029397"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Awak pakai baju apa?",
+      "right": "Baju merah. Saya kat depan lobi.",
+      "wrong": [
+       "Dua minit.",
+       "Itu pintu depan."
+      ],
+      "why": "Pakai baju apa? — what are you wearing: the colour does it."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "you",
+      "ms": "Ada tour guide tak kat sini?",
+      "en": "Is there a tour guide here?",
+      "src": [
+       "t10674916"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

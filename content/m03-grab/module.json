@@ -1,0 +1,42 @@
+{
+ "id": "m03",
+ "title": "Grab & getting around",
+ "lessons": [
+  {
+   "id": "l01",
+   "file": "l01.json",
+   "title": "Nak pergi mana?",
+   "blurb": "Getting in: where to, how far, and will we make it."
+  },
+  {
+   "id": "l02",
+   "file": "l02.json",
+   "title": "Kat mana ni?",
+   "blurb": "The pickup call: where are you, which car, which gate."
+  },
+  {
+   "id": "l03",
+   "file": "l03.json",
+   "title": "Belok kiri, belok kanan",
+   "blurb": "Directing the driver when the map gets it wrong."
+  },
+  {
+   "id": "l04",
+   "file": "l04.json",
+   "title": "Naik apa?",
+   "blurb": "Buses, trains and tickets — and missing the one you wanted."
+  },
+  {
+   "id": "l05",
+   "file": "l05.json",
+   "title": "Dah sampai",
+   "blurb": "Arriving: where to stop, which gate, and not leaving your phone behind."
+  }
+ ],
+ "finale": {
+  "title": "Module 3 test",
+  "blurb": "Twelve questions drawn from all five lessons.",
+  "testSize": 12
+ },
+ "clips": []
+}

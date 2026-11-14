@@ -1,0 +1,763 @@
+{
+ "id": "m03-l01",
+ "title": "Nak pergi mana?",
+ "blurb": "Getting in: where to, how far, and will we make it.",
+ "staff": {
+  "label": "Kak",
+  "name": "Driver",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "Nak pergi mana?",
+   "body": "The driver's first question. The polite version adds a title: <i>Tuan nak pergi mana?</i> You can answer with just the place: <i>KLCC</i>."
+  },
+  {
+   "title": "pukul and jam",
+   "body": "For clock time, both work: <b>pukul lapan</b> or <b>jam lapan</b> = eight o'clock. <i>Pukul berapa?</i> asks the time."
+  },
+  {
+   "title": "… tak?",
+   "body": "<b>Jauh tak?</b> — far or not? Add <b>tak</b> to any adjective for a quick yes/no question: <i>sempat tak?</i>, <i>jem tak?</i>"
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "nak",
+   "hendak"
+  ],
+  [
+   "tak",
+   "tidak"
+  ],
+  [
+   "kat",
+   "di"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "takpe",
+   "tidak apa"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "kejap",
+   "sekejap"
+  ]
+ ],
+ "tr": {
+  "Abang pakai kereta apa?": "What car are you driving?",
+  "Aku rasa tiket aku dah hilang.": "I think I've lost my ticket.",
+  "Awak kat pintu depan ke pintu belakang?": "Are you at the front gate or the back gate?",
+  "Awak pakai baju apa?": "What are you wearing?",
+  "Awak tunggu kat mana?": "Where are you waiting?",
+  "Baju merah. Saya kat depan lobi.": "A red top. I'm in front of the lobby.",
+  "Baru je pergi. Kena tunggu lima belas minit.": "It only just left. You'll have to wait fifteen minutes.",
+  "Bas nombor lima dah pergi?": "Has bus number five gone?",
+  "Bas nombor lima.": "Bus number five.",
+  "Belok kiri, lepas tu jalan terus.": "Turn left, then go straight.",
+  "Belok sini.": "Turn here.",
+  "Belum. Nak beli kat mana?": "Not yet. Where do I buy one?",
+  "Berapa ringgit?": "How many ringgit?",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Berhenti kat sini je.": "Just stop here.",
+  "Berhenti kat sini.": "Stop here.",
+  "Betul ke?": "Is that right?",
+  "Boleh berhenti kat bank kejap?": "Can we stop at a bank for a moment?",
+  "Boleh. Tapi jangan lama sangat.": "Sure. But don't be too long.",
+  "Cash. Lapan ringgit kan?": "Cash. Eight ringgit, right?",
+  "Dah sampai ke belum?": "Have you arrived yet?",
+  "Dah sampai.": "We're here.",
+  "Dah. Saya kat depan lobi.": "Yes. I'm in front of the lobby.",
+  "Dekat je.": "It's close.",
+  "Depan sikit.": "A bit further on.",
+  "Dua minit.": "Two minutes.",
+  "Dua tiket.": "Two tickets.",
+  "Guard bagi masuk.": "The guard lets you in.",
+  "Guard tak bagi masuk. Macam mana?": "The guard won't let me in. What now?",
+  "Itu pintu depan.": "That's the front gate.",
+  "Jalan dalam jem teruk.": "The back roads are badly jammed.",
+  "Jalan dalam. Highway jem.": "The back roads. The highway is jammed.",
+  "Jalan terus.": "Go straight.",
+  "Jangan lupa barang.": "Don't forget your things.",
+  "Jauh jugak.": "It's fairly far.",
+  "KLCC jauh tak dari sini?": "Is KLCC far from here?",
+  "Kak, sekarang pukul berapa?": "What time is it now?",
+  "Kanan. Lepas tu jalan terus.": "Right. Then go straight.",
+  "Kat sini okay.": "Here is fine.",
+  "Kat tempat duduk belakang tu.": "On the back seat there.",
+  "Kena tukar bas dua kali. Okay ke?": "You have to change buses twice. Is that okay?",
+  "Kereta putih.": "A white car.",
+  "Kiri ke kanan?": "Left or right?",
+  "Lapan ringgit je.": "Just eight ringgit.",
+  "Lapangan terbang. Sempat tak?": "The airport. Will we make it?",
+  "Leceh la. LRT ada tak?": "What a hassle. Is there an LRT?",
+  "Lepas lampu isyarat, belok mana?": "After the traffic lights, which way do I turn?",
+  "Lintas jalan ni.": "Cross this road.",
+  "Naik LRT.": "Take the LRT.",
+  "Nak bayar macam mana?": "How do you want to pay?",
+  "Nak beli berapa tiket?": "How many tickets do you want to buy?",
+  "Nak berhenti kat mana?": "Where do you want to stop?",
+  "Nak ikut highway ke jalan dalam?": "Shall I take the highway or the back roads?",
+  "Nak masuk ikut pintu mana?": "Which gate do you want to go in by?",
+  "Okay, nampak.": "Okay, I see it.",
+  "Pintu belakang.": "The back gate.",
+  "Pintu belakang. Dekat lobi.": "The back gate. Near the lobby.",
+  "Pintu belakang. Pintu depan jem.": "The back gate. The front gate is jammed.",
+  "Pukul berapa?": "What time?",
+  "Pukul lapan.": "Eight o'clock.",
+  "Pukul sembilan suku.": "Quarter past nine.",
+  "Rumah awak yang mana?": "Which one is your house?",
+  "Rumah saya sebelah kedai.": "My house is next to the shop.",
+  "Saya dah sampai.": "I've arrived.",
+  "Saya dah terlepas simpang. Macam mana?": "I've missed the turning. What now?",
+  "Saya pakai baju merah.": "I'm wearing a red top.",
+  "Saya tunggu kat lobi.": "I'm waiting at the lobby.",
+  "Sempat tak sampai sebelum pukul sembilan?": "Will we make it before nine?",
+  "Sini boleh berhenti?": "Can we stop here?",
+  "Sorry.": "Sorry.",
+  "Stesen dekat je.": "The station is close.",
+  "Stesen jauh tak?": "Is the station far?",
+  "Tak boleh lama. Turun cepat sikit.": "Not for long. Get out quickly.",
+  "Tak jauh.": "Not far.",
+  "Tak jauh. Dekat je.": "Not far. It's close.",
+  "Tak payah ikut Waze.": "No need to follow Waze.",
+  "Tak sempat rasanya. Jalan jem.": "I don't think so. The road is jammed.",
+  "Takpe, saya jalan pergi pintu depan.": "Never mind, I'll walk to the front gate.",
+  "Takpe. Depan tu boleh u-turn.": "Never mind. You can U-turn just ahead.",
+  "Tambang dah bayar.": "The fare is paid.",
+  "Telefon saya mana?": "Where's my phone?",
+  "Terima kasih, bang.": "Thank you.",
+  "Terima kasih, kak.": "Thank you.",
+  "Terima kasih.": "Thank you.",
+  "Tiket awak mana?": "Where's your ticket?",
+  "Tunggu saya sebentar.": "Wait for me a moment.",
+  "Tunggu sekejap.": "Wait a moment.",
+  "Yang sebelah kedai tu.": "The one next to the shop."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Pergi ke mana?",
+     "en": "Where are you going?",
+     "src": [
+      "t3936348"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Saya nak pergi KLCC.",
+     "en": "I want to go to KLCC."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "KLCC? Okay.",
+     "en": "KLCC? Okay."
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Jauh tak?",
+     "en": "Is it far?"
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Tak jauh. Dekat saja.",
+     "en": "Not far. It's close."
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Okay, terima kasih.",
+     "en": "Okay, thank you."
+    }
+   ],
+   "gist": {
+    "q": "How far is KLCC?",
+    "options": [
+     "Not far — it's close",
+     "Very far",
+     "The driver doesn't know"
+    ],
+    "answer": 0,
+    "why": "Tak jauh. Dekat saja."
+   },
+   "vocab": [
+    "pergi",
+    "jauh",
+    "dekat",
+    "mana",
+    "sini",
+    "terima kasih"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Di mana stesen metro?",
+      "en": "Where is the metro station?",
+      "src": [
+       "t10908300"
+      ],
+      "real": true,
+      "wrong": [
+       "Where is the bus stop?",
+       "When does the metro leave?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Saya hendak pergi sekarang.",
+      "en": "I want to go now.",
+      "src": [
+       "t4564034"
+      ],
+      "real": true,
+      "word": "sekarang"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Awak mesti pergi.",
+      "en": "You must go.",
+      "src": [
+       "t3936315"
+      ],
+      "real": true,
+      "wrong": [
+       "You can't go.",
+       "You may go later."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Tunggu sebentar.",
+      "en": "Wait a moment.",
+      "src": [
+       "t3942138"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Maaf, sekarang pukul berapa?",
+      "en": "Excuse me, what time is it now?",
+      "src": [
+       "t4556345"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Pukul berapa?",
+      "right": "Pukul lapan.",
+      "wrong": [
+       "Tak jauh.",
+       "Saya nak pergi KLCC."
+      ],
+      "why": "Pukul berapa? asks the time, so answer with pukul + number."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Di mana bank terdekat?",
+      "en": "Where is the nearest bank?",
+      "src": [
+       "t1230171"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "KLCC jauh tak dari sini?",
+      "right": "Jauh jugak.",
+      "wrong": [
+       "Pukul lapan.",
+       "Terima kasih."
+      ],
+      "why": "Jauh tak? — answer jauh or tak jauh. Jauh jugak = fairly far."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "you",
+      "ms": "Saya mahu pergi ke kiri.",
+      "en": "I want to go left.",
+      "src": [
+       "t10655356"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Tuan nak pergi mana?",
+     "en": "Where would you like to go, sir?",
+     "src": [
+      "t7849575"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Saya nak pergi KLCC. Jauh tak dari sini?",
+     "en": "I want to go to KLCC. Is it far from here?"
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Tak jauh. Tapi jalan jem sikit.",
+     "en": "Not far. But the traffic is a bit jammed."
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Sekarang pukul berapa?",
+     "en": "What time is it now?",
+     "src": [
+      "t10125953"
+     ],
+     "real": true
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Sudah pukul lapan lebih.",
+     "en": "It's already past eight.",
+     "src": [
+      "t11077427"
+     ],
+     "real": true
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Makin lambat ini.",
+     "en": "It's getting late.",
+     "src": [
+      "t10228811"
+     ],
+     "real": true
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Takpe, sempat. Dalam dua puluh minit sampai.",
+     "en": "Don't worry, we'll make it. We'll be there in about twenty minutes."
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Okay. Terima kasih, kak.",
+     "en": "Okay. Thank you."
+    }
+   ],
+   "gist": {
+    "q": "How long will the ride take?",
+    "options": [
+     "About twenty minutes",
+     "About eight minutes",
+     "Over an hour",
+     "The driver won't say"
+    ],
+    "answer": 0,
+    "why": "Dalam dua puluh minit sampai."
+   },
+   "vocab": [
+    "jauh",
+    "jem",
+    "pukul",
+    "lebih",
+    [
+     "sempat",
+     "make it in time"
+    ],
+    "sampai"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Berapa jauhnya dari lapangan terbang ke hotel?",
+      "en": "How far is it from the airport to the hotel?",
+      "src": [
+       "t6469559"
+      ],
+      "real": true,
+      "wrong": [
+       "How long is the flight to the hotel?",
+       "How much is it from the airport to the hotel?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Saya berada di lapangan terbang sekarang.",
+      "en": "I'm at the airport now.",
+      "src": [
+       "t372566"
+      ],
+      "real": true,
+      "word": "sekarang"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Anda mahu saya tolong panggilkan teksi?",
+      "en": "Would you like me to call a taxi for you?",
+      "src": [
+       "t974168"
+      ],
+      "real": true,
+      "wrong": [
+       "Did you call a taxi for me?",
+       "Do you want to share a taxi?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Saya hendak pergi sekarang.",
+      "en": "I want to go now.",
+      "src": [
+       "t4564034"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Di manakah hospital yang terdekat?",
+      "en": "Where is the nearest hospital?",
+      "src": [
+       "t3936648"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Pergi ke mana?",
+      "right": "Lapangan terbang. Sempat tak?",
+      "wrong": [
+       "Sudah pukul lapan lebih.",
+       "Terima kasih, kak."
+      ],
+      "why": "Pergi ke mana? wants a place; then you can ask if you'll make it."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Boleh saya pergi dahulu?",
+      "en": "May I go first?",
+      "src": [
+       "t10677811"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kak, sekarang pukul berapa?",
+      "right": "Pukul sembilan suku.",
+      "wrong": [
+       "Tak jauh.",
+       "Makin lambat ini."
+      ],
+      "why": "A time question: pukul sembilan suku = quarter past nine."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Tunggu sampai jam enam.",
+      "en": "Wait until six o'clock.",
+      "src": [
+       "t10984318"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Tuan nak pergi mana?",
+     "en": "Where would you like to go, sir?",
+     "src": [
+      "t7849575"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "KLCC. Tapi nak berhenti kat bank dulu. Di mana bank terdekat?",
+     "en": "KLCC. But I want to stop at a bank first. Where is the nearest bank?",
+     "src": [
+      "t1230171"
+     ]
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Bank? Ada, dekat simpang depan tu.",
+     "en": "A bank? Yes, near the junction just ahead."
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Okay. Sampai bank nanti, tunggu saya sebentar.",
+     "en": "Okay. When we get to the bank, wait for me a moment."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Boleh. Tapi jangan lama sangat, sini tak boleh parking.",
+     "en": "Sure. But don't be too long, you can't park here."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Sekarang pukul berapa?",
+     "en": "What time is it now?",
+     "src": [
+      "t10125953"
+     ],
+     "real": true
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Sudah pukul lapan lebih.",
+     "en": "It's already past eight.",
+     "src": [
+      "t11077427"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Makin lambat ini. Sempat tak sampai sebelum pukul sembilan?",
+     "en": "It's getting late. Will we make it before nine?",
+     "src": [
+      "t10228811"
+     ]
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Jalan jem ni. Saya rasa tak sempat.",
+     "en": "The road's jammed. I don't think we'll make it."
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Takpe lah. Pergi terus KLCC je, tak payah berhenti kat bank.",
+     "en": "Never mind. Just go straight to KLCC, no need to stop at the bank."
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Okay, set.",
+     "en": "Okay, done."
+    }
+   ],
+   "gist": {
+    "q": "What happens to the bank stop?",
+    "options": [
+     "He drops it because of the time",
+     "They stop there for five minutes",
+     "The bank is closed",
+     "The driver refuses"
+    ],
+    "answer": 0,
+    "why": "Pergi terus KLCC je, tak payah berhenti kat bank."
+   },
+   "vocab": [
+    "berhenti",
+    "terdekat",
+    "simpang",
+    "parking",
+    [
+     "terus",
+     "straight; directly"
+    ],
+    "tak payah"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Aku boleh bawak kau ke sana.",
+      "en": "I can take you there.",
+      "src": [
+       "t10730603"
+      ],
+      "real": true,
+      "wrong": [
+       "I can't take you there.",
+       "You can drive me there.",
+       "I've been there with you."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Kau boleh tak naik sini jap?",
+      "en": "Can you come up here for a sec?",
+      "src": [
+       "t10727787"
+      ],
+      "real": true,
+      "word": "naik"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Jom bawak dia sekali dengan kita.",
+      "en": "Let's take him along with us.",
+      "src": [
+       "t9700620"
+      ],
+      "real": true,
+      "wrong": [
+       "Let's leave him behind.",
+       "He took us along with him.",
+       "Let's go without them."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Saya tak tahu dekat mana.",
+      "en": "I don't know where it is.",
+      "src": [
+       "t8662811"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Mana satu bas ni pegi downtown?",
+      "en": "Which of these buses goes downtown?",
+      "src": [
+       "t10663715"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Boleh berhenti kat bank kejap?",
+      "right": "Boleh. Tapi jangan lama sangat.",
+      "wrong": [
+       "Sudah pukul lapan lebih.",
+       "Di mana bank terdekat?"
+      ],
+      "why": "A boleh…? request: boleh, with a condition."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Aku nampak kau kat sana.",
+      "en": "I saw you there.",
+      "src": [
+       "t10727790"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Sempat tak sampai sebelum pukul sembilan?",
+      "right": "Tak sempat rasanya. Jalan jem.",
+      "wrong": [
+       "Okay, set.",
+       "Tunggu saya sebentar."
+      ],
+      "why": "Sempat tak? — tak sempat, and the reason."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Aku tak leh pandu.",
+      "en": "I can't drive.",
+      "src": [
+       "t10162975"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}
