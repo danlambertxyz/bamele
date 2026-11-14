@@ -1,0 +1,739 @@
+{
+ "id": "m06-l03",
+ "title": "Nak berapa kilo?",
+ "blurb": "Quantities at the wet market: kilos, pieces, half a tray of eggs.",
+ "staff": {
+  "label": "Kak",
+  "name": "Stallholder",
+  "voice": "f"
+ },
+ "you": {
+  "voice": "m"
+ },
+ "notes": [
+  {
+   "title": "biji, kilo, papan",
+   "body": "Fruit and eggs are counted in <b>biji</b>: <i>lima biji epal</i>. Most other things go by <b>kilo</b>. A tray of thirty eggs is <b>sepapan</b>; half a tray is <i>setengah papan</i>."
+  },
+  {
+   "title": "setengah",
+   "body": "<b>Setengah</b> = half: <i>setengah kilo</i>. <b>Sekilo setengah</b> = a kilo and a half."
+  },
+  {
+   "title": "Lagi?",
+   "body": "The stallholder's “anything else?” Answer with the next item, or <b>itu je</b> — that's all."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "nak",
+   "hendak"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "bijik",
+   "biji"
+  ],
+  [
+   "sikit",
+   "sedikit"
+  ],
+  [
+   "tak payah",
+   "tidak perlu"
+  ],
+  [
+   "dah",
+   "sudah"
+  ],
+  [
+   "tu",
+   "itu"
+  ]
+ ],
+ "tr": {
+  "Ada baki?": "Do you have change?",
+  "Ada lagi. Nak berapa kilo?": "There's still some. How many kilos do you want?",
+  "Anggur ni manis tak?": "Are these grapes sweet?",
+  "Apa kau nak beli?": "What do you want to buy?",
+  "Awak pakai saiz apa?": "What size do you wear?",
+  "Baru sampai pagi tadi.": "It only came in this morning.",
+  "Bawang sekilo.": "A kilo of onions.",
+  "Besar sikit.": "A bit big.",
+  "Biru je ada. Nak cuba?": "There's only blue. Want to try them?",
+  "Boleh lah, cuba dulu.": "Okay then, I'll try them first.",
+  "Boleh saya tinggal satu barang?": "Can I leave one item behind?",
+  "Boleh. Lapan belas.": "Sure. Eighteen.",
+  "Boleh. Putih ada?": "Sure. Do you have white?",
+  "Cash ke kad?": "Cash or card?",
+  "Cash. Nah, dua puluh.": "Cash. Here you go, twenty.",
+  "Cili nak berapa?": "How much chilli do you want?",
+  "Cuba rasa dulu.": "Try a taste first.",
+  "Dah masuk?": "Has it gone through?",
+  "Dah. Tiga puluh dua ringgit.": "Yes. Thirty-two ringgit.",
+  "Dua puluh lapan. Nak tak?": "Twenty-eight. Do you want it?",
+  "Dua puluh lima lah. Ini je yang saya ada.": "Twenty-five, come on. That's all I have.",
+  "Dua puluh ringgit je.": "Just twenty ringgit.",
+  "Dua puluh ringgit. Okay?": "Twenty ringgit. Okay?",
+  "Enam puluh lima lah. Tak mampu.": "Sixty-five, come on. I can't afford more.",
+  "Gula ada lagi tak?": "Is there any sugar left?",
+  "Hitam habis. Nak warna lain?": "Black is sold out. Want another colour?",
+  "Itu lain.": "That's different.",
+  "Jumpa!": "Found it!",
+  "Kad tak boleh.": "No cards.",
+  "Kecik sikit. Ada saiz besar?": "A bit small. Do you have a bigger size?",
+  "Kembung sekilo lima belas. Nak berapa?": "Mackerel is fifteen a kilo. How much do you want?",
+  "Kualiti bagus ni.": "This is good quality.",
+  "Kurang tiga ringgit. Macam mana?": "You're three ringgit short. What now?",
+  "Lain kali bayar.": "Pay next time.",
+  "Lapan ringgit je.": "Only eight ringgit.",
+  "Last price.": "Last price.",
+  "Lima puluh. Ada baki?": "A fifty. Do you have change?",
+  "Mahal lah, kak. Lain kali lah.": "That's expensive. Next time.",
+  "Mahal lah. Kurang sikit boleh?": "That's expensive. Can it be a bit less?",
+  "Mahal lah. Lima belas boleh?": "That's expensive. Can you do fifteen?",
+  "Mahal sangat. Kedai sebelah jual enam puluh.": "Too expensive. The shop next door sells them for sixty.",
+  "Mahal tak?": "Is it expensive?",
+  "Manis sangat. Rasa lah.": "Very sweet. Have a taste.",
+  "Masam sikit.": "A bit sour.",
+  "Mesin kad rosak. Cash ada?": "The card machine is broken. Do you have cash?",
+  "Mesin rosak.": "The machine is broken.",
+  "Minggu depan kot.": "Next week, I think.",
+  "Muat tak?": "Does it fit?",
+  "Nak apa-apa lagi?": "Do you want anything else?",
+  "Nak beli anggur sikit.": "I want to buy a few grapes.",
+  "Nak beli berapa?": "How many do you want to buy?",
+  "Nak berapa biji?": "How many do you want?",
+  "Nak epal.": "I'd like apples.",
+  "Nak plastik?": "Do you want a plastic bag?",
+  "Nak warna apa?": "What colour do you want?",
+  "Original ni.": "These are original.",
+  "Rugi la kalau tak beli.": "It'd be a loss not to buy.",
+  "Saiz S.": "Size S.",
+  "Satu je.": "Just one.",
+  "Saya ada beg.": "I have a bag.",
+  "Scan sini.": "Scan here.",
+  "Semua segar.": "It's all fresh.",
+  "Semua sekali berapa?": "How much altogether?",
+  "Sesuai dengan awak.": "They suit you.",
+  "Setengah kilo je.": "Just half a kilo.",
+  "Setengah kilo je. Tolong siang sekali.": "Just half a kilo. Please clean them too.",
+  "Stok baru sampai minggu depan. Nak tunggu?": "New stock arrives next week. Do you want to wait?",
+  "Tak cukup. QR boleh?": "Not enough. Can I pay by QR?",
+  "Tak mahal. Lima ringgit je.": "Not expensive. Only five ringgit.",
+  "Tak nak beli ke? Murah ni.": "Don't you want to buy? It's cheap.",
+  "Tak payah. Saya ada beg.": "No need. I have a bag.",
+  "Tak rugi.": "You won't lose out.",
+  "Tak. Itu je.": "No. That's all.",
+  "Takde duit kecik lah.": "I don't have small change.",
+  "Takpe lah. Mungkin lain kali.": "Never mind. Maybe next time.",
+  "Tengok-tengok je.": "Just looking.",
+  "Terima kasih.": "Thank you.",
+  "Tiga biji je.": "Just three.",
+  "Tiga puluh. Kualiti bagus ni.": "Thirty. This is good quality.",
+  "Tujuh puluh. Last price.": "Seventy. Last price.",
+  "Untuk awak je.": "Just for you.",
+  "Warna biru.": "Blue.",
+  "Warna hitam ada?": "Do you have black?",
+  "Warna hitam.": "Black.",
+  "Yang hijau dua belas, yang merah lima belas. Nak yang mana?": "The green ones are twelve, the red ones fifteen. Which do you want?",
+  "Yang hijau lah. Murah sikit.": "The green ones. They're a bit cheaper.",
+  "Yang ni sedap.": "This one's good.",
+  "Lapan puluh ringgit. Barang original.": "Eighty ringgit. It's the original product."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "you",
+     "ms": "Kak, nak epal.",
+     "en": "I'd like some apples."
+    },
+    {
+     "id": "e2",
+     "s": "staff",
+     "ms": "Berapa biji epal?",
+     "en": "How many apples?",
+     "src": [
+      "t9419770"
+     ],
+     "real": true
+    },
+    {
+     "id": "e3",
+     "s": "you",
+     "ms": "Lima biji.",
+     "en": "Five."
+    },
+    {
+     "id": "e4",
+     "s": "staff",
+     "ms": "Lagi?",
+     "en": "Anything else?"
+    },
+    {
+     "id": "e5",
+     "s": "you",
+     "ms": "Itu je.",
+     "en": "That's all."
+    },
+    {
+     "id": "e6",
+     "s": "staff",
+     "ms": "Lima ringgit.",
+     "en": "Five ringgit."
+    }
+   ],
+   "gist": {
+    "q": "How many apples does he buy?",
+    "options": [
+     "Five",
+     "One",
+     "A kilo"
+    ],
+    "answer": 0,
+    "why": "Lima biji."
+   },
+   "vocab": [
+    "epal",
+    "biji",
+    "berapa",
+    "lagi",
+    "itu je",
+    "lima"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Saya makan sebiji epal.",
+      "en": "I ate an apple.",
+      "src": [
+       "t3936573"
+      ],
+      "real": true,
+      "wrong": [
+       "I bought an apple.",
+       "I ate five apples."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Kotak ini mengandungi epal.",
+      "en": "This box contains apples.",
+      "src": [
+       "t1230484"
+      ],
+      "real": true,
+      "word": "kotak"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Ada gula?",
+      "en": "Is there any sugar?",
+      "src": [
+       "t4839615"
+      ],
+      "real": true,
+      "wrong": [
+       "Is it sweet?",
+       "Do you want sugar?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Epal itu sangat merah.",
+      "en": "That apple is very red.",
+      "src": [
+       "t720237"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Sudahkah awak membeli telur?",
+      "en": "Have you bought the eggs?",
+      "src": [
+       "t10732649"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nak berapa biji?",
+      "right": "Tiga biji je.",
+      "wrong": [
+       "Lima ringgit.",
+       "Nak epal."
+      ],
+      "why": "Berapa biji? — how many: a number + biji."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Pisang berwarna kuning.",
+      "en": "Bananas are yellow.",
+      "src": [
+       "t10512580"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak apa-apa lagi?",
+      "right": "Tak. Itu je.",
+      "wrong": [
+       "Lima biji.",
+       "Berapa biji epal?"
+      ],
+      "why": "Anything else? No — itu je."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Saya tidak suka telur.",
+      "en": "I don't like eggs.",
+      "src": [
+       "t3936410"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Ya, nak apa?",
+     "en": "Yes, what would you like?"
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Bawang sekilo. Dengan cili setengah kilo.",
+     "en": "A kilo of onions. And half a kilo of chillies."
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Bawang besar ke bawang kecil?",
+     "en": "Big onions or small onions?"
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Bawang besar.",
+     "en": "Big onions."
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Lagi?",
+     "en": "Anything else?"
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Ada gula?",
+     "en": "Is there any sugar?",
+     "src": [
+      "t4839615"
+     ],
+     "real": true
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Ingatkan dah habis, rupanya ada lagi. Nak berapa?",
+     "en": "I thought it was finished, but it turns out there's more. How much do you want?",
+     "src": [
+      "t11516632"
+     ]
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Sekilo je.",
+     "en": "Just a kilo."
+    }
+   ],
+   "gist": {
+    "q": "What happened with the sugar?",
+    "options": [
+     "She thought it had run out, but there was some left",
+     "It was sold out",
+     "It was too expensive",
+     "He decided he didn't need it"
+    ],
+    "answer": 0,
+    "why": "Ingatkan dah habis, rupanya ada lagi."
+   },
+   "vocab": [
+    "bawang",
+    "sekilo",
+    "setengah",
+    "cili",
+    "gula",
+    "rupanya"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Telur kau beli tak?",
+      "en": "Did you buy the eggs?",
+      "src": [
+       "t10732639"
+      ],
+      "real": true,
+      "wrong": [
+       "Did you eat the eggs?",
+       "Do you sell eggs?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Ada susu sikit dalam botol tu.",
+      "en": "There's a little milk in that bottle.",
+      "src": [
+       "t10655082"
+      ],
+      "real": true,
+      "word": "botol"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Aku ada dua bijik buah pear.",
+      "en": "I have two pears.",
+      "src": [
+       "t9695726"
+      ],
+      "real": true,
+      "wrong": [
+       "I ate two pears.",
+       "I want two pears."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Aku nak membeli makanan sikit.",
+      "en": "I want to buy a bit of food.",
+      "src": [
+       "t9500969"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Berapa banyak madu aku patut beli?",
+      "en": "How much honey should I buy?",
+      "src": [
+       "t10724976"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Cili nak berapa?",
+      "right": "Setengah kilo je.",
+      "wrong": [
+       "Bawang besar.",
+       "Ada gula?"
+      ],
+      "why": "Nak berapa? — how much: an amount."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Sudahkah awak membeli telur?",
+      "en": "Have you bought the eggs?",
+      "src": [
+       "t10732649"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Gula ada lagi tak?",
+      "right": "Ada lagi. Nak berapa kilo?",
+      "wrong": [
+       "Sekilo je.",
+       "Bawang sekilo."
+      ],
+      "why": "Ada lagi tak? — is there still some: ada lagi."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Saya makan sebiji epal.",
+      "en": "I ate an apple.",
+      "src": [
+       "t3936573"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Ya dik, nak apa hari ni?",
+     "en": "Yes, what would you like today?"
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Nak ikan. Ikan apa yang segar hari ni?",
+     "en": "I want fish. Which fish is fresh today?"
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Semua segar. Kembung baru sampai pagi tadi.",
+     "en": "All of it is fresh. The mackerel only came in this morning."
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Kembung sekilo berapa?",
+     "en": "How much is mackerel a kilo?"
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Lima belas.",
+     "en": "Fifteen."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Okay, bagi setengah kilo. Tolong siang sekali.",
+     "en": "Okay, give me half a kilo. Please clean them too."
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Boleh. Lagi?",
+     "en": "Sure. Anything else?"
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Telur ada?",
+     "en": "Do you have eggs?"
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Ada. Sepapan ke setengah?",
+     "en": "Yes. A tray or half?"
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Setengah papan je.",
+     "en": "Just half a tray."
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Beg dah penuh. Nak plastik lagi satu?",
+     "en": "The bag's full. Want another plastic bag?",
+     "src": [
+      "t10542208"
+     ]
+    },
+    {
+     "id": "h12",
+     "s": "you",
+     "ms": "Tak payah, saya ada beg.",
+     "en": "No need, I have a bag."
+    }
+   ],
+   "gist": {
+    "q": "What does he ask her to do with the fish?",
+    "options": [
+     "Clean them for him",
+     "Cut them in half",
+     "Keep them for later",
+     "Weigh them again"
+    ],
+    "answer": 0,
+    "why": "Tolong siang sekali."
+   },
+   "vocab": [
+    "segar",
+    "pagi tadi",
+    "siang",
+    "sepapan",
+    "plastik",
+    "beg"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Berat juga kotak ini ya!",
+      "en": "This box is quite heavy, isn't it!",
+      "src": [
+       "t5900202"
+      ],
+      "real": true,
+      "wrong": [
+       "This box is quite light, isn't it!",
+       "This box is empty, isn't it!",
+       "This box is too big, isn't it!"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Buah pisang itu belum masak lagi.",
+      "en": "That banana isn't ripe yet.",
+      "src": [
+       "t10681166"
+      ],
+      "real": true,
+      "word": "masak"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Lagi sikit je nak habis.",
+      "en": "Just a little more and it's finished.",
+      "src": [
+       "t11518687"
+      ],
+      "real": true,
+      "wrong": [
+       "It finished a long time ago.",
+       "There's still plenty left.",
+       "It will never be finished."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Telur kau beli tak?",
+      "en": "Did you buy the eggs?",
+      "src": [
+       "t10732639"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Anda menjual beberapa epal di pasar.",
+      "en": "You sell some apples at the market.",
+      "src": [
+       "t10903250"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Kembung sekilo lima belas. Nak berapa?",
+      "right": "Setengah kilo je. Tolong siang sekali.",
+      "wrong": [
+       "Semua segar.",
+       "Saya ada beg."
+      ],
+      "why": "How much do you want? An amount — and ask her to clean them."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Kita dapat banyak barang.",
+      "en": "We got a lot of stuff.",
+      "src": [
+       "t9881562"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Nak plastik?",
+      "right": "Tak payah. Saya ada beg.",
+      "wrong": [
+       "Setengah papan je.",
+       "Baru sampai pagi tadi."
+      ],
+      "why": "Turning down a plastic bag: tak payah."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Ada susu sikit dalam botol tu.",
+      "en": "There's a little milk in that bottle.",
+      "src": [
+       "t10655082"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

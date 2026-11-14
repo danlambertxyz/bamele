@@ -42,8 +42,9 @@
       "id": "m06",
       "num": 6,
       "title": "Pasar & shops",
-      "blurb": "Weights, prices, gentle bargaining, asking for another.",
-      "ready": false
+      "blurb": "Prices, gentle bargaining, kilos and pieces, sizes and colours, paying up.",
+      "ready": true,
+      "dir": "m06-pasar"
     },
     {
       "id": "m07",

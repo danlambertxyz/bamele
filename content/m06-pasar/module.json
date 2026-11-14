@@ -1,0 +1,42 @@
+{
+ "id": "m06",
+ "title": "Pasar & shops",
+ "lessons": [
+  {
+   "id": "l01",
+   "file": "l01.json",
+   "title": "Berapa harga ni?",
+   "blurb": "Asking prices at a fruit stall, and tasting before you buy."
+  },
+  {
+   "id": "l02",
+   "file": "l02.json",
+   "title": "Kurang sikit boleh?",
+   "blurb": "Gentle bargaining: too expensive, a bit less, last price."
+  },
+  {
+   "id": "l03",
+   "file": "l03.json",
+   "title": "Nak berapa kilo?",
+   "blurb": "Quantities at the wet market: kilos, pieces, half a tray of eggs."
+  },
+  {
+   "id": "l04",
+   "file": "l04.json",
+   "title": "Cari apa?",
+   "blurb": "In a shop: what you're looking for, size, colour and “maybe next time”."
+  },
+  {
+   "id": "l05",
+   "file": "l05.json",
+   "title": "Bayar macam mana?",
+   "blurb": "Paying up: cash, card or QR, and what to do when you're three ringgit short."
+  }
+ ],
+ "finale": {
+  "title": "Module 6 test",
+  "blurb": "Twelve questions drawn from all five lessons.",
+  "testSize": 12
+ },
+ "clips": []
+}

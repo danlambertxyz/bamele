@@ -1,0 +1,753 @@
+{
+ "id": "m06-l02",
+ "title": "Kurang sikit boleh?",
+ "blurb": "Gentle bargaining: too expensive, a bit less, last price.",
+ "staff": {
+  "label": "Abg",
+  "name": "Stallholder",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "Kurang sikit boleh?",
+   "body": "“Can it be a bit less?” — the standard opening move. Smile when you say it; this is a game both sides know."
+  },
+  {
+   "title": "… lah",
+   "body": "<b>lah</b> softens a counter-offer: <i>dua puluh lima lah</i> — come on, twenty-five. Sellers answer in kind: <i>okay lah</i>."
+  },
+  {
+   "title": "mampu and rugi",
+   "body": "<b>Tak mampu</b> = can't afford it. <b>Rugi</b> = a loss: the seller says <i>rugi saya</i> (I'd lose money); friends say <i>rugi kalau tak beli</i> (you'd lose out not buying)."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "takde",
+   "tiada"
+  ],
+  [
+   "sikit",
+   "sedikit"
+  ],
+  [
+   "je",
+   "sahaja"
+  ],
+  [
+   "ni",
+   "ini"
+  ],
+  [
+   "jugak",
+   "juga"
+  ],
+  [
+   "kecik",
+   "kecil"
+  ],
+  [
+   "tau",
+   "tahu"
+  ]
+ ],
+ "tr": {
+  "Ada baki?": "Do you have change?",
+  "Ada lagi. Nak berapa kilo?": "There's still some. How many kilos do you want?",
+  "Anggur ni manis tak?": "Are these grapes sweet?",
+  "Apa kau nak beli?": "What do you want to buy?",
+  "Awak pakai saiz apa?": "What size do you wear?",
+  "Baru sampai pagi tadi.": "It only came in this morning.",
+  "Bawang sekilo.": "A kilo of onions.",
+  "Besar sikit.": "A bit big.",
+  "Biru je ada. Nak cuba?": "There's only blue. Want to try them?",
+  "Boleh lah, cuba dulu.": "Okay then, I'll try them first.",
+  "Boleh saya tinggal satu barang?": "Can I leave one item behind?",
+  "Boleh. Lapan belas.": "Sure. Eighteen.",
+  "Boleh. Putih ada?": "Sure. Do you have white?",
+  "Cash ke kad?": "Cash or card?",
+  "Cash. Nah, dua puluh.": "Cash. Here you go, twenty.",
+  "Cili nak berapa?": "How much chilli do you want?",
+  "Cuba rasa dulu.": "Try a taste first.",
+  "Dah masuk?": "Has it gone through?",
+  "Dah. Tiga puluh dua ringgit.": "Yes. Thirty-two ringgit.",
+  "Dua puluh lapan. Nak tak?": "Twenty-eight. Do you want it?",
+  "Dua puluh lima lah. Ini je yang saya ada.": "Twenty-five, come on. That's all I have.",
+  "Dua puluh ringgit je.": "Just twenty ringgit.",
+  "Dua puluh ringgit. Okay?": "Twenty ringgit. Okay?",
+  "Enam puluh lima lah. Tak mampu.": "Sixty-five, come on. I can't afford more.",
+  "Gula ada lagi tak?": "Is there any sugar left?",
+  "Hitam habis. Nak warna lain?": "Black is sold out. Want another colour?",
+  "Itu lain.": "That's different.",
+  "Jumpa!": "Found it!",
+  "Kad tak boleh.": "No cards.",
+  "Kecik sikit. Ada saiz besar?": "A bit small. Do you have a bigger size?",
+  "Kembung sekilo lima belas. Nak berapa?": "Mackerel is fifteen a kilo. How much do you want?",
+  "Kualiti bagus ni.": "This is good quality.",
+  "Kurang tiga ringgit. Macam mana?": "You're three ringgit short. What now?",
+  "Lain kali bayar.": "Pay next time.",
+  "Lapan ringgit je.": "Only eight ringgit.",
+  "Last price.": "Last price.",
+  "Lima puluh. Ada baki?": "A fifty. Do you have change?",
+  "Mahal lah, kak. Lain kali lah.": "That's expensive. Next time.",
+  "Mahal lah. Kurang sikit boleh?": "That's expensive. Can it be a bit less?",
+  "Mahal lah. Lima belas boleh?": "That's expensive. Can you do fifteen?",
+  "Mahal sangat. Kedai sebelah jual enam puluh.": "Too expensive. The shop next door sells them for sixty.",
+  "Mahal tak?": "Is it expensive?",
+  "Manis sangat. Rasa lah.": "Very sweet. Have a taste.",
+  "Masam sikit.": "A bit sour.",
+  "Mesin kad rosak. Cash ada?": "The card machine is broken. Do you have cash?",
+  "Mesin rosak.": "The machine is broken.",
+  "Minggu depan kot.": "Next week, I think.",
+  "Muat tak?": "Does it fit?",
+  "Nak apa-apa lagi?": "Do you want anything else?",
+  "Nak beli anggur sikit.": "I want to buy a few grapes.",
+  "Nak beli berapa?": "How many do you want to buy?",
+  "Nak berapa biji?": "How many do you want?",
+  "Nak epal.": "I'd like apples.",
+  "Nak plastik?": "Do you want a plastic bag?",
+  "Nak warna apa?": "What colour do you want?",
+  "Original ni.": "These are original.",
+  "Rugi la kalau tak beli.": "It'd be a loss not to buy.",
+  "Saiz S.": "Size S.",
+  "Satu je.": "Just one.",
+  "Saya ada beg.": "I have a bag.",
+  "Scan sini.": "Scan here.",
+  "Semua segar.": "It's all fresh.",
+  "Semua sekali berapa?": "How much altogether?",
+  "Sesuai dengan awak.": "They suit you.",
+  "Setengah kilo je.": "Just half a kilo.",
+  "Setengah kilo je. Tolong siang sekali.": "Just half a kilo. Please clean them too.",
+  "Stok baru sampai minggu depan. Nak tunggu?": "New stock arrives next week. Do you want to wait?",
+  "Tak cukup. QR boleh?": "Not enough. Can I pay by QR?",
+  "Tak mahal. Lima ringgit je.": "Not expensive. Only five ringgit.",
+  "Tak nak beli ke? Murah ni.": "Don't you want to buy? It's cheap.",
+  "Tak payah. Saya ada beg.": "No need. I have a bag.",
+  "Tak rugi.": "You won't lose out.",
+  "Tak. Itu je.": "No. That's all.",
+  "Takde duit kecik lah.": "I don't have small change.",
+  "Takpe lah. Mungkin lain kali.": "Never mind. Maybe next time.",
+  "Tengok-tengok je.": "Just looking.",
+  "Terima kasih.": "Thank you.",
+  "Tiga biji je.": "Just three.",
+  "Tiga puluh. Kualiti bagus ni.": "Thirty. This is good quality.",
+  "Tujuh puluh. Last price.": "Seventy. Last price.",
+  "Untuk awak je.": "Just for you.",
+  "Warna biru.": "Blue.",
+  "Warna hitam ada?": "Do you have black?",
+  "Warna hitam.": "Black.",
+  "Yang hijau dua belas, yang merah lima belas. Nak yang mana?": "The green ones are twelve, the red ones fifteen. Which do you want?",
+  "Yang hijau lah. Murah sikit.": "The green ones. They're a bit cheaper.",
+  "Yang ni sedap.": "This one's good.",
+  "Lapan puluh ringgit. Barang original.": "Eighty ringgit. It's the original product."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "you",
+     "ms": "Berapa harganya?",
+     "en": "How much is it?",
+     "src": [
+      "t3936297"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "staff",
+     "ms": "Dua puluh ringgit.",
+     "en": "Twenty ringgit."
+    },
+    {
+     "id": "e3",
+     "s": "you",
+     "ms": "Harga ini mahal.",
+     "en": "This price is expensive.",
+     "src": [
+      "t5239320"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "staff",
+     "ms": "Okay, lapan belas.",
+     "en": "Okay, eighteen."
+    },
+    {
+     "id": "e5",
+     "s": "you",
+     "ms": "Lima belas boleh?",
+     "en": "Can you do fifteen?"
+    },
+    {
+     "id": "e6",
+     "s": "staff",
+     "ms": "Boleh lah.",
+     "en": "Okay then."
+    }
+   ],
+   "gist": {
+    "q": "What price do they agree on?",
+    "options": [
+     "Fifteen ringgit",
+     "Eighteen ringgit",
+     "Twenty ringgit"
+    ],
+    "answer": 0,
+    "why": "Lima belas boleh? … Boleh lah."
+   },
+   "vocab": [
+    "harga",
+    "mahal",
+    "boleh",
+    "lapan belas",
+    "lima belas",
+    "dua puluh"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Yang ini tak mahal.",
+      "en": "This one isn't expensive.",
+      "src": [
+       "t924021"
+      ],
+      "real": true,
+      "wrong": [
+       "This one is very expensive.",
+       "This one isn't for sale."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Saya ada sedikit duit.",
+      "en": "I have a little money.",
+      "src": [
+       "t3276538"
+      ],
+      "real": true,
+      "word": "sedikit"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Saya tidak ada duit.",
+      "en": "I don't have any money.",
+      "src": [
+       "t3936400"
+      ],
+      "real": true,
+      "wrong": [
+       "I have a lot of money.",
+       "I found some money."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Harga itu mahal.",
+      "en": "That price is expensive.",
+      "src": [
+       "t3936334"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Bolehkah harga diskaun?",
+      "en": "Can the price be discounted?",
+      "src": [
+       "t9294870"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Dua puluh ringgit. Okay?",
+      "right": "Mahal lah. Lima belas boleh?",
+      "wrong": [
+       "Dua puluh ringgit.",
+       "Berapa harganya?"
+      ],
+      "why": "Too much? Say mahal lah, then name your price."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Saya terlupa duit saya.",
+      "en": "I forgot my money.",
+      "src": [
+       "t974240"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Kurang sikit boleh?",
+      "right": "Boleh. Lapan belas.",
+      "wrong": [
+       "Harga ini mahal.",
+       "Saya terlupa duit saya."
+      ],
+      "why": "Asked for a discount: boleh, and the new price."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Saya perlukan wang.",
+      "en": "I need money.",
+      "src": [
+       "t8658129"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "you",
+     "ms": "Bang. Berapa harga untuk ini?",
+     "en": "Excuse me. How much is this?",
+     "src": [
+      "t1230096"
+     ]
+    },
+    {
+     "id": "m2",
+     "s": "staff",
+     "ms": "Tiga puluh ringgit.",
+     "en": "Thirty ringgit."
+    },
+    {
+     "id": "m3",
+     "s": "you",
+     "ms": "Kasut ni sumpah mahal.",
+     "en": "These shoes are seriously expensive.",
+     "src": [
+      "t10761188"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "staff",
+     "ms": "Kualiti bagus ni. Tak rugi.",
+     "en": "This is good quality. You won't lose out."
+    },
+    {
+     "id": "m5",
+     "s": "you",
+     "ms": "Kurang sikit boleh?",
+     "en": "Can it be a bit less?"
+    },
+    {
+     "id": "m6",
+     "s": "staff",
+     "ms": "Dua puluh lapan.",
+     "en": "Twenty-eight."
+    },
+    {
+     "id": "m7",
+     "s": "you",
+     "ms": "Dua puluh lima. Ini je duit aku ada.",
+     "en": "Twenty-five. This is all the money I have.",
+     "src": [
+      "t10684039"
+     ]
+    },
+    {
+     "id": "m8",
+     "s": "staff",
+     "ms": "Okay lah, dua puluh lima. Untuk awak je.",
+     "en": "Okay then, twenty-five. Just for you."
+    }
+   ],
+   "gist": {
+    "q": "How much does she pay for the shoes?",
+    "options": [
+     "Twenty-five ringgit",
+     "Twenty-eight ringgit",
+     "Thirty ringgit",
+     "She walks away"
+    ],
+    "answer": 0,
+    "why": "Okay lah, dua puluh lima."
+   },
+   "vocab": [
+    "kasut",
+    "sumpah",
+    "kualiti",
+    "rugi",
+    "kurang",
+    "duit"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Kasut ini terlalu mahal.",
+      "en": "These shoes are too expensive.",
+      "src": [
+       "t10761179"
+      ],
+      "real": true,
+      "wrong": [
+       "These shoes are too small.",
+       "These shoes are very cheap."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Dia takde banyak duit sangat.",
+      "en": "He doesn't have very much money.",
+      "src": [
+       "t10690011"
+      ],
+      "real": true,
+      "word": "banyak"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Berapa baki duit yang awak ada?",
+      "en": "How much money do you have left?",
+      "src": [
+       "t5900277"
+      ],
+      "real": true,
+      "wrong": [
+       "How much money did you spend?",
+       "How much do you want to pay?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Saya terlupa duit saya.",
+      "en": "I forgot my money.",
+      "src": [
+       "t974240"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Aku ingat dia nak pinjam duit.",
+      "en": "I thought he wanted to borrow money.",
+      "src": [
+       "t11518825"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Tiga puluh. Kualiti bagus ni.",
+      "right": "Mahal lah. Kurang sikit boleh?",
+      "wrong": [
+       "Untuk awak je.",
+       "Tak rugi."
+      ],
+      "why": "He's defending the price; you still ask for less."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Boleh saya pinjam duit awak?",
+      "en": "May I borrow your money?",
+      "src": [
+       "t5200284"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Dua puluh lapan. Nak tak?",
+      "right": "Dua puluh lima lah. Ini je yang saya ada.",
+      "wrong": [
+       "Tiga puluh ringgit.",
+       "Kualiti bagus ni."
+      ],
+      "why": "Counter with a number and a reason."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Saya tidak ada duit.",
+      "en": "I don't have any money.",
+      "src": [
+       "t3936400"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "you",
+     "ms": "Bang, kasut ni berapa?",
+     "en": "How much are these shoes?"
+    },
+    {
+     "id": "h2",
+     "s": "staff",
+     "ms": "Lapan puluh. Original ni.",
+     "en": "Eighty. These are original."
+    },
+    {
+     "id": "h3",
+     "s": "you",
+     "ms": "Kasut ni sumpah mahal. Kedai sebelah jual enam puluh je.",
+     "en": "These shoes are seriously expensive. The shop next door sells them for just sixty.",
+     "src": [
+      "t10761188"
+     ]
+    },
+    {
+     "id": "h4",
+     "s": "staff",
+     "ms": "Itu lain. Yang ni kualiti bagus.",
+     "en": "Those are different. These are good quality."
+    },
+    {
+     "id": "h5",
+     "s": "you",
+     "ms": "Kurang sikit lah, bang. Enam puluh boleh?",
+     "en": "A bit less, come on. Can you do sixty?"
+    },
+    {
+     "id": "h6",
+     "s": "staff",
+     "ms": "Tak boleh lah, rugi saya. Tujuh puluh lima.",
+     "en": "I can't, I'd lose money. Seventy-five."
+    },
+    {
+     "id": "h7",
+     "s": "you",
+     "ms": "Dah lama nak beli tapi tak mampu.",
+     "en": "I've wanted to buy these for ages but can't afford them.",
+     "src": [
+      "t11380307"
+     ],
+     "real": true
+    },
+    {
+     "id": "h8",
+     "s": "staff",
+     "ms": "Okay, okay. Tujuh puluh. Last price.",
+     "en": "Okay, okay. Seventy. Last price."
+    },
+    {
+     "id": "h9",
+     "s": "you",
+     "ms": "Enam puluh lima. Ini je duit aku ada.",
+     "en": "Sixty-five. This is all the money I have.",
+     "src": [
+      "t10684039"
+     ]
+    },
+    {
+     "id": "h10",
+     "s": "staff",
+     "ms": "Kau ada duit ke tak? Haha. Okay lah, enam puluh lima.",
+     "en": "Do you have money or not? Haha. Okay then, sixty-five.",
+     "src": [
+      "t6387846"
+     ]
+    },
+    {
+     "id": "h11",
+     "s": "you",
+     "ms": "Terima kasih, bang!",
+     "en": "Thank you!"
+    }
+   ],
+   "gist": {
+    "q": "What is the final price?",
+    "options": [
+     "Sixty-five ringgit",
+     "Sixty ringgit",
+     "Seventy ringgit",
+     "Seventy-five ringgit"
+    ],
+    "answer": 0,
+    "why": "Okay lah, enam puluh lima."
+   },
+   "vocab": [
+    "original",
+    "kedai",
+    [
+     "jual",
+     "sell"
+    ],
+    "mampu",
+    "last price",
+    "sebelah"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Nak beli apanya, duit pun takde.",
+      "en": "Buy what? I don't even have any money.",
+      "src": [
+       "t11521599"
+      ],
+      "real": true,
+      "wrong": [
+       "I'll buy anything, I have money.",
+       "What did you buy with the money?",
+       "I bought it, so the money's gone."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Dah tau takde duit, nak beli jugak.",
+      "en": "Knows there's no money, and still wants to buy.",
+      "src": [
+       "t11521603"
+      ],
+      "real": true,
+      "word": "jugak"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Aku ingatkan dia jual saiz kecik je.",
+      "en": "I thought they only sold the small size.",
+      "src": [
+       "t11540126"
+      ],
+      "real": true,
+      "wrong": [
+       "I thought they only sold the big size.",
+       "I knew they had every size.",
+       "They told me the small size was sold out."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Dia takde banyak duit sangat.",
+      "en": "He doesn't have very much money.",
+      "src": [
+       "t10690011"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Makin lama barang makin mahal.",
+      "en": "Things just keep getting more expensive.",
+      "src": [
+       "t11395878"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Lapan puluh ringgit. Barang original.",
+      "right": "Mahal sangat. Kedai sebelah jual enam puluh.",
+      "wrong": [
+       "Last price.",
+       "Terima kasih, bang!"
+      ],
+      "why": "Compare with the shop next door — a classic bargaining move."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Berapa baki duit yang awak ada?",
+      "en": "How much money do you have left?",
+      "src": [
+       "t5900277"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Tujuh puluh. Last price.",
+      "right": "Enam puluh lima lah. Tak mampu.",
+      "wrong": [
+       "Original ni.",
+       "Itu lain."
+      ],
+      "why": "Even at “last price” you can try once more: tak mampu — can't afford it."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Aku ingat dia nak pinjam duit.",
+      "en": "I thought he wanted to borrow money.",
+      "src": [
+       "t11518825"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,765 @@
+{
+ "id": "m06-l04",
+ "title": "Cari apa?",
+ "blurb": "In a shop: what you're looking for, size, colour and “maybe next time”.",
+ "staff": {
+  "label": "Abg",
+  "name": "Shop assistant",
+  "voice": "m"
+ },
+ "you": {
+  "voice": "f"
+ },
+ "notes": [
+  {
+   "title": "cari",
+   "body": "<b>Cari</b> = look for. <i>Apa yang awak cari?</i> — what are you looking for? <i>Saya cari kasut</i> — I'm looking for shoes."
+  },
+  {
+   "title": "muat",
+   "body": "<b>Muat tak?</b> — does it fit? Answers: <i>muat</i>, <i>besar sikit</i> (a bit big), <i>kecik sikit</i> (a bit small)."
+  },
+  {
+   "title": "lain kali",
+   "body": "<b>Mungkin lain kali</b> — maybe next time — is the easy, polite way to leave without buying."
+  }
+ ],
+ "phrases": {},
+ "match": [
+  [
+   "kecik",
+   "kecil"
+  ],
+  [
+   "takde",
+   "tiada"
+  ],
+  [
+   "sikit",
+   "sedikit"
+  ],
+  [
+   "kot",
+   "agaknya"
+  ],
+  [
+   "macam ni",
+   "begini"
+  ],
+  [
+   "takyah",
+   "tidak payah"
+  ],
+  [
+   "je",
+   "sahaja"
+  ]
+ ],
+ "tr": {
+  "Ada baki?": "Do you have change?",
+  "Ada lagi. Nak berapa kilo?": "There's still some. How many kilos do you want?",
+  "Anggur ni manis tak?": "Are these grapes sweet?",
+  "Apa kau nak beli?": "What do you want to buy?",
+  "Awak pakai saiz apa?": "What size do you wear?",
+  "Baru sampai pagi tadi.": "It only came in this morning.",
+  "Bawang sekilo.": "A kilo of onions.",
+  "Besar sikit.": "A bit big.",
+  "Biru je ada. Nak cuba?": "There's only blue. Want to try them?",
+  "Boleh lah, cuba dulu.": "Okay then, I'll try them first.",
+  "Boleh saya tinggal satu barang?": "Can I leave one item behind?",
+  "Boleh. Lapan belas.": "Sure. Eighteen.",
+  "Boleh. Putih ada?": "Sure. Do you have white?",
+  "Cash ke kad?": "Cash or card?",
+  "Cash. Nah, dua puluh.": "Cash. Here you go, twenty.",
+  "Cili nak berapa?": "How much chilli do you want?",
+  "Cuba rasa dulu.": "Try a taste first.",
+  "Dah masuk?": "Has it gone through?",
+  "Dah. Tiga puluh dua ringgit.": "Yes. Thirty-two ringgit.",
+  "Dua puluh lapan. Nak tak?": "Twenty-eight. Do you want it?",
+  "Dua puluh lima lah. Ini je yang saya ada.": "Twenty-five, come on. That's all I have.",
+  "Dua puluh ringgit je.": "Just twenty ringgit.",
+  "Dua puluh ringgit. Okay?": "Twenty ringgit. Okay?",
+  "Enam puluh lima lah. Tak mampu.": "Sixty-five, come on. I can't afford more.",
+  "Gula ada lagi tak?": "Is there any sugar left?",
+  "Hitam habis. Nak warna lain?": "Black is sold out. Want another colour?",
+  "Itu lain.": "That's different.",
+  "Jumpa!": "Found it!",
+  "Kad tak boleh.": "No cards.",
+  "Kecik sikit. Ada saiz besar?": "A bit small. Do you have a bigger size?",
+  "Kembung sekilo lima belas. Nak berapa?": "Mackerel is fifteen a kilo. How much do you want?",
+  "Kualiti bagus ni.": "This is good quality.",
+  "Kurang tiga ringgit. Macam mana?": "You're three ringgit short. What now?",
+  "Lain kali bayar.": "Pay next time.",
+  "Lapan ringgit je.": "Only eight ringgit.",
+  "Last price.": "Last price.",
+  "Lima puluh. Ada baki?": "A fifty. Do you have change?",
+  "Mahal lah, kak. Lain kali lah.": "That's expensive. Next time.",
+  "Mahal lah. Kurang sikit boleh?": "That's expensive. Can it be a bit less?",
+  "Mahal lah. Lima belas boleh?": "That's expensive. Can you do fifteen?",
+  "Mahal sangat. Kedai sebelah jual enam puluh.": "Too expensive. The shop next door sells them for sixty.",
+  "Mahal tak?": "Is it expensive?",
+  "Manis sangat. Rasa lah.": "Very sweet. Have a taste.",
+  "Masam sikit.": "A bit sour.",
+  "Mesin kad rosak. Cash ada?": "The card machine is broken. Do you have cash?",
+  "Mesin rosak.": "The machine is broken.",
+  "Minggu depan kot.": "Next week, I think.",
+  "Muat tak?": "Does it fit?",
+  "Nak apa-apa lagi?": "Do you want anything else?",
+  "Nak beli anggur sikit.": "I want to buy a few grapes.",
+  "Nak beli berapa?": "How many do you want to buy?",
+  "Nak berapa biji?": "How many do you want?",
+  "Nak epal.": "I'd like apples.",
+  "Nak plastik?": "Do you want a plastic bag?",
+  "Nak warna apa?": "What colour do you want?",
+  "Original ni.": "These are original.",
+  "Rugi la kalau tak beli.": "It'd be a loss not to buy.",
+  "Saiz S.": "Size S.",
+  "Satu je.": "Just one.",
+  "Saya ada beg.": "I have a bag.",
+  "Scan sini.": "Scan here.",
+  "Semua segar.": "It's all fresh.",
+  "Semua sekali berapa?": "How much altogether?",
+  "Sesuai dengan awak.": "They suit you.",
+  "Setengah kilo je.": "Just half a kilo.",
+  "Setengah kilo je. Tolong siang sekali.": "Just half a kilo. Please clean them too.",
+  "Stok baru sampai minggu depan. Nak tunggu?": "New stock arrives next week. Do you want to wait?",
+  "Tak cukup. QR boleh?": "Not enough. Can I pay by QR?",
+  "Tak mahal. Lima ringgit je.": "Not expensive. Only five ringgit.",
+  "Tak nak beli ke? Murah ni.": "Don't you want to buy? It's cheap.",
+  "Tak payah. Saya ada beg.": "No need. I have a bag.",
+  "Tak rugi.": "You won't lose out.",
+  "Tak. Itu je.": "No. That's all.",
+  "Takde duit kecik lah.": "I don't have small change.",
+  "Takpe lah. Mungkin lain kali.": "Never mind. Maybe next time.",
+  "Tengok-tengok je.": "Just looking.",
+  "Terima kasih.": "Thank you.",
+  "Tiga biji je.": "Just three.",
+  "Tiga puluh. Kualiti bagus ni.": "Thirty. This is good quality.",
+  "Tujuh puluh. Last price.": "Seventy. Last price.",
+  "Untuk awak je.": "Just for you.",
+  "Warna biru.": "Blue.",
+  "Warna hitam ada?": "Do you have black?",
+  "Warna hitam.": "Black.",
+  "Yang hijau dua belas, yang merah lima belas. Nak yang mana?": "The green ones are twelve, the red ones fifteen. Which do you want?",
+  "Yang hijau lah. Murah sikit.": "The green ones. They're a bit cheaper.",
+  "Yang ni sedap.": "This one's good.",
+  "Lapan puluh ringgit. Barang original.": "Eighty ringgit. It's the original product."
+ },
+ "clips": [],
+ "levels": {
+  "easy": {
+   "dialogue": [
+    {
+     "id": "e1",
+     "s": "staff",
+     "ms": "Apa yang awak cari?",
+     "en": "What are you looking for?",
+     "src": [
+      "t10583556"
+     ],
+     "real": true
+    },
+    {
+     "id": "e2",
+     "s": "you",
+     "ms": "Saya cari baju.",
+     "en": "I'm looking for a top."
+    },
+    {
+     "id": "e3",
+     "s": "staff",
+     "ms": "Awak suka warna apa?",
+     "en": "What colour do you like?",
+     "src": [
+      "t10542284"
+     ],
+     "real": true
+    },
+    {
+     "id": "e4",
+     "s": "you",
+     "ms": "Saya suka biru.",
+     "en": "I like blue."
+    },
+    {
+     "id": "e5",
+     "s": "staff",
+     "ms": "Saiz apa?",
+     "en": "What size?"
+    },
+    {
+     "id": "e6",
+     "s": "you",
+     "ms": "Saiz M.",
+     "en": "Size M."
+    }
+   ],
+   "gist": {
+    "q": "What is she shopping for?",
+    "options": [
+     "A blue top, size M",
+     "Black shoes, size 7",
+     "A white bag"
+    ],
+    "answer": 0,
+    "why": "Saya cari baju … biru … saiz M."
+   },
+   "vocab": [
+    "cari",
+    "baju",
+    "warna",
+    "biru",
+    "saiz",
+    "suka"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "ev1",
+      "s": "staff",
+      "ms": "Siapa punya beg ini?",
+      "en": "Whose bag is this?",
+      "src": [
+       "t6469504"
+      ],
+      "real": true,
+      "wrong": [
+       "Where is this bag from?",
+       "How much is this bag?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "ev2",
+      "s": "you",
+      "ms": "Langit berwarna biru.",
+      "en": "The sky is blue.",
+      "src": [
+       "t342112"
+      ],
+      "real": true,
+      "word": "biru"
+     },
+     {
+      "type": "choose",
+      "id": "ev3",
+      "s": "staff",
+      "ms": "Pensel ini putih.",
+      "en": "This pencil is white.",
+      "src": [
+       "t3942271"
+      ],
+      "real": true,
+      "wrong": [
+       "This pencil is black.",
+       "This pencil is new."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "ev4",
+      "s": "you",
+      "ms": "Meja itu hijau.",
+      "en": "That table is green.",
+      "src": [
+       "t3276540"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "ev5",
+      "s": "staff",
+      "ms": "Baju berwarna putih dan hitam.",
+      "en": "The shirt is white and black.",
+      "src": [
+       "t9621016"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Nak warna apa?",
+      "right": "Warna hitam.",
+      "wrong": [
+       "Saiz M.",
+       "Saya cari baju."
+      ],
+      "why": "Warna apa? — which colour."
+     },
+     {
+      "type": "order",
+      "id": "ev6",
+      "s": "you",
+      "ms": "Baju berwarna putih dan merah.",
+      "en": "The shirt is white and red.",
+      "src": [
+       "t9621007"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Awak pakai saiz apa?",
+      "right": "Saiz S.",
+      "wrong": [
+       "Warna biru.",
+       "Saya suka biru."
+      ],
+      "why": "Saiz apa? — which size."
+     },
+     {
+      "type": "order",
+      "id": "ev7",
+      "s": "staff",
+      "ms": "Buku itu kecil.",
+      "en": "That book is small.",
+      "src": [
+       "t634156"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "medium": {
+   "dialogue": [
+    {
+     "id": "m1",
+     "s": "staff",
+     "ms": "Apa yang awak cari?",
+     "en": "What are you looking for?",
+     "src": [
+      "t10583556"
+     ],
+     "real": true
+    },
+    {
+     "id": "m2",
+     "s": "you",
+     "ms": "Saya cari kasut.",
+     "en": "I'm looking for shoes."
+    },
+    {
+     "id": "m3",
+     "s": "staff",
+     "ms": "Apa saiz yang awak cari?",
+     "en": "What size are you looking for?",
+     "src": [
+      "t10583707"
+     ],
+     "real": true
+    },
+    {
+     "id": "m4",
+     "s": "you",
+     "ms": "Saiz tujuh. Warna hitam ada?",
+     "en": "Size seven. Do you have black?"
+    },
+    {
+     "id": "m5",
+     "s": "staff",
+     "ms": "Hitam habis. Putih ada.",
+     "en": "Black is sold out. We have white."
+    },
+    {
+     "id": "m6",
+     "s": "you",
+     "ms": "Boleh cuba yang putih?",
+     "en": "Can I try the white ones?"
+    },
+    {
+     "id": "m7",
+     "s": "staff",
+     "ms": "Boleh. Muat tak?",
+     "en": "Sure. Do they fit?"
+    },
+    {
+     "id": "m8",
+     "s": "you",
+     "ms": "Besar sikit. Saiz enam ada?",
+     "en": "A bit big. Do you have size six?"
+    },
+    {
+     "id": "m9",
+     "s": "staff",
+     "ms": "Saya akan cuba cari.",
+     "en": "I'll try to find it.",
+     "src": [
+      "t3936700"
+     ],
+     "real": true
+    }
+   ],
+   "gist": {
+    "q": "What's wrong with the white shoes?",
+    "options": [
+     "They're a bit big",
+     "They're too expensive",
+     "They're the wrong colour",
+     "They're sold out"
+    ],
+    "answer": 0,
+    "why": "Besar sikit. Saiz enam ada?"
+   },
+   "vocab": [
+    "kasut",
+    "hitam",
+    "putih",
+    "cuba",
+    "muat",
+    "habis"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "mv1",
+      "s": "staff",
+      "ms": "Di mana anda membeli baju itu?",
+      "en": "Where did you buy that shirt?",
+      "src": [
+       "t5311481"
+      ],
+      "real": true,
+      "wrong": [
+       "When did you buy that shirt?",
+       "Why did you buy that shirt?"
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "mv2",
+      "s": "you",
+      "ms": "Kerana ia terlalu besar.",
+      "en": "Because it's too big.",
+      "src": [
+       "t5491975"
+      ],
+      "real": true,
+      "word": "besar"
+     },
+     {
+      "type": "choose",
+      "id": "mv3",
+      "s": "staff",
+      "ms": "Kasut jenis apakah yang anda cari?",
+      "en": "What kind of shoes are you looking for?",
+      "src": [
+       "t10583778"
+      ],
+      "real": true,
+      "wrong": [
+       "What size shoes do you wear?",
+       "Where did you find those shoes?"
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "mv4",
+      "s": "you",
+      "ms": "Baju berwarna putih dan hitam.",
+      "en": "The shirt is white and black.",
+      "src": [
+       "t9621016"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "mv5",
+      "s": "staff",
+      "ms": "Aku ingatkan dia jual saiz kecik je.",
+      "en": "I thought they only sold the small size.",
+      "src": [
+       "t11540126"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Muat tak?",
+      "right": "Kecik sikit. Ada saiz besar?",
+      "wrong": [
+       "Warna hitam ada?",
+       "Saya cari kasut."
+      ],
+      "why": "Does it fit? A bit small — ask for a bigger size."
+     },
+     {
+      "type": "order",
+      "id": "mv6",
+      "s": "you",
+      "ms": "Saya sedang mencari dompet.",
+      "en": "I'm looking for a wallet.",
+      "src": [
+       "t12752310"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Hitam habis. Nak warna lain?",
+      "right": "Boleh. Putih ada?",
+      "wrong": [
+       "Saiz tujuh.",
+       "Besar sikit."
+      ],
+      "why": "Offered another colour: boleh, and ask what there is."
+     },
+     {
+      "type": "order",
+      "id": "mv7",
+      "s": "staff",
+      "ms": "Baju berwarna putih dan merah.",
+      "en": "The shirt is white and red.",
+      "src": [
+       "t9621007"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  },
+  "hard": {
+   "dialogue": [
+    {
+     "id": "h1",
+     "s": "staff",
+     "ms": "Apa yang awak cari?",
+     "en": "What are you looking for?",
+     "src": [
+      "t10583556"
+     ],
+     "real": true
+    },
+    {
+     "id": "h2",
+     "s": "you",
+     "ms": "Saya cari kasut. Yang macam ni, tapi warna hitam.",
+     "en": "I'm looking for shoes. Like these, but in black."
+    },
+    {
+     "id": "h3",
+     "s": "staff",
+     "ms": "Apa saiz yang awak cari?",
+     "en": "What size are you looking for?",
+     "src": [
+      "t10583707"
+     ],
+     "real": true
+    },
+    {
+     "id": "h4",
+     "s": "you",
+     "ms": "Saiz tujuh.",
+     "en": "Size seven."
+    },
+    {
+     "id": "h5",
+     "s": "staff",
+     "ms": "Hitam saiz tujuh habis lah. Tinggal saiz kecik je.",
+     "en": "Black in size seven is sold out. Only small sizes are left."
+    },
+    {
+     "id": "h6",
+     "s": "you",
+     "ms": "Alamak. Bila stok baru sampai?",
+     "en": "Oh no. When does new stock arrive?"
+    },
+    {
+     "id": "h7",
+     "s": "staff",
+     "ms": "Minggu depan kot. Kejap. Saya akan cuba cari.",
+     "en": "Next week, I think. Hang on. I'll try to find it.",
+     "src": [
+      "t3936700"
+     ]
+    },
+    {
+     "id": "h8",
+     "s": "you",
+     "ms": "Okay, terima kasih.",
+     "en": "Okay, thank you."
+    },
+    {
+     "id": "h9",
+     "s": "staff",
+     "ms": "Jumpa! Tapi warna biru. Nak cuba?",
+     "en": "Found some! But in blue. Want to try them?"
+    },
+    {
+     "id": "h10",
+     "s": "you",
+     "ms": "Boleh lah. Hmm, muat. Tapi biru…",
+     "en": "Okay then. Hmm, they fit. But blue…"
+    },
+    {
+     "id": "h11",
+     "s": "staff",
+     "ms": "Cantik tu. Sesuai dengan awak.",
+     "en": "They're nice. They suit you."
+    },
+    {
+     "id": "h12",
+     "s": "you",
+     "ms": "Mungkin lain kali. Saya fikir dulu.",
+     "en": "Maybe next time. I'll think about it first.",
+     "src": [
+      "t10723468"
+     ]
+    }
+   ],
+   "gist": {
+    "q": "Why doesn't she buy the shoes?",
+    "options": [
+     "They only have her size in blue, not black",
+     "They don't fit",
+     "They cost too much",
+     "The shop is closing"
+    ],
+    "answer": 0,
+    "why": "Jumpa! Tapi warna biru … Mungkin lain kali."
+   },
+   "vocab": [
+    "stok",
+    "kot",
+    "jumpa",
+    "cantik",
+    "sesuai",
+    "lain kali"
+   ],
+   "phrases": [],
+   "drills": {
+    "listen": [
+     {
+      "type": "choose",
+      "id": "hv1",
+      "s": "staff",
+      "ms": "Sempat lagi nak shopping untuk Raya.",
+      "en": "There's still time to go shopping for Raya.",
+      "src": [
+       "t11395918"
+      ],
+      "real": true,
+      "wrong": [
+       "It's too late to shop for Raya.",
+       "Shopping for Raya is finished.",
+       "I never shop for Raya."
+      ]
+     },
+     {
+      "type": "gap",
+      "id": "hv2",
+      "s": "you",
+      "ms": "Takyah pening-pening nak cari baju.",
+      "en": "No need for the headache of looking for clothes.",
+      "src": [
+       "t11365041"
+      ],
+      "real": true,
+      "word": "cari"
+     },
+     {
+      "type": "choose",
+      "id": "hv3",
+      "s": "staff",
+      "ms": "Lain kalilah kot.",
+      "en": "Another time, I guess.",
+      "src": [
+       "t10723478"
+      ],
+      "real": true,
+      "wrong": [
+       "Right now, I guess.",
+       "Never again, I guess.",
+       "Every time, I guess."
+      ]
+     },
+     {
+      "type": "dictation",
+      "id": "hv4",
+      "s": "you",
+      "ms": "Kerana ia terlalu besar.",
+      "en": "Because it's too big.",
+      "src": [
+       "t5491975"
+      ],
+      "real": true
+     },
+     {
+      "type": "ladder",
+      "id": "hv5",
+      "s": "staff",
+      "ms": "Susun elok-elok kang senang nak cari.",
+      "en": "Arrange things neatly so they're easy to find later.",
+      "src": [
+       "t11376577"
+      ],
+      "real": true
+     }
+    ],
+    "read": [
+     {
+      "type": "reply",
+      "prompt": "Stok baru sampai minggu depan. Nak tunggu?",
+      "right": "Takpe lah. Mungkin lain kali.",
+      "wrong": [
+       "Saiz tujuh.",
+       "Jumpa!"
+      ],
+      "why": "Not waiting: takpe lah, mungkin lain kali."
+     },
+     {
+      "type": "order",
+      "id": "hv6",
+      "s": "you",
+      "ms": "Saya sedang mencari dompet.",
+      "en": "I'm looking for a wallet.",
+      "src": [
+       "t12752310"
+      ],
+      "real": true
+     },
+     {
+      "type": "reply",
+      "prompt": "Biru je ada. Nak cuba?",
+      "right": "Boleh lah, cuba dulu.",
+      "wrong": [
+       "Minggu depan kot.",
+       "Sesuai dengan awak."
+      ],
+      "why": "Only blue — sure, try first: cuba dulu."
+     },
+     {
+      "type": "order",
+      "id": "hv7",
+      "s": "staff",
+      "ms": "Kasut jenis apakah yang anda cari?",
+      "en": "What kind of shoes are you looking for?",
+      "src": [
+       "t10583778"
+      ],
+      "real": true
+     },
+     {
+      "type": "match"
+     }
+    ]
+   }
+  }
+ }
+}
