@@ -265,7 +265,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "tambah",
+    "satu lagi",
+    "air",
+    "kejap",
+    "roti canai",
+    "teh tarik"
+   ]
   },
   "medium": {
    "dialogue": [
@@ -424,7 +432,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "tambah",
+    "satu lagi",
+    "tadi",
+    "yang ni",
+    "biasa",
+    "bawak"
+   ]
   },
   "hard": {
    "dialogue": [
@@ -608,7 +624,32 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    [
+     "tinggal",
+     "left over; remaining"
+    ],
+    "peha",
+    "tanya",
+    "belum",
+    "tukar",
+    "tak sempat"
+   ]
   }
+ },
+ "tr": {
+  "Air nak tambah?": "Want to add a drink?",
+  "Air tak nak.": "No drink.",
+  "Nak tambah makan ke air?": "Do you want to add food or a drink?",
+  "Takde dah. Itu je.": "Nothing more. That's all.",
+  "Yang ni pun kurang manis?": "This one less sweet too?",
+  "Tak, yang ni biasa je.": "No, this one's just regular.",
+  "Peha dah habis lah. Dada boleh?": "Thigh's finished. Is breast okay?",
+  "Rasanya dah atas kuali tu.": "I think it's already on the pan.",
+  "Meja ni kan?": "This table, right?",
+  "Roti telur tadi belum buat. Nak tukar ke?": "The roti telur hasn't been made yet. Do you want to change it?",
+  "Ha, tukar jadi roti bawang lah.": "Yes, change it to roti bawang.",
+  "Peha dah habis lah.": "Thigh's finished."
  }
 }

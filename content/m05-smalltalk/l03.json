@@ -162,6 +162,19 @@
    "tidak perlu"
   ]
  ],
+ "tr": {
+  "Jom nyanyi dengan aku.": "Come and sing with me.",
+  "Tak nak. Aku tak boleh nyanyi.": "No. I can't sing.",
+  "Awak mahu pergi?": "Do you want to go?",
+  "Nak. Jomlah!": "Yes. Let's go!",
+  "Isnin tak boleh. Selasa macam mana?": "Monday I can't. How about Tuesday?",
+  "Kau datang tak malam ni?": "Are you coming tonight?",
+  "Datang. Jumpa lagi!": "Yes. See you!",
+  "Kau nak jumpa aku ke?": "Do you want to see me?",
+  "Nak la. Dah lama kita tak jumpa.": "Of course. It's been ages since we met.",
+  "Kenapa kau tak datang semalam?": "Why didn't you come yesterday?",
+  "Sorry. Semalam mak aku datang rumah.": "Sorry. My mum came over yesterday."
+ },
  "clips": [],
  "levels": {
   "easy": {
@@ -234,6 +247,14 @@
     "answer": 0,
     "why": "Jom makan luar malam ni! … Boleh la."
    },
+   "vocab": [
+    "jom",
+    "main bola",
+    "tak boleh",
+    "mungkin",
+    "hujan",
+    "malam ni"
+   ],
    "phrases": [
     "p1",
     "p2",
@@ -437,6 +458,14 @@
     "answer": 0,
     "why": "Hari ni mak aku nak datang rumah."
    },
+   "vocab": [
+    "mak",
+    "macam mana",
+    "mungkin",
+    "bergurau",
+    "cakap",
+    "jomlah"
+   ],
    "phrases": [
     "p1",
     "p2",
@@ -676,6 +705,14 @@
     "answer": 0,
     "why": "Isnin aku dah plan nak balik kampung."
    },
+   "vocab": [
+    "lepak",
+    "plan",
+    "setahun",
+    "payah",
+    "takat",
+    "bergurau"
+   ],
    "phrases": [
     "p9",
     "p10",

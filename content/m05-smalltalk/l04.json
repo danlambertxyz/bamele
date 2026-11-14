@@ -176,6 +176,22 @@
    "bawa"
   ]
  ],
+ "tr": {
+  "Boleh awak tunggu sebentar?": "Can you wait a moment?",
+  "Boleh. Saya tunggu.": "Sure. I'll wait.",
+  "Hujan ke?": "Is it raining?",
+  "Tak. Hari ini panas.": "No. It's hot today.",
+  "Kau kat mana? Dah lambat ni.": "Where are you? It's getting late.",
+  "Sorry. Jalan jem teruk.": "Sorry. The traffic is terrible.",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Kau tengah sejuk kan?": "You're cold, aren't you?",
+  "Ha'ah. Aircond ni sejuk gila.": "Yep. This aircon is freezing.",
+  "Diorang dah sampai?": "Have they arrived?",
+  "Belum. Diorang pun sesat.": "Not yet. They're lost too.",
+  "Sempat tak ni?": "Will we make it?",
+  "Tak sempat. Jalan jem teruk.": "We won't. The traffic is terrible.",
+  "Rumah aku sejuk gila.": "My house is freezing."
+ },
  "clips": [],
  "levels": {
   "easy": {
@@ -246,6 +262,17 @@
     "answer": 0,
     "why": "Kami sesat nak sampai sini."
    },
+   "vocab": [
+    "panas",
+    "lambat",
+    "minta maaf",
+    [
+     "lewat",
+     "late (formal)"
+    ],
+    "jem",
+    "sesat"
+   ],
    "phrases": [
     "p8",
     "p13",
@@ -459,6 +486,17 @@
     "answer": 0,
     "why": ""
    },
+   "vocab": [
+    "sesat",
+    "sejak",
+    "takkan",
+    [
+     "sempat",
+     "make it in time"
+    ],
+    "sekejap",
+    "dah pun"
+   ],
    "phrases": [
     "p1",
     "p2",
@@ -691,6 +729,14 @@
     "answer": 0,
     "why": "Sekarang ni aku takde kereta. Aku naik Grab."
    },
+   "vocab": [
+    "berjanggut",
+    "teruk",
+    "sekarang ni",
+    "takde",
+    "diorang",
+    "entah-entah"
+   ],
    "phrases": [
     "p10",
     "p11",

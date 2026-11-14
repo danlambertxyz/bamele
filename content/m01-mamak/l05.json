@@ -270,7 +270,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "lauk",
+    "sayur",
+    "yang ni",
+    "kuah",
+    "sikit",
+    "ayam goreng"
+   ]
   },
   "medium": {
    "dialogue": [
@@ -435,7 +443,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "separuh",
+    "lauk",
+    "banjir",
+    "campur",
+    "telur masin",
+    "takpe"
+   ]
   },
   "hard": {
    "dialogue": [
@@ -619,7 +635,33 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "nasi tambah",
+    "yang tu",
+    "tulang",
+    "malas",
+    "senang",
+    "tepi"
+   ]
   }
+ },
+ "tr": {
+  "Kuah nak?": "Do you want gravy?",
+  "Tak nak kuah.": "No gravy.",
+  "Ayam ke ikan?": "Chicken or fish?",
+  "Pedas sikit tau. Okay?": "It's a bit spicy, you know. Okay?",
+  "Tak nak lah. Sayur lain ada tak?": "No thanks. Is there another vegetable?",
+  "Campur lah.": "Mixed, then.",
+  "Telur masin nak?": "Do you want salted egg?",
+  "Tak nak. Itu je.": "No. That's all.",
+  "Nasi biasa ke nasi tambah?": "Regular rice or extra rice?",
+  "Nasi biasa je, tak payah tambah.": "Just regular rice, no need for extra.",
+  "Banjir, tapi jangan kena sayur.": "Flooded, but don't let it touch the vegetables.",
+  "Okay boss, set.": "Okay boss, done.",
+  "Ikan kembung ada tulang sikit. Okay ke?": "The mackerel has a few bones. Is that okay?",
+  "Malas lah. Ambik ayam je.": "Can't be bothered. I'll just take the chicken.",
+  "Kuah kari ye, bukan kuah ikan.": "Curry gravy, okay, not fish gravy.",
+  "Makan sini kan?": "Eating here, right?"
  }
 }

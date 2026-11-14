@@ -1,83 +1,10 @@
 #!/usr/bin/env python3
 """Build Module 5 (Small talk) from Tatoeba sentences.
 
-Lines and drills are assembled from sentence ids so the Malay text is copied
-verbatim from the corpus export, never retyped. A part is either a Tatoeba id
-(int) or a string written for the app. `real` = the whole line is verbatim.
-
 Usage: python tools/build_m05.py <dir with zlm.tsv and zsm.tsv>
-The TSVs are Tatoeba's per-language "sentences_detailed" exports (CC BY 2.0 FR).
+See tools/tatoeba_build.py for how lines are assembled.
 """
-import json
-import sys
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parent.parent
-SRC = Path(sys.argv[1])
-T = {}
-for name in ("zlm.tsv", "zsm.tsv"):
-    for row in (SRC / name).read_text(encoding="utf-8").splitlines():
-        p = row.split("\t")
-        if len(p) >= 4:
-            T[int(p[0])] = (p[2].strip(), p[3])
-USED = {}
-S, Y = "staff", "you"
-
-
-def text(parts):
-    parts = parts if isinstance(parts, (list, tuple)) else [parts]
-    out, ids = [], []
-    for part in parts:
-        if isinstance(part, int):
-            t = T[part][0]
-            if t[-1] not in ".!?…":
-                t += "."
-            USED[part] = T[part]
-            ids.append(part)
-            out.append(t)
-        else:
-            out.append(part)
-    ms = " ".join(out)
-    extra = {}
-    if ids:
-        extra["src"] = [f"t{i}" for i in ids]
-        if all(isinstance(p, int) for p in parts):
-            extra["real"] = True
-    return ms, extra
-
-
-def ln(s, parts, en):
-    ms, extra = text(parts)
-    return {"s": s, "ms": ms, "en": en, **extra}
-
-
-def c(s, parts, en, *wrong): return {"type": "choose", **ln(s, parts, en), "wrong": list(wrong)}
-def g(s, parts, en, word): return {"type": "gap", **ln(s, parts, en), "word": word}
-def d(s, parts, en): return {"type": "dictation", **ln(s, parts, en)}
-def l(s, parts, en): return {"type": "ladder", **ln(s, parts, en)}
-def o(s, parts, en): return {"type": "order", **ln(s, parts, en)}
-
-
-def r(prompt, right, wrong, why):
-    return {"type": "reply", "prompt": text(prompt)[0], "right": text(right)[0], "wrong": [text(w)[0] for w in wrong], "why": why}
-
-
-M = {"type": "match"}
-
-
-def ph(parts, en, note=None, v=None):
-    ms, extra = text(parts)
-    out = {"ms": ms, "en": en, **extra}
-    if note:
-        out["note"] = note
-    if v:
-        out["v"] = v
-    return out
-
-
-def gist(q, right, *wrong, why=""):
-    return {"q": q, "options": [right, *wrong], "answer": 0, "why": why}
-
+from tatoeba_build import *  # noqa: F401,F403
 
 LESSONS = []
 
@@ -624,34 +551,228 @@ LESSONS.append(dict(
             ]),
     }))
 
-# ---------------------------------------------------------------- write out
-PRE = {"easy": "e", "medium": "m", "hard": "h"}
-mdir = ROOT / "content/m05-smalltalk"
-mdir.mkdir(exist_ok=True)
-entries = []
-for L in LESSONS:
-    lesson = {"id": f"m05-{L['id']}", "title": L["title"], "blurb": L["blurb"], "staff": L["staff"], "you": L["you"],
-              "notes": L["notes"], "phrases": L["phrases"], "match": L["match"], "clips": [], "levels": {}}
-    for level, lv in L["levels"].items():
-        dialogue = [{"id": f"{PRE[level]}{i + 1}", **line} for i, line in enumerate(lv["dialogue"])]
-        n, drills = 0, {}
-        for kind in ("listen", "read"):
-            drills[kind] = []
-            for ex in lv[kind]:
-                ex = dict(ex)
-                if "ms" in ex:
-                    n += 1
-                    ex = {"type": ex["type"], "id": f"{PRE[level]}v{n}", **{k: v for k, v in ex.items() if k != "type"}}
-                drills[kind].append(ex)
-        lesson["levels"][level] = {"dialogue": dialogue, "gist": lv["gist"], "phrases": lv["phrases"], "drills": drills}
-    (mdir / f"{L['id']}.json").write_text(json.dumps(lesson, ensure_ascii=False, indent=1) + "\n")
-    entries.append({"id": L["id"], "file": f"{L['id']}.json", "title": L["title"], "blurb": L["blurb"]})
+# ---------------------------------------------------------------- vocab and reply translations
+VOCAB = {
+ "l01": {
+  "easy": [
+   "apa khabar",
+   "khabar baik",
+   "jumpa",
+   "sibuk",
+   "belum",
+   "jom"
+  ],
+  "medium": [
+   "dah lama",
+   "tu la",
+   "asyik",
+   "kerja kuat",
+   [
+    "pulak",
+    "and you?; as for…"
+   ],
+   "makan luar"
+  ],
+  "hard": [
+   "ingatkan",
+   "balik kampung",
+   "rindu",
+   "lepak",
+   "sekali-sekala",
+   "ambik cuti"
+  ]
+ },
+ "l02": {
+  "easy": [
+   "penat",
+   "mengantuk",
+   "agak",
+   "sibuk",
+   "tidur",
+   "kerja"
+  ],
+  "medium": [
+   "mengantuk",
+   "mesti",
+   "besok",
+   "rehat",
+   "minggu depan",
+   "cuti"
+  ],
+  "hard": [
+   "masuk kerja",
+   "tetap",
+   "walaupun",
+   "cadangnya",
+   "bercuti",
+   "teringin"
+  ]
+ },
+ "l03": {
+  "easy": [
+   "jom",
+   "main bola",
+   "tak boleh",
+   "mungkin",
+   "hujan",
+   "malam ni"
+  ],
+  "medium": [
+   "mak",
+   "macam mana",
+   "mungkin",
+   "bergurau",
+   "cakap",
+   "jomlah"
+  ],
+  "hard": [
+   "lepak",
+   "plan",
+   "setahun",
+   "payah",
+   "takat",
+   "bergurau"
+  ]
+ },
+ "l04": {
+  "easy": [
+   "panas",
+   "lambat",
+   "minta maaf",
+   [
+    "lewat",
+    "late (formal)"
+   ],
+   "jem",
+   "sesat"
+  ],
+  "medium": [
+   "sesat",
+   "sejak",
+   "takkan",
+   [
+    "sempat",
+    "make it in time"
+   ],
+   "sekejap",
+   "dah pun"
+  ],
+  "hard": [
+   "berjanggut",
+   "teruk",
+   "sekarang ni",
+   "takde",
+   "diorang",
+   "entah-entah"
+  ]
+ },
+ "l05": {
+  "easy": [
+   "suka",
+   "bising",
+   "tak kisah",
+   [
+    "rasa",
+    "think; feel"
+   ],
+   "dua-dua",
+   "best"
+  ],
+  "medium": [
+   "pernah",
+   "selalu",
+   "bising",
+   "tak kisah",
+   "lama-lama",
+   [
+    "gila",
+    "extremely (lit. crazy)"
+   ]
+  ],
+  "hard": [
+   "malas",
+   "harga",
+   "serba-serbi",
+   "mana boleh",
+   "camtu",
+   "susah-susah"
+  ]
+ }
+}
 
-module = {"id": "m05", "title": "Small talk", "lessons": entries,
-          "finale": {"title": "Module 5 test", "blurb": "Twelve questions drawn from all five lessons.", "testSize": 12}, "clips": []}
-(mdir / "module.json").write_text(json.dumps(module, ensure_ascii=False, indent=1) + "\n")
+TR = {
+ "l01": {
+  "Awak buat apa?": "What are you doing?",
+  "Tak buat apa-apa.": "Nothing much.",
+  "Khabar baik.": "I'm fine.",
+  "Laparnya...": "So hungry...",
+  "Jom makan!": "Let's eat!",
+  "Kenapa awak tak balik?": "Why didn't you go home?",
+  "Banyak kerja. Fikir nak balik je.": "Lots of work. All I think about is going home.",
+  "Bila nak jumpa?": "When shall we meet?",
+  "Esok mungkin aku jumpa kau.": "Maybe I'll see you tomorrow.",
+  "Kau apa cerita sekarang?": "What's new with you these days?",
+  "Asyik kerja. Fikir nak balik je.": "Always working. All I think about is going home.",
+  "Cuti ni kau balik kampung tak?": "Are you going back to your kampung this holiday?",
+  "Balik. Dah lama tak balik kampung.": "Yes. It's been ages since I went back.",
+  "Malam ni tak boleh.": "Tonight I can't."
+ },
+ "l02": {
+  "Awak sibuk sekarang?": "Are you busy now?",
+  "Sibuk. Banyak kerja.": "Busy. Lots of work.",
+  "Awak okay?": "Are you okay?",
+  "Okay. Penat sikit je.": "Okay. Just a bit tired.",
+  "Lama dah buat kerja ni?": "Been doing this job long?",
+  "Saya baru dalam kerja macam ni.": "I'm new to this kind of work.",
+  "Esok kau kerja tak?": "Are you working tomorrow?",
+  "Kerja. Aku tak ambik cuti.": "Yes. I'm not taking leave.",
+  "Lama dah kerja kat sini?": "Been working here long?",
+  "Baru je. Saya baru dalam kerja macam ni.": "Not long. I'm new to this kind of work.",
+  "Kau sakit, kenapa datang kerja?": "You're sick, why did you come to work?",
+  "Bos panggil. Kena masuk kerja jugak.": "The boss called. I had to come in anyway."
+ },
+ "l03": {
+  "Jom nyanyi dengan aku.": "Come and sing with me.",
+  "Tak nak. Aku tak boleh nyanyi.": "No. I can't sing.",
+  "Awak mahu pergi?": "Do you want to go?",
+  "Nak. Jomlah!": "Yes. Let's go!",
+  "Isnin tak boleh. Selasa macam mana?": "Monday I can't. How about Tuesday?",
+  "Kau datang tak malam ni?": "Are you coming tonight?",
+  "Datang. Jumpa lagi!": "Yes. See you!",
+  "Kau nak jumpa aku ke?": "Do you want to see me?",
+  "Nak la. Dah lama kita tak jumpa.": "Of course. It's been ages since we met.",
+  "Kenapa kau tak datang semalam?": "Why didn't you come yesterday?",
+  "Sorry. Semalam mak aku datang rumah.": "Sorry. My mum came over yesterday."
+ },
+ "l04": {
+  "Boleh awak tunggu sebentar?": "Can you wait a moment?",
+  "Boleh. Saya tunggu.": "Sure. I'll wait.",
+  "Hujan ke?": "Is it raining?",
+  "Tak. Hari ini panas.": "No. It's hot today.",
+  "Kau kat mana? Dah lambat ni.": "Where are you? It's getting late.",
+  "Sorry. Jalan jem teruk.": "Sorry. The traffic is terrible.",
+  "Berhati-hati di jalan raya!": "Be careful on the road!",
+  "Kau tengah sejuk kan?": "You're cold, aren't you?",
+  "Ha'ah. Aircond ni sejuk gila.": "Yep. This aircon is freezing.",
+  "Diorang dah sampai?": "Have they arrived?",
+  "Belum. Diorang pun sesat.": "Not yet. They're lost too.",
+  "Sempat tak ni?": "Will we make it?",
+  "Tak sempat. Jalan jem teruk.": "We won't. The traffic is terrible.",
+  "Rumah aku sejuk gila.": "My house is freezing."
+ },
+ "l05": {
+  "Awak suka warna apa?": "What colour do you like?",
+  "Saya suka kuning.": "I like yellow.",
+  "Teh ke kopi? Kau rasa?": "Tea or coffee? What do you think?",
+  "Aku tak kisah. Dua-dua boleh.": "I don't mind. Either is fine.",
+  "Nampak saya ok tak?": "Do I look okay?",
+  "Kau nampak lawa gila.": "You look gorgeous.",
+  "Korang berdua camna OK?": "How are you two, okay?",
+  "OK je. Kitorang tak kisah.": "We're fine. We don't mind.",
+  "Harga naik lagi. Kau rasa?": "Prices are up again. What do you think?",
+  "Nak buat macam mana. Aku tak kisah.": "What can you do. I don't mind.",
+  "Mana ada. Aku tak tipu kau.": "No way. I'm not lying to you."
+ }
+}
 
-# attribution list for the credits page (CC BY 2.0 FR needs author + source)
-credits = [{"id": i, "by": u, "ms": t} for i, (t, u) in sorted(USED.items())]
-(mdir / "sources.json").write_text(json.dumps(credits, ensure_ascii=False, indent=1) + "\n")
-print(f"wrote {len(LESSONS)} lessons; {len(USED)} Tatoeba sentences used")
+write_module("m05", "m05-smalltalk", "Small talk", LESSONS, VOCAB, TR)

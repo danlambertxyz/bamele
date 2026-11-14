@@ -165,6 +165,20 @@
    "beritahu"
   ]
  ],
+ "tr": {
+  "Awak sibuk sekarang?": "Are you busy now?",
+  "Sibuk. Banyak kerja.": "Busy. Lots of work.",
+  "Awak okay?": "Are you okay?",
+  "Okay. Penat sikit je.": "Okay. Just a bit tired.",
+  "Lama dah buat kerja ni?": "Been doing this job long?",
+  "Saya baru dalam kerja macam ni.": "I'm new to this kind of work.",
+  "Esok kau kerja tak?": "Are you working tomorrow?",
+  "Kerja. Aku tak ambik cuti.": "Yes. I'm not taking leave.",
+  "Lama dah kerja kat sini?": "Been working here long?",
+  "Baru je. Saya baru dalam kerja macam ni.": "Not long. I'm new to this kind of work.",
+  "Kau sakit, kenapa datang kerja?": "You're sick, why did you come to work?",
+  "Bos panggil. Kena masuk kerja jugak.": "The boss called. I had to come in anyway."
+ },
  "clips": [],
  "levels": {
   "easy": {
@@ -236,6 +250,14 @@
     "answer": 0,
     "why": "Saya agak mengantuk … Hari ini sangat sibuk."
    },
+   "vocab": [
+    "penat",
+    "mengantuk",
+    "agak",
+    "sibuk",
+    "tidur",
+    "kerja"
+   ],
    "phrases": [
     "p1",
     "p8",
@@ -451,6 +473,14 @@
     "answer": 0,
     "why": "Khamis minggu depan cuti."
    },
+   "vocab": [
+    "mengantuk",
+    "mesti",
+    "besok",
+    "rehat",
+    "minggu depan",
+    "cuti"
+   ],
    "phrases": [
     "p1",
     "p2",
@@ -682,6 +712,14 @@
     "answer": 0,
     "why": "Semalam cuti. Sekali bos panggil kena masuk kerja."
    },
+   "vocab": [
+    "masuk kerja",
+    "tetap",
+    "walaupun",
+    "cadangnya",
+    "bercuti",
+    "teringin"
+   ],
    "phrases": [
     "p9",
     "p10",

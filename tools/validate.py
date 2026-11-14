@@ -53,6 +53,14 @@ def main():
             for a, _ in lesson["match"]:
                 if a not in glossary:
                     missing_words.setdefault(a, f"{lid} match")
+            # English known for a Malay sentence anywhere in this lesson (reply options are looked up here)
+            english = dict(lesson.get("tr", {}))
+            for p in lesson["phrases"].values():
+                english[p["ms"]] = p["en"]
+            for lv in lesson["levels"].values():
+                for x in lv["dialogue"] + lv["drills"]["listen"] + lv["drills"]["read"]:
+                    if "ms" in x:
+                        english[x["ms"]] = x["en"]
             for level in ("easy", "medium", "hard"):
                 lv = lesson["levels"][level]
                 seen_ids, seen_ms = set(), set()
@@ -67,6 +75,14 @@ def main():
                 for pid in lv["phrases"]:
                     if pid not in lesson["phrases"]:
                         problems.append(f"{lid} {level}: unknown phrase {pid}")
+                vocab = [w[0] if isinstance(w, list) else w for w in lv.get("vocab", [])]
+                if len(vocab) < 5:
+                    problems.append(f"{lid} {level}: needs at least 5 vocab words")
+                for w in vocab:
+                    if w not in glossary:
+                        problems.append(f"{lid} {level}: vocab word '{w}' is not a glossary key")
+                if len(set(vocab)) != len(vocab):
+                    problems.append(f"{lid} {level}: repeated vocab word")
                 g = lv["gist"]
                 if not 0 <= g["answer"] < len(g["options"]):
                     problems.append(f"{lid} {level}: gist answer out of range")
@@ -98,6 +114,8 @@ def main():
                             seen_ms.add(ex["prompt"].lower())
                             for text in [ex["prompt"], ex["right"], *ex["wrong"]]:
                                 need_words(text, tag)
+                                if text not in english:
+                                    problems.append(f"{tag}: no English for reply text '{text}' (add it to the lesson's tr)")
 
     for key in glossary:
         need_audio(f"audio/words/{slug(key)}.mp3")

@@ -268,7 +268,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "kurang manis",
+    "tak nak",
+    "pedas",
+    "tambah",
+    "telur",
+    "minum"
+   ]
   },
   "medium": {
    "dialogue": [
@@ -426,7 +434,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "asing",
+    "tak nak",
+    "timun",
+    "telur mata",
+    "banyak",
+    "ha'ah"
+   ]
   },
   "hard": {
    "dialogue": [
@@ -604,7 +620,35 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    [
+     "kosong",
+     "no sugar (in drinks)"
+    ],
+    "langsung",
+    "pahit",
+    "tak tahan",
+    "ganti",
+    "tak payah"
+   ]
   }
+ },
+ "tr": {
+  "Nak tambah telur tak?": "Do you want to add an egg?",
+  "Tak nak. Terima kasih.": "No, thank you.",
+  "Nak minum apa?": "What do you want to drink?",
+  "Teh o ais satu, kurang manis.": "One iced tea without milk, less sweet.",
+  "Nasi lemak satu.": "One nasi lemak.",
+  "Nak tambah telur mata ke ayam goreng?": "Want to add a fried egg or fried chicken?",
+  "Dua-dua tak nak. Nasi lemak biasa je.": "Neither. Just a regular nasi lemak.",
+  "Timun nak?": "Do you want cucumber?",
+  "Sambal ni pedas tau. Nak letak asing ke?": "This sambal is spicy, you know. Shall I put it on the side?",
+  "Ha, letak asing lah. Saya tak tahan pedas.": "Yes, put it on the side. I can't take spicy food.",
+  "Okay, siap. Duduk dulu.": "Okay, done. Have a seat.",
+  "Betul-betul kosong? Pahit tau.": "Really no sugar? It's bitter, you know.",
+  "Betul. Tak nak gula langsung.": "Right. No sugar at all.",
+  "Ganti tak boleh lah.": "Can't swap it.",
+  "Tambah je.": "Just add it."
  }
 }

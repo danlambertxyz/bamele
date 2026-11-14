@@ -266,7 +266,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "makan sini",
+    "bungkus",
+    "tunggu",
+    "kejap",
+    "nasi goreng",
+    "teh ais"
+   ]
   },
   "medium": {
    "dialogue": [
@@ -425,7 +433,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "bungkus",
+    "dua-dua",
+    "ikat tepi",
+    "kena",
+    "takpe",
+    "sini"
+   ]
   },
   "hard": {
    "dialogue": [
@@ -603,7 +619,29 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "tapau",
+    "budak",
+    "asing-asing",
+    "jangan",
+    "sudu garpu",
+    "datang balik"
+   ]
   }
+ },
+ "tr": {
+  "Nak makan sini ke nak bungkus?": "Do you want to eat here or take away?",
+  "Makan sini.": "Eating here.",
+  "Nak order apa?": "What do you want to order?",
+  "Mee goreng satu, bungkus.": "One fried noodles, takeaway.",
+  "Air nak apa?": "What drink do you want?",
+  "Air tak nak. Makan je.": "No drinks. Just food.",
+  "Kena tunggu lima belas minit, boleh?": "It's a fifteen-minute wait, is that okay?",
+  "Lama jugak. Takpe lah, saya tunggu.": "That's quite long. Never mind, I'll wait.",
+  "Saya datang balik lah. Lima belas minit kan?": "I'll come back. Fifteen minutes, right?",
+  "Yang pedas tu nak letak telur mata?": "Want a fried egg on the spicy one?",
+  "Tak payah. Yang tak pedas je letak telur.": "No need. Only the non-spicy one gets an egg.",
+  "Dhal dua, kari satu.": "Two dhal, one curry."
  }
 }

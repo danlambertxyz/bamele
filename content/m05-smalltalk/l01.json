@@ -164,6 +164,22 @@
    "tidak akan"
   ]
  ],
+ "tr": {
+  "Awak buat apa?": "What are you doing?",
+  "Tak buat apa-apa.": "Nothing much.",
+  "Khabar baik.": "I'm fine.",
+  "Laparnya...": "So hungry...",
+  "Jom makan!": "Let's eat!",
+  "Kenapa awak tak balik?": "Why didn't you go home?",
+  "Banyak kerja. Fikir nak balik je.": "Lots of work. All I think about is going home.",
+  "Bila nak jumpa?": "When shall we meet?",
+  "Esok mungkin aku jumpa kau.": "Maybe I'll see you tomorrow.",
+  "Kau apa cerita sekarang?": "What's new with you these days?",
+  "Asyik kerja. Fikir nak balik je.": "Always working. All I think about is going home.",
+  "Cuti ni kau balik kampung tak?": "Are you going back to your kampung this holiday?",
+  "Balik. Dah lama tak balik kampung.": "Yes. It's been ages since I went back.",
+  "Malam ni tak boleh.": "Tonight I can't."
+ },
  "clips": [],
  "levels": {
   "easy": {
@@ -234,6 +250,14 @@
     "answer": 0,
     "why": "Dah makan? … Belum. Jom makan!"
    },
+   "vocab": [
+    "apa khabar",
+    "khabar baik",
+    "jumpa",
+    "sibuk",
+    "belum",
+    "jom"
+   ],
    "phrases": [
     "p8",
     "p9",
@@ -444,6 +468,17 @@
     "answer": 0,
     "why": "Aku ni asyik sibuk dengan kerja."
    },
+   "vocab": [
+    "dah lama",
+    "tu la",
+    "asyik",
+    "kerja kuat",
+    [
+     "pulak",
+     "and you?; as for…"
+    ],
+    "makan luar"
+   ],
    "phrases": [
     "p1",
     "p3",
@@ -682,6 +717,14 @@
     "answer": 0,
     "why": "Malam ni tak boleh. Esok mungkin aku jumpa kau."
    },
+   "vocab": [
+    "ingatkan",
+    "balik kampung",
+    "rindu",
+    "lepak",
+    "sekali-sekala",
+    "ambik cuti"
+   ],
    "phrases": [
     "p10",
     "p11",

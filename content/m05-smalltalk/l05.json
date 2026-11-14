@@ -175,6 +175,19 @@
    "kamu semua"
   ]
  ],
+ "tr": {
+  "Awak suka warna apa?": "What colour do you like?",
+  "Saya suka kuning.": "I like yellow.",
+  "Teh ke kopi? Kau rasa?": "Tea or coffee? What do you think?",
+  "Aku tak kisah. Dua-dua boleh.": "I don't mind. Either is fine.",
+  "Nampak saya ok tak?": "Do I look okay?",
+  "Kau nampak lawa gila.": "You look gorgeous.",
+  "Korang berdua camna OK?": "How are you two, okay?",
+  "OK je. Kitorang tak kisah.": "We're fine. We don't mind.",
+  "Harga naik lagi. Kau rasa?": "Prices are up again. What do you think?",
+  "Nak buat macam mana. Aku tak kisah.": "What can you do. I don't mind.",
+  "Mana ada. Aku tak tipu kau.": "No way. I'm not lying to you."
+ },
  "clips": [],
  "levels": {
   "easy": {
@@ -249,6 +262,17 @@
     "answer": 0,
     "why": "Dua-dua best gila!"
    },
+   "vocab": [
+    "suka",
+    "bising",
+    "tak kisah",
+    [
+     "rasa",
+     "think; feel"
+    ],
+    "dua-dua",
+    "best"
+   ],
    "phrases": [
     "p1",
     "p2",
@@ -466,6 +490,17 @@
     "answer": 0,
     "why": "Aircond ni bising betul."
    },
+   "vocab": [
+    "pernah",
+    "selalu",
+    "bising",
+    "tak kisah",
+    "lama-lama",
+    [
+     "gila",
+     "extremely (lit. crazy)"
+    ]
+   ],
    "phrases": [
     "p9",
     "p4",
@@ -702,6 +737,14 @@
     "answer": 0,
     "why": "Takyah susah-susah. Makan kat sini je la."
    },
+   "vocab": [
+    "malas",
+    "harga",
+    "serba-serbi",
+    "mana boleh",
+    "camtu",
+    "susah-susah"
+   ],
    "phrases": [
     "p10",
     "p11",

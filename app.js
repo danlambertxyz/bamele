@@ -14,7 +14,7 @@ const nav = $('#nav');
 const LEVELS = ['easy', 'medium', 'hard'];
 const SHORT = { easy: 'Easy', medium: 'Med', hard: 'Hard' };
 const FULL = { easy: 'Easy', medium: 'Medium', hard: 'Hard' };
-const STEPS = ['Listen', 'Read along', 'Phrases', 'Listening drills', 'Reading drills', 'Real clip', 'Wrap-up'];
+const STEPS = ['Listen', 'Read along', 'Vocab', 'Listening drills', 'Reading drills', 'Real clip', 'Wrap-up'];
 const CLIP_STEP = 5;
 const DAY = 864e5;
 const BOXES = [1, 3, 7, 14, 30]; // days
@@ -269,8 +269,6 @@ const ADDRESS = {
   Abg: 'Abg = abang, “older brother”. How you address a man serving you; said as “bang”.',
   Kak: 'Kak = kakak, “older sister”. How you address a woman serving you.',
 };
-/** Marks a line copied unchanged from an open corpus (Tatoeba). */
-const realTag = (x) => (x && x.real ? `<span class="real" title="Copied unchanged from Tatoeba, sentence ${esc(x.src.map((t) => '#' + t.slice(1)).join(', '))}">${ICON.tick} Real sentence</span>` : '');
 const staffHTML = (label) => (ADDRESS[label] ? tip(esc(label), ADDRESS[label]) : esc(label));
 
 /* ---------- small UI builders ---------- */
@@ -410,7 +408,7 @@ async function viewCourse() {
   setNav('course');
   let stars = 0, starTotal = 0;
   const cards = await Promise.all(COURSE.modules.map(async (m) => {
-    let prog = 'Not written yet', counts = null;
+    let prog = 'Coming soon', counts = null;
     const lv = levelOf(m.id);
     if (m.ready) {
       counts = levelCounts(m.id, await getModule(m.id));
@@ -502,7 +500,7 @@ async function viewLesson(mid, lid, step) {
   c.next = () => (step < STEPS.length - 1 ? `<a class="btn next" href="#/l/${mid}/${lid}/${nx}">Next: ${STEPS[nx]} →</a>` : '');
   c.back = () => (step > 0 ? `<a class="btn ghost back" href="#/l/${mid}/${lid}/${pv}">← Back: ${STEPS[pv]}</a>` : `<a class="btn ghost back" href="#/m/${mid}">← Back: Module page</a>`);
   c.nav = () => `<div class="row spread stepnav">${c.back()}${c.next()}</div>`;
-  [stepListen, stepRead, stepPhrases, (x) => stepDrills(x, 'listen'), (x) => stepDrills(x, 'read'), stepClip, stepWrap][step](c);
+  [stepListen, stepRead, stepVocab, (x) => stepDrills(x, 'listen'), (x) => stepDrills(x, 'read'), stepClip, stepWrap][step](c);
 }
 const speakerHTML = (c, s) => (s === 'you' ? 'You' : staffHTML(c.lesson.staff.label));
 function speedControl() {
@@ -547,7 +545,7 @@ function stepRead(c) {
         <span class="avatar">${speakerHTML(c, l.s)}</span>
         <div class="bubble"><p class="ms" lang="ms">${glossHTML(l.ms)}</p><p class="en" hidden>${esc(l.en)}</p>
           <div class="tools"><button type="button" class="iconbtn play-line" aria-label="Play line">${ICON.play}</button>
-            <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>${realTag(l)}
+            <button type="button" class="link reveal" aria-expanded="false">Reveal sentence</button>
             </div>
         </div></div>`).join('')}</div>
     </section><aside>
@@ -574,42 +572,77 @@ function stepRead(c) {
   });
 }
 
-function stepPhrases(c) {
-  app.innerHTML = `<section class="stack" style="gap:18px">${c.head('The phrases worth keeping from this dialogue. Say them out loud after the audio.')}
-    <div class="phrases">${c.lv.phrases.map((pid) => { const p = c.lesson.phrases[pid]; return `<article class="card phrase" data-id="${pid}">
-      <p class="ms" lang="ms">${glossHTML(p.ms)}</p>
-      <div class="row"><button type="button" class="iconbtn" data-sp="normal" aria-label="Play">${ICON.play}</button>
-        <button type="button" class="iconbtn" data-sp="slow" aria-label="Play slowly">${ICON.slow}</button>
-        <button type="button" class="link show" aria-expanded="false">Show meaning</button>${realTag(p)}</div>
-      <div class="stack more" hidden><p class="en">${esc(p.en)}</p>${p.note ? `<p class="small muted">${esc(p.note)}</p>` : ''}</div></article>`; }).join('')}</div>
-    ${c.nav()}</section>`;
-  $('.phrases').addEventListener('click', (e) => {
-    const card = e.target.closest('.phrase');
-    if (!card) return;
-    const sp = e.target.closest('[data-sp]');
-    if (sp) play([[c.src(card.dataset.id, sp.dataset.sp), sp]]);
-    const sh = e.target.closest('.show');
-    if (sh) { const m = $('.more', card); m.hidden = !m.hidden; sh.textContent = m.hidden ? 'Show meaning' : 'Hide meaning'; sh.setAttribute('aria-expanded', !m.hidden); }
-  });
+/* ---------- vocab step ---------- */
+const shortEn = (en) => en.split(/\s[—(]|;/)[0].trim();
+const wordSrc = (k) => `audio/words/${slug(k)}.mp3`;
+/** A level's key words: glossary keys, or [key, meaning] where the glossary gloss is too broad. */
+function vocabOf(lv) {
+  return (lv.vocab || []).map((v) => { const k = Array.isArray(v) ? v[0] : v; return { k, en: Array.isArray(v) ? v[1] : shortEn(GLOSS[k].en), std: GLOSS[k].std }; });
+}
+/** Mini exercise built from the words themselves: match, hear-and-choose, pick-the-word. */
+function vocabItems(words, level) {
+  const mk = (ex, w) => ({ ex, line: w ? { ms: w.k, en: w.en } : null, level, oneSpeed: true, reviewId: w ? `w:${w.k}` : null, src: () => (w ? wordSrc(w.k) : ''), tr: {}, staff: '' });
+  const others = (w, f) => shuffle(words.filter((x) => x !== w)).slice(0, 3).map(f);
+  const pick = shuffle(words);
+  const items = [mk({ type: 'match', title: 'Match the words', q: 'Match each word to its meaning.', pairs: words.map((w) => [w.k, w.en]) })];
+  pick.slice(0, 2).forEach((w) => items.push(mk({ type: 'choose', q: 'Listen. What does this word mean?', options: [w.en, ...others(w, (x) => x.en)], answer: 0 }, w)));
+  pick.slice(2, 4).forEach((w) => items.push(mk({ type: 'word', meaning: w.en, options: [w.k, ...others(w, (x) => x.k)], answer: 0 }, w)));
+  return items;
+}
+function stepVocab(c) {
+  const words = vocabOf(c.lv);
+  if (!LS.vocabItems) LS.vocabItems = vocabItems(words, c.level);
+  const st = (LS.drill.vocab = LS.drill.vocab || { i: 0, results: [] });
+  app.innerHTML = `<section class="stack" style="gap:18px; max-width:860px; width:100%; align-self:center">${c.head('The key words from this dialogue. Listen to each one, then try the mini exercise.')}
+    <div class="vocab">${words.map((w) => `<article class="card word"><div class="row"><button type="button" class="iconbtn" data-k="${esc(w.k)}" aria-label="Play ${esc(w.k)}">${ICON.play}</button><span class="vword" lang="ms">${esc(w.k)}</span></div>
+      <span class="vmean">${esc(w.en)}</span>${w.std ? `<span class="small muted">Standard form: ${esc(w.std)}</span>` : ''}</article>`).join('')}</div>
+    <div class="stack host" style="gap:14px"></div>${c.nav()}</section>`;
+  $('.vocab').addEventListener('click', (e) => { const b = e.target.closest('[data-k]'); if (b) play([[wordSrc(b.dataset.k), b]]); });
+  const host = $('.host');
+  const start = () => {
+    $('.vocab').hidden = true; // the word list would give the answers away
+    runDrills(host, LS.vocabItems, st, (done) => {
+      const right = done.results.filter(Boolean).length;
+      $('.vocab').hidden = false;
+      host.innerHTML = `<div class="card key"><span class="eyebrow">Vocab done</span><p class="score">${right}/${LS.vocabItems.length}</p>
+        <p class="muted">${right === LS.vocabItems.length ? 'Clean sweep.' : 'Missed words are in your review queue.'}</p>
+        <div class="row"><button type="button" class="btn ghost again">Do it again</button></div></div>`;
+      $('.again').addEventListener('click', () => { LS.drill.vocab = null; LS.vocabItems = null; stepVocab(c); });
+    });
+  };
+  if (st.i > 0) return start();
+  host.innerHTML = `<div class="card key"><span class="eyebrow">Mini exercise</span><h2>${LS.vocabItems.length} quick questions on these words</h2>
+    <p class="muted">The word list hides while you answer.</p><div class="row"><button type="button" class="btn red go-vocab">Start</button></div></div>`;
+  $('.go-vocab').addEventListener('click', start);
 }
 
 /* ---------- exercises ---------- */
-const EX_TITLE = { choose: 'Listen and choose', gap: 'Gap fill by ear', dictation: 'Dictation', ladder: 'Speed ladder', reply: 'What would you say?', order: 'Word order', match: 'Standard vs colloquial' };
+const EX_TITLE = { word: 'Pick the word', choose: 'Listen and choose', gap: 'Gap fill by ear', dictation: 'Dictation', ladder: 'Speed ladder', reply: 'What would you say?', order: 'Word order', match: 'Standard vs colloquial' };
 /** item = { ex, line, src(speed), level, match, reviewId } ; done(ok) fires once. */
 function renderExercise(el, item, done) {
   const { ex, line, level } = item, hard = level === 'hard';
-  const listen = () => `<div class="row"><button type="button" class="btn red" data-play="normal">${ICON.play} Play</button>${hard ? '' : `<button type="button" class="btn ghost" data-play="slow">${ICON.slow} Slow</button>`}</div>`;
-  const answerLine = () => `<p class="ms" lang="ms">${glossHTML(line.ms)}</p><span class="muted">${esc(line.en)}</span>${realTag(line)}`;
-  el.innerHTML = `<span class="eyebrow quiet">${EX_TITLE[ex.type]}</span>`;
+  const listen = () => `<div class="row"><button type="button" class="btn red" data-play="normal">${ICON.play} Play</button>${hard || item.oneSpeed ? '' : `<button type="button" class="btn ghost" data-play="slow">${ICON.slow} Slow</button>`}</div>`;
+  const answerLine = () => `<p class="ms" lang="ms">${glossHTML(line.ms)}</p><span class="muted">${esc(line.en)}</span>`;
+  el.innerHTML = `<span class="eyebrow quiet">${ex.title || EX_TITLE[ex.type]}</span>`;
   el.addEventListener('click', (e) => { const b = e.target.closest('[data-play]'); if (b) play([[item.src(b.dataset.play), b]]); });
   const add = (html) => el.insertAdjacentHTML('beforeend', html);
 
   if (ex.type === 'choose') {
-    add(`<p class="q">What does this mean?</p>${listen()}`);
+    add(`<p class="q">${esc(ex.q || 'What does this mean?')}</p>${listen()}`);
+    mcq(el, ex, (ok) => { feedback(el, ok, answerLine()); done(ok); });
+  } else if (ex.type === 'word') {
+    add(`<p class="q">Which word means “${esc(ex.meaning)}”?</p>`);
     mcq(el, ex, (ok) => { feedback(el, ok, answerLine()); done(ok); });
   } else if (ex.type === 'reply') {
-    add(`<p class="q">What would you say back?</p><div class="line staff"><span class="avatar">${staffHTML(item.staff)}</span><div class="bubble"><p class="ms" lang="ms">${glossHTML(ex.prompt)}</p></div></div>`);
-    mcq(el, Object.assign({ gloss: true }, ex), (ok) => { feedback(el, ok, `<span>${esc(ex.why || '')}</span>`); done(ok); });
+    const tr = (t) => item.tr[t] || '';
+    add(`<p class="q">What would you say back?</p><div class="line staff"><span class="avatar">${staffHTML(item.staff)}</span><div class="bubble"><p class="ms" lang="ms">${glossHTML(ex.prompt)}</p><p class="en prompt-en" hidden>${esc(tr(ex.prompt))}</p></div></div>`);
+    mcq(el, ex, (ok) => {
+      // once answered, every option and the prompt show their English
+      $('.prompt-en', el).hidden = !tr(ex.prompt);
+      $$('.opt', el).forEach((o) => { const t = tr(ex.options[+o.dataset.i]); if (t) o.insertAdjacentHTML('beforeend', `<span class="opt-en">${esc(t)}</span>`); });
+      feedback(el, ok, `<span>${esc(ex.why || '')}</span>`);
+      done(ok);
+    });
   } else if (ex.type === 'gap') {
     const re = new RegExp(`\\b${ex.word}\\b`, 'i');
     const [before, after] = line.ms.split(re);
@@ -686,11 +719,13 @@ function renderExercise(el, item, done) {
     });
     draw();
   } else if (ex.type === 'match') {
-    const n = { easy: 4, medium: 5, hard: 7 }[level], pairs = item.match.slice(0, n);
+    const n = { easy: 4, medium: 5, hard: 7 }[level], pairs = ex.pairs || item.match.slice(0, n);
     const right = shuffle(pairs.map((p, i) => i));
     let sel = null, slips = 0, left = pairs.length;
-    add(`<p class="q">Match each casual form to its standard form.</p>
-      <div class="matchgrid">${pairs.map((p, i) => `<button type="button" data-side="a" data-i="${i}" lang="ms">${esc(p[0])}</button><button type="button" data-side="b" data-i="${right[i]}" lang="ms">${esc(pairs[right[i]][1])}</button>`).join('')}</div>`);
+    add(`<p class="q">${esc(ex.q || 'Match each casual form to its standard form.')}</p>
+      <div class="matchgrid">${pairs.map((p, i) => `<button type="button" data-side="a" data-i="${i}" lang="ms">${esc(p[0])}</button><button type="button" data-side="b" data-i="${right[i]}">${esc(pairs[right[i]][1])}</button>`).join('')}</div>`);
+    // for casual ↔ standard pairs, say what each word means once they are all matched
+    const meanings = () => (ex.pairs ? '' : `<ul class="meanings">${pairs.map((p) => `<li><b lang="ms">${esc(p[0])}</b> = <span lang="ms">${esc(p[1])}</span>${GLOSS[p[0]] ? ` — ${esc(shortEn(GLOSS[p[0]].en))}` : ''}</li>`).join('')}</ul>`);
     $('.matchgrid', el).addEventListener('click', (e) => {
       const b = e.target.closest('button');
       if (!b || b.classList.contains('locked')) return;
@@ -698,7 +733,7 @@ function renderExercise(el, item, done) {
       if (sel.dataset.i === b.dataset.i) {
         [sel, b].forEach((x) => { x.classList.remove('sel'); x.classList.add('locked'); x.disabled = true; });
         sel = null;
-        if (--left === 0) { const ok = slips <= 1; feedback(el, ok, `<span>${slips ? `${slips} slip${slips > 1 ? 's' : ''} on the way.` : 'All matched first time.'}</span>`); done(ok); }
+        if (--left === 0) { const ok = slips <= 1; feedback(el, ok, `<span>${slips ? `${slips} slip${slips > 1 ? 's' : ''} on the way.` : 'All matched first time.'}</span>${meanings()}`); done(ok); }
       } else {
         slips++;
         const a = sel; sel = null;
@@ -707,6 +742,15 @@ function renderExercise(el, item, done) {
       }
     });
   }
+}
+/** English for any Malay sentence used in a lesson: its own lines and drills, plus `tr` for reply options. */
+function trMap(lesson) {
+  if (lesson._tr) return lesson._tr;
+  const m = Object.assign({}, lesson.tr);
+  const add = (x) => { if (x && x.ms && x.en) m[x.ms] = x.en; };
+  Object.values(lesson.phrases || {}).forEach(add);
+  Object.values(lesson.levels).forEach((lv) => { lv.dialogue.forEach(add); ['listen', 'read'].forEach((k) => lv.drills[k].forEach(add)); });
+  return (lesson._tr = m);
 }
 /** Run a list of exercise items one at a time inside `host`; calls `finish(state)` at the end. */
 function runDrills(host, items, state, finish) {
@@ -731,10 +775,10 @@ function runDrills(host, items, state, finish) {
 function drillItems(mid, lesson, level, lid, kinds) {
   const lv = lesson.levels[level], adir = `audio/${mid}/${lid}`;
   return (kinds || ['listen', 'read']).flatMap((kind) => lv.drills[kind].map((d) => {
-    const ex = Object.assign({}, d), line = d.ms ? { ms: d.ms, en: d.en, real: d.real, src: d.src } : null;
+    const ex = Object.assign({}, d), line = d.ms ? { ms: d.ms, en: d.en } : null;
     if (d.type === 'choose') { ex.options = [d.en].concat(d.wrong); ex.answer = 0; }
     if (d.type === 'reply') { ex.options = [d.right].concat(d.wrong); ex.answer = 0; }
-    return { ex, line, level, match: lesson.match, staff: lesson.staff.label, reviewId: line ? `${lesson.id}:${level}:${d.id}` : null, src: (sp) => `${adir}/${d.id}-${sp}.mp3` };
+    return { ex, line, level, match: lesson.match, tr: trMap(lesson), staff: lesson.staff.label, reviewId: line ? `${lesson.id}:${level}:${d.id}` : null, src: (sp) => `${adir}/${d.id}-${sp}.mp3` };
   }));
 }
 function stepDrills(c, kind) {
@@ -772,8 +816,9 @@ async function stepClip(c) {
 }
 
 function stepWrap(c) {
-  const added = c.lv.phrases.filter((pid) => { const p = c.lesson.phrases[pid]; return addReview({ id: `${c.lesson.id}:${pid}`, ms: p.ms, en: p.en, audio: `${c.adir}/${pid}-normal.mp3` }); }).length;
-  const res = ['listen', 'read'].flatMap((k) => (LS.drill[k] ? LS.drill[k].results : []));
+  const words = vocabOf(c.lv);
+  const added = words.filter((w) => addReview({ id: `w:${w.k}`, ms: w.k, en: w.en, audio: wordSrc(w.k) })).length;
+  const res = ['vocab', 'listen', 'read'].flatMap((k) => (LS.drill[k] ? LS.drill[k].results : []));
   const d = res.length ? { results: res } : null, right = d ? res.filter(Boolean).length : null;
   touchDay();
   const firstTime = !S.done[c.key];
@@ -785,8 +830,8 @@ function stepWrap(c) {
       <div class="row">${right !== null ? `<span class="pill">Drills ${right}/${d.results.length}</span>` : '<span class="pill yellow">Drills skipped</span>'}
         ${LS.gist !== null ? `<span class="pill ${LS.gist ? '' : 'red'}">Gist ${LS.gist ? 'right' : 'missed'}</span>` : ''}
         ${c.level === 'hard' ? `<span class="pill yellow">${SES.hints} word hint${SES.hints === 1 ? '' : 's'}</span>` : ''}</div>
-      <p>${added ? `${added} phrase${added > 1 ? 's' : ''} joined your review queue; first review is due tomorrow.` : 'These phrases are already in your review queue.'}</p>
-      <ul style="margin:0; padding-left:20px">${c.lv.phrases.map((pid) => `<li lang="ms">${esc(c.lesson.phrases[pid].ms)}</li>`).join('')}</ul>
+      <p>${added ? `${added} word${added > 1 ? 's' : ''} joined your review queue; first review is due tomorrow.` : 'These words are already in your review queue.'}</p>
+      <ul style="margin:0; padding-left:20px">${words.map((w) => `<li><b lang="ms">${esc(w.k)}</b> — ${esc(w.en)}</li>`).join('')}</ul>
       <div class="row">${c.back()}${nextL ? `<a class="btn" href="#/l/${c.mid}/${nextL.id}/0">Next lesson: ${esc(nextL.title)} →</a>` : `<a class="btn red" href="#/f/${c.mid}">Module finale →</a>`}
         <a class="btn ghost" href="#/m/${c.mid}">Module page</a><a class="btn ghost" href="#/review">Review</a></div></div></section>`;
 }
@@ -845,7 +890,7 @@ function viewReview(practiseAll) {
       const days = next ? Math.max(0, Math.ceil((next - Date.now()) / DAY)) : 0;
       app.innerHTML = `${head}<div class="card key empty reviewcard"><span class="eyebrow">${total ? 'Session done' : 'Nothing due'}</span>
         <h2>${all.length ? `${Object.keys(S.review).length} items in your queue` : 'Your queue is empty'}</h2>
-        <p class="muted">${all.length ? (dueItems().length ? `${dueItems().length} still due.` : `Next one is due ${days <= 1 ? 'within a day' : `in ${days} days`}.`) : 'Finish a lesson and its key phrases land here. Sentences you miss in drills come here too.'}</p>
+        <p class="muted">${all.length ? (dueItems().length ? `${dueItems().length} still due.` : `Next one is due ${days <= 1 ? 'within a day' : `in ${days} days`}.`) : 'Finish a lesson and its key words land here. Sentences you miss in drills come here too.'}</p>
         <div class="row">${all.length ? '<button type="button" class="btn ghost all">Practise everything anyway</button>' : ''}<a class="btn" href="#/">Home</a></div></div>`;
       const b = $('.all');
       if (b) b.addEventListener('click', () => viewReview(true));

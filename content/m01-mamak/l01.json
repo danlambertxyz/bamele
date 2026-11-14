@@ -249,7 +249,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "minum",
+    "makan",
+    "kurang manis",
+    "itu je",
+    "dulu",
+    "terima kasih"
+   ]
   },
   "medium": {
    "dialogue": [
@@ -414,7 +422,15 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "ada lagi",
+    "dah habis",
+    "kuah",
+    "kurang manis",
+    "itu je",
+    "kejap"
+   ]
   },
   "hard": {
    "dialogue": [
@@ -592,7 +608,30 @@
       "type": "match"
      }
     ]
-   }
+   },
+   "vocab": [
+    "mana-mana",
+    "baru je",
+    "kena",
+    "kalau macam tu",
+    "bagi",
+    "tambah"
+   ]
   }
+ },
+ "tr": {
+  "Makan apa?": "What are you eating?",
+  "Roti telur satu.": "One roti telur.",
+  "Teh tarik satu.": "One teh tarik.",
+  "Makan tak nak?": "You don't want food?",
+  "Tak nak makan. Minum je.": "I don't want food. Just a drink.",
+  "Ada apa-apa lagi?": "Anything else?",
+  "Ada. Nak tambah teh tarik satu.": "Yes. I want to add one teh tarik.",
+  "Nasi goreng dah habis lah. Mee goreng ada.": "The fried rice is finished. There's fried noodles.",
+  "Okay, mee goreng satu lah.": "Okay, one fried noodles then.",
+  "Roti kena tunggu lima belas minit. Okay ke?": "The roti is a fifteen-minute wait. Is that okay?",
+  "Lama jugak tu. Maggi goreng cepat sikit tak?": "That's quite long. Is maggi goreng a bit quicker?",
+  "Telur mata tak nak tambah?": "Don't you want to add a fried egg?",
+  "Tak payah lah, itu je dulu.": "No need, that's all for now."
  }
 }

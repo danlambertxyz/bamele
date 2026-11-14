@@ -284,9 +284,16 @@ button.chip:hover { border-color: var(--green); }
 /* Word order: a used tile leaves its slot behind */
 .tile.gone { color: transparent; background: var(--ground); border-style: dashed; border-color: var(--border); box-shadow: none; cursor: default; }
 
-/* Marker for sentences copied unchanged from an open corpus */
-.real { display: inline-flex; align-items: center; gap: 4px; align-self: flex-start; font-size: 12px; font-weight: 600; color: var(--ok); background: var(--ok-tint); border-radius: 999px; padding: 3px 9px; cursor: help; }
-.real svg { width: 12px; height: 12px; }
-.tools .real { margin-left: auto; }
+/* Credits: attribution list */
 .sources { columns: 2 320px; font-size: 13px; padding-left: 18px; }
 .sources li { break-inside: avoid; margin-bottom: 4px; }
+
+/* Vocab step */
+.vocab { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.word { gap: 6px; padding: 16px; }
+.vword { font-family: var(--head); font-weight: 700; font-size: 22px; }
+.vmean { font-size: 16px; }
+/* English shown on answer options once a reading drill is answered */
+.opt-en { display: block; margin-top: 2px; font-size: 13px; font-weight: 400; color: var(--muted); }
+.meanings { margin: 4px 0 0; padding-left: 18px; font-size: 15px; }
+.meanings li { margin-bottom: 2px; }
