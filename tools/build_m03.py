@@ -151,7 +151,7 @@ LESSONS.append(dict(
             listen=[
                 c(S, 10727790, "I saw you there.", "I'll see you there.", "I didn't see you there."),
                 g(Y, 10167110, "He doesn't live here anymore.", "duduk"),
-                c(S, 11029397, "He's sitting over there all alone.", "He's waiting over there with friends.", "Nobody is sitting over there."),
+                c(S, 11029397, "He lives there by himself.", "He lives there with friends.", "Nobody lives there."),
                 d(Y, 10682853, "Who are you waiting for?"),
                 l(S, 8248462, "How did you get here?"),
             ],
@@ -186,7 +186,7 @@ LESSONS.append(dict(
             ],
             read=[
                 r("Guard tak bagi masuk. Macam mana?", "Takpe, saya jalan pergi pintu depan.", ["Saya pakai baju merah.", "Kereta warna apa?"], "The guard won't let him in, so you offer to walk to the front gate."),
-                o(S, 11029397, "He's sitting over there all alone."),
+                o(S, 11029397, "He lives there by himself."),
                 r("Awak pakai baju apa?", "Baju merah. Saya kat depan lobi.", ["Dua minit.", "Itu pintu depan."], "Pakai baju apa? — what are you wearing: the colour does it."),
                 o(Y, 10674916, "Is there a tour guide here?"),
                 M,

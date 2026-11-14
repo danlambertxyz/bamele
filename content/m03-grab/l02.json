@@ -448,14 +448,14 @@
       "id": "mv3",
       "s": "staff",
       "ms": "Dia duduk sorang-sorang kat sana.",
-      "en": "He's sitting over there all alone.",
+      "en": "He lives there by himself.",
       "src": [
        "t11029397"
       ],
       "real": true,
       "wrong": [
-       "He's waiting over there with friends.",
-       "Nobody is sitting over there."
+       "He lives there with friends.",
+       "Nobody lives there."
       ]
      },
      {
@@ -720,7 +720,7 @@
       "id": "hv6",
       "s": "staff",
       "ms": "Dia duduk sorang-sorang kat sana.",
-      "en": "He's sitting over there all alone.",
+      "en": "He lives there by himself.",
       "src": [
        "t11029397"
       ],
